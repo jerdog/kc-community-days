@@ -14,8 +14,7 @@
     {
       "binding": "DB",
       "database_name": "communitydays",
-      // Create with `npx wrangler d1 create communitydays` and paste the id here.
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "c0437d11-7e80-4971-8581-619058feb54e",
       "migrations_dir": "migrations"
     }
   ]

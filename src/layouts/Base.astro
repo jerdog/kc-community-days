@@ -1,0 +1,52 @@
+---
+import '../styles/base.css';
+import { event, nav } from '../data/site.js';
+
+const { title, description = event.tagline } = Astro.props;
+const pageTitle = title ? `${title} · ${event.name}` : `${event.name} ${event.year}`;
+const path = Astro.url.pathname.replace(/\/?$/, '/');
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:site_name" content={event.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL('/images/brand/logo-square.webp', Astro.site)} />
+    <meta name="twitter:card" content="summary" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="/"><img src="/images/brand/logo.webp" alt={event.name} width="198" height="40" /></a>
+        <nav aria-label="Main">
+          <ul>
+            {nav.map((item) => (
+              <li><a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a></li>
+            ))}
+          </ul>
+        </nav>
+        <a class="btn" href="/tickets/">Tickets</a>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <span>© {event.year} {event.name}. A community-run, not-for-profit event.</span>
+        <span>Contact us: <a href={`mailto:${event.contactEmail}`}>{event.contactEmail}</a></span>
+      </div>
+    </footer>
+  </body>
+</html>

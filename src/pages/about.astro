@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import { groups, team, event } from '../data/site.js';
+---
+<Base title="About">
+  <section class="section"><div class="container">
+    <h1>About CommunityDays</h1>
+    <div class="prose">
+      <p>{event.name} {event.year} is a new two-day event celebrating the strength and diversity of Kansas City's tech community. It brings some of the city's Meetup groups together (with more being added) to collaborate on content and build community.</p>
+      <p>We look forward to having you join us as we continue to grow the Kansas City tech community.</p>
+    </div>
+  </div></section>
+  <section class="section" style="padding-top:0"><div class="container">
+    <h2>Participating groups</h2>
+    <div class="grid" style="--min:180px">
+      {groups.map((g) => (
+        <a class="card" href={g.url} style="text-decoration:none;display:grid;gap:10px;align-content:start">
+          {g.logo ? <img src={g.logo} alt="" style="height:80px;width:auto;object-fit:contain" loading="lazy" /> : null}
+          <strong>{g.name}</strong>
+        </a>
+      ))}
+    </div>
+  </div></section>
+  <section class="section" style="padding-top:0"><div class="container">
+    <h2>Meet the {event.name} team</h2>
+    <div class="grid" style="--min:180px">
+      {team.map((p) => (
+        <div class="speaker">
+          <img src={p.photo} alt="" loading="lazy" />
+          <h3>{p.url ? <a href={p.url}>{p.name}</a> : p.name}</h3>
+          <p>{p.role}</p>
+        </div>
+      ))}
+    </div>
+  </div></section>
+</Base>

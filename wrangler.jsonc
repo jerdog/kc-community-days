@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "communitydays",
+  "main": "worker/index.js",
+  "compatibility_date": "2026-11-01",
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "communitydays",
+      // Create with `npx wrangler d1 create communitydays` and paste the id here.
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ]
+  // Once ready to cut over from Squarespace:
+  // "routes": [
+  //   { "pattern": "communitydays.info", "custom_domain": true },
+  //   { "pattern": "www.communitydays.info", "custom_domain": true }
+  // ]
+}

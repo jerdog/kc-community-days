@@ -1,0 +1,36 @@
+---
+import Base from '../layouts/Base.astro';
+import { event } from '../data/site.js';
+import { scheduleByDay, speakersOf, groupOf, minutes, slug } from '../lib/sessionize.js';
+const days = scheduleByDay();
+---
+<Base title="Schedule">
+  <section class="section"><div class="container">
+    <h1>Schedule</h1>
+    <p class="muted">{event.venue.name}, {event.venue.address}. All times Central.</p>
+    <nav class="day-tabs" aria-label="Days">
+      {days.map((d) => <a class="btn secondary" href={`#${d.day}`}>{d.label}</a>)}
+    </nav>
+    {days.map((d) => (
+      <section id={d.day} style="scroll-margin-top:16px">
+        <h2>{d.label}</h2>
+        {d.slots.map((slot) => (
+          <div class="slot">
+            <time datetime={slot.startsAt}>{slot.time}</time>
+            <div class="slot-sessions">
+              {slot.sessions.map((s) => (
+                <article class:list={['card', 'session-card', { service: s.service }]}>
+                  <h3>{s.service ? s.title : <a href={`/sessions/#${slug(s.title)}`}>{s.title}</a>}</h3>
+                  <div class="meta">
+                    {[speakersOf(s).map((p) => p.name).join(', '), s.room, `${minutes(s)} min`].filter(Boolean).join(' · ')}
+                  </div>
+                  {groupOf(s) && <span class="tag" style="margin-top:8px">{groupOf(s)}</span>}
+                </article>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+    ))}
+  </div></section>
+</Base>

@@ -1,0 +1,2623 @@
+{
+  "eventId": "295atto3",
+  "importedAt": "2026-11-17T15:33:43.134Z",
+  "rooms": [
+    "Room 1",
+    "Room 2",
+    "Room 3",
+    "Room 4",
+    "Room 5",
+    "Room 6"
+  ],
+  "speakers": [
+    {
+      "id": "99522a9f-8a16-4c1b-965e-4043d288cfed",
+      "name": "Shashank Daté",
+      "tagline": "Using Ruby for fun and profit since 2002",
+      "photo": "https://cdn.sessionize.com/image/5b60-200o200o2-9KwEpitjZP1zjXEJxy3niP.png",
+      "bio": [
+        "Shashank is an avid mruby programmer who tinkers with Raspberry Pis on electrifying hobby projects."
+      ],
+      "links": []
+    },
+    {
+      "id": "09f1db8d-dbc1-4ac0-a51d-db5b4640dccb",
+      "name": "Angela Jones",
+      "tagline": "Technology Champion | Pay It Forward Advocate | Professional Work-from-Home Fur Mom 🐾",
+      "photo": "https://cdn.sessionize.com/image/1328-200o200o2-pVM7Wyk1C9EWLV9TGipkBD.JPG",
+      "bio": [
+        "Angela Jones is a Modern Workplace Consultant who helps organizations drive business growth and transformation through thoughtful, people‑centered technology solutions. Drawing on her background in retail management and recruiting, Angela brings a strong foundation in leadership, talent development, and operational excellence to her technology work. This experience shapes a consulting approach grounded in trust and a deep understanding of how people and businesses operate, enabling her to design and implement modern workplace solutions that improve adoption, empower employees, and deliver meaningful business outcomes.",
+        "A Kansas City native, Angela enjoys traveling and spending time with her family, friends, and fur babies. She is also an organizer of the Kansas City Dynamics 365, Power Platform, and AI User Group, where she is passionate about community building and knowledge sharing."
+      ],
+      "links": []
+    },
+    {
+      "id": "19c505cb-ff20-4321-ae86-8f28f4e1f7f1",
+      "name": "Julie Heckman",
+      "tagline": "Snowflake | Senior Solution Engineer",
+      "photo": "https://cdn.sessionize.com/image/2473-200o200o2-NBAwDvWvAPqpv86qG7MN53.png",
+      "bio": [
+        "I’ve spent nearly 20 years bridging the gap between petabyte-scale chaos and business-ready clarity. My journey started in the algorithmic trenches of Kansas City’s high-frequency trading scene and has since evolved through the complexities of Agricultural IoT, public sector digital transformation, and global enterprise data strategy.",
+        "From coding MapReduce and Spark algorithms at Tradebot to leading high-performing app dev teams through complex digital transformations, I’ve seen it all. Having navigated many migrations from on prem to the cloud and the \"integration tax\" of the modern data stack, I’ve developed a healthy immunity to architectural buzzwords and a pathological commitment to data provenance.",
+        "Currently, as a Senior Solution Engineer at Snowflake, I act as a bilingual interpreter between the C-suite and the dev team—translating executive visions into technical wins. I advocate for the Data Cloud because it turns a liability—data pain—into a strategic asset. I help organizations optimize their infrastructure so they can stop managing servers and start managing outcomes."
+      ],
+      "links": []
+    },
+    {
+      "id": "7af36cc1-3353-4476-9343-121e962f4bd5",
+      "name": "Patrick Liekhus",
+      "tagline": "Solutions Architect @ SETWorks | AI Creator",
+      "photo": "https://cdn.sessionize.com/image/fb77-200o200o2-RBPMX3XSd9VDZDM1XwQ8tL.png",
+      "bio": [
+        "Patrick Liekhus is a Solutions Architect at SETWorks, building HIPAA-compliant healthcare provider management software for individuals with devlopment disabilities. Patrick advocates for spec-driven development and practical approaches to maintaining engineering discipline with AI coding tools.",
+        "His expertise includes building scalable architectures, implementing continuous delivery pipelines, and helping teams leverage AI to accelerate delivery while maintaining quality. Patrick specializes in regulated environments where comprehensive documentation and compliance requirements must coexist with modern development velocity."
+      ],
+      "links": []
+    },
+    {
+      "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
+      "name": "Billy Korando",
+      "tagline": "Java Developer Advocate",
+      "photo": "https://cdn.sessionize.com/image/2c63-200o200o2-MqnWywU4YnfRYEETYgm4u6.jpg",
+      "bio": [
+        "Billy is a Java Developer Advocate with the Java Platform Group at Oracle. With over a decade of experience in Java, Billy brings a passion for helping developers find ways to reduce tedious work, such as project initiation, deployment, testing, and validation, through automation and adopting the latest features and tools in the Java ecosystem. Outside of work, Billy enjoys traveling, playing kickball, and cheering on the Kansas City Chiefs. Billy also co-organizes the Kansas City Java users group."
+      ],
+      "links": []
+    },
+    {
+      "id": "fa44c880-991f-4f83-aa72-a2a5d5352960",
+      "name": "Derek Moore",
+      "tagline": "Manager & Lead Software Architect at Netsmart",
+      "photo": "https://cdn.sessionize.com/image/85da-200o200o2-hQmwQ45WxyhNYzh6K1cAhA.jpg",
+      "bio": [
+        "Derek Moore is a technical manager and lead software architect at Netsmart with 30 years of experience in building, delivering and supporting mission-critical Internet-connected solutions for industry. With a background in the open source and Internet provider communities, Derek has a unique perspective on solution design and software engineering in a world where services need to start out having small footprints and efficient deployments while holding the door open for massive scale as service usage inevitably grows."
+      ],
+      "links": []
+    },
+    {
+      "id": "aa24b5ca-5b96-4657-909e-e5be82ebf891",
+      "name": "Adhithi Ravichandran",
+      "tagline": "Software Consultant, Pluralsight Author, Speaker",
+      "photo": "https://cdn.sessionize.com/image/a540-200o200o2-wE7vVY7Z7Ams7M4EiC2DfE.jpg",
+      "bio": [
+        "Adhithi Ravichandran is a Software Consultant, Author, and Speaker based in Kansas City, and the founder of Surya Consulting, Inc. Through her consulting practice, she partners with organizations to build modern, scalable software systems while helping teams evolve their engineering practices in an AI-driven world.",
+        "With a passion for both technology and education, Adhithi has authored several highly rated Pluralsight courses, reaching over 140,000 students worldwide. Her teaching spans modern web development, including React, React Native, Next.js, GraphQL, and Cypress, as well as AI-focused topics such as Applied AI-Assisted Coding, with a strong emphasis on practical, real-world application.",
+        "Through Surya Consulting, Inc., Adhithi combines her deep expertise in modern frontend technologies with a strong focus on helping teams effectively adopt AI in the software development lifecycle. Her consulting work spans designing scalable architectures, guiding teams as they integrate AI into their workflows, and evolving engineering practices to support faster, higher-quality delivery. She works closely with developers to ensure AI is used thoughtfully enhancing productivity while maintaining high standards for code quality, security, and long-term system reliability.",
+        "Adhithi is also an active voice in the tech community, writing on Medium for an audience of over 20,000 monthly readers and speaking at conferences across the country. Her work is driven by a commitment to helping teams think more effectively, collaborate better, and build high-quality software in the age of AI."
+      ],
+      "links": []
+    },
+    {
+      "id": "13181a5c-88d0-4791-88f9-3cd6c2373c03",
+      "name": "Daymon Littrell-Reyes",
+      "tagline": "Software Engineer @Google",
+      "photo": "https://cdn.sessionize.com/image/8165-200o200o2-pJqMDs4r7WrHsq348ApKMz.jpg",
+      "bio": [
+        "Daymon is a Kansas City-born Software Engineer at Google. His work and research interests focus on microarchitecture, alongside a broad range of personal projects spanning anti-cheat and malware analysis, game development, full-stack web, and native mobile and Windows applications. His preferred languages are Rust, Kotlin, Swift, and Scala. Outside of software development, he enjoys gaming, reading, and chess."
+      ],
+      "links": []
+    },
+    {
+      "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+      "name": "DaShaun Carter",
+      "tagline": "Spring Developer Advocate, Broadcom",
+      "photo": "https://cdn.sessionize.com/image/92aa-200o200o2-BvDf1x1yDTviz1mo3h9aUH.png",
+      "bio": [
+        "DaShaun is a husband, father of four, volunteer, struggling athlete, former professional cheerleader, Raspberry Pi enthusiast, and Spring Developer Advocate at Broadcom. Deliberately practicing to build, run, and manage, better software, faster."
+      ],
+      "links": []
+    },
+    {
+      "id": "4744f53f-c70b-478a-a5cb-3041c3302036",
+      "name": "Renee Anne Poulin",
+      "tagline": "Stronger Teams Through Clearer Conversations",
+      "photo": "https://cdn.sessionize.com/image/21b3-200o200o2-KccDGLG5wJUvNrEo9dqRtr.jpg",
+      "bio": [
+        "Renée Anne Poulin is an Agile coach, workshop designer, and former university professor who helps leaders and teams navigate complexity, collaboration, and change more skillfully. Her background spans humanities research, adult learning, organizational transformation, and product strategy, giving her an unusual ability to connect people, process, and technology in practical ways. She has worked across cross-functional environments and designs research-informed learning experiences that help professionals make better decisions, communicate more clearly, and work more effectively together. Known for blending systems thinking with human-centered facilitation, she brings a multidisciplinary lens to the hidden dynamics that shape meetings, teamwork, and workplace performance. Her work is grounded in evidence, adaptive learning, and the belief that better team conversations lead to improved business outcomes."
+      ],
+      "links": []
+    },
+    {
+      "id": "98173d1a-ba3a-47b6-97d7-9e2174187eaa",
+      "name": "Christina Lin",
+      "tagline": "Lead Advocate, Google Americas",
+      "photo": "https://cdn.sessionize.com/image/9ee0-200o200o2-HhVijrnf9RAqG8Fp9FWwmE.jpg",
+      "bio": [
+        "As the Lead Advocate for Google Americas, Christina Lin bridges the gap between cutting-edge technologies and developer success. With deep expertise in Agentic systems and modern cloud architectures—including Google Cloud, Kubernetes, Apache Kafka, Java, Python, and Ansible—she creates dynamic technical content and live demonstrations that drive the adoption of intelligent, scalable best practices. An open-source champion at heart, Christina’s mission is to cultivate a highly collaborative, innovative, and deeply connected global developer community ready for the AI era."
+      ],
+      "links": []
+    },
+    {
+      "id": "ba70cb63-c6e5-49c5-929d-42b5fec5dcae",
+      "name": "Aaron Spiegel",
+      "tagline": "Head of Field Engineering & Field CTO, Qbeast",
+      "photo": "https://cdn.sessionize.com/image/26bb-200o200o2-NYbZHuPCuTGVtVaDZdtdM5.png",
+      "bio": [
+        "Aaron is a veteran data and platform architect with 25+ years leading high-scale systems across aviation, engineering, telecom, and storage. As Field CTO at Qbeast, he focuses on Lakehouse performance and cost optimization, AI-ready data architecture, and pragmatic agentic design. Formerly with Dell EMC and Wheels Up, he brings deep experience in open analytics, cloud platforms, and Kubernetes. Aaron pairs strategy with hands-on execution—designing resilient data products, governance, and the AI lifecycle (from feature pipelines to model deployment and monitoring)—to solve critical business challenges and translate complex platforms into measurable outcomes."
+      ],
+      "links": []
+    },
+    {
+      "id": "fba3860c-21b3-4309-8679-c50047b23bf5",
+      "name": "Ben Goodman",
+      "tagline": "Senior Site Reliability Engineer - Rokt",
+      "photo": "https://cdn.sessionize.com/image/18f2-200o200o2-EmoXRjkiDRHCXVMX55po6B.jpg",
+      "bio": [
+        "Ben Goodman is a Member of the Technical Staff on Adaptive Innovation's Infrastructure team. He has previously worked on large, global infrastructure at Rokt, open source tooling to automate Terraform best practices, and was a data scientist in a past life."
+      ],
+      "links": []
+    },
+    {
+      "id": "85019837-c755-48ec-884a-76e6889437b3",
+      "name": "Michelle Frost",
+      "tagline": "AI Advocate @ JetBrains | Responsible AI | MS, AI | Microsoft AI MVP",
+      "photo": "https://cdn.sessionize.com/image/692f-200o200o2-WgzKSCBAFfoamtUwAWukjx.jpg",
+      "bio": [
+        "Michelle Frost is an AI Advocate at JetBrains. With over a decade of engineering experience, Michelle holds a Bachelor of Science in Computer Science from the University of Missouri at Kansas City, a Master of Science in Artificial Intelligence from Johns Hopkins University, and is a Microsoft AI MVP. As an established AI and Machine Learning specialist, Michelle focuses on Responsible AI development. Her approach is grounded in creating AI that is fair, accountable, and transparent.",
+        "Michelle is also an active member and Tech Advisor to The Center for Practical Bioethics' Ethical AI Initiative. When not behind the screen, she can be found tending to her garden with her 100 lb pup Wilbur by her side."
+      ],
+      "links": []
+    },
+    {
+      "id": "6d5add80-9200-4afc-9f33-3cd18e26d723",
+      "name": "Seth Eliot",
+      "tagline": "Principal Resilience Architect, Arpio",
+      "photo": "https://cdn.sessionize.com/image/4276-200o200o2-WSXoxHUhBaLzFtpKVmFSvb.jpg",
+      "bio": [
+        "Seth is Principal Resilience Architect at Arpio. Previously, as the Global Reliability Lead for AWS Well-Architected, he spearheaded the development of comprehensive disaster recovery (DR) guidance for AWS customers. He authored the AWS whitepaper \"Disaster Recovery of Workloads on AWS: Recovery in the Cloud\" [http://bit.ly/DR_AWS] as well as the AWS Architecture Blog's disaster recovery series [http://bit.ly/aws-dr-blog]. At AWS, Seth worked directly with customers, aiding them in building resilient architectures in the cloud. At Arpio, he continues working hands-on with customers, helping them to implement disaster recovery and ransomware protection for their AWS workloads. In prior roles at Amazon, Seth was Principal Engineer for Amazon Fresh and International Technologies, and before that he was developer lead for the team that created Prime Video."
+      ],
+      "links": []
+    },
+    {
+      "id": "714a1231-ea11-41da-81ed-00880a9ec506",
+      "name": "Tamara Copple",
+      "tagline": "Evangelist for women in STEM, product owner, keynote speaker, D&D veteran",
+      "photo": "https://cdn.sessionize.com/image/591a-200o200o2-W1odEwuREomHNmn53Mx1k2.jpg",
+      "bio": [
+        "Tamara Copple is cofounder and Lead Business Consultant for Grand River Analytics and a product owner for international nonprofit Children International. She is a speaker and community organizer for multiple professional groups. Always a business analyst at heart, Tamara mentors tech and tech-adjacent professionals in mastering their craft with empathy and humanity in the age of AI."
+      ],
+      "links": []
+    },
+    {
+      "id": "d6ad140e-cc7f-40d7-8fdf-ff541f171fc3",
+      "name": "Cindy Vogel",
+      "tagline": "Right Triangle, Director of Healthcare Analytics & Integration",
+      "photo": "https://cdn.sessionize.com/image/0a86-200o200o2-QceXdefbeXrdLRSrz14L7q.png",
+      "bio": [
+        "Cindy Vogel is the Director of Healthcare Analytics & Integration at Right Triangle Consulting, where she helps healthcare and life sciences organizations turn complex data into practical, governed, and usable assets. A product professional turned data practitioner, she brings more than 20 years of Healthcare IT experience across domestic and international markets, with a focus on applied data governance, analytics integration, and operational improvement. Cindy is an active contributor to Dataversity and helped develop and review the Applied Data Governance Practitioner Certification. She also is a member of HIMSS Greater Kansas City Chapter, DAMA International and KC Data Professionals."
+      ],
+      "links": []
+    },
+    {
+      "id": "a1f56b95-0b10-40b1-9c58-15b1b183d2ae",
+      "name": "Mike Shearer",
+      "tagline": "Senior Software Engineer",
+      "photo": "https://cdn.sessionize.com/image/e6da-200o200o2-35ftp5xkMM46bAcdLewZgf.jpg",
+      "bio": [
+        "Software engineer with over 10 years of experience in distributed data processing systems with a recent emphasis in AI reasoning and training pipelines."
+      ],
+      "links": []
+    },
+    {
+      "id": "73cb4683-21f0-42ec-a4df-b097e9871259",
+      "name": "Elizabeth Christensen",
+      "tagline": "Postgres @ Snowflake",
+      "photo": "https://cdn.sessionize.com/image/77c0-200o200o2-3BkZm8yJNZBEvnsk2rJD9q.png",
+      "bio": [
+        "Elizabeth is a Postgres contributor and technical writer at Snowflake. She is on the board of the US PostgreSQL Association and hosts an online Postgres Meetup for All and a local KC Postgres group. She also helps host the annual PostGIS Day. Elizabeth is passionate about open source technology and diversity in tech though education. Elizabeth is from Lawrence, Kansas and enjoys spending time in her own personal backyard tiki hut."
+      ],
+      "links": []
+    },
+    {
+      "id": "53407b34-cdab-4f53-8ff0-9fa73d3ffe3a",
+      "name": "Andy Flower",
+      "tagline": "Right Triangle Consulting",
+      "photo": "https://cdn.sessionize.com/image/f687-200o200o2-fEGmjQwdbfiRBK8y2PVs8s.jpg",
+      "bio": [
+        "Andy Flower, bringing more than 30 years of expertise in data management and architecture, heads Right Triangle Consulting to help organizations implement innovative data solutions. Our goal is to provide effective strategies in areas such as data strategy, AI data preparation, cloud data management, governance, and engineering, all aligned with the objectives of the organization."
+      ],
+      "links": []
+    },
+    {
+      "id": "82f56bf5-be4f-4f3d-b507-1b69fd777c2d",
+      "name": "Bradley Dice",
+      "tagline": "NVIDIA",
+      "photo": "https://cdn.sessionize.com/image/53b1-200o200o2-wgbaQSZCUBx7SnakSkr7Aj.jpg",
+      "bio": [
+        "Bradley Dice is a Senior Software Engineer in GPU-Accelerated Data Analytics at NVIDIA, designing high-performance open-source libraries for data analytics (cuDF) with modern CUDA, C++, and Python."
+      ],
+      "links": []
+    },
+    {
+      "id": "9fd5eded-a99b-4935-8464-d8fd5199f494",
+      "name": "Preston Chandler",
+      "tagline": "Lean/Agile Evangelist and SVP Client Transformation at WPP",
+      "photo": "https://cdn.sessionize.com/image/ff19-200o200o2-93623c5b-d687-4768-82c5-63fec1747f81.jpg",
+      "bio": [
+        "Preston Chandler is a transformation leader and systems strategist with more than 20 years of experience helping complex organizations improve how they operate, innovate, and deliver value.",
+        "He currently serves as the Global Lead of Strategic Operations at WPP, where he works across marketing and engineering organizations to improve decision velocity, operational design, and large-scale delivery performance. In parallel, he is a Managing Partner at Centered, advising executive leaders on building innovation-ready teams and sustainable operating models.",
+        "Preston’s work sits at the intersection of engineering, product, and marketing — designing systems that reduce friction, accelerate learning, and align technical execution with business strategy. Over his career, he has partnered with more than 100 teams across industries including pharmaceuticals, manufacturing, digital product development, supply chain, and enterprise technology. His client experience includes Pfizer, Merck, Johnson & Johnson, Ford, Sprint, Novartis, and VML.",
+        "He specializes in diagnosing systemic bottlenecks, improving alignment in complex environments, and helping senior teams scale without losing adaptability.",
+        "Preston brings a pragmatic, systems-level lens to innovation — focusing not just on frameworks, but on how organizations actually behave under pressure."
+      ],
+      "links": []
+    },
+    {
+      "id": "a5a7faa9-6651-4b15-b842-25c24ee21787",
+      "name": "Mindy Becker",
+      "tagline": "Right Triangle Consulting, Director of Data Governance",
+      "photo": "https://cdn.sessionize.com/image/cef5-200o200o2-hkBJy2mStuXbRasiCtGDYp.jpg",
+      "bio": [
+        "Mindy Becker is a Kansas City–based data governance leader known for transforming how organizations understand, trust, and activate their data. As Director of Data Governance at Right Triangle Consulting, she architects programs that strengthen data quality, elevate business intelligence, and enable confident, insight‑driven decision‑making across finance, life insurance, and healthcare. With more than a decade of experience spanning data integration, modeling, privacy, and analytics, Mindy is recognized for translating complex technical concepts into clear, actionable strategies for both executives and practitioners.",
+        "She brings expertise in applied data governance, data quality, metadata strategy, and regulatory reporting, along with emerging capabilities in AI governance and AI readiness to help organizations prepare for responsible, scalable adoption of modern technologies. Mindy holds the DATAVERSITY Applied Data Governance Certification, where she contributed to exam development, and is a Certified Data Management Professional (CDMP). She is an active contributor to the Kansas City data community, a frequent speaker at DAMA and Dataversity events, and a committed advocate for education and community impact through Prep KC, the Junior League of Kansas City, and the American Cancer Society’s Hope Lodge."
+      ],
+      "links": []
+    },
+    {
+      "id": "770d6b80-a16a-4acd-a261-2467ea84e3c0",
+      "name": "Cecil Williams",
+      "tagline": "Consultant at Source Allies, Inc.",
+      "photo": "https://cdn.sessionize.com/image/a060-200o200o2-WzNKKqSiutCGQ6qBaYJW5P.png",
+      "bio": [
+        "Cecil G. Williams is consultant with Source Allies, a technical consultancy based in Urbandale Iowa. Cecil is a software craftsman with over 35 years of professional experience. Cecil has deep expertise in practices used by high performing teams such as lean & agile, ensemble development, test-driven development, and continuous integration and delivery. When he's not coaching teams or writing code, he volunteers with Tech Camp, inspiring the next generation of technologists."
+      ],
+      "links": []
+    },
+    {
+      "id": "f4f9dcb7-93e5-49df-bbe5-b313e137a9f5",
+      "name": "Surya Rao Rayarao",
+      "tagline": "SS&C Technologies, Lead Software Engineer",
+      "photo": "https://cdn.sessionize.com/image/fb75-200o200o2-Kctt6ZofLfdPSA3BpEZXdw.jpg",
+      "bio": [
+        "Surya Rao Rayarao is a distinguished thought leader at the forefront of artificial intelligence and data modernization. With deep expertise in machine learning applications and enterprise transformation, he specializes in helping organizations navigate the complex landscape of digital evolution.",
+        "His work particularly focuses on the financial and insurance sectors, where he has pioneered innovative approaches to hyperautomation, anomaly detection, and intelligent data processing. Through his speaking engagements, Surya shares practical insights on implementing AI solutions that drive real business value.",
+        "Known for his \"enlightening\" and \"inspiring\" presentations, Surya combines technical depth with accessible communication, making complex AI concepts understandable for diverse audiences from technical teams to executive leadership."
+      ],
+      "links": []
+    },
+    {
+      "id": "beeb0799-4d44-4f60-a23d-b3fb2596ebb7",
+      "name": "Rob Voss",
+      "tagline": "Founder, Voss AI Consulting | OpenAI Academy Faculty | Helping organizations stop guessing and start using AI with confidence",
+      "photo": "https://cdn.sessionize.com/image/346c-200o200o2-fQdp4RKvHYvLtqDb9xMeKb.jpg",
+      "bio": [
+        "Rob Voss is an AI strategist, educator, and researcher who helps organizations move from AI anxiety to measurable adoption. As the founder of Voss AI Consulting, he works with business leaders, financial firms, and educational institutions to build practical AI strategies that protect client data, save time, and increase profitability.",
+        "Rob is one of 89 OpenAI Academy faculty worldwide — and the sole representative from Missouri — recognized for his work bridging AI capabilities with real-world professional practice. He has trained over 500 professionals across education, finance, and business, with independently validated outcomes: a 93% increase in regular AI use, 200% improvement in training satisfaction, and 52% reduction in AI-related anxiety among participants.",
+        "A tenured Associate Professor of History at Northwest Missouri State University, Rob brings 25+ years of teaching experience and a researcher's rigor to the AI space. He founded the university's Applied AI minor, directs the MSEd in Teaching History, and is developing a B.S. in Interdisciplinary Technology. His academic background gives him a rare perspective: he understands both how transformative technologies reshape industries and how organizations actually learn and change.",
+        "Rob has presented at IIBA KC Chapter, the Missouri SBDC AI Summit, KC AI Club, MidAIR Conference, and other regional and national venues. He holds a Ph.D. in History from the University of Nebraska–Lincoln.",
+        "Website: vossaiconsulting.com",
+        "LinkedIn: linkedin.com/in/ai-robvoss"
+      ],
+      "links": []
+    },
+    {
+      "id": "d14f9633-1d01-47d0-9351-46b2b0986045",
+      "name": "Kevin Hiatt",
+      "tagline": "CTO & Managing Partner with Arion Trident",
+      "photo": "https://cdn.sessionize.com/image/8fbc-200o200o2-XT1LnD2k4AYHQq9nmkKVUA.png",
+      "bio": [
+        "20+ year IT executive in Fortune 500, healthcare and non-profits leading digital transformation, DevOps, cybersecurity, operational efficiency and governance."
+      ],
+      "links": []
+    },
+    {
+      "id": "6ee43712-add3-48d2-81a6-350a27f0411f",
+      "name": "Micah Melling",
+      "tagline": "Data Science Leader",
+      "photo": "https://cdn.sessionize.com/image/9c01-200o200o2-Lo82wf7QGBz7TtW2mgTRkR.jpg",
+      "bio": [
+        "Micah Melling has led multiple data science teams in Kansas City. He developed and taught graduate-level data science courses at Park University. He also serves on the UMKC Analytics Advisory Board and volunteers with PrepKC's Data in Action Program for 8th graders. He has spoken throughout the community about data science and the intersection of AI and philosophy."
+      ],
+      "links": []
+    },
+    {
+      "id": "b44daeb6-3421-4180-808b-c9451776f8f1",
+      "name": "Doug Hohulin",
+      "tagline": "Kansas City AI Club Board Member - Humanities Chair",
+      "photo": "https://cdn.sessionize.com/image/4d41-200o200o2-M12kS6MS8KmfLHeJANGBaY.png",
+      "bio": [
+        "Doug Hohulin works on AI in Healthcare, Regulation/Governance/Policy, Road Safety/AV, Education, and Energy; and he formally worked for Motorola and Nokia for 33 years in Strategy, Business Development, Account Management and Engineering roles. He is a Kansas City AI Club Board Member - Humanities Chair and Texas DOT Connected and Autonomous Vehicle Task Force member"
+      ],
+      "links": []
+    },
+    {
+      "id": "67d4621e-71f3-44ec-b9c9-b182e1cf278a",
+      "name": "Duane Newman",
+      "tagline": "Microsoft MVP",
+      "photo": "https://cdn.sessionize.com/image/ee7b-200o200o2-UEDCN6khQueGhoj2SuZPW8.jpg",
+      "bio": [
+        "Duane is Co-Founder of Alien Arc Technologies, LLC where he focuses on creating solutions targeting mobile devices, modern desktops, and the Internet of Things. As a Microsoft MVP and technology enthusiast with a passion for good software he strives to bring solutions that improve or eliminate costly duplication and repetitive processes so more important things can be done. He enjoys teaching others and speaking at conferences on topics such as DevOps, Testing, and Mobile. When not behind a computer screen he can be found sharing his love of SCUBA and all things underwater through his dive shop, Dive Rinse Repeat Scuba."
+      ],
+      "links": []
+    },
+    {
+      "id": "8eaf133e-aca8-4e60-8ba0-75374deda636",
+      "name": "Chip Johnson",
+      "tagline": "",
+      "photo": "https://cdn.sessionize.com/image/da6f-200o200o2-BV4jsJB35BU9PkLDmhdvad.png",
+      "bio": [
+        "Chip Johnson has been part of the DevOpsDays community since 2011, attending and speaking at events across the U.S. A former systems engineer turned product leader, he has worked on DevOps, security, identity, and operations platforms at Chef, Sonatype, Auth0, Mondoo, and Mezmo. His current work focuses on how AI-driven software delivery is reshaping production operations, deployment systems, and the constraints that emerge as engineering output begins to outpace human review."
+      ],
+      "links": []
+    },
+    {
+      "id": "076712c7-eb21-4928-92c6-7121715ef01f",
+      "name": "Jay Farias",
+      "tagline": "Chief Energetics Officer @ The Action Company",
+      "photo": "https://cdn.sessionize.com/image/877b-200o200o2-UPHGzvT5RdY4BjNjjtK428.png",
+      "bio": [
+        "Jay brings over 10+ years of experience from the analytics world, the majority of those in consulting. Now, he’s channeling his leadership skills and systems-thinking mindset into a new mission: bringing intention and structure to the chaos of collaboration. As a Chief Energetics Officer at The Action Company, Jay designs and facilitates purposeful spaces where teams align, engage, and move forward with clarity.",
+        "Outside of work, Jay can usually be found scaling a rock wall, practicing or teaching yoga, reading sci-fi and philosophy, or exploring the US with his partner and son in his self-built camper van."
+      ],
+      "links": []
+    },
+    {
+      "id": "fa6ae37c-e6b0-4b5a-adbe-d03d4b3fa815",
+      "name": "Carl Chesser",
+      "tagline": "Oracle, Software Architect",
+      "photo": "https://cdn.sessionize.com/image/a966-200o200o2-KGux3oFSc1cRuSzfbMGHhP.png",
+      "bio": [
+        "Carl is a software architect at Oracle. Most of his career has been focused on evolving and scaling the service infrastructure for their core electronic medical record platform called Millennium. He is now working with on their next-generation EHR within Oracle Health. He is passionate about growing a positive engineering culture, optimizing how software teams operate, and working on interesting problems in healthcare. In his spare time, he enjoys blogging about engineering related topics and sharing his poorly made illustrations at https://che55er.io."
+      ],
+      "links": []
+    },
+    {
+      "id": "354dc991-47f0-4073-b609-02c5e5c9e4a9",
+      "name": "Nathan Smith",
+      "tagline": "Senior Data Scientist, Neo4j",
+      "photo": "https://cdn.sessionize.com/image/b2f5-200o200o2-NmVtBNi4U559PHz8fTNkZ.png",
+      "bio": [
+        "Nathan Smith is a Senior Data Scientist in Neo4j Professional Services. He helps customers across a range of industries get more value from their data through graph-powered machine learning. He lives in Kansas City and is an organizer of the Kansas City Graph Databases Meetup."
+      ],
+      "links": []
+    },
+    {
+      "id": "e4ca7219-aa6b-4cb8-bd61-d8af33af278f",
+      "name": "Ted Kihm",
+      "tagline": "Euphemystic Ventures, Founder",
+      "photo": "https://cdn.sessionize.com/image/d8d9-200o200o2-48EiAiF1nQVoCkNsnjyoXE.jpg",
+      "bio": [
+        "Ted Kihm is the founder of Euphemystic Ventures, where he is building AI systems and infrastructure focused on real-world data problems. After 25 years working with large-scale search and data platforms at T-Mobile and other enterprise environments, he now focuses on applying semantic search and retrieval-augmented systems to messy, document-heavy workflows.",
+        "His recent work includes building a GPU-backed AI data center and developing citation-first AI systems that operate on unstructured inputs such as scanned documents, PDFs, and operational records. Ted is particularly interested in bridging the gap between theoretical AI capabilities and practical, trustworthy systems that can be used in production."
+      ],
+      "links": []
+    },
+    {
+      "id": "9e0cfc94-5b81-43cb-87bb-b8a110ea093f",
+      "name": "Mandi Walls",
+      "tagline": "DevOps Advocate",
+      "photo": "https://cdn.sessionize.com/image/88e1-200o200o2-7jPk6Wj9frK8N8MpdUFkBG.jpg",
+      "bio": [
+        "Mandi Walls is a DevOps Advocate on the Community and Advocacy Team at PagerDuty. Before joining PagerDuty, Mandi spent a number of years at Chef Software, working with customers and community members in the US and Europe. Originally a large-scale systems administrator, Mandi has focused on IT automation; organizational culture and change; and community."
+      ],
+      "links": []
+    },
+    {
+      "id": "c5524c72-a18f-49e5-9fa8-0c23a9a87ae4",
+      "name": "Jenny Tarwater",
+      "tagline": "Agile Enthusiast",
+      "photo": "https://cdn.sessionize.com/image/053e-200o200o2-4BnqET5ozcYxXjKrA58vsH.jpg",
+      "bio": [
+        "Jenny Tarwater is founder of Blueshift Innovation. She is a Project Management and Agile enthusiast who specializes in coaching and training agile teams in Scrum, Kanban and SAFe.",
+        "Her background of working with diverse groups has allowed her to hone her training for students of all levels and teams. From coding HTML and Java at a .com startup in the mid-90s, to Enterprise Project Management with Sprint and Chrysler, Jenny has firsthand experience with not only leading Agile teams, but also what it takes to transition companies of all sizes to an Agile culture. Jenny is able to go above and beyond in the training and coaching she provides thanks to her dedication and enthusiasm. Her enriched communication skills allow her to transfer her deep knowledge of project management and Agile methodologies to attendees."
+      ],
+      "links": []
+    },
+    {
+      "id": "90c74ce2-3381-4226-9c41-1770f75d9d47",
+      "name": "Brent Stewart",
+      "tagline": "Co-Founder of Alien Arc Technologies",
+      "photo": "https://cdn.sessionize.com/image/7b5d-200o200o2-pnkokN1LcvoKE8AErfTJBt.jpg",
+      "bio": [
+        "As a professional software developer with over two decades of experience, I have seen many development trends come and go and learned that there is not a shortcut to being a great developer. I enjoy teaching others what I have learned and try to mentor others whenever I can. I am a co-organizer of the Kansas City .NET User Group and love speaking at conferences.",
+        "I am a creator at heart and have started multiple businesses over the years in a variety of industries. My latest venture is Alien Arc Technologies which allows me to take my ideas and give them form. I love quality in all things and I always try to provide the best quality in everything I do. If it is worth doing, then it is worth doing right."
+      ],
+      "links": []
+    },
+    {
+      "id": "530b689c-93d5-46a3-b70e-d5bebf9a7f5c",
+      "name": "Jay Whitsitt",
+      "tagline": "Mobile developer, community organizer",
+      "photo": "https://cdn.sessionize.com/image/61e3-200o200o2-NTGcGg6soxyVWAJFLrZnV7.jpg",
+      "bio": [
+        "Jay Whitsitt is an experienced mobile app developer with a passion for crafting user-centric experiences across platforms for users wherever they are. Since starting a career as a native iOS developer, he has released both personal and professional apps for iOS, Android, Wear OS, Google Assistant, and the web, leveraging both native and multiplatform tools like Flutter.",
+        "Jay is also a community leader, co-organizing GDG Kansas City and DevFest KC, connecting developers with the latest in and around Google technologies."
+      ],
+      "links": []
+    },
+    {
+      "id": "34a3eb26-af37-44ba-be41-ad525d8b310f",
+      "name": "Roger O'Dell",
+      "tagline": "Your never to old to learn",
+      "photo": "https://cdn.sessionize.com/image/8e32-200o200o2-N6Gx9V5agob7NeEgvtLhvB.jpg",
+      "bio": [
+        "Army Veteran, Software Engineer, Speaker & Trainer, I have had the opportunity to work with, help and mentor for the last 16 years."
+      ],
+      "links": []
+    },
+    {
+      "id": "135d90c8-09b4-43f0-b9a8-2dd0d0569f84",
+      "name": "Rob Kraft",
+      "tagline": "Software Consultant at Kraft Software",
+      "photo": "https://cdn.sessionize.com/image/3552-200o200o2-YGv7akL2cMzRqfqKfArKix.png",
+      "bio": [
+        "I have been developing software for almost four decades. Although I have a Master's Degree in Project Management I earned it prior to the primacy of Agile practices, and I felt many of the principles I learned couldn't be applied to software development. My focus is always on the aspect of software development process that needs to most attention, which could be writing code, project prioritization, quality assurance, or building culture. I'm passionate about sharing good development practices, especially security in software development. I've taught classes on SQL Server and programming languages, co-authored books on SQL Server, spent many years developing large applications with C# .Net, and dabble in everything I can."
+      ],
+      "links": []
+    },
+    {
+      "id": "85316d15-17e0-437d-8a0a-ab44deb388f0",
+      "name": "Richard Boyd",
+      "tagline": "Developer Advocate, HashiCorp",
+      "photo": "https://cdn.sessionize.com/image/55d5-200o200o2-GL8TZHDPECdyuXYjuCdMvT.jpg",
+      "bio": [
+        "Richard is a Developer Advocate at HashiCorp/IBM. He previously worked in industries from consumer robotics to B2B SaaS to the US Defense industry and across roles from Statistician to Developer to SRE to Product Management. Richard’s focus is on Infrastructure-as-code and Serverless system design."
+      ],
+      "links": []
+    },
+    {
+      "id": "fe6661a0-fbd2-4139-8ad4-429275250306",
+      "name": "Dylan Evans",
+      "tagline": "Speaker, writer, and CEO of Simple Salt",
+      "photo": "https://cdn.sessionize.com/image/b0cf-200o200o2-N4z1kJ3DkYRDZMy5kAZqUF.jpg",
+      "bio": [
+        "Dylan is a recovering cyber enthusiast.",
+        "He has held positions building, managing, teaching, and advising on cybersecurity of all flavors.",
+        "He now demystifies security for those worried about it.",
+        "He is the founder and CEO of Simple Salt, which provides focused threat advisory to professional services firms such as law, accounting, and engineering.",
+        "He enjoys reducing waste, aligning teams, and well-chosen metrics.",
+        "He has a soft spot for long walks on the beach, NIST 800-63B rev 5, and asking people about their Whys."
+      ],
+      "links": []
+    },
+    {
+      "id": "87c2b40e-43c9-4aef-b053-14369976ea1b",
+      "name": "Lindsay Shelton",
+      "tagline": "Digital Workplace Advisor | MVP, MCT | she, her",
+      "photo": "https://cdn.sessionize.com/image/3bea-200o200o2-QTCipfEiGraABPzLNi5kCi.jpg",
+      "bio": [
+        "Lindsay is an MVP (Business Applications, M365), MCT alumni, Digital Workplace Advisor, international speaker, and user group organizer who is committed to keeping business productive by embracing technology as a tool to problem-solve. Having worked in education for over half of her career, she understands that technology can be a challenge for many users, and she knows how to be a change agent, encouraging the reluctant to give it a try and the inexperienced to dive on in. Her roles as a Digital Workplace Advisor, Application Programmer, and technology consultant showcase her ability to excel in complex projects, while her active participation in the tech community highlights her commitment to knowledge sharing in formats such as speaking at events and blogging. Her aim is to empower makers to create and thrive while doing so in a secure, governed way.",
+        "Lindsay spent the last decade teaching English Language Arts and was selected to receive training to become a technology and pre-engineering teacher based on her aptitude for learning and adapting new technologies with her own students and colleagues.",
+        "She holds a BS in Secondary English Education from the University of Kansas and an MS in Curriculum and Instruction from Emporia State University.",
+        "In her spare time, Lindsay enjoys spending time with her two cats Charlie and Trixie, and marathoning a wide variety of television shows."
+      ],
+      "links": []
+    },
+    {
+      "id": "c215589a-869a-499d-86da-6d94bd7ada47",
+      "name": "David Traynham",
+      "tagline": "Building Trust and Vaue by Treating Data as a Product",
+      "photo": "https://cdn.sessionize.com/image/9025-200o200o2-X3NrNnUSNWB8eX7Rthrtfn.jpg",
+      "bio": [
+        "David Traynham is a data engineering and analytics leader based in Kansas City and one of the organizers leading the relaunch of the Kansas City Data Professionals community. He currently leads a data engineering organization at Shamrock Trading Corp., where his team is responsible for building scalable, reliable data platforms that support analytics, reporting, and operational decision-making across the business.",
+        "David approaches data with a product mindset, believing data should be intentionally designed, owned, and evolved rather than treated as a byproduct of applications. His career spans data engineering, analytics, information security, and IT delivery, shaping a systems-level perspective on how data, technology, and organizations intersect. Earlier in his career, he served as a Military Intelligence Officer in the U.S. Army, where his passion for data began and where he developed a deep appreciation for the role high-quality, trustworthy data plays in effective decision-making. That experience continues to influence his leadership approach and emphasis on risk-aware, outcome-driven decisions.",
+        "Through KCDP, David is helping rebuild a practitioner-led community centered on practical experience and peer learning. The group exists to create space for candid conversations, strengthen connections across disciplines and organizations, and raise the bar for how data work is practiced across the Kansas City region."
+      ],
+      "links": []
+    },
+    {
+      "id": "b4100c50-f917-4891-ac5d-1b06d1865ae6",
+      "name": "Zackery Griesinger",
+      "tagline": "Senior Software Engineering Building Developer Tooling at C2FO",
+      "photo": "https://cdn.sessionize.com/image/6ab9-200o200o2-VBx6vthYDvdvNS1v4LTD8Z.jpg",
+      "bio": [
+        "Zackery is a Senior DevOps Engineer working on Developer Tooling at Trumid. A Kansas City native, Zack has over five years of experience building software. After graduating from the University of Missouri-Kansas City in 2018 he began his career building frontends as Cerner. Soon after, Zack moved a local startup, C2FO, where he began learning DevOps and focusing his career on Developer Experience. Now he works on the DevOps team at Trumid. When not writing code or working you can find him reading, running or playing fighting games."
+      ],
+      "links": []
+    },
+    {
+      "id": "ec77568b-a7a8-4243-8419-92414a9268df",
+      "name": "AM Grobelny",
+      "tagline": "Developer Advocate, AWS",
+      "photo": "https://cdn.sessionize.com/image/65db-200o200o2-Nwwr324w72P5BqfpddMiJw.jpg",
+      "bio": [
+        "I've spent the past 10+ years working on or helping people work on software. I was also a professional educator previously in my career, so I have a particular passion for helping people more easily understand difficult concepts. I currently work at AWS, and I'm focused on helping people learn through experience by using AWS GameDay."
+      ],
+      "links": []
+    },
+    {
+      "id": "583e8f08-8316-4ed2-afdf-4cd091e44564",
+      "name": "Spencer Schneidenbach",
+      "tagline": "AI Architect, Microsoft MVP, President/CTO Aviron Labs",
+      "photo": "https://cdn.sessionize.com/image/8f7a-200o200o2-08-8316-4ed2-afdf-4cd091e44564.86ef5656-100b-426d-8634-f4d4305b6c67.jpg",
+      "bio": [
+        "Spencer Schneidenbach is an AI Architect, President, and CTO of Aviron Labs, an AI and software development firm based in the United States. He has been recognized as a Microsoft MVP for his AI expertise and contributions to the community. Visit our website at https://avironlabs.com for more information."
+      ],
+      "links": []
+    },
+    {
+      "id": "d81d82c8-b647-465c-a2df-3e8a4e170f54",
+      "name": "CJ Obermaier",
+      "tagline": "Education Engineer",
+      "photo": "https://cdn.sessionize.com/image/7a5f-200o200o2-HgSQzUQzzwB5Lqq8K3R4cS.jpg",
+      "bio": [
+        "I write tutorials for HashiCorp and IBM Bob."
+      ],
+      "links": []
+    },
+    {
+      "id": "3a96be54-c75e-486d-8cd3-cd3a73862667",
+      "name": "Vicki Landers",
+      "tagline": "Speaker | CEO | Coach",
+      "photo": "https://cdn.sessionize.com/image/e738-200o200o2-PykZUsBUTx9zppz2EUY7pL.jpg",
+      "bio": [
+        "Vicki Landers, PT, MHA, ACC is a physical therapist, certified professional coach, and former healthcare software analyst and strategist who has spent her career at the intersection of people, systems, and technology. Her work spans roles as a clinician, supervisor, director, and Senior Systems Analyst/Strategist at North Kansas City Hospital, where she led software strategy, implementations, and workflow analysis for home health.",
+        "Working inside complex healthcare systems taught Vicki something that applies far beyond healthcare or technology: the biggest problems aren’t always technical—they’re often rooted in the perspective people bring to the problem.",
+        "Today, Vicki speaks to leaders, innovators, and teams about a simple but powerful idea: the lens you wear matters. Through her coaching and speaking, she helps people recognize how their perspective shapes decisions, communication, and collaboration—and how a brief pause can shift a reaction into a more intentional response. Her work gives audiences practical ways to notice their lens, rethink assumptions, and show up differently in the moments that matter most."
+      ],
+      "links": []
+    },
+    {
+      "id": "3a72bcea-7907-4e24-9de7-885b91e581ad",
+      "name": "Elizabeth Garrett Christensen",
+      "tagline": "Postgres @ Snowflake",
+      "photo": "https://cdn.sessionize.com/image/27c9-200o200o2-HoUhNUU6gwjdirjjbLCktV.png",
+      "bio": [
+        "Elizabeth is on the Open Source advocacy team at Snowflake focusing on Postgres. She organizes the Kansas City Postgres User Group, Postgres Meetup for All, co-hosts PostGIS Day, and is on the board of the the US PostgreSQL Association. Elizabeth enjoys writing about Postgres for Newbies and teaching people about databases whenever she gets the chance. She has a background in open source project management and enjoys working with development teams to build products and applications using all the fun things in the open source toy box. Elizabeth is from Lawrence, Kansas and spends her free time in her backyard tiki hut."
+      ],
+      "links": []
+    },
+    {
+      "id": "a9979a02-fb57-4e05-915f-2e5768a71e18",
+      "name": "Justin Rosenberg",
+      "tagline": "#MentalHealth #Bipolar #Stroke",
+      "photo": "https://cdn.sessionize.com/image/187e-200o200o2-7DE4AeSmGtW4QMfz6yN2C1.png",
+      "bio": [
+        "~25 years experience including a 3 year stint at IBM. Since then he got diagnosed with Bipolar and had a Ischemic Stroke. Luckily he has been Clinical Reference Laboratory for 16 years,"
+      ],
+      "links": []
+    },
+    {
+      "id": "e43782ee-9fd2-4007-8599-4541c7398a58",
+      "name": "Mark Williams",
+      "tagline": "Technologist Fluent in Engineer, Executive, and Coach",
+      "photo": "https://cdn.sessionize.com/image/e355-200o200o2-DTnP1VwoA8hPYBQkw2fX5R.jpg",
+      "bio": [
+        "Mark Williams is a technology executive with 25+ years of experience bridging two worlds that rarely overlap: deep software development expertise and enterprise platform strategy. Currently Director of Solutions Delivery for the Kansas City Chiefs, he has led digital transformation across HRIS, CRM, ERP, and venue operations — implementing and optimizing platforms such as Dynamics 365, Dayforce, and Power Automate to drive measurable business outcomes. His career spans hands-on engineering (including development of Menutronics, the world's first electronic grocery shopping service) through executive leadership of cloud migrations, AI adoption, and organization-wide change management. Mark is equally at home in a architecture whiteboard session and a steering committee boardroom — making him a rare voice who can connect technical reality to strategic vision."
+      ],
+      "links": []
+    },
+    {
+      "id": "be37f63c-e09b-4e43-8c0b-37e9df97dc17",
+      "name": "Tracey Hawkins",
+      "tagline": "Gen AI Cybersecurity Expert for End Users, Safety and Security Source",
+      "photo": "https://cdn.sessionize.com/image/55a8-200o200o2-n5odqRj47hQDpDHiGfeAwm.png",
+      "bio": [],
+      "links": []
+    },
+    {
+      "id": "01c5e7cd-9468-4084-8f0e-0eefb71d4c62",
+      "name": "Rahul Tanniru",
+      "tagline": "Senior Vice President Of Software Engineering, Jp Morgan Chase",
+      "photo": "https://cdn.sessionize.com/image/8fe9-200o200o2-N2c9DpJiGpHQZ2tkyWRwBj.jpg",
+      "bio": [
+        "I am a Senior Vice President of Software Engineering at JPMorgan Chase, specializing in enterprise-scale cloud platforms, distributed systems, and AI-enabled infrastructure. I lead and contribute to the design of secure, scalable, and highly resilient cloud-native architectures supporting mission-critical financial systems.",
+        "My expertise spans AWS, Kubernetes, platform engineering, DevOps, and Site Reliability Engineering, with a strong focus on building self-service infrastructure platforms and enabling large engineering organizations to operate at scale. I work extensively on multi-account cloud architectures, infrastructure automation, reliability engineering, and integrating AI and machine learning workloads into modern cloud environments.",
+        "Over the past decade, I have focused on designing high-performance systems that improve scalability, operational efficiency, and platform reliability in complex enterprise environments. I am passionate about advancing cloud architecture standards, mentoring engineers, evaluating innovative technology solutions, and contributing to the broader technology community through speaking, technical publications, and industry judging initiatives."
+      ],
+      "links": []
+    },
+    {
+      "id": "846a2657-6c55-48fb-a04e-6bfe727da6d6",
+      "name": "Kalee Wood",
+      "tagline": "Solopreneur | The Body Knows",
+      "photo": "https://cdn.sessionize.com/image/ff5b-200o200o2-TJTrbCP4yZKbhX8fvaAAtq.png",
+      "bio": [
+        "https://www.the-body-knows.com/"
+      ],
+      "links": []
+    },
+    {
+      "id": "7104995a-e90d-4d4c-abe3-193156bc9e79",
+      "name": "Chris Perrin",
+      "tagline": "Director of Product Development + Wrangler of Chaos",
+      "photo": "https://cdn.sessionize.com/image/85b3-200o200o2-Rgv58t5jUHBkChqaALj2va.jpg",
+      "bio": [
+        "Chris Perrin is a tech geek, chaos wrangler, and all-around software leader with a knack for building high-performance teams and systems. With over 20 years of experience in software engineering, he’s helped teams—from the noblest of startups to giantest of enterprises—navigate the wild world of software development, Agile lifecycles, and getting more done.",
+        "Chris loves demystifying complex tech, creating buzzwords and then turning buzzwords into real-world solutions. Whether he's talking about microservices, team performance, or trying to get AI to do his job, he brings energy, humor, and plenty of practical takeaways to every talk.",
+        "When he’s not writing code or breaking things in the name of innovation, you’ll find him mentoring up-and-coming devs, writing decent-to-okay fiction, and geeking out over the latest in geek. Catch him at the conference, on LinkedIn, or wherever there’s strong coffee and great conversations!"
+      ],
+      "links": []
+    },
+    {
+      "id": "66c1e054-83a5-487a-aef3-0d8499f07c6f",
+      "name": "Avindra Fernando",
+      "tagline": "Principal Architect | Fractional CTO | AI-Driven Development & Modernization | Conference Speaker",
+      "photo": "https://cdn.sessionize.com/image/ae57-200o200o2-LVHWMzkxC1JsTPjNuaDWti.jpg",
+      "bio": [
+        "Avindra Fernando is a software consultant with over 13 years of experience helping teams build scalable, modern web applications. In 2021, he founded Taprobane Consulting to guide clients through architectural decisions, migrations to newer tech stacks, and the implementation of robust AI-powered development and testing strategies that ensure quality and performance.",
+        "He actively mentors engineering teams, leads workshops, and delivers hands-on training. As a regular speaker at tech conferences, Avindra shares practical lessons on concepts and technologies such as Software Architecture, AI-driven development, React, Next.js, E2E Testing, and TypeScript. He leverages his experience to shape future technology direction and accelerate the growth of companies across industries."
+      ],
+      "links": []
+    },
+    {
+      "id": "9c44a519-28ee-402f-97ed-0607d43747ab",
+      "name": "Melanie Howitt",
+      "tagline": "Director of Revenue Cycle Data & Technology Solutions | Architecting AI-ready healthcare operations",
+      "photo": "https://cdn.sessionize.com/image/5758-200o200o2-hAZfPZPP8YXNbwPXacnV4E.jpg",
+      "bio": [
+        "Melanie Howitt is the Director of Revenue Cycle Data and Technology Solutions at In2itive Business Solutions with more than 25 years of experience in analytics and business intelligence and 16 years in healthcare revenue cycle operations.",
+        "Her career began in the early days of enterprise analytics, building reporting and operational insights from flat systems, exported data, and spreadsheets long before modern cloud data platforms existed. Over the years she has helped organizations evolve from manual reporting environments into modern data architectures that support real-time operational decision making.",
+        "Today Melanie focuses on designing AI-ready operational systems using technologies such as Microsoft Fabric, Dataverse, and Power Platform. Her work centers on translating complex healthcare workflows, particularly in ambulatory surgery centers, into structured operational data models that enable automation, analytics, and AI copilots.",
+        "She specializes in bridging the gap between healthcare operations and modern data architecture, helping organizations move from fragmented data environments to systems that support practical AI applications in production."
+      ],
+      "links": []
+    },
+    {
+      "id": "995a76ba-6e94-461b-a823-e0267b77c1c6",
+      "name": "Mandi Walls",
+      "tagline": "Mandi Walls, Developer Advocate, PagerDuty",
+      "photo": "https://cdn.sessionize.com/image/eee4-200o200o2-ac65625c-f3a1-4ff7-b401-85527d80147d.jpg",
+      "bio": [
+        "Mandi Walls is a Developer Advocate at PagerDuty. For PagerDuty, she helps organizations along their IT Modernization journey. Prior to PagerDuty, she worked at Chef Software and AOL. She is an international speaker on DevOps topics and the author of the whitepaper “Building A DevOps Culture”, published by O’Reilly."
+      ],
+      "links": []
+    },
+    {
+      "id": "fa56eb09-7b0b-46f6-8ee5-49edece9b3af",
+      "name": "Nathan Hayden",
+      "tagline": "Founder, August Professional Solutions",
+      "photo": "https://cdn.sessionize.com/image/5deb-200o200o2-LLVKBpRequrnRNKT3aJ8au.jpg",
+      "bio": [
+        "Nathan Hayden is a Kansas City-based independent consultant and builder working at the intersection of ERP, data engineering, and AI. He runs August Professional Solutions and the DataMadeRight brand, focused on helping organizations trust the data their decisions depend on.",
+        "With 20+ years in the Microsoft Dynamics and SQL Server ecosystem, he's spent the last few years using AI to build integrations, automations, and data pipelines that simply weren't practical before, closing the gap between what mid-sized organizations need and what they can actually afford to execute.",
+        "When he's not solving data problems for clients, he's building things for the fun of it."
+      ],
+      "links": []
+    },
+    {
+      "id": "3a40aa86-bfd3-4a9a-ac85-64042ee1eeac",
+      "name": "Lyndsay Noble",
+      "tagline": "Director of Analytics and Technology Programs, Rockhurst University",
+      "photo": "https://cdn.sessionize.com/image/7faf-200o200o2-BtZm5UWCqj8JoP2Q6RaYQk.jpg",
+      "bio": [
+        "Lyndsay serves as the Academic Program Director for all analytics and technology programs at Rockhurst University. Beyond guiding the next generation of technologists, she partners with organizations to navigate evolving technology landscapes by aligning strategy, people, and processes"
+      ],
+      "links": []
+    },
+    {
+      "id": "424f7166-a882-473f-b05e-15aed7f9ff86",
+      "name": "Cory House",
+      "tagline": "Author / Consultant",
+      "photo": "https://cdn.sessionize.com/image/0729-200o200o2-hX7JViSy9XGF5ys31ag2tt.jpg",
+      "bio": [
+        "Cory is an author, a 12 time Microsoft MVP, and international speaker. He is founder of reactjsconsulting, where he helps companies transition to React. He has trained over 10,000 software developers at conferences and businesses worldwide. Cory has authored over a dozen courses on JavaScript, React, C#, testing, and web development on Pluralsight and Dometrain. He shares software development tips daily on X as @housecor."
+      ],
+      "links": []
+    }
+  ],
+  "sessions": [
+    {
+      "id": "7865c18c-5413-41cc-bc48-b1ead63e22b0",
+      "title": "Opening",
+      "description": [],
+      "speakers": [],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T13:45:00Z",
+      "endsAt": "2026-05-28T14:00:00Z",
+      "tags": [],
+      "service": true,
+      "plenum": true
+    },
+    {
+      "id": "1174174",
+      "title": "Culture is still a challenge",
+      "description": [
+        "When the only tool you have is a hammer, every problem looks like a nail. For technical teams, their control over their environment is often limited to the technical tools they choose to use to implement their projects. Unfortunately, tooling alone doesn’t create better customer experiences, better end products, and happier employees; culture plays a major role.",
+        "Organizational culture is set from the top. The attitudes, values, and behaviors of an organization’s leadership forms the core of the organization’s culture. While some folks may feel disenchanted with the commodification of ideas like DevOps, there is still work to be done, helping organizations with their cultural challenges.",
+        "How can tech teams influence culture? How can individuals support and grow a more positive culture? Technology is not alone in the struggle for better organizational structures and relationships, and we’ll talk about some of the methods and research."
+      ],
+      "speakers": [
+        "9e0cfc94-5b81-43cb-87bb-b8a110ea093f"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T14:00:00Z",
+      "endsAt": "2026-05-28T14:30:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1188926",
+      "title": "Governance Done Right: Cost-Effective Implementation",
+      "description": [
+        "Organizations can’t afford governance programs that are heavy, theoretical, or disconnected from business priorities. Doing governance right means designing a right-sized model that aligns with organizational maturity, integrates into existing workflows, and delivers measurable value without unnecessary overhead.",
+        "This session explores practical strategies for implementing governance in a financially responsible way—prioritizing high-impact use cases, reducing operational waste, strengthening compliance, and improving data reliability. Beyond implementation, we’ll focus on how to clearly articulate ROI to CXOs by translating governance outcomes into metrics that matter: cost avoidance, risk reduction, efficiency gains, and performance improvement. Attendees will leave with a framework for both building governance sustainably and telling a compelling value story that secures executive support."
+      ],
+      "speakers": [
+        "d6ad140e-cc7f-40d7-8fdf-ff541f171fc3",
+        "a5a7faa9-6651-4b15-b842-25c24ee21787"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-28T14:00:00Z",
+      "endsAt": "2026-05-28T14:30:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1190077",
+      "title": "AI Without the Hype: What Business Leaders Actually Need to Know in 2026",
+      "description": [
+        "AI tools are everywhere. AI strategies are not. While organizations rush to adopt the latest models and platforms, most business leaders are stuck in the same place they were two years ago - overwhelmed by options, unsure where to start, and quietly worried they're falling behind.",
+        "This session cuts through the noise. Drawing on validated research from training 500+ professionals across education, finance, and business — including a longitudinal study that produced a 93% increase in regular AI use, a 200% improvement in training satisfaction, and a 52% reduction in AI-related anxiety. Rob Voss presents a practical, no-jargon framework for AI adoption that actually works.",
+        "You'll walk away understanding:",
+        "Why most AI adoption fails (and it's not a technology problem)",
+        "How to assess your organization's AI readiness in five minutes",
+        "The three decisions every leader needs to make before buying a single tool",
+        "What \"responsible AI use\" looks like when you're not a tech company",
+        "This talk is built for non-technical decision-makers - the people signing the checks, managing the teams, and fielding questions from boards and clients about \"what we're doing with AI.\" Whether you lead a five-person firm or a 500-person department, you'll leave with a clear, actionable next step and not another slide deck full of buzzwords."
+      ],
+      "speakers": [
+        "beeb0799-4d44-4f60-a23d-b3fb2596ebb7"
+      ],
+      "room": "Room 3",
+      "startsAt": "2026-05-28T14:00:00Z",
+      "endsAt": "2026-05-28T14:55:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "IIBA Kansas City"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1193948",
+      "title": "Choosing an AI Coding Workflow",
+      "description": [
+        "AI is here, but deciding what to use and how is difficult. In this fast-paced session, we'll explore 15 key decisions for coding effectively in AI including IDEs, models, harnesses, instructions, permissions, agents, and more. You'll leave this session with a variety of ideas for how to rethink your AI-related tooling, patterns, and workflows."
+      ],
+      "speakers": [
+        "424f7166-a882-473f-b05e-15aed7f9ff86"
+      ],
+      "room": "Room 5",
+      "startsAt": "2026-05-28T14:00:00Z",
+      "endsAt": "2026-05-28T14:30:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Global AI KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1233409",
+      "title": "\"FIFA, Festivals, and Fraud: The AI Scams All Businesses Can’t Afford to Ignore\"",
+      "description": [
+        "\"Tracey, the Safety Lady\" Hawkins, International Gen AI Cybersecurity Expert for End Users and Safe Work Practices",
+        "Kansas City businesses are preparing for the massive economic opportunity that FIFA and other major events will bring, but many are overlooking the growing cybersecurity and fraud risks that come with them.",
+        "AI is making scams faster, cheaper, and far more convincing, giving criminals the ability to create deepfake voice calls, realistic phishing emails, fake videos, and AI-powered social engineering attacks that target businesses and employees at scale.",
+        "In this practical, action-driven session, attendees will learn how to spot AI-generated red flags before clicking, sending, paying, or responding, apply simple verification strategies that reduce fraud risk immediately, and strengthen their human firewall to better protect company data, finances, operations, customers, and reputations.",
+        "After this session, attendees will be able to recognize how criminals are using AI-powered phishing, voice cloning, deepfakes, impersonation scams, and social engineering attacks to target businesses, employees, and consumers.",
+        "Attendees will leave with practical, real-world strategies they can use immediately to verify suspicious requests, reduce the risk of fraud and data loss, strengthen their human firewall, and better protect their organization’s finances, reputation, customer trust, and sensitive information from evolving AI-enabled threats."
+      ],
+      "speakers": [
+        "be37f63c-e09b-4e43-8c0b-37e9df97dc17"
+      ],
+      "room": "Room 6",
+      "startsAt": "2026-05-28T14:00:00Z",
+      "endsAt": "2026-05-28T14:55:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KC AI Club"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1180972",
+      "title": "Set Thrusters to Prompt Speed - DevOps Primitives for the Age of AI",
+      "description": [
+        "AI is accelerating software development to a pace many teams have never experienced before. Agentic systems can generate code, refactor architectures, and ship changes faster than traditional processes were designed to handle. But while the tools are new, the operational challenges are not.",
+        "In this talk, we’ll explore how classic DevOps primitives become even more critical when development moves at “prompt speed.” Practices like feature flags, decoupling deploy from release, zero-downtime deployments, and fast CI/CD pipelines allow teams to safely harness the velocity that AI enables.",
+        "We’ll also discuss the unique operational challenges of agentic AI systems: evaluating the usefulness of generated changes over time, detecting regressions in behavior rather than just correctness, and building testing strategies that can keep up with rapidly evolving code.",
+        "Rather than reinventing software delivery for the AI era, we’ll show how the fundamentals of DevOps provide the guardrails that let teams move faster than ever without sacrificing reliability.",
+        "Attendees will learn how to adapt proven DevOps practices to safely operate in a world where software can be generated, modified, and shipped at unprecedented speed."
+      ],
+      "speakers": [
+        "b4100c50-f917-4891-ac5d-1b06d1865ae6"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T14:30:00Z",
+      "endsAt": "2026-05-28T15:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1196017",
+      "title": "The Human Schema: Applying Structure to Stakeholder Conversations",
+      "description": [
+        "We have schemas for data and protocols for code, but not for how we collaborate. As our tools evolve, the real challenge — and opportunity — lies in how we connect. “The Human Schema” introduces a practical framework for structuring stakeholder conversations so teams can align on purpose, people, and process with less friction and more intention. You'll leave with tools you can immediately use in your next meeting."
+      ],
+      "speakers": [
+        "076712c7-eb21-4928-92c6-7121715ef01f"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-28T14:30:00Z",
+      "endsAt": "2026-05-28T15:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1194505",
+      "title": "The Most Valuable Thing I Do Isn’t Writing Code",
+      "description": [
+        "After years of building software, one realization stands out: the most valuable contributions rarely come from writing code.",
+        "This talk reflects on where real impact happens; defining the right problems, making decisions under uncertainty, and helping teams move in the same direction. As AI takes on more of the coding, these contributions become even more important.",
+        "This talk focuses on my personal look at how the role of an engineer evolves over time and why the work that matters most often isn’t the most visible."
+      ],
+      "speakers": [
+        "aa24b5ca-5b96-4657-909e-e5be82ebf891"
+      ],
+      "room": "Room 5",
+      "startsAt": "2026-05-28T14:30:00Z",
+      "endsAt": "2026-05-28T15:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Global AI KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Lightning Talk (5-15 minutes)"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1154862",
+      "title": "Steering the Ship: Production-Ready AI Workflows with Context, Rules, and Guardrails",
+      "description": [
+        "Your AI copilot is brilliant in the moment but has the memory of a goldfish. Ask it to \"add a new API endpoint\" and it might choose REST when you're building GraphQL, scaffold Entity Framework when you're using Dapper, or forget your team's naming conventions entirely. Every. Single. Time. The problem isn't the AI—it's that you're starting from scratch with every prompt.",
+        "This session reveals the architecture behind production-grade AI workflows that maintain consistency across your entire codebase. You'll learn how to build \"steering files\"—external context documents that shape AI behavior without touching source code—and discover practical patterns for Product_Overview.md files, behavioral rule sets, and context management strategies. We'll explore real examples from healthcare software development: Cursor rules that enforce EARS requirements syntax, behavioral files that generate C4 architecture diagrams on demand, and guardrails that prevent AI drift during complex refactoring. You'll see how to structure context hierarchies so your AI knows when to write BDD tests, when to follow your team's coding standards, and when to generate comprehensive technical documentation.",
+        "Walk away with ready-to-use templates for steering files, a decision framework for what belongs in context vs. prompts, and battle-tested patterns for maintaining AI consistency across sprints, developers, and codebases. Whether you're using Cursor, GitHub Copilot, or Claude Code, you'll learn how to transform unpredictable AI assistants into reliable team members who remember your team's standards, architectural decisions, and quality expectations."
+      ],
+      "speakers": [
+        "7af36cc1-3353-4476-9343-121e962f4bd5"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T15:25:00Z",
+      "endsAt": "2026-05-28T15:55:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1189382",
+      "title": "Modernize your Data Estate",
+      "description": [
+        "Generative AI is proving its value, delivering a massive 41% average ROI for early adopters. However, for many organizations, their legacy data estate remains a \"hidden tax\" that stifles innovation. Poor data quality costs organizations an average of $12.9 million annually, and by 2027, 60% of data and analytics leaders will face critical failures that risk AI governance, model accuracy, and compliance.",
+        "This session explores how to overcome siloed data, slow batch pipelines, and high operational burdens by transitioning to a unified, cloud-native data ecosystem with Snowflake. Whether your strategy is to connect to your data in-place using Lakehouse Analytics and Apache Iceberg, or to fully migrate your data warehouse, this session will provide a proven roadmap for your data modernization journey"
+      ],
+      "speakers": [
+        "19c505cb-ff20-4321-ae86-8f28f4e1f7f1"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-28T15:25:00Z",
+      "endsAt": "2026-05-28T15:55:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1167103",
+      "title": "Allies in Change: How PMs, BA's and Change Managers Collaborate to Enable Transformation",
+      "description": [
+        "The project manager, business analysis professional, and change manager all have important but distinctly different roles to play as change agents. In this session, we explore where these roles intersect, how they reinforce one another, and where misunderstandings can create friction. Participants will gain practical tools to navigate role ambiguity, collaborate more intentionally, and strengthen their influence on change outcomes."
+      ],
+      "speakers": [
+        "714a1231-ea11-41da-81ed-00880a9ec506"
+      ],
+      "room": "Room 3",
+      "startsAt": "2026-05-28T15:25:00Z",
+      "endsAt": "2026-05-28T16:20:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "IIBA Kansas City"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1201903",
+      "title": "How To Upskill Within Your Skillset",
+      "description": [
+        "The days of mastering a single technology and coasting for years are long gone. As platforms evolve and new tools emerge, technology professionals are constantly faced with the question of how to stay relevant without completely reinventing themselves. The answer often lies in learning how to upskill within existing strengths and experience.",
+        "In this panel discussion, Angela, Lindsay, and Mark share how they have adapted their careers amid shifting technology trends, sometimes through major pivots and other times by expanding into adjacent skillsets. With backgrounds spanning multiple roles across the Microsoft ecosystem and other technologies, they will share what it really takes to grow with the technology without feeling pressured to chase every trend.",
+        "This session offers honest lessons learned, practical approaches to continuous growth, and reassurance that career progression does not always mean starting over. Attendees will walk away with insights they can apply immediately to remain agile, confident, and relevant in an ever-changing tech landscape."
+      ],
+      "speakers": [
+        "87c2b40e-43c9-4aef-b053-14369976ea1b",
+        "09f1db8d-dbc1-4ac0-a51d-db5b4640dccb",
+        "e43782ee-9fd2-4007-8599-4541c7398a58"
+      ],
+      "room": "Room 4",
+      "startsAt": "2026-05-28T15:25:00Z",
+      "endsAt": "2026-05-28T16:25:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCDNUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1189984",
+      "title": "Introducing N#: What I Learned Building a .NET Language Entirely with AI",
+      "description": [
+        "What's the most ambitious thing you can vibe-code? Spencer decided to find out by building N# - a working .NET programming language, complete with compiler, tooling, and language server support - entirely with AI coding agents.",
+        "In this session, Spencer will take you through the full journey: from initial language design prompts to a functioning compiler that targets .NET. We'll go over how to structure truly ambitious AI-assisted projects, when to let the AI run vs. when to take the wheel, and what breaks when you push these tools to their absolute limits.",
+        "This isn't just a flex - it's the most extreme stress-test of AI coding tools you'll ever see, and every lesson transfers to your own projects."
+      ],
+      "speakers": [
+        "583e8f08-8316-4ed2-afdf-4cd091e44564"
+      ],
+      "room": "Room 5",
+      "startsAt": "2026-05-28T15:25:00Z",
+      "endsAt": "2026-05-28T15:55:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCDNUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1233404",
+      "title": "Patients Are Bringing AI Into the Exam Room. The Importance of AI Education and Health Lite",
+      "description": [
+        "#2 Doug Hohulin, Kansas City AI Club Board Member - Humanities Chair",
+        "Discover how to effectively guide the growing trend of patients bringing AI-generated medical advice into the exam room, transforming potential misinformation into collaborative, safer care. Learn actionable strategies to harness AI as a relationship amplifier that boosts health literacy, improves treatment adherence, and unlocks a \"Longevity Dividend\" of up to nine additional healthy years.",
+        "Develop Collaborative Frameworks: Equip attendees with practical strategies to guide patients who use AI health tools, transitioning from confronting potential misinformation to collaboratively optimizing individual treatment plans. Amplify the Clinical Relationship: Learn how to implement AI as a \"relationship amplifier\" during patient consultations to build critical health literacy, improve adherence, and directly address modifiable risk factors. Capture the Longevity Dividend: Identify actionable ways to translate AI-informed conversations into safer, tech-powered healing that can potentially yield up to nine additional healthy, disability-free years for patients.",
+        "Attendees—whether patients, doctors, or nurses—will know how to collaboratively translate AI-generated health data into safe, actionable medical decisions. They will be able to utilize AI as a shared relationship amplifier that builds mutual trust, boosts vital health literacy, and drives a measurable longevity dividend."
+      ],
+      "speakers": [
+        "b44daeb6-3421-4180-808b-c9451776f8f1"
+      ],
+      "room": "Room 6",
+      "startsAt": "2026-05-28T15:25:00Z",
+      "endsAt": "2026-05-28T16:25:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KC AI Club"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1197195",
+      "title": "Get Out of Your Own Way: Building Agents That Own the Work",
+      "description": [
+        "Nobody warns you that agentic AI doesn't reduce cognitive load. Nor do they tell you how much it expands your ambition. Which I realized during a panic attack at Summer Moon coffee shop.",
+        "It was then I realized that agentic tools weren't going to take me out of the creative loop. They slammed right into it and would sweep me away if I let them.",
+        "It was then and there I decided the only way I could be successful was get out of my own way and ask my agents for assistance. So I learned:",
+        "1. How to decompose work so that smaller agents could perform master specific work",
+        "2. Tools, pipelines and orchestration tools to make my agents work better",
+        "3. Which tasks I could automate to free up more time to do interesting work.",
+        "Attendees will learn how to build agents, design oversight points to stay in control and which parts of the process they should never automate."
+      ],
+      "speakers": [
+        "7104995a-e90d-4d4c-abe3-193156bc9e79"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T15:55:00Z",
+      "endsAt": "2026-05-28T16:25:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1189771",
+      "title": "The Magic Tools",
+      "description": [
+        "Tokenization and format preserving encryption (FPE) are magic tools that make security and compliance scrutiny go away. We will talk through about the strategy of each, how to implement them correctly, and how to address likely objections."
+      ],
+      "speakers": [
+        "fe6661a0-fbd2-4139-8ad4-429275250306"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-28T15:55:00Z",
+      "endsAt": "2026-05-28T16:25:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1233312",
+      "title": "Blueprint to Impact: Aligning AI to Corporate Goals and Proving Real Results",
+      "description": [
+        "AI succeeds when it’s directly tied to clear business priorities—not just technology curiosity. In this session, attendees will learn how to strategically align AI initiatives with corporate goals, secure stakeholder buy‑in, and deliver measurable, credible results that move the organization forward.",
+        "Participants will be able to map AI opportunities to corporate strategic goals using a simple, repeatable alignment framework. Participants will be able to build a compelling business case that gains stakeholder support and sets up AI initiatives for measurable success.",
+        "They will be able to evaluate AI ideas through the lens of organizational goals and select initiatives that directly support strategic priorities. They will be able to build and communicate a clear business case that secures buy‑in and sets AI projects up to deliver measurable, credible results."
+      ],
+      "speakers": [
+        "3a40aa86-bfd3-4a9a-ac85-64042ee1eeac"
+      ],
+      "room": "Room 5",
+      "startsAt": "2026-05-28T15:55:00Z",
+      "endsAt": "2026-05-28T16:25:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KC AI Club"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1184961",
+      "title": "DevOps Strategies to Rebuild and Recover Your Cloud Workload After a Disaster",
+      "description": [
+        "You've backed up your data. You've secured your application code and infrastructure as code. You've documented runbooks. But when Google accidentally deleted a customer's entire cloud environment for a week, or when Change Healthcare's partners refused connectivity for 90 days after a breach, backups alone weren't enough. The real objective is recovering quickly and completely—data, infrastructure, networking, configuration, and security principals—all together. In this talk, you'll learn the requirements for fast, reliable recovery including cross-region and cross-account isolation, complete workload recovery, and testability. Seth will walk through the design decisions you need to make and how can implement them using cloud native tools. All while applying DevOps principles—automation, culture, lean practices, measurement, and sharing—to reduce toil, and test your DR strategy safely and frequently."
+      ],
+      "speakers": [
+        "6d5add80-9200-4afc-9f33-3cd18e26d723"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T16:35:00Z",
+      "endsAt": "2026-05-28T17:05:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1193968",
+      "title": "Coding Isn’t the Bottleneck. Validation Is.",
+      "description": [
+        "AI can generate code in seconds. We can create features, tests, and pull requests faster than ever. But if code is now easy to produce, what is the real bottleneck?",
+        "Many teams are generating more code than ever with tools like Copilot, Claude Code, Cursor, and other AI agents. The hard part is no longer writing the code. The hard part is knowing if the code is actually good. Is it secure, performant, and maintainable? Does it fit the architecture of the system? AI can generate a lot of output, but without the right context and validation it can also introduce risk.",
+        "In this session we’ll look at how teams can shift their focus from generation to validation. We’ll talk about testing, good architecture, and simple validation patterns teams can use today. You’ll leave with practical ideas for making sure the code we generate is actually ready for production."
+      ],
+      "speakers": [
+        "66c1e054-83a5-487a-aef3-0d8499f07c6f"
+      ],
+      "room": "Room 3",
+      "startsAt": "2026-05-28T16:35:00Z",
+      "endsAt": "2026-05-28T17:05:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Global AI KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1154861",
+      "title": "Stop VIBE Coding: Engineering Discipline for the AI Generation",
+      "description": [
+        "You've seen it happen. A developer asks Claude to \"create a screen for managing Question Types—make it look nice and work fast.\" Twenty iterations later, they've got 6,379 lines of unnecessary code, and nobody remembers why the original requirements were. Welcome to VIBE coding—where every prompt is like hitting \"I'm Feeling Lucky\" on Google. It works... until it doesn't.",
+        "This session reveals how spec-driven development transforms AI from an unpredictable code generator into a precision engineering tool. You'll learn the EARS (Easy Approach to Requirements Syntax) method for writing unambiguous requirements, discover how \"steering files\" give your AI agents consistent context and behavioral guardrails, and see real examples of BDD test generation and C4 architecture diagrams created from well-structured specifications. We'll explore the complete workflow from ambiguous user story to production-ready code, including practical patterns for Cursor rules, context management, and maintaining the \"Agile AI Manifesto\"—individuals and interactions with strong processes and tools.",
+        "Walk away with immediately actionable templates, steering file patterns, and a proven methodology that helps your team maintain engineering discipline while leveraging AI's speed. Whether you're using Cursor, GitHub Copilot, or Claude Code, these principles will help you avoid the \"I can't do anything without AI's help\" trap while dramatically improving code quality and delivery speed."
+      ],
+      "speakers": [
+        "7af36cc1-3353-4476-9343-121e962f4bd5"
+      ],
+      "room": "Room 4",
+      "startsAt": "2026-05-28T16:35:00Z",
+      "endsAt": "2026-05-28T17:05:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCDNUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1180848",
+      "title": "Coding While You Sleep: How I Deliver Real, Paid Projects Running AI Agents Overnight",
+      "description": [
+        "AI coding tools like Claude Code and OpenAI Codex are powerful amplifiers of existing developer skill. But exactly how far can you take them? Is Ralph really a useful way to write software?",
+        "Spencer ran AI agents overnight, letting them tackle complex problems while he slept, for both paid projects (that netted over USD$250k in revenue!) as well as some fun side projects - and he's been doing it long before Ralph was cool.",
+        "In this session, Spencer will share the lessons he learned from pushing AI coding agents to their limits. We'll discuss how to structure prompts and tasks for long-running agent sessions, how to set up your projects so agents can work autonomously, and how to review and validate AI-generated code so you're not shipping garbage. We'll also cover the practical, everyday techniques that make you a more effective AI-assisted developer.",
+        "If you've been curious about Ralphing but haven't figured out how to make Ralph truly productive, this session will give you a roadmap. Come ready to learn how to put AI agents to work - even while you're off the clock."
+      ],
+      "speakers": [
+        "583e8f08-8316-4ed2-afdf-4cd091e44564"
+      ],
+      "room": "Room 5",
+      "startsAt": "2026-05-28T16:35:00Z",
+      "endsAt": "2026-05-28T17:05:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Global AI KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1201904",
+      "title": "10 Ways to Go from “Meh” to “Must‑Have” with Copilot",
+      "description": [
+        "You finally wrestled a Copilot license out of the grip of your IT admins. Congratulations! But with great licensing comes… well, great features! So many great features, in fact, that it can be overwhelming figuring out where to even start.",
+        "That's where this session comes in. Join an adoption/training specialist and an M365 consultant on a guided, practical, actionable journey through the best, \"use these yesterday\" features of an M365 Copilot license.",
+        "You’ll leave this session with a clear understanding of where Copilot adds the most value today, hands-on examples you can immediately apply, and simple habits that make Copilot feel like a trusted assistant instead of another tool competing for your attention. Our goal is to help you move from “We have Copilot” to “We can’t imagine working without it.”"
+      ],
+      "speakers": [
+        "87c2b40e-43c9-4aef-b053-14369976ea1b",
+        "09f1db8d-dbc1-4ac0-a51d-db5b4640dccb"
+      ],
+      "room": "Room 6",
+      "startsAt": "2026-05-28T16:35:00Z",
+      "endsAt": "2026-05-28T17:05:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCDNUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1193956",
+      "title": "The Fewer Environments the Better: Lean DevOps Strategies",
+      "description": [
+        "Many companies have a half-dozen long-lived environments, complex branching strategies, shared DB instances, many related repositories, insufficient automated tests, and risky, large, infrequent releases. What's the path to incremental improvement? In this session, we'll explore strategies for simplifying DevOps. We'll explore feature flags, testing in prod, ephemeral environments, canary releases, static datasets, per-developer databases, pre-merge vs post-merge QA, and more. After this session, you'll have a list of ideas for streamlining your environments and workflows."
+      ],
+      "speakers": [
+        "424f7166-a882-473f-b05e-15aed7f9ff86"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T17:05:00Z",
+      "endsAt": "2026-05-28T17:35:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1196086",
+      "title": "AI as Your Data Engineering Partner: 3 Real Projects",
+      "description": [
+        "What does AI-assisted data engineering actually look like in practice? This session walks through three real projects at different scales: a Python ETL pipeline that turns messy manual exports into a basic financial data warehouse, a SQL Server diff tool scaffolded in 60 minutes at hackathon speed, and a complex enterprise integration connecting a document management system to an ERP.",
+        "Each project tells a different story about where AI adds value and where human judgment remains essential. We'll discuss practical considerations for incorporating AI into your own data work."
+      ],
+      "speakers": [
+        "fa56eb09-7b0b-46f6-8ee5-49edece9b3af"
+      ],
+      "room": "Room 3",
+      "startsAt": "2026-05-28T17:05:00Z",
+      "endsAt": "2026-05-28T17:35:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Global AI KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "222f482f-a8e8-4c1c-ba34-5f987d4ddb71",
+      "title": "Lunch",
+      "description": [],
+      "speakers": [],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T17:35:00Z",
+      "endsAt": "2026-05-28T18:30:00Z",
+      "tags": [],
+      "service": true,
+      "plenum": true
+    },
+    {
+      "id": "1190047",
+      "title": "Modern Python Tooling in the AI Coding Era",
+      "description": [
+        "Using modern Python development tools can be a boon for both productivity and code health. Especially in the age of AI coding assistance, creating and enforcing development standards can be especially beneficial for long-term system maintenance. LLMs for coding assistance are, after all, parasitic on what the developer knows and what guidance they provide.",
+        "This session will provide an overview of ways that humans can make consequential development decisions to promote code health and maintainability.",
+        "Enforcing Development Standards",
+        "- Sharing functions and classes with a private PyPi server on AWS",
+        "- Using cookiecutter to create project templates",
+        "- Leveraging pre-commit to enforce coding standards",
+        "- Exploring when MCP makes sense and when it does not",
+        "Making Decisions on Development Preferences",
+        "- Migrating from pandas to polars",
+        "- Picking a hyperparameter optimization paradigm",
+        "- Knowing when Streamlit won't cut it",
+        "- Choosing between FastAPI, Flask, and all the other options"
+      ],
+      "speakers": [
+        "6ee43712-add3-48d2-81a6-350a27f0411f"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T18:30:00Z",
+      "endsAt": "2026-05-28T19:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1231403",
+      "title": "A Casual Introduction To DevOps, But Make It A Contest",
+      "description": [
+        "This workshop will teach attendees the basics of DevOps and Infrastructure as Code (IaC) in a fun gamified way that combines learning DevOps fundamentals with making \"line go up\". Attendees will gain hands-on expertise with both AWS and HashiCorp Terraform in a free, safe, and sand-boxed environment. Bring your laptop and a web browser (no additional tools are needed to get started) and leave with tips and tricks that you can immediately apply to your own workflows."
+      ],
+      "speakers": [
+        "85316d15-17e0-437d-8a0a-ab44deb388f0",
+        "ec77568b-a7a8-4243-8419-92414a9268df"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-28T18:30:00Z",
+      "endsAt": "2026-05-28T20:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1196072",
+      "title": "The Signals We Miss in Meetings: How to Recognize Hidden Team Dynamics and Respond More Skillfully",
+      "description": [
+        "You have probably been in a work meeting where something felt off, but nobody named it.",
+        "Maybe the team agreed too quickly. Or one person dominated while others disappeared. Perhaps a real concern showed up briefly, then got dropped and everyone moved on. Or the meeting ended with decisions on paper, but real clarity, ownership, or trust were missing.",
+        "Those sorts of interactions can deeply impact businesses. What gets missed in team conversations often shows up later as slower decisions, hidden risk, weak follow-through, recurring conflict, and delivery problems that appear procedural on the surface but are relational in reality.",
+        "This session is for anyone who works with teams in real time and wants to help groups collaborate more effectively, including Agile coaches, Scrum Masters, Project or Product Managers, and Tech Leads. We will explore six practical coaching lenses for noticing what is happening underneath conversation, including what is unspoken, how group dynamics affect the work, recurring team patterns, missing voices, team reactivity, and false harmony.",
+        "Participants will leave with a practical way to read team dynamics “in the wild,” recognize signals that often get overlooked, and choose useful interventions in the moment. You will gain concrete questions, facilitation moves, and diagnostic tools you can use in standups, sprint planning, retrospectives, stakeholder meetings, incident reviews, and everyday team conversations.",
+        "Because sometimes the most important part of a meeting is the part nobody says out loud."
+      ],
+      "speakers": [
+        "4744f53f-c70b-478a-a5cb-3041c3302036"
+      ],
+      "room": "Room 3",
+      "startsAt": "2026-05-28T18:30:00Z",
+      "endsAt": "2026-05-28T19:25:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Agile KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1222543",
+      "title": "Agentic AI Workflows with Embabel",
+      "description": [
+        "We have all seen the \"Hello, World\" of Spring AI: sending a prompt and getting a response. But as we move toward production, the real challenge is not the LLM call; it is the workflow. How do you ensure an agent does not loop infinitely? How do you coordinate multiple tools without a mess of \"if-else\" blocks? And how do we keep our Java-centric domain models at the heart of the AI’s reasoning?",
+        "Enter Embabel, a new JVM-based framework from Rod Johnson (creator of Spring) designed to bring discipline to agentic AI. Unlike Python-centric alternatives, Embabel is built on the philosophy of strong typing, OODA loops (Observe, Orient, Decide, Act), and Goal-Oriented Action Planning (GOAP).",
+        "In this session, we will go beyond basic RAG and explore how to build \"digital workers\" that can actually plan. You will learn: How to turn your existing Spring Beans into AI Actions.",
+        "The shift from imperative coding to Goal-Oriented orchestration.",
+        "How Embabel uses DICE (Domain-Integrated Context Engineering) to give agents true domain knowledge.",
+        "Why the JVM is actually the best place to run mission-critical AI agents.",
+        "Join us for a code-heavy look at the future of Java backend development. We are moving to a world where our systems do not just respond to requests, but actively work to achieve goals."
+      ],
+      "speakers": [
+        "345b7e02-c223-49a0-875d-0a3502ee2e82"
+      ],
+      "room": "Room 4",
+      "startsAt": "2026-05-28T18:30:00Z",
+      "endsAt": "2026-05-28T19:25:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCJUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1183646",
+      "title": "How YOU show up Matters.",
+      "description": [
+        "The demands of today’s workplace are relentless. Between deadlines, releases, shifting priorities, and the constant stream of “one more thing,” it’s easy to lose sight of why your work matters. When that happens, engagement drops and culture begins to drift.",
+        "In complex environments, it can feel like the system is too big for one person to influence. But here’s the surprising truth: while you may not control the system, you do shape the culture around you every day.",
+        "The key isn’t fixing the work—it’s shifting the perspective you bring to it. Your perspective fuels your attitude, drives your behavior, and influences the people around you in ways you may not realize.",
+        "Culture rarely changes because we wait for it to. It changes when people do.",
+        "In this interactive session, you’ll explore a simple but powerful question: What changes when you change how you show up?"
+      ],
+      "speakers": [
+        "3a96be54-c75e-486d-8cd3-cd3a73862667"
+      ],
+      "room": "Room 5",
+      "startsAt": "2026-05-28T18:30:00Z",
+      "endsAt": "2026-05-28T19:25:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "IIBA Kansas City"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1193970",
+      "title": "The Future of Code Reviews: Will Humans Still Be Needed?",
+      "description": [
+        "What if AI reviewed your pull requests before a human ever looked at them? Today AI agents can scan diffs, suggest fixes, and catch bugs in seconds. So what does that mean for human code reviews?",
+        "Tools like CodeRabbit, Copilot, and Qodo AI are already helping teams review code faster. AI can point out issues, suggest improvements, and flag risky changes. But good software is not just about catching bugs. Context, architecture decisions, and long-term maintainability still require human judgment.",
+        "In this session we’ll explore how AI and human reviewers can work together in modern development workflows. You’ll learn where AI can speed things up, where humans still matter most, and how teams can rethink the review process going forward."
+      ],
+      "speakers": [
+        "66c1e054-83a5-487a-aef3-0d8499f07c6f"
+      ],
+      "room": "Room 6",
+      "startsAt": "2026-05-28T18:30:00Z",
+      "endsAt": "2026-05-28T19:25:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCDNUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1197161",
+      "title": "Data Architecture for Agentic Systems: What Changes When AI Is in the Loop",
+      "description": [
+        "Adding AI to your product isn't just a feature decision, it's an architectural one. When a non-deterministic model is making classifications, rankings, or decisions inside your pipeline, the assumptions your data layer was built on quietly break.",
+        "In this session, Adarash Mishra draws on real client engagements to walk through the three structural shifts that catch teams off guard: why context becomes infrastructure (and what happens when you treat it as ephemeral), how human-in-the-loop checkpoints have to be designed in (not bolted on), and what it takes to build pipelines that handle non-deterministic outputs gracefully.",
+        "You'll leave with concrete patterns drawn from systems that are running in production today."
+      ],
+      "speakers": [
+        "f876acaf-d95f-434f-91f2-908fd62635b9"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T19:00:00Z",
+      "endsAt": "2026-05-28T19:30:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1195841",
+      "title": "From Saying to Thinking to Doing: A Practical Guide to LLMs, LRMs, and LAMs",
+      "description": [
+        "The AI landscape in 2024-2025 has given us three distinct - and often confused - categories of models: Large Language Models (LLMs), Large Reasoning Models (LRMs), and Large Action Models (LAMs). Each answers a fundamentally different question. LLMs ask what should I say? LRMs ask what is the correct answer, and why? LAMs ask what should I do, and how?",
+        "This session cuts through the hype with a practical breakdown of all three. We'll cover what each model type actually does under the hood, when you should reach for one versus another, and how they relate to each other - spoiler: they form a layered hierarchy, not competing alternatives. We'll also tackle the elephant in the room: the word \"Large\" is a moving target. GPT-3's 175 billion parameters made it a giant in 2020; today, models that small run on your laptop. Understanding that \"large\" is a snapshot of the frontier - not a fixed spec - is essential context for anyone building on these systems. Whether you're a data scientist deciding which model to call in a pipeline, an engineer evaluating agentic frameworks, or just trying to make sense of the weekly AI announcements, this talk gives you a durable mental model for navigating the LLM → LRM → LAM spectrum - and what comes next.",
+        "Audience: Data scientists, ML engineers, analytics practitioners, and anyone building with or evaluating AI models. No prior expertise in model architecture required."
+      ],
+      "speakers": [
+        "99522a9f-8a16-4c1b-965e-4043d288cfed"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T19:30:00Z",
+      "endsAt": "2026-05-28T20:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "group",
+          "name": "Global AI KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1197564",
+      "title": "Try This Next: A Game for Solving Agile Challenges",
+      "description": [
+        "Teams often struggle to know what to try next when something isn’t working.",
+        "In this interactive, game-based session, participants bring a real team or process challenge. Through structured rounds of questions and peer input, table groups tap into the collective wisdom of the room to uncover what’s really going on and generate practical experiments.",
+        "Along the way, you’ll see how feedback, communication, and team dynamics shape outcomes—often more than the process itself.",
+        "Leave with one clear next step and a repeatable approach you can use with your team."
+      ],
+      "speakers": [
+        "c5524c72-a18f-49e5-9fa8-0c23a9a87ae4"
+      ],
+      "room": "Room 3",
+      "startsAt": "2026-05-28T19:40:00Z",
+      "endsAt": "2026-05-28T20:35:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Agile KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1222446",
+      "title": "BDD and AI a Match Made in He...?",
+      "description": [
+        "BDD, Behavior Driven Development, often expressed using given-when-then scenarios, is not a new methodology. An impedement to it's braoder adoption however has been that the connection between given-when-then scenarios and the actual code was either so loose, that the amount of time and effort taken to write the code to support the scenario was onerous.",
+        "Today, as AI coding tools have become more advanced and are able to complete increasingly complex tasks autonomously, is it time to re-evaluate the usage of BDD and other similar high-level design methodologies?"
+      ],
+      "speakers": [
+        "6f426cb0-6261-4f79-b726-b7ffc3b028ff"
+      ],
+      "room": "Room 4",
+      "startsAt": "2026-05-28T19:40:00Z",
+      "endsAt": "2026-05-28T20:10:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCJUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1195147",
+      "title": "From Frustration to Flow: Elevating Performance Where It Matters Most",
+      "description": [
+        "You’re working hard. Maybe harder than ever.",
+        "And still—something feels off.",
+        "In this highly interactive, story-driven session, you’ll step into a series of unexpected moments from the tennis court that reveal a deeper truth about pressure and the patterns we fall into when things aren’t working.",
+        "You won’t just hear the stories—you’ll experience the shift. You’ll begin to recognize where frustration shows up in your own work and life—and what it actually takes to move through it. You’ll walk away with practical steps to shift from frustration to flow.",
+        "This session is memorable, relatable, and thought provoking."
+      ],
+      "speakers": [
+        "846a2657-6c55-48fb-a04e-6bfe727da6d6"
+      ],
+      "room": "Room 5",
+      "startsAt": "2026-05-28T19:40:00Z",
+      "endsAt": "2026-05-28T20:35:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "IIBA Kansas City"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1233196",
+      "title": "How to Get Execs on your Side",
+      "description": [
+        "Do VPs ever ignore you? Do nontechnical execs ever have unfeasible expectations, suggest absurd solutions, or cut funding with no regard for your expertise? Do you ever feel stuck in a parade of half-baked and half-finished projects, desperately cobbled together with baling wire and duct tape?",
+        "There’s a better way. “Execs that don’t get it” are a solved problem, and you can start immediately. In this session, Dylan will walk through a practical, memorable recipe that works 80% of the time, every time."
+      ],
+      "speakers": [
+        "fe6661a0-fbd2-4139-8ad4-429275250306"
+      ],
+      "room": "Room 6",
+      "startsAt": "2026-05-28T19:40:00Z",
+      "endsAt": "2026-05-28T20:35:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCDNUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1189304",
+      "title": "From Messy Data to Trusted Answers: Why Cleaning Isn’t the Answer",
+      "description": [
+        "Every data project starts the same way: “we just need to clean the data.”",
+        "Six to nine months later, the project is still not in production - and often never will be.",
+        "In the real world, data arrives fragmented and inconsistent: scanned documents, PDFs, emails, missing fields, and conflicting sources. Traditional approaches try to force this into structured schemas before delivering value, creating long delays and brittle systems that struggle to adapt.",
+        "This talk presents a different approach: designing AI systems that work with messy data instead of requiring it to be fixed upfront.",
+        "We will explore how semantic embeddings enable retrieval based on meaning rather than strict structure, allowing useful results across inconsistent inputs. We will also examine embedding drift - how meaning shifts across contexts, projects, and time - and why this creates new challenges for reliability.",
+        "The key insight is that trust does not come from perfectly cleaned data or more powerful models. It comes from traceability. By combining semantic retrieval with citation-based answers, AI systems can remain useful even when underlying data is incomplete, inconsistent, or evolving.",
+        "Drawing from real-world implementations in construction and document-heavy workflows, this session will walk through practical patterns for moving from raw, messy inputs to answers that can be verified and trusted.",
+        "If your AI depends on clean data before it can deliver value, it may never ship. This talk offers a practical alternative: systems that embrace real-world data and still produce answers you can trust."
+      ],
+      "speakers": [
+        "e4ca7219-aa6b-4cb8-bd61-d8af33af278f"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T20:10:00Z",
+      "endsAt": "2026-05-28T20:40:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1222570",
+      "title": "Why my children will never deploy active-passive.",
+      "description": [
+        "For decades, we’ve been told that \"High Availability\" means keeping a warm spare in the basement. We accepted the failover windows, the data loss during \"the flip,\" and the wasted infrastructure as the cost of doing business. But the era of the passive node is over.",
+        "In this lightning session, we are questioning everything you were taught about databases at scale. Why pay for infrastructure that does nothing? Why settle for \"eventual\" availability when you can have \"continuous\" operations?",
+        "We’ll break down why Active-Passive is a legacy constraint we no longer have to pass down to the next generation of engineers. You’ll learn how Active-Active architectures provide true resilience, linear scalability, and—most importantly—peace of mind. It’s time to stop planning for failure and start designing for constant uptime. My children will never deploy Active-Passive, and after these 15 minutes, you won't want to either."
+      ],
+      "speakers": [
+        "345b7e02-c223-49a0-875d-0a3502ee2e82"
+      ],
+      "room": "Room 4",
+      "startsAt": "2026-05-28T20:10:00Z",
+      "endsAt": "2026-05-28T20:25:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCJUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Lightning Talk (5-15 minutes)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1194428",
+      "title": "A Practical Guide to JVM Native Memory in Kubernetes",
+      "description": [
+        "Most JVM tuning stops at the heap, but in Kubernetes, that’s often why you’re overprovisioning memory and still getting OOMKilled. Native memory (metaspace, threads, direct buffers, and more) quietly consumes a significant portion of your container limits, leading teams to oversize requests “just to be safe” and pay for it.",
+        "In this lightning talk, we’ll break down where JVM memory really goes and show how to use built-in tools like Native Memory Tracking (NMT) and jcmd to get a clear picture in minutes. You’ll leave with a simple approach to right-size your JVM, avoid unexpected container kills, and reduce wasted memory spend."
+      ],
+      "speakers": [
+        "fa6ae37c-e6b0-4b5a-adbe-d03d4b3fa815"
+      ],
+      "room": "Room 4",
+      "startsAt": "2026-05-28T20:25:00Z",
+      "endsAt": "2026-05-28T20:40:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCJUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Lightning Talk (5-15 minutes)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1222451",
+      "title": "Why Developers Should Love Testing",
+      "description": [
+        "We know that test automation is often discussed as a “best practice” in modern software development, but why should we love automated testing as a developer? In this presentation, we will learn how reliance on manual testing and processes for validation lies at the heart of some of the most challenging problems in software development. We will then cover practices and principles for developing reliable, portable, and maintainable automated tests. This will help developers not view automated testing as a chore but as a central aspect of our work that helps us deliver better customer service!"
+      ],
+      "speakers": [
+        "6f426cb0-6261-4f79-b726-b7ffc3b028ff"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T20:40:00Z",
+      "endsAt": "2026-05-28T21:35:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCJUG"
+        },
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1192978",
+      "title": "It is STILL About the Data",
+      "description": [
+        "AI has emphasized the critical role of a solid data strategy and effective data management. Although the requirements and technology surrounding data are constantly changing, the fundamental principles remain consistent. This presentation reviews these principles and explores the best approaches to provide dependable and efficient data solutions in the age of AI."
+      ],
+      "speakers": [
+        "53407b34-cdab-4f53-8ff0-9fa73d3ffe3a"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-28T20:50:00Z",
+      "endsAt": "2026-05-28T21:20:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1197148",
+      "title": "Can We Make $1 Million in the Next Hour? (Live-Coding a Full-Stack App)",
+      "description": [
+        "Can we make a $1 million? Probably not, but we can deploy a whole app! In this live-coding session, we will attempt the \"impossible\": going from a blank editor to a deployed, database-backed application with a functional UI before the session timer runs out.",
+        "This isn't a get-rich-quick scheme; This is a crash course on how to vibe code your way to success: we will use Claude and Gemini, NotebookLM to generate ideas, OpenArt for assets, and our favorite agents to generate our documentation on the fly.",
+        "While all can benefit from this session, it's designed for those who are skeptical or intimidated by agentic workflows, this session will cover:",
+        "The Product Manager Mindset: How to prompt for architecture, not just syntax. We will discuss the \"Accept All\" trap and how to spot hallucinations before they break production.",
+        "The Live Stack: A look at the specific toolchain for 2026 rapid deployment that makes this speed possible.",
+        "The Reality Check: We won't just show the happy path. We will do live debugging and discuss the security implications of shipping AI-generated code.",
+        "We'll crowdsource the app idea from a curated list at the start of the hour. Will we walk away millionaires? We can hope. Will you walk away knowing exactly how to build your next big idea? Definitely."
+      ],
+      "speakers": [
+        "7104995a-e90d-4d4c-abe3-193156bc9e79"
+      ],
+      "room": "Room 3",
+      "startsAt": "2026-05-28T20:50:00Z",
+      "endsAt": "2026-05-28T21:45:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Global AI KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1180855",
+      "title": "A Data-Driven Approach to Mental Health",
+      "description": [
+        "I suffer from bipolar disorder. I have struggled with depression, anxiety, and mania. My mania has affected my relationship with my wife, while the other two has caused me trouble at work including getting fired. But through it all I am happy with my life, because I know what to expect during depression and mania and I have a plan.",
+        "During my presentation that I have given to 5 meetups, I explore a little bit of my history, some definitions, some symptoms I feel, some tools I use, the plan I have, some videos, my thoughts on AI therapy, and then the meaning of life."
+      ],
+      "speakers": [
+        "a9979a02-fb57-4e05-915f-2e5768a71e18"
+      ],
+      "room": "Room 4",
+      "startsAt": "2026-05-28T20:50:00Z",
+      "endsAt": "2026-05-28T21:45:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCJUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1197070",
+      "title": "The Real Race Begins After Go-Live: Mastering Long-Term Operations for Max Value",
+      "description": [
+        "The launch of a new system isn’t the finish line, it’s the green flag waving to signal the start of a new race to prove value and return on investment. The business won’t wait for platform stabilization. Transformations missing the nuance of post-launch operations start on the wrong foot - quickly spinning into negative opinions and dwindling organizational confidence regarding the initiative’s efforts and purpose. Attendees will leave with a readiness checklist to launch with maximum velocity."
+      ],
+      "speakers": [
+        "d14f9633-1d01-47d0-9351-46b2b0986045"
+      ],
+      "room": "Room 5",
+      "startsAt": "2026-05-28T20:50:00Z",
+      "endsAt": "2026-05-28T21:45:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "IIBA Kansas City"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1235018",
+      "title": "Build for Every Screen with Flutter",
+      "description": [
+        "Building for mobile and web used to mean managing fragmented codebases, writing boilerplate, and wrestling with UI frameworks disconnected from your backend. In this demo-heavy session, we’ll dive into how Flutter and Dart fundamentally change that workflow. We won't just look at how to build beautiful, natively compiled apps from a single codebase—we’ll explore how using Dart on both the server and client allows you to completely eliminate duplicate code by sharing data models, validation logic, and business rules across your entire stack.",
+        "Watch live as we leverage Flutter's Hot Reload to build an interactive application from a blank canvas. You'll see exactly how easy it is to wire up shared backend data models, handle complex state management on the fly, and polish it off with buttery-smooth animations."
+      ],
+      "speakers": [
+        "530b689c-93d5-46a3-b70e-d5bebf9a7f5c"
+      ],
+      "room": "Room 6",
+      "startsAt": "2026-05-28T20:50:00Z",
+      "endsAt": "2026-05-28T21:45:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "GDG KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1197574",
+      "title": "The Data Product Revolution",
+      "description": [
+        "Most organizations don’t have a data problem. They have a trust problem.",
+        "​We’ve built faster pipelines, cheaper storage, and prettier dashboards. And yet teams still argue over numbers, rebuild the same datasets, and don’t trust what’s already there.",
+        "​We be walking through what “Data as a Product” actually means in practice:",
+        "- ​Why ownership is the missing ingredient",
+        "- ​Why governance keeps failing when it’s bolted on",
+        "- ​How trust, reuse, and speed are designed, not hoped for",
+        "- ​How to start without a massive transformation program",
+        "​This isn’t theory or vendor hype. It’s a practical operating model for teams that want data people actually trust and reuse."
+      ],
+      "speakers": [
+        "c215589a-869a-499d-86da-6d94bd7ada47"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-28T21:20:00Z",
+      "endsAt": "2026-05-28T21:50:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "ac0cc3f1-5e26-4621-857f-fac5dcee631a",
+      "title": "Happy Hour",
+      "description": [],
+      "speakers": [],
+      "room": "Room 1",
+      "startsAt": "2026-05-28T22:00:00Z",
+      "endsAt": "2026-05-28T23:10:00Z",
+      "tags": [],
+      "service": true,
+      "plenum": true
+    },
+    {
+      "id": "1197491",
+      "title": "Building an Agent Harness for Production in Production: The story of AURA",
+      "description": [
+        "In this talk we'll walk through the story of AURA, an apache 2 licensed agent harness for running production operations. Agent harnesses provide an opinionated way to enforce guardrails, memory, and tool calling without needing to define logic or have a full SDLC for your agents. As the number of agents running in production increase the value of a reliable harness increases as well which is why we released AURA to push AI-SRE into the open in a way that didn't require the normal amount of boilerplate code to make them production-ready in the end. We'll also cover challenges involved with complex multi-agent workflows and tool calls, and how we solved this inside of AURA."
+      ],
+      "speakers": [
+        "a1f56b95-0b10-40b1-9c58-15b1b183d2ae",
+        "8eaf133e-aca8-4e60-8ba0-75374deda636"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T14:00:00Z",
+      "endsAt": "2026-05-29T14:30:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1198144",
+      "title": "GPU Acceleration in Data Analytics",
+      "description": [
+        "High-performance analytics is increasingly critical for enterprise AI and agentic workloads ingesting massive quantities of structured data. GPU acceleration with cuDF offers a practical path to faster analytics through familiar dataframe and SQL interfaces. With open-source integrations for pandas, Polars, DuckDB, Spark, and Presto, cuDF makes it easier to adopt GPU-powered analytics within existing workflows. This talk gives attendees a concrete roadmap to understand the ecosystem, identify high-impact use cases, and start accelerating analytics without a ground-up rewrite."
+      ],
+      "speakers": [
+        "82f56bf5-be4f-4f3d-b507-1b69fd777c2d"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-29T14:00:00Z",
+      "endsAt": "2026-05-29T14:30:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1180483",
+      "title": "Building Innovation-Ready Teams: The DNA of High-Performing Groups",
+      "description": [
+        "Innovation isn’t just about hiring smart people—it’s about creating the right conditions for them to thrive. The most successful teams don’t just generate ideas; they experiment, iterate, and execute with speed and confidence. But what makes some teams highly innovative while others struggle with bureaucracy, misalignment, or stagnation?",
+        "This session will break down the DNA of high-performing, innovation-ready teams. You’ll learn the key elements of team design, leadership, and culture that enable teams to take risks, collaborate effectively, and consistently deliver breakthrough results.",
+        "Whether you’re a leader looking to level up your team’s innovation capabilities or a team member seeking to improve collaboration, this session will give you a practical framework to build teams that move fast, think boldly, and innovate with purpose.",
+        "Key Topics:",
+        "🔹 The Science of High-Performing Teams – What research reveals about the best innovation teams",
+        "🔹 Psychological Safety & Trust – The foundation of creative problem-solving and risk-taking",
+        "🔹 Balancing Autonomy & Alignment – How to give teams freedom while keeping them focused on shared goals",
+        "🔹 The Role of Leadership in Innovation – How great leaders set the stage for bold thinking and execution",
+        "🔹 Collaboration & Cross-Functionality – Breaking down silos to drive faster decision-making and execution",
+        "🔹 Agile & Lean Thinking in Teams – How iterative approaches fuel speed and adaptability",
+        "🔹 Sustaining an Innovation Culture – Turning one-time successes into long-term team capabilities",
+        "Key Takeaways:",
+        "✅ A Blueprint for Innovation-Ready Teams – Learn the core principles of team design that enable innovation to thrive",
+        "✅ Practical Strategies for Leaders & Teams – Gain actionable tools to improve collaboration, creativity, and execution",
+        "✅ Techniques for Building Psychological Safety – Create an environment where people feel safe to share ideas and take risks",
+        "✅ Stronger, More Aligned Teams – Understand how to structure teams for maximum impact and innovation success"
+      ],
+      "speakers": [
+        "9fd5eded-a99b-4935-8464-d8fd5199f494"
+      ],
+      "room": "Room 3",
+      "startsAt": "2026-05-29T14:00:00Z",
+      "endsAt": "2026-05-29T15:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Agile KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1186287",
+      "title": "From Java to AI: Modernizing Enterprise Systems with Machine Learning",
+      "description": [
+        "Java has been the backbone of enterprise software for decades — but in today's world, AI and Machine Learning are redefining what enterprise systems can do. The question is: how do you bridge the two?",
+        "In this session, Surya Rao Rayarao — Lead Software Engineer at SS&C Technologies, IEEE Senior Member, and MS Data Science graduate (UT Austin) — draws on 20+ years of Java and enterprise engineering experience to show you exactly how to evolve modern Java applications with AI/ML capabilities, without a full rewrite.",
+        "Key takeaways:",
+        "• The evolution of Java enterprise systems: from J2EE to AI-ready architectures",
+        "• Practical patterns for embedding ML pipelines into Spring Boot and Java microservices",
+        "• Real-world FinTech examples: using AI to solve complex financial data challenges in Java-based systems",
+        "• How to expose ML models as REST APIs and integrate them with existing Java backends",
+        "• Career insights for Java engineers looking to evolve into AI/ML-integrated roles",
+        "Whether you're a Java developer curious about AI, a tech lead navigating modernization, or an architect designing next-gen systems, this talk delivers actionable strategies grounded in 20+ years of real production Java experience."
+      ],
+      "speakers": [
+        "f4f9dcb7-93e5-49df-bbe5-b313e137a9f5"
+      ],
+      "room": "Room 4",
+      "startsAt": "2026-05-29T14:00:00Z",
+      "endsAt": "2026-05-29T15:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCJUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1232454",
+      "title": "Living in a Stream",
+      "description": [
+        "Master the Gemini Live API. Build \"full-duplex\" agents that can see gestures and hear commands with zero-latency, allowing for true real-time, interruptible interaction."
+      ],
+      "speakers": [
+        "98173d1a-ba3a-47b6-97d7-9e2174187eaa"
+      ],
+      "room": "Room 5",
+      "startsAt": "2026-05-29T14:00:00Z",
+      "endsAt": "2026-05-29T16:05:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "GDG KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1234272",
+      "title": "Blazor Fundamentals: Getting Started with Modern .NET Web Development",
+      "description": [
+        "Blazor lets .NET developers build interactive, full-featured web applications using C#, bringing modern web development into your existing .NET ecosystem. This session is designed for developers new to Blazor who want a practical, hands-on introduction to the framework.",
+        "We’ll walk through setting up your development environment, exploring project structure, and creating your first Blazor app. You’ll learn about render modes, from static server-side rendering to the latest Interactive Auto mode. You’ll also see how to work with forms and manage data effectively. You’ll learn how to leverage the NavigationManager to make routing simple and pass data between pages. Finally, you’ll learn to design reusable components that provide the backbone for robust, maintainable applications.",
+        "Along the way, we’ll explore the Blazor component lifecycle, event handling, and performance best practices to help you create responsive and dynamic web applications.",
+        "By the end of this session, you’ll be ready to confidently build interactive Blazor applications, understand the key concepts and patterns behind components, and apply practical techniques that set you up for success in modern .NET web development."
+      ],
+      "speakers": [
+        "90c74ce2-3381-4226-9c41-1770f75d9d47"
+      ],
+      "room": "Room 6",
+      "startsAt": "2026-05-29T14:00:00Z",
+      "endsAt": "2026-05-29T15:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCDNUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1194954",
+      "title": "Testing Infrastructure as Code - Ensuring Reliability in Terraform and CloudFormation",
+      "description": [
+        "Many teams leverage infrastructure as code but don't test it. Learn how to test your infrastructure before you break production. I'll cover Terraform and CloudFormation testing tools—from linting to integration tests—with live demos including Test-Driven Infrastructure (TDI)."
+      ],
+      "speakers": [
+        "770d6b80-a16a-4acd-a261-2467ea84e3c0"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T14:30:00Z",
+      "endsAt": "2026-05-29T15:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1198189",
+      "title": "RAG Has a Relationship Problem",
+      "description": [
+        "You've built a RAG pipeline. It retrieves relevant chunks, stuffs them into a prompt, and most of the time it works. Until it doesn't. The answer is somewhere in your documents, but your system keeps missing it, or worse, it confidently stitches together pieces that don't belong together. The problem often isn't your embeddings or your model. It's that vector search is great at finding similar content, but terrible at following relationships: that these two chunks are about the same person, that this policy supersedes that one, that steps A, B, and C have to happen in order.",
+        "Graphs fix the relationship problem. Not by replacing your existing stack, but by giving it the connective tissue it's been missing. We'll start from zero on graph concepts, so no prior experience required, then get practical: how do you add a knowledge graph to a retrieval pipeline without rebuilding everything from scratch, and what kinds of questions suddenly become answerable that weren't before?",
+        "You'll leave with a clear mental model of what graphs bring to retrieval, a realistic picture of the implementation complexity, and a decision framework for whether your use case is a good fit."
+      ],
+      "speakers": [
+        "354dc991-47f0-4073-b609-02c5e5c9e4a9"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-29T14:30:00Z",
+      "endsAt": "2026-05-29T15:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1175502",
+      "title": "When Logging Becomes The Outage: Escaping the ECS Logging Trap",
+      "description": [
+        "Logging systems are designed to help us understand failures, but what happens when the Logging itself becomes the cause of an outage?",
+        "In this session, I will walk through a real-world incident involving Amazon ECS where the default logging configuration used blocking mode with CloudWatch as the log destination. When CloudWatch experienced an outage, application containers continued attempting to push logs while buffering them locally. As the logging buffer reached its limit, containers became blocked waiting for the logging driver, ultimately impacting application availability.",
+        "This talk explores how a seemingly harmless default configuration can create an unexpected reliability risk in distributed systems. We will look at how ECS logging works under the hood, why blocking mode can create cascading failures during downstream outages, and how switching to non-blocking mode can isolate application workloads from logging system failures.",
+        "I will share the investigation process, architectural decisions, and practical lessons learned from redesigning the logging strategy to prevent observability dependencies from affecting production workloads.",
+        "Attendees will leave with actionable guidance on designing resilient logging pipelines and avoiding a class of failures where logging infrastructure unintentionally becomes the single point of failure."
+      ],
+      "speakers": [
+        "01c5e7cd-9468-4084-8f0e-0eefb71d4c62"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T15:10:00Z",
+      "endsAt": "2026-05-29T15:40:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1182845",
+      "title": "From Claims to Copilots: Architecting AI-Ready Operational Systems",
+      "description": [
+        "Many organizations are eager to adopt AI, but few have the operational data architecture required to support it in production systems.",
+        "In real environments, critical workflow data is scattered across transactional systems, operational tools, and analytics platforms that rarely share a common model. Without a coherent operational architecture, AI tools struggle to reason about workflow state or produce meaningful insights.",
+        "This session explores how operational lifecycle modeling can create the foundation for AI-enabled systems.",
+        "Using a healthcare revenue cycle environment as a case study, we’ll examine how operational events can be captured in Microsoft Dataverse and unified with analytics in Microsoft Fabric to create a canonical operational model. This architecture allows AI copilots and automation tools to reason about the state of real-world workflows rather than disconnected data points.",
+        "Attendees will learn:",
+        "Why many AI initiatives fail when they start with models instead of architecture",
+        "How lifecycle-based data modeling improves observability of operational systems",
+        "How platforms like Dataverse and Microsoft Fabric can support AI-ready architectures",
+        "Rather than focusing on AI theory or tools alone, this session focuses on the operational systems design required to make AI useful in complex real-world environments."
+      ],
+      "speakers": [
+        "9c44a519-28ee-402f-97ed-0607d43747ab"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-29T15:10:00Z",
+      "endsAt": "2026-05-29T15:40:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "group",
+          "name": "Global AI KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1195139",
+      "title": "Always Let Your Context Be Your Guide",
+      "description": [
+        "In our quest for \"best practices\", we often forget that what works brilliantly in a large software company might fail spectacularly in a small to medium size business or startup. Practices that literally save lives and improve quality for one team can be a waste of time for another. This talk shares at least twenty-five contextual elements (references to them online will be shared, we will only cover a few during the presentation) that can impact everything from your choice of software methodology to the amount of time a developer should spend trying to make a function run faster. Functional requirements, business regulations, security demands, deployment frequency, and architecture, are just a few of the elements that should inform our technical decisions. Should you use TDD? Should you provide estimates? Should you automate deployments? Should you hold retrospectives? All these questions and more can be answered once you identify your context. Through examples based on real-world experiences, research, and learning from others, you'll gain new perspectives for evaluating your unique development context and making decisions that work for you, rather than blindly following what worked for someone else."
+      ],
+      "speakers": [
+        "135d90c8-09b4-43f0-b9a8-2dd0d0569f84"
+      ],
+      "room": "Room 3",
+      "startsAt": "2026-05-29T15:10:00Z",
+      "endsAt": "2026-05-29T16:05:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Agile KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1198224",
+      "title": "CPU & GPU: Analytics Benchmarks with DuckDB & SiriusDB",
+      "description": [
+        "GPU acceleration is rapidly becoming a focal point for analytical workloads—but how much does it actually help in real-world scenarios?",
+        "In this talk, we present a hands-on evaluation of GPU-accelerated analytics using industry benchmarks across multiple execution engines, including DuckDB and emerging GPU-native systems like SiriusDB. We focus on reproducible experiments and practical deployment constraints.",
+        "We explore how performance varies across query types, data layouts, and storage formats, highlighting where GPUs deliver significant gains—and where they fall short. Along the way, we examine key factors such as memory pressure, data transfer overhead, and the interaction between indexing strategies and execution engines.",
+        "Attendees will leave with a clear understanding of when GPU acceleration is worth the investment, how to design meaningful benchmarks, and what to watch out for when bringing GPUs into lakehouse analytics environments."
+      ],
+      "speakers": [
+        "ba70cb63-c6e5-49c5-929d-42b5fec5dcae",
+        "fa44c880-991f-4f83-aa72-a2a5d5352960"
+      ],
+      "room": "Room 4",
+      "startsAt": "2026-05-29T15:10:00Z",
+      "endsAt": "2026-05-29T16:05:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Data Science KC"
+        },
+        {
+          "category": "group",
+          "name": "KC Data Professionals"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1233343",
+      "title": "Coding Paradise: The Future of App Creation with .NET MAUI",
+      "description": [
+        "Dive into cross-platform app development with .NET MAUI, Microsoft's Multi-platform App UI framework. Learn how MAUI allows you to craft native mobile and desktop applications using C# and XAML. You'll be able to unify your development efforts for Android, iOS, macOS, and Windows under a single shared codebase while still enabling access to every aspect of each native platform. Unlock the potential of .NET MAUI, where the creation of cross-platform applications becomes an accessible reality."
+      ],
+      "speakers": [
+        "67d4621e-71f3-44ec-b9c9-b182e1cf278a"
+      ],
+      "room": "Room 6",
+      "startsAt": "2026-05-29T15:10:00Z",
+      "endsAt": "2026-05-29T16:05:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCDNUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1184752",
+      "title": "Cloud Cost Efficiency as an Operating Principle",
+      "description": [
+        "Many organizations are able to deliver reliable, secure infrastructure for developers to consume. Cloud costs often come in as an after thought, however. This leads to a feast or famine pattern of not thinking about cloud costs until they spiral out of control. By failing to prioritize cost efficiency as an operating principle, platform teams distract themselves when bill blow-outs do occur, while wasting profit dollars along the way.",
+        "In this talk we will discuss:",
+        "- The cultural foundations needed for a cost efficient cloud footprint",
+        "- The foundational processes that enable cost optimization initiatives",
+        "- How to prioritize different cost optimization initiatives",
+        "- Tactical ways, from experience, to save in the cloud across compute, storage, and networking"
+      ],
+      "speakers": [
+        "fba3860c-21b3-4309-8679-c50047b23bf5"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T15:40:00Z",
+      "endsAt": "2026-05-29T16:10:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1186214",
+      "title": "Data Without Borders: The Era of the Open Lakehouse",
+      "description": [
+        "We just entered a new era of the deconstructed database, the walls are coming down and data storage is no longer connected to a query engine or proprietary data format. The future of data isn't just about open storage or open source software - it’s about interoperability.",
+        "In this talk, we explore how Apache Iceberg has evolved from a table format into the “universal mesh” that connects the modern data stack. We will dive into the architectural shift from fragile ETL pipelines to seamless, multi-engine access. Discover how data powerhouses like AWS S3, Databricks, Postgres, Snowflake, DuckDB, Clickhouse, and so many others are being reimagined as \"Iceberg-native\" through logical replication and REST catalogs.",
+        "Join us to map out a future where data is no longer a prisoner of its platform - but a liquid asset accessible to any engine, at any time."
+      ],
+      "speakers": [
+        "73cb4683-21f0-42ec-a4df-b097e9871259"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-29T15:40:00Z",
+      "endsAt": "2026-05-29T16:10:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KC Postgres"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1237708",
+      "title": "What You Need to Know (And Why You Should Care) About AI Governance",
+      "description": [
+        "AI governance is no longer just for your legal team, but is becoming a daily reality for developers and platform engineers. The rapid adoption of AI agents taking real-world actions introduces an entirely new risk profile for everyone on the product team.",
+        "But what does \"governance\" actually look like when you’re debugging an agent's reasoning loop or trying to hit a sprint deadline without getting blocked?",
+        "This session skips legal theory to focus on what product teams actually need to know. We’ll look at how to translate high-level guidelines like NIST’s AI Risk Management Framework and the EU AI Act into practical engineering decisions. We will use a beginner friendly governance framework as a lens on how to balance innovation with accountability, helping your team navigate: what we need to do for the product, what we should do ethically, what we must do legally, and what we can do technically.",
+        "Whether you’re writing code or managing the roadmap, you’ll leave with practical strategies to build systems that are resilient, compliant, and ready for global deployment."
+      ],
+      "speakers": [
+        "85019837-c755-48ec-884a-76e6889437b3"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T16:20:00Z",
+      "endsAt": "2026-05-29T16:50:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1196939",
+      "title": "Right-Sizing Your Analytics Architecture: From Laptop to Lakehouse",
+      "description": [
+        "In the analytics world, we often face a challenging dilemma: build too small and you'll hit scaling walls; build too big and you'll waste resources on unnecessary complexity. This talk presents a pragmatic approach to building analytics systems that can start small but grow seamlessly to enterprise scale. We'll demonstrate how modern open-source tools like Polars, Postgres and DuckDB paired with cloud-native storage formats create a pathway to scale without overengineering your initial implementation.",
+        "Many data teams struggle with the tension between immediate needs and future scalability. Traditional approaches often force an either/or decision: either build for today (and rewrite later) or build for tomorrow (and delay value delivery). This talk challenges that false dichotomy by showcasing a flexible architecture that evolves naturally from single-node to distributed processing with minimal friction.",
+        "We'll walk through a real-world analytics pipeline that begins on a single machine using lightweight, high-performance tools and then seamlessly transitions to distributed computing as data volumes grow. The key insight is that by making smart choices about data formats and storage from the beginning, you can postpone many scaling decisions without creating technical debt.",
+        "Key Topics",
+        "* The Scalability Spectrum: Understanding when single-node processing is sufficient and when distributed systems become necessary",
+        "* Starting Small: Leveraging Polars, Postgres and DuckDB for lightning-fast analytics on a single node",
+        "* Open Table Formats: How Apache Iceberg over S3 provides a foundation for future scale",
+        "* The Bridge to Big: Using GPU acceleration to extend single-node capabilities",
+        "* Going Distributed: Transitioning to Databricks, Snowflake, or other distributed systems with the same data",
+        "* Decision Framework: How to make architectural choices that don't paint you into a corner",
+        "Attendees will learn:",
+        "1. How to build analytics systems that start small but can grow to petabyte scale",
+        "2. Practical techniques for avoiding premature optimization while ensuring future scalability",
+        "3. When to use single-node vs. distributed processing tools",
+        "4. How modern open table formats enable seamless transitions between processing engines",
+        "5. A decision framework for making pragmatic architecture choices",
+        "This talk is designed for data engineers, analytics engineers, and architects who want to build systems that deliver immediate value while supporting future growth. It's ideal for teams that are starting new analytics initiatives or looking to modernize existing pipelines."
+      ],
+      "speakers": [
+        "fa44c880-991f-4f83-aa72-a2a5d5352960",
+        "ba70cb63-c6e5-49c5-929d-42b5fec5dcae",
+        "3a72bcea-7907-4e24-9de7-885b91e581ad"
+      ],
+      "room": "Room 2",
+      "startsAt": "2026-05-29T16:20:00Z",
+      "endsAt": "2026-05-29T17:20:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KC Postgres"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1233230",
+      "title": "Look Ma, No Backend! Building Secure, Dynamic, and Hybrid Apps with Google's Firebase AI Logic",
+      "description": [
+        "The modern app developer's dream is simple: build intelligent, multimodal features without the burden of spinning up, scaling, and maintaining a dedicated backend server. Firebase AI Logic makes this a reality by giving client SDKs direct, secure access to Google's latest Gemini 3 models. But moving generative AI entirely to the client-side introduces a scary new Wild West: how do you secure your API quota from malicious users? How do you update prompt templates or swap models without waiting days for an app store review? And what happens when your user steps into a cellular dead zone?",
+        "In this code-forward session, we’ll build and stress-test a live, client-side AI application right from the podium. We’ll explore the crucial architectural guardrails required to run client-side AI safely in production, and what Google's Firebase brings to the table to help solve these problems."
+      ],
+      "speakers": [
+        "13181a5c-88d0-4791-88f9-3cd6c2373c03"
+      ],
+      "room": "Room 3",
+      "startsAt": "2026-05-29T16:20:00Z",
+      "endsAt": "2026-05-29T17:20:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "GDG KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1235015",
+      "title": "No More Opt-Outs: Mastering Resizability and Orientation in Android 17",
+      "description": [
+        "With the release of Android 17 (API 37), the era of \"locking\" your UI is coming to an end. The platform is removing the developer opt-out for orientation and resizability restrictions on large screens, making adaptive layouts a requirement rather than a choice.",
+        "How do you transition a legacy codebase to a world of fluid windowing? In this session, we will dive into the technical solutions for supporting landscape, portrait, and multi-window environments. We’ll cover how to handle configuration changes gracefully, leverage WindowSizeClasses, and ensure your app remains functional and beautiful across the entire Android ecosystem."
+      ],
+      "speakers": [
+        "34a3eb26-af37-44ba-be41-ad525d8b310f"
+      ],
+      "room": "Room 4",
+      "startsAt": "2026-05-29T16:20:00Z",
+      "endsAt": "2026-05-29T17:20:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "GDG KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1197218",
+      "title": "AI: The Agile Manifesto's Final Form",
+      "description": [
+        "Twenty-five years ago, seventeen developers declared that working software matters more than process. Then we spent a quarter century turning Agile into the very bureaucracy it was designed to replace.",
+        "Then AI-enabled engineering changed everything, including Agile, because AI is the fulfilment of Agile's promise.",
+        "\"Working software over documentation\" becomes real when AI collapses the distance between intent and running code to minutes.",
+        "\"Responding to change\" stops being expensive advice when regenerating a component costs minutes instead of days.",
+        "\"Customer collaboration\" transforms when you can prototype in real time instead of promising a demo next sprint.",
+        "\"Individuals over process\" finally lands when AI amplifies engineering judgment instead of burying it in ceremony.",
+        "But there's a catch. Agile without discipline gave us chaos wearing a manifesto as a hall pass. AI without discipline gives us vibe coding dressed as innovation. It's the same failure in a shinier package.",
+        "Attendees will learn how AI embraces all the ideals of Agile and how to implement AI with the right amount of discipline to deliver on time and with quality."
+      ],
+      "speakers": [
+        "7104995a-e90d-4d4c-abe3-193156bc9e79"
+      ],
+      "room": "Room 5",
+      "startsAt": "2026-05-29T16:20:00Z",
+      "endsAt": "2026-05-29T17:20:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "Agile KC"
+        },
+        {
+          "category": "session_length",
+          "name": "Half-session (25 minute + 5 minute Q&A)"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1233198",
+      "title": "The Most Secure Platform is the one People Use",
+      "description": [
+        "The world is full of examples where people bypass elaborate edifices designed by smart, well-meaning experts. Security teams love technically perfect solutions, but often spend too little time on how people will actually experience them. We discuss the basics of UI/UX design and how to select security features that enhance the value of a product instead of reducing it."
+      ],
+      "speakers": [
+        "fe6661a0-fbd2-4139-8ad4-429275250306"
+      ],
+      "room": "Room 6",
+      "startsAt": "2026-05-29T16:20:00Z",
+      "endsAt": "2026-05-29T17:20:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "KCDNUG"
+        },
+        {
+          "category": "session_length",
+          "name": "Full session (50 minutes + 5 minute Q&A)"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "4fa7ac6f-130a-4c84-8361-2bb0d6d4c6b1",
+      "title": "Ignite Intro / Overview",
+      "description": [],
+      "speakers": [],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T16:50:00Z",
+      "endsAt": "2026-05-29T16:55:00Z",
+      "tags": [],
+      "service": true,
+      "plenum": false
+    },
+    {
+      "id": "1194432",
+      "title": "What HTTP Can Teach Us About Better Human Communication",
+      "description": [
+        "In DevOps, our systems rely on clear contracts, acknowledgements, and predictable responses - but our communication often doesn’t. The result is endless “just checking in” pings, unnecessary meetings, and avoidable interruptions.",
+        "This lightning talk applies HTTP concepts like request types, status codes, and response timing to everyday interactions. By treating communication like an API, teams can reduce ambiguity, eliminate redundant follow-ups, and create more reliable, low-noise collaboration patterns.",
+        "Walk away with a simple “human API contract” you can start using immediately."
+      ],
+      "speakers": [
+        "fa6ae37c-e6b0-4b5a-adbe-d03d4b3fa815"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T16:55:00Z",
+      "endsAt": "2026-05-29T17:00:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1180977",
+      "title": "Stop. Using. YAML. Anchors.",
+      "description": [
+        "YAML anchors feel like a clever way to keep configuration DRY. A little &base, a quick <<: *base, and suddenly your CI config is reusable and elegant.",
+        "Until someone has to read it.",
+        "Six months later your pipeline is powered by invisible inheritance, confusing merges, and configuration indirection that makes debugging feel like archaeology.",
+        "In this lightning talk, we’ll explore why YAML anchors often make configs harder to reason about, harder to maintain, and harder to onboard engineers into—and what to do instead.",
+        "Because clever YAML is usually a mistake."
+      ],
+      "speakers": [
+        "b4100c50-f917-4891-ac5d-1b06d1865ae6"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T17:00:00Z",
+      "endsAt": "2026-05-29T17:05:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1242706",
+      "title": "Show your work: AI fact-checking with versioned documentation",
+      "description": [
+        "Use AI to fact-check your work code, tutorial, and documentation using versioned docs index on your machine."
+      ],
+      "speakers": [
+        "d81d82c8-b647-465c-a2df-3e8a4e170f54"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T17:05:00Z",
+      "endsAt": "2026-05-29T17:10:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "1243365",
+      "title": "Best Practices for Oncall Teams",
+      "description": [
+        "Bad practices can sink on-call teams. On-call is hard enough without adding on drama and frustration! Help your responders have a better on-call experience by reassessing some key requirements and employing a few alternatives."
+      ],
+      "speakers": [
+        "995a76ba-6e94-461b-a823-e0267b77c1c6"
+      ],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T17:10:00Z",
+      "endsAt": "2026-05-29T17:15:00Z",
+      "tags": [
+        {
+          "category": "group",
+          "name": "DevOpsDays KC"
+        }
+      ],
+      "service": false
+    },
+    {
+      "id": "4bc0a004-edb0-4fda-8e3b-41823bf9625b",
+      "title": "Lunch",
+      "description": [],
+      "speakers": [],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T17:20:00Z",
+      "endsAt": "2026-05-29T18:20:00Z",
+      "tags": [],
+      "service": true,
+      "plenum": true
+    },
+    {
+      "id": "f432f994-aaf0-40bc-8833-75413bab746f",
+      "title": "Open Spaces",
+      "description": [],
+      "speakers": [],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T18:20:00Z",
+      "endsAt": "2026-05-29T21:00:00Z",
+      "tags": [],
+      "service": true,
+      "plenum": true
+    },
+    {
+      "id": "b50aeb68-9ec8-4b44-bb33-450e6afb897a",
+      "title": "Closing",
+      "description": [],
+      "speakers": [],
+      "room": "Room 1",
+      "startsAt": "2026-05-29T21:00:00Z",
+      "endsAt": "2026-05-29T21:15:00Z",
+      "tags": [],
+      "service": true,
+      "plenum": true
+    }
+  ]
+}

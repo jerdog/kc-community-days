@@ -1,0 +1,41 @@
+---
+// Progressive form: posts JSON to /api/<endpoint> and shows the result inline.
+const { endpoint, submitLabel = 'Submit' } = Astro.props;
+---
+<form class="stack" data-api={`/api/${endpoint}`} method="post" action={`/api/${endpoint}`}>
+  <slot />
+  <label class="hp" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off" /></label>
+  <div><button class="btn" type="submit">{submitLabel}</button></div>
+  <p class="form-status" role="status" aria-live="polite"></p>
+</form>
+<script>
+  for (const form of document.querySelectorAll('form[data-api]')) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const status = form.querySelector('.form-status');
+      const button = form.querySelector('button[type="submit"]');
+      const fd = new FormData(form);
+      const data = {};
+      for (const [k, v] of fd) data[k] = k in data ? [].concat(data[k], v) : v;
+      button.disabled = true;
+      status.textContent = 'Sending…';
+      status.dataset.state = '';
+      try {
+        const res = await fetch(form.dataset.api, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+        const body = await res.json();
+        status.textContent = body.message || body.error;
+        status.dataset.state = res.ok ? 'ok' : 'error';
+        if (res.ok) form.reset();
+      } catch {
+        status.textContent = 'Could not reach the server. Check your connection and try again.';
+        status.dataset.state = 'error';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  }
+</script>

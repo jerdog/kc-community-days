@@ -1,0 +1,6 @@
+---
+const { community, link = true } = Astro.props;
+---
+{community && (link
+  ? <a class="ribbon" href={`/communities/${community.slug}/`} style={`--c:${community.color}`}>{community.name}</a>
+  : <span class="ribbon" style={`--c:${community.color}`}>{community.name}</span>)}

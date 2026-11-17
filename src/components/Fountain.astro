@@ -1,0 +1,10 @@
+---
+// The Kansas City fountain mark, redrawn as line art so it can take any color.
+const { class: cls = '', strokeWidth = 4 } = Astro.props;
+---
+<svg class:list={['fountain', cls]} viewBox="0 0 100 100" aria-hidden="true" focusable="false" stroke-width={strokeWidth}>
+  <path d="M50 96V44" />
+  <path d="M50 44C44 14 22 12 12 50M50 44C46 22 30 20 22 54M50 44C48 28 38 27 32 58M50 44C49 33 44 32 41 62" />
+  <path d="M50 44C56 14 78 12 88 50M50 44C54 22 70 20 78 54M50 44C52 28 62 27 68 58M50 44C51 33 56 32 59 62" />
+  <path d="M12 50V70M22 54V76M32 58V82M41 62V88M88 50V70M78 54V76M68 58V82M59 62V88" opacity=".55" />
+</svg>

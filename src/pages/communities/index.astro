@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import { event, communities } from '../../data/site.js';
+import { talksByCommunity } from '../../lib/sessionize.js';
+const list = [...communities].sort((a, b) => a.name.localeCompare(b.name));
+---
+<Base title="Communities" description={`The Kansas City meetup groups behind ${event.name}.`}>
+  <header class="page-head on-dark"><div class="in">
+    <h1>Communities</h1>
+    <p>{event.name} is built by Kansas City's meetup groups. Each one brings its own talks. Find yours, then go meet the others.</p>
+  </div></header>
+  <div class="sec"><div class="in">
+    <ul class="comm-list">
+      {list.map((c) => {
+        const n = talksByCommunity(c.slug).length;
+        return <li><a href={`/communities/${c.slug}/`} style={`--c:${c.color}`}><b>{c.name}</b><span>{n ? `${n} talk${n > 1 ? 's' : ''}` : 'Community partner'}</span></a></li>;
+      })}
+    </ul>
+    <p class="sub" style="margin-top:28px;max-width:60ch">Run a Kansas City meetup and want to take part next year? Email <a href={`mailto:${event.contactEmail}`}>{event.contactEmail}</a>.</p>
+  </div></div>
+</Base>

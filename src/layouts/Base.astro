@@ -1,10 +1,15 @@
 ---
-import '../styles/base.css';
-import { event, nav } from '../data/site.js';
+import '../styles/site.css';
+import Fountain from '../components/Fountain.astro';
+import Form from '../components/Form.astro';
+import { event, nav, sponsors } from '../data/site.js';
+import { isPast } from '../lib/state.js';
 
-const { title, description = event.tagline } = Astro.props;
+const { title, description = event.description, sponsorStrip = true } = Astro.props;
 const pageTitle = title ? `${title} · ${event.name}` : `${event.name} ${event.year}`;
-const path = Astro.url.pathname.replace(/\/?$/, '/');
+const path = Astro.url.pathname;
+const current = (href) => (path === href || (href !== '/' && path.startsWith(href)) ? 'page' : undefined);
+const nextYear = event.year + 1;
 ---
 <!doctype html>
 <html lang="en">
@@ -14,39 +19,109 @@ const path = Astro.url.pathname.replace(/\/?$/, '/');
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="icon" href="/favicon.ico" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link rel="canonical" href={new URL(path, Astro.site)} />
     <meta property="og:site_name" content={event.name} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={new URL('/images/brand/logo-square.webp', Astro.site)} />
     <meta name="twitter:card" content="summary" />
+    <meta name="theme-color" content="#303086" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@75..125,400..900&family=Atkinson+Hyperlegible+Next:wght@400;700&family=Atkinson+Hyperlegible+Mono:wght@400;700&display=swap" />
+    <script is:inline>document.documentElement.classList.add('js')</script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="container">
-        <a class="logo" href="/"><img src="/images/brand/logo.webp" alt={event.name} width="198" height="40" /></a>
-        <nav aria-label="Main">
-          <ul>
-            {nav.map((item) => (
-              <li><a href={item.href} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a></li>
-            ))}
-          </ul>
+    <header class="site-top on-dark">
+      <div class="in">
+        <a class="mark" href="/"><Fountain />{event.name}</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Main">
+          <ul>{nav.map((item) => <li><a href={item.href} aria-current={current(item.href)}>{item.label}</a></li>)}</ul>
         </nav>
-        <a class="btn" href="/tickets/">Tickets</a>
       </div>
     </header>
+
     <main id="main" tabindex="-1">
       <slot />
     </main>
-    <footer class="site-footer">
-      <div class="container">
-        <span>© {event.year} {event.name}. A community-run, not-for-profit event.</span>
-        <span>Contact us: <a href={`mailto:${event.contactEmail}`}>{event.contactEmail}</a></span>
+
+    {sponsorStrip && (
+      <aside class="spons-strip" aria-labelledby="spons-strip-h">
+        <div class="in">
+          <h2 id="spons-strip-h">Made possible by</h2>
+          {sponsors.flatMap((t) => t.items.map((s) => (
+            <span>{s.url ? <a href={s.url}>{s.name}</a> : <span class="nm">{s.name}</span>}<small>{t.tier.toLowerCase()}</small></span>
+          )))}
+        </div>
+      </aside>
+    )}
+
+    <footer class="site-foot on-dark">
+      <div class="in">
+        <div id="signup">
+          <h2>{isPast ? `Hear about ${nextYear} first.` : 'Get event updates.'}</h2>
+          <Form endpoint="subscribe" class="news" buttonClass="btn gold" submitLabel="Sign up" id="footer-signup">
+            <label>Email address<input name="email" type="email" required autocomplete="email" /></label>
+          </Form>
+        </div>
+        <div>
+          <ul class="foot-links">
+            <li><a href="/code-of-conduct/">Code of Conduct</a></li>
+            <li><a href="/about/">About the organizers</a></li>
+            <li><a href="/attend/#refunds">Refund policy</a></li>
+            <li><a href="/feedback/">Share feedback</a></li>
+          </ul>
+          <p class="help">Questions? <a href={`mailto:${event.contactEmail}`}>{event.contactEmail}</a></p>
+        </div>
+        <p class="legal">{event.name} is a community-run, not-for-profit event.</p>
       </div>
     </footer>
+
+    <script>
+      // Mobile menu
+      const top = document.querySelector('.site-top');
+      const btn = top?.querySelector('.menu-btn');
+      btn?.addEventListener('click', () => {
+        const open = btn.getAttribute('aria-expanded') !== 'true';
+        btn.setAttribute('aria-expanded', String(open));
+        top.classList.toggle('open', open);
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && btn?.getAttribute('aria-expanded') === 'true') {
+          btn.setAttribute('aria-expanded', 'false');
+          top.classList.remove('open');
+          btn.focus();
+        }
+      });
+
+      // Forms: submit as JSON, announce the result in the form's live region
+      for (const form of document.querySelectorAll('form[data-api]')) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const status = form.querySelector('.form-status');
+          const button = form.querySelector('button[type="submit"]');
+          if (!form.checkValidity()) { form.reportValidity(); return; }
+          const data = {};
+          for (const [k, v] of new FormData(form)) data[k] = k in data ? [].concat(data[k], v) : v;
+          button.disabled = true;
+          status.dataset.state = '';
+          status.textContent = 'Sending…';
+          try {
+            const res = await fetch(form.dataset.api, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(data) });
+            const body = await res.json();
+            status.textContent = body.message || body.error;
+            status.dataset.state = res.ok ? 'ok' : 'error';
+            if (res.ok) form.reset();
+          } catch {
+            status.textContent = 'Could not reach the server. Check your connection and try again.';
+            status.dataset.state = 'error';
+          } finally {
+            button.disabled = false;
+          }
+        });
+      }
+    </script>
   </body>
 </html>

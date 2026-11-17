@@ -1,25 +1,74 @@
 ---
 import Base from '../layouts/Base.astro';
-import { event, groups, tickets } from '../data/site.js';
-import { speakers, sessions } from '../lib/sessionize.js';
-const talks = sessions.filter((s) => !s.service).length;
+import Fountain from '../components/Fountain.astro';
+import SessionRow from '../components/SessionRow.astro';
+import SpeakerBadge from '../components/SpeakerBadge.astro';
+import { event, communities, tickets } from '../data/site.js';
+import { days, talks, speakers, rooms, talksBySpeaker } from '../lib/sessionize.js';
+import { isPast } from '../lib/state.js';
+
+const allDays = days();
+const firstDay = allDays[0];
+const firstHour = firstDay.sessions.filter((s) => new Date(s.startsAt) - new Date(firstDay.sessions[0].startsAt) < 60 * 60 * 1000).slice(0, 6);
+// Featured speakers: one per community, in lineup order, for variety
+const featured = [];
+const usedCommunities = new Set();
+for (const t of talks) {
+  const sp = t.speakerList[0];
+  if (!sp?.photo || !t.community || usedCommunities.has(t.community.slug) || featured.includes(sp)) continue;
+  usedCommunities.add(t.community.slug);
+  featured.push(sp);
+  if (featured.length === 4) break;
+}
+const lineup = [...communities].sort((a, b) => a.name.localeCompare(b.name));
+const early = tickets.tiers[0];
 ---
 <Base>
-  <section class="section" style="background:var(--brand);color:var(--brand-ink)">
-    <div class="container">
-      <h1 style="font-size:clamp(34px,6vw,64px)">Join us for {event.name} {event.year}!</h1>
-      <p style="font-size:20px;margin:0 0 4px"><strong>{event.dates.label}</strong> at {event.venue.host}</p>
-      <p style="margin:0 0 28px">{event.venue.name}, {event.venue.address}</p>
-      <p style="display:flex;gap:12px;flex-wrap:wrap;margin:0">
-        <a class="btn" href={event.ticketsUrl}>Tickets from ${tickets.tiers[0].price}</a>
-        <a class="btn secondary" href={event.prospectusUrl}>See the Sponsor Prospectus</a>
-      </p>
+  <section class="hero on-dark" aria-labelledby="hero-h">
+    <div class="hero-fountain" aria-hidden="true"><Fountain strokeWidth={0.9} /></div>
+    <div class="in">
+      <div>
+        <p class="when"><span><b>{event.dates.days}</b> {event.dates.label}</span><span><b>at</b> {event.venue.host}, {event.venue.city}</span></p>
+        <h1 id="hero-h">CommunityDays <span>KC</span></h1>
+        <p class="presents">{isPast ? `Thanks for coming to ${event.year}. The program is below.` : event.tagline}</p>
+        <ul class="lineup" aria-label="Participating communities">
+          {lineup.map((c) => <li class={`t${c.tier}`}><a href={`/communities/${c.slug}/`}>{c.name}</a></li>)}
+        </ul>
+      </div>
+      {isPast ? (
+        <div class="attendee">
+          <div class="role" aria-hidden="true">SAVE THE DATE</div>
+          <h2>{event.name} {event.year + 1}</h2>
+          <p>Dates are coming. Sign up and we'll email you when tickets and the call for speakers open.</p>
+          <a class="btn" href="#signup">Get updates</a>
+        </div>
+      ) : (
+        <div class="attendee">
+          <div class="role" aria-hidden="true">ATTENDEE</div>
+          <p class="price">${early.price}<small>{early.name.toLowerCase()}</small></p>
+          <p>{tickets.note} ${tickets.tiers[1].price} after April 27.</p>
+          <a class="btn" href={event.ticketsUrl}>Get your badge</a>
+        </div>
+      )}
     </div>
   </section>
-  <section class="section">
-    <div class="container prose">
-      <p>{event.tagline} {groups.length} meetup groups, {talks} sessions and {speakers.length} speakers across two days.</p>
-      <p><a href="/schedule/">See the schedule</a> · <a href="/speakers/">Meet the speakers</a> · <a href="/about/">About the event</a></p>
+  <div class="facts on-dark"><div class="in">
+    <span><b>{talks.length}</b> talks</span><span><b>{speakers.length}</b> speakers</span><span><b>{rooms.length}</b> rooms</span><span><b>{allDays.length}</b> days</span><span>{event.venue.name} · {event.venue.street}</span>
+  </div></div>
+
+  <section class="sec" aria-labelledby="prog-h"><div class="in">
+    <div class="prog">
+      <div class="prog-side" style="position:static">
+        <h2 id="prog-h" style="font-weight:900;font-stretch:118%;font-size:clamp(30px,4vw,44px);letter-spacing:-0.03em;line-height:1">Program</h2>
+        <p class="sub">How {firstDay.weekday} {isPast ? 'started' : 'starts'}. The full program filters by day, community and room.</p>
+        <a class="lnk" href="/program/">See the full program</a>
+      </div>
+      <ol class="rows">{firstHour.map((s) => <SessionRow session={s} />)}</ol>
     </div>
-  </section>
+  </div></section>
+
+  <section class="sec" aria-labelledby="spk-h"><div class="in">
+    <div class="sec-h"><h2 id="spk-h">Speakers</h2><a class="lnk" href="/speakers/">All {speakers.length} speakers</a></div>
+    <ul class="badges">{featured.map((p) => <SpeakerBadge speaker={p} />)}</ul>
+  </div></section>
 </Base>

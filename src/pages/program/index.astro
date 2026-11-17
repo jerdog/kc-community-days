@@ -1,0 +1,86 @@
+---
+import Base from '../../layouts/Base.astro';
+import SessionRow from '../../components/SessionRow.astro';
+import { event, communities } from '../../data/site.js';
+import { days, rooms, talks } from '../../lib/sessionize.js';
+
+const allDays = days();
+const withTalks = communities.filter((c) => talks.some((t) => t.community?.slug === c.slug));
+const total = allDays.reduce((n, d) => n + d.sessions.length, 0);
+---
+<Base title="Program" description={`All ${talks.length} talks at ${event.name} ${event.year}, by day, community and room.`}>
+  <header class="page-head on-dark"><div class="in">
+    <h1>Program</h1>
+    <p>{talks.length} talks across {rooms.length} rooms on {event.dates.label}. All times are Central.</p>
+  </div></header>
+
+  <div class="sec"><div class="in">
+    <div class="prog">
+      <div class="prog-side">
+        <form class="filters" id="filters" hidden>
+          <h2 class="visually-hidden">Filter the program</h2>
+          <label>Day
+            <select name="day">
+              <option value="">Both days</option>
+              {allDays.map((d) => <option value={d.key}>{d.label}</option>)}
+            </select>
+          </label>
+          <label>Community
+            <select name="community">
+              <option value="">All communities</option>
+              {withTalks.map((c) => <option value={c.slug}>{c.name}</option>)}
+            </select>
+          </label>
+          <label>Room
+            <select name="room">
+              <option value="">All rooms</option>
+              {rooms.map((r) => <option value={r}>{r}</option>)}
+            </select>
+          </label>
+          <button class="btn outline" type="reset">Clear filters</button>
+        </form>
+        <p class="count" id="count" role="status" aria-live="polite">Showing all {total} sessions</p>
+      </div>
+      <div>
+        {allDays.map((d) => (
+          <section class="day-block" aria-labelledby={`d-${d.key}`} data-day={d.key}>
+            <h2 class="day-h" id={`d-${d.key}`}>{d.label}</h2>
+            <ol class="rows">{d.sessions.map((s) => <SessionRow session={s} />)}</ol>
+          </section>
+        ))}
+      </div>
+    </div>
+  </div></div>
+</Base>
+
+<script define:vars={{ total }}>
+  const form = document.getElementById('filters');
+  const count = document.getElementById('count');
+  form.hidden = false;
+  const params = new URLSearchParams(location.search);
+  for (const el of form.elements) if (el.name && params.has(el.name)) el.value = params.get(el.name);
+
+  function apply() {
+    const f = Object.fromEntries(new FormData(form));
+    let shown = 0;
+    for (const row of document.querySelectorAll('.row')) {
+      const service = row.classList.contains('service');
+      const match =
+        (!f.day || row.dataset.day === f.day) &&
+        (!f.room || row.dataset.room === f.room || (service && !f.community)) &&
+        (!f.community || row.dataset.community === f.community);
+      row.hidden = !match;
+      if (match) shown++;
+    }
+    for (const block of document.querySelectorAll('.day-block')) {
+      block.hidden = !block.querySelector('.row:not([hidden])');
+    }
+    count.textContent = shown === total ? `Showing all ${total} sessions` : `Showing ${shown} of ${total} sessions`;
+    const q = new URLSearchParams(Object.entries(f).filter(([, v]) => v));
+    history.replaceState(null, '', q.size ? `?${q}` : location.pathname);
+  }
+  form.addEventListener('change', apply);
+  form.addEventListener('reset', () => setTimeout(apply));
+  form.addEventListener('submit', (e) => e.preventDefault());
+  apply();
+</script>

@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import Form from '../components/Form.astro';
+import { event, sponsors } from '../data/site.js';
+---
+<Base title="Sponsor" sponsorStrip={false} description={`Sponsor ${event.name} and reach Kansas City's tech community.`}>
+  <header class="page-head on-dark"><div class="in">
+    <h1>Sponsor</h1>
+    <p>Put your company in front of a dozen Kansas City tech communities at once.</p>
+    <p><a class="btn gold" href={event.prospectusUrl}>Download the prospectus<span class="visually-hidden"> (PDF)</span></a></p>
+  </div></header>
+
+  <section class="sec" aria-labelledby="thanks-h"><div class="in">
+    <div class="sec-h"><h2 id="thanks-h">{event.year} sponsors</h2></div>
+    {sponsors.map((t) => (
+      <>
+        <h3 class="tier-h">{t.tier}</h3>
+        <ul class="logos">
+          {t.items.map((s) => {
+            const img = <img src={s.logo} alt={s.name} loading="lazy" />;
+            return <li>{s.url ? <a href={s.url}>{img}</a> : img}</li>;
+          })}
+        </ul>
+      </>
+    ))}
+  </div></section>
+
+  <section class="sec" aria-labelledby="ask-h"><div class="in two">
+    <div class="prose">
+      <h2 id="ask-h" style="font-size:clamp(30px,4vw,44px);font-weight:900;font-stretch:118%;margin-top:0">Talk to us about sponsoring</h2>
+      <p>Tell us a little about your company and an organizer will reach out with options. The <a href={event.prospectusUrl}>sponsor prospectus (PDF)</a> has the full details.</p>
+    </div>
+    <Form endpoint="sponsor-inquiry" submitLabel="Send">
+      <label><span>Your name <span class="req">(required)</span></span><input name="name" required autocomplete="name" /></label>
+      <label><span>Email <span class="req">(required)</span></span><input name="email" type="email" required autocomplete="email" /></label>
+      <label><span>Company <span class="req">(required)</span></span><input name="company" required autocomplete="organization" /></label>
+      <label><span>Phone <span class="req">(optional)</span></span><input name="phone" type="tel" autocomplete="tel" /></label>
+      <label><span>Anything we should know? <span class="req">(optional)</span></span><textarea name="message" rows="4"></textarea></label>
+    </Form>
+  </div></section>
+</Base>

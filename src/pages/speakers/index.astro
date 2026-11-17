@@ -1,0 +1,15 @@
+---
+import Base from '../../layouts/Base.astro';
+import SpeakerBadge from '../../components/SpeakerBadge.astro';
+import { event } from '../../data/site.js';
+import { speakers } from '../../lib/sessionize.js';
+---
+<Base title="Speakers" description={`The ${speakers.length} speakers at ${event.name} ${event.year}.`}>
+  <header class="page-head on-dark"><div class="in">
+    <h1>Speakers</h1>
+    <p>{speakers.length} people from across Kansas City's tech community, listed by first name. The ribbon shows the community each one is speaking with.</p>
+  </div></header>
+  <div class="sec"><div class="in">
+    <ul class="badges">{speakers.map((p, i) => <SpeakerBadge speaker={p} headingLevel={2} eager={i < 4} />)}</ul>
+  </div></div>
+</Base>

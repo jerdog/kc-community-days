@@ -45,10 +45,11 @@ const origin = `http://localhost:${server.address().port}`;
 const browser = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {});
 
 let failures = 0;
-for (const width of [1280, 320]) {
-  const page = await browser.newPage({ viewport: { width, height: 900 } });
-  for (const path of pages) {
-    await page.goto(origin + path, { waitUntil: 'networkidle' });
+const CONCURRENCY = 6;
+async function check(width, path) {
+    const page = await browser.newPage({ viewport: { width, height: 900 } });
+    await page.goto(origin + path, { waitUntil: 'load' });
+    await page.evaluate(() => document.fonts.ready);
     await page.addScriptTag({ content: axeSource });
     const { violations } = await page.evaluate((tags) => window.axe.run(document, { runOnly: { type: 'tag', values: tags } }), TAGS);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
@@ -57,9 +58,12 @@ for (const width of [1280, 320]) {
     failures += issues.length;
     console.log(`${issues.length ? '✗' : '✓'} ${width}px ${path}`);
     if (issues.length) console.log(issues.join('\n'));
-  }
-  await page.close();
+    await page.close();
 }
+const jobs = [1280, 320].flatMap((w) => pages.map((p) => [w, p]));
+await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
+  while (jobs.length) await check(...jobs.shift());
+}));
 await browser.close();
 server.close();
 console.log(failures ? `\n${failures} accessibility issue(s).` : '\nNo WCAG 2.2 AA issues found by axe.');

@@ -1,11 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
 import { event } from '../data/site.js';
-const nextYear = event.year + 1;
 ---
-<Base title="Code of Conduct and Policies">
-  <section class="section"><div class="container prose">
-    <h1>Code of Conduct and Policies</h1>
+<Base title="Code of Conduct">
+  <header class="page-head on-dark"><div class="in">
+    <h1>Code of Conduct</h1>
+    <p>Everyone at {event.name} agrees to this code: attendees, speakers, sponsors, volunteers and organizers.</p>
+  </div></header>
+  <section class="sec"><div class="in prose">
     <p>{event.name} is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, or religion. We do not tolerate harassment of conference participants in any form. Sexual language and imagery is not appropriate for any conference venue, including talks. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.</p>
     <p>Harassment includes offensive verbal comments related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, religion, sexual images in public spaces, deliberate intimidation, stalking, following, harassing photography or recording, sustained disruption of talks or other events, inappropriate physical contact, and unwelcome sexual attention. Participants asked to stop any harassing behavior are expected to comply immediately.</p>
     <p>Exhibitors in the expo hall, sponsor or vendor booths, or similar activities are also subject to the anti-harassment policy. In particular, exhibitors should not use sexualized images, activities, or other material. Booth staff (including volunteers) should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.</p>
@@ -18,10 +20,6 @@ const nextYear = event.year + 1;
       <li>KCMO Police: <a href="tel:+18162345111">(816) 234-5111</a> (or 911 for emergency response)</li>
       <li>Sexual Assault Hotline: <a href="tel:+18165310233">(816) 531-0233</a> or <a href="tel:+19136420233">(913) 642-0233</a></li>
     </ul>
-    <h2 id="refund-policy">Refund Policy</h2>
-    <p>Tickets to {event.name} {event.year} are non-refundable within thirty (30) days of the event.</p>
-    <p>If you are unable to attend, and you cancel between 15 and 30 days prior to {event.name}, we can carry forward your current ticket registration to {event.name} {nextYear}.</p>
-    <p>Any cancellation requests within 15 days of the event are not eligible for a refund or a {nextYear} carryover, and can only be transferred to another colleague or friend for {event.name} {event.year}.</p>
-    <p>We are a community-run, not-for-profit event, and we have our own non-refundable commitments to our vendors. To survive, we must remain financially viable, and that does drive our ticketing and refund policy.</p>
+    <p>Looking for the refund policy? It's on the <a href="/attend/#refunds">Attend page</a>.</p>
   </div></section>
 </Base>

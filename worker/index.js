@@ -10,12 +10,29 @@ const json = (body, status = 200) =>
     headers: { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' },
   });
 
+const escapeHtml = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+
+function htmlPage(message, referer) {
+  let back = '/';
+  try {
+    if (referer) back = new URL(referer).pathname;
+  } catch {}
+  return new Response(
+    `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CommunityDays KC</title></head>` +
+      `<body style="font:18px/1.5 system-ui,sans-serif;max-width:40rem;margin:3rem auto;padding:0 1rem;color:#16153f">` +
+      `<p role="status">${escapeHtml(message)}</p><p><a href="${escapeHtml(back)}">Go back</a></p></body></html>`,
+    { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } }
+  );
+}
+
 const clean = (v, max = MAX) => (typeof v === 'string' ? v.trim().slice(0, max) : '');
 
 async function readBody(request) {
   const type = request.headers.get('content-type') || '';
   if (type.includes('application/json')) return request.json();
-  return Object.fromEntries(await request.formData());
+  const data = {};
+  for (const [k, v] of await request.formData()) data[k] = k in data ? [].concat(data[k], v) : v;
+  return data;
 }
 
 const handlers = {
@@ -89,7 +106,13 @@ export default {
     if (clean(data.website)) return json({ ok: true, message: 'Thanks!' });
 
     try {
-      return await handler(data, env);
+      const res = await handler(data, env);
+      // Plain HTML form posts (JavaScript off) get a readable page instead of JSON.
+      if (!(request.headers.get('content-type') || '').includes('application/json')) {
+        const body = await res.json();
+        return htmlPage(body.message || body.error, request.headers.get('referer'));
+      }
+      return res;
     } catch (err) {
       console.error(`api/${name} failed`, err);
       return json({ error: 'Something went wrong saving that. Please try again or email communitydays@kcdc.info.' }, 500);

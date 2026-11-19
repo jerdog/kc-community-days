@@ -17,7 +17,8 @@
     "test:a11y": "npm run build && node tests/a11y.mjs",
     "db:migrate:preview": "wrangler d1 migrations apply PREVIEW_DB --remote --config wrangler.preview-migrations.jsonc",
     "deploy:preview": "npm run build && npm run db:migrate:preview && wrangler preview",
-    "new-year": "node scripts/new-year.mjs"
+    "new-year": "node scripts/new-year.mjs",
+    "test:admin": "node tests/admin-e2e.mjs"
   },
   "devDependencies": {
     "astro": "^7.4.12",

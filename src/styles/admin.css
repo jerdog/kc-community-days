@@ -1,0 +1,62 @@
+/* Admin pages. Builds on site.css tokens; utilitarian, WCAG 2.2 AA. */
+html:has(body.admin) { scroll-padding-top: 24px; scroll-padding-bottom: 24px }
+.admin { font-size: 16px }
+.admin-top { justify-content: space-between }
+.admin-tag { font: 700 13px var(--mono); background: var(--gold); color: var(--ink); padding: 3px 8px; border-radius: 4px; margin-left: 10px; letter-spacing: 0 }
+.admin-user { display: flex; align-items: center; gap: 12px; flex-wrap: wrap }
+.admin-who { font: 14px var(--mono) }
+.btn.small { min-height: 40px; padding: 8px 14px; font-size: 15px }
+.btn.danger { color: var(--error) }
+.admin-narrow, .admin-wrap { padding-block: 40px 80px; display: grid; gap: 18px; align-content: start }
+.admin-narrow { max-width: 640px }
+.admin h1 { font-weight: 900; font-stretch: 112%; font-size: clamp(30px, 4vw, 42px) }
+.admin h2 { font-weight: 850; font-size: 26px; margin-bottom: 14px }
+.admin h3 { font-weight: 800; font-size: 20px; margin: 18px 0 8px }
+.admin code { font-family: var(--mono); font-size: .92em; background: var(--white); padding: 1px 5px; border-radius: 3px }
+.admin-msg { min-height: 1.5em; font-weight: 700 }
+.admin-msg.is-error, .warn { color: var(--error) }
+.draft-bar { background: var(--white); border: 2px solid var(--indigo); border-radius: 6px; padding: 16px 18px; display: grid; gap: 10px }
+.draft-commits { margin: 0; padding-left: 1.2em; font-size: 15px; display: grid; gap: 2px }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center }
+.confirm { background: var(--stock); border: 2px solid var(--ink); border-radius: 6px; padding: 14px 16px; display: grid; gap: 10px }
+.error-summary { border: 3px solid var(--error); background: var(--white); border-radius: 6px; padding: 14px 18px }
+.error-summary h2 { font-size: 20px; color: var(--error); margin-bottom: 8px }
+.error-summary ul { margin: 0; padding-left: 1.2em; display: grid; gap: 4px }
+.admin-toc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 15px }
+.admin-toc a { display: inline-block; padding-block: 4px }
+.admin-sec { background: var(--white); border-radius: 6px; padding: 20px 22px; margin-bottom: 18px; display: grid; gap: 14px; scroll-margin-top: 16px }
+.admin-sec > * { max-width: 760px }
+.field { display: grid; gap: 6px; margin: 0 }
+.field > label, .field > legend, .list > legend { font-weight: 700 }
+.field.check { grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: 10px }
+.field.check input { width: 24px; height: 24px; min-height: 0; accent-color: var(--indigo) }
+.field.check .help, .field.check .field-err { grid-column: 2 }
+.help { font-size: 14px; color: var(--sub); margin: 0 }
+.field-err { color: var(--error); font-weight: 700; font-size: 15px; margin: 0 }
+[aria-invalid="true"] { border-color: var(--error) !important; box-shadow: 0 0 0 1px var(--error) }
+.admin input, .admin select, .admin textarea { min-height: 44px }
+.color-row, .image-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center }
+.color-row input[type=text] { width: 9em }
+.color-row input[type=color] { width: 52px; height: 44px; padding: 2px; min-height: 0 }
+.ribbon-preview { background: var(--c); color: var(--white); font: 700 14px/1 var(--body); padding: 10px 20px 10px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 9px) 50%, 100% 100%, 0 100%) }
+.ratio { font: 700 14px var(--mono) }
+.ratio.pass { color: #1d6b3a }
+.ratio.fail { color: var(--error) }
+.image-row input[type=text] { flex: 1 1 260px; width: auto }
+.upload { position: relative; cursor: pointer }
+.upload:focus-within { outline: 3px solid var(--indigo); outline-offset: 3px }
+.list { border: 2px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 12px; margin: 0 }
+.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px }
+.item { border: 1px solid var(--rule); border-radius: 6px; padding: 14px; display: grid; gap: 12px; background: var(--stock) }
+.item-h { font-size: 17px; font-weight: 800; margin: 0 }
+.item-actions { display: flex; flex-wrap: wrap; gap: 8px }
+.checks { display: flex; flex-wrap: wrap; gap: 6px 18px }
+.checks label { display: inline-flex; gap: 8px; align-items: center; min-height: 32px; font-weight: 400 }
+.checks input { width: 22px; height: 22px; min-height: 0; accent-color: var(--indigo) }
+.inline-fields { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); gap: 12px }
+
+/* Let every column shrink to the screen; long content wraps instead of widening the page. */
+.admin-wrap > *, .admin-sec > *, .field, .list, .item, .draft-bar > * { min-width: 0 }
+.admin input, .admin select, .admin textarea { max-width: 100% }
+.admin-sec, .draft-bar, .list, .item { overflow-wrap: anywhere }
+@media (max-width: 560px) { .admin-sec { padding: 16px 14px } .list { padding: 12px 10px } .item { padding: 12px 10px } }

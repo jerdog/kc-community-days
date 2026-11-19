@@ -1,3 +1,5 @@
+import { handleAdmin } from './admin/routes.js';
+
 // Cloudflare Worker entry. Static pages are served from ./dist by the assets
 // binding; only /api/* reaches this code (see run_worker_first in wrangler.jsonc).
 
@@ -89,6 +91,7 @@ const handlers = {
 
 export default {
   async fetch(request, env) {
+    if (/^\/admin(\/|$)/.test(new URL(request.url).pathname)) return handleAdmin(request, env);
     const { pathname } = new URL(request.url);
     const name = pathname.replace(/^\/api\//, '').replace(/\/$/, '');
     const handler = handlers[name];

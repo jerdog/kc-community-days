@@ -1,5 +1,5 @@
 // Turns one year's config + Sessionize data into everything the pages need.
-// Used for the current year (site.config.js) and for each archived year (archive/<year>/).
+// Used for the current year (site.config.json) and for each archived year (archive/<year>/).
 
 const day = (ymd) => new Date(`${ymd}T12:00:00Z`);
 const fmt = (ymd, opts) => day(ymd).toLocaleDateString('en-US', { timeZone: 'UTC', ...opts });
@@ -60,7 +60,7 @@ function mergeDuplicateSpeakers(data) {
 }
 
 /**
- * @param {object} config   one year's settings (shape of site.config.js)
+ * @param {object} config   one year's settings (shape of site.config.json)
  * @param {object} raw      that year's sessionize.json, or null
  * @param {object} opts     { base: '' | '/2026', archived: boolean, today: 'YYYY-MM-DD' }
  */
@@ -69,7 +69,7 @@ export function makeYear(config, raw, { base = '', archived = false, today } = {
   const tz = ev.timezone || 'America/Chicago';
   const { start = null, end = null } = ev;
   const year = Number(ev.year || String(start || '').slice(0, 4));
-  if (!year) throw new Error('site.config.js: set event.year (or event.start).');
+  if (!year) throw new Error('site.config.json: set event.year (or event.start).');
   const features = { registration: true, callForSpeakers: false, program: true, speakers: true, ...config.features };
   if (archived) Object.assign(features, { registration: false, callForSpeakers: false, program: true, speakers: true });
 
@@ -77,7 +77,7 @@ export function makeYear(config, raw, { base = '', archived = false, today } = {
   const eventId = config.sessionize?.eventId || null;
   const matches = raw && eventId && raw.eventId === eventId;
   if (raw && eventId && raw.eventId !== eventId && !archived) {
-    console.warn(`[sessionize] src/data/sessionize.json is for event ${raw.eventId}, but site.config.js names ${eventId}. Run npm run import:sessionize. Showing no program for now.`);
+    console.warn(`[sessionize] src/data/sessionize.json is for event ${raw.eventId}, but site.config.json names ${eventId}. Run npm run import:sessionize. Showing no program for now.`);
   }
   const data = matches ? mergeDuplicateSpeakers(raw) : EMPTY;
 

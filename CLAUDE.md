@@ -23,6 +23,8 @@
 - `worker/index.js`: `/api/*` only; everything else is static assets from `dist/`
 - `migrations/`: D1 schema as numbered SQL files. Applied automatically by `npm run deploy` (the Workers Builds deploy command) on the production branch. Never edit a deployed migration; add a new numbered file. Keep changes additive because migrations run before the new code goes live.
 - `src/styles/site.css`: the whole design system (tokens at the top)
+- Sponsors: tiers in `site.config.js` set the badge label, ribbon color and whether the tier is billed in the homepage hero (`hero: true`). Homepage shows sponsor badges; every page's footer shows all logos on white tiles.
+- Branch previews use their own D1 database (`communitydays-preview`), set in `previews` in `wrangler.jsonc` and in `wrangler.preview-migrations.jsonc` (keep the two in sync). The Workers Builds preview command is `npm run deploy:preview`, which migrates the preview database before deploying.
 - Previews: `EVENT_STATE=upcoming|past` forces the homepage mode; `SITE_TODAY=YYYY-MM-DD` builds as if it were that date (ticket tiers, mode).
 - `src/lib/sessionize.js` ignores `sessionize.json` when its event ID differs from the config, so pages show "coming soon" between years. Every page must render with an empty program.
 

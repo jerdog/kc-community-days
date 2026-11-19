@@ -4,7 +4,11 @@ import Fountain from '../components/Fountain.astro';
 import Lineup from '../components/Lineup.astro';
 import SessionRow from '../components/SessionRow.astro';
 import SpeakerBadge from '../components/SpeakerBadge.astro';
-import { event, tickets, isPast, nextYear } from '../lib/site.js';
+import SponsorBadges from '../components/SponsorBadges.astro';
+import SponsorLogos from '../components/SponsorLogos.astro';
+import { event, tickets, isPast, nextYear, sponsors } from '../lib/site.js';
+const heroSponsors = sponsors.some((t) => t.hero && t.items.length);
+const hasSponsors = sponsors.some((t) => t.items.length);
 import { days, talks, speakers, rooms, hasProgram } from '../lib/sessionize.js';
 
 const allDays = days();
@@ -37,6 +41,12 @@ const presents = isPast
         <h1 id="hero-h">CommunityDays <span>KC</span></h1>
         <p class="presents">{presents}</p>
         <Lineup />
+        {heroSponsors && (
+          <div class="presented">
+            <p class="presented-lab">Presented with support from</p>
+            <SponsorLogos hero size="lg" />
+          </div>
+        )}
       </div>
       {isPast ? (
         <div class="attendee">
@@ -83,6 +93,13 @@ const presents = isPast
       <h2 id="soon-h" style="font-size:clamp(30px,4vw,44px);font-weight:900;font-stretch:118%">The program is on its way</h2>
       <p>Talks and speakers for {event.name} {event.year} will appear here once they're announced.</p>
       {event.callForSpeakersUrl && <p><a class="btn" href={event.callForSpeakersUrl}>Submit a talk</a></p>}
+    </div></section>
+  )}
+  {hasSponsors && (
+    <section class="sec" aria-labelledby="spons-h"><div class="in">
+      <div class="sec-h"><h2 id="spons-h">Sponsors</h2><a class="lnk" href="/sponsor/">Become a sponsor</a></div>
+      <p class="sub" style="margin:-14px 0 26px">Thank you to the organizations behind {event.name}.</p>
+      <SponsorBadges />
     </div></section>
   )}
 </Base>

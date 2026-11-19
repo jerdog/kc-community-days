@@ -1,8 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import SessionRow from '../../components/SessionRow.astro';
-import { event, communities } from '../../data/site.js';
-import { talksByCommunity } from '../../lib/sessionize.js';
+import { event, communities } from '../../lib/site.js';
+import { talksByCommunity, hasProgram } from '../../lib/sessionize.js';
 
 export function getStaticPaths() {
   return communities.map((community) => ({ params: { slug: community.slug }, props: { community } }));
@@ -16,7 +16,7 @@ const n = theirTalks.length;
     <p class="crumb"><a href="/communities/">Communities</a></p>
     <h1>{c.name}</h1>
     {c.fullName && <p>{c.fullName}</p>}
-    <p>{n ? `${n} talk${n > 1 ? 's' : ''} at ${event.name} ${event.year}.` : `A community partner of ${event.name} ${event.year}.`}</p>
+    <p>{n ? `${n} talk${n > 1 ? 's' : ''} at ${event.name} ${event.year}.` : hasProgram ? `A community partner of ${event.name} ${event.year}.` : `Part of ${event.name} ${event.year}. Talks will be listed here once the program is announced.`}</p>
     {c.url && <p><a class="btn" style={`background:var(--white);color:${c.color}`} href={c.url}>Visit {c.name}</a></p>}
   </div></header>
   <div class="sec"><div class="in">
@@ -26,7 +26,7 @@ const n = theirTalks.length;
         <ol class="rows">{theirTalks.map((s) => <SessionRow session={s} showDay />)}</ol>
       </section>
     ) : (
-      <p class="prose">{c.name} didn't present talks this year. {c.url ? <>Find their events on <a href={c.url}>their site</a>.</> : null}</p>
+      <p class="prose">{hasProgram ? `${c.name} didn't present talks this year.` : 'The program hasn’t been announced yet.'} {c.url ? <>Find their events on <a href={c.url}>their site</a>.</> : null}</p>
     )}
   </div></div>
 </Base>

@@ -7,7 +7,8 @@ Website for **CommunityDays KC**, migrated from Squarespace to [Astro](https://a
 | Piece | What it does |
 | --- | --- |
 | `src/pages/` | Home, Program (+ a page and `.ics` per talk), Speakers (+ a page each), Communities (+ a page each), Attend, Sponsor, About, Code of Conduct, Feedback |
-| `src/data/site.js` | Event details, tickets, communities (lineup tier and ribbon color), sponsors and organizers. **Edit this to update the site.** |
+| `site.config.js` | **The one file to edit.** Event dates and venue, ticket tiers, links, Sessionize event ID, homepage lineup, communities, sponsors and organizers. Has a new-year checklist at the top. |
+| `src/lib/site.js` | Derives date labels, the current ticket tier and pre/post-event mode from the config |
 | `src/data/sessionize.json` | Speakers, sessions and schedule from Sessionize (generated) |
 | `src/styles/site.css` | The "Lineup" design system |
 | `worker/index.js` | Worker entry. Static files come from the assets binding; only `/api/*` runs code |
@@ -15,7 +16,9 @@ Website for **CommunityDays KC**, migrated from Squarespace to [Astro](https://a
 | `public/_redirects` | 301s for old Squarespace URLs |
 | `tests/a11y.mjs` | WCAG 2.2 AA check of every page at 1280px and 320px |
 
-The homepage switches from "buy tickets" to "save the date" once the event's end date has passed (decided at build time). Preview the pre-event version with `EVENT_STATE=upcoming npm run build`.
+The homepage switches from "buy tickets" to "save the date" once the event's end date has passed, and the ticket price follows the tier deadlines (both decided at build time, so a deploy after a deadline picks it up). Preview with `EVENT_STATE=upcoming npm run build` or `SITE_TODAY=2026-03-01 npm run build`.
+
+If `site.config.js` names a different Sessionize event than the imported data, the program, speaker and community pages show "coming soon" instead of the old talks.
 
 ## Develop
 
@@ -30,8 +33,8 @@ npm run test:a11y           # WCAG 2.2 AA check; run before committing UI change
 ## Update speakers and schedule from Sessionize
 
 ```bash
-npm run import:sessionize            # default event id 295atto3
-npm run import:sessionize -- <newId> # next year's event
+npm run import:sessionize            # uses sessionize.eventId from site.config.js
+npm run import:sessionize -- <id>    # one-off override
 ```
 
 Commit the updated `src/data/sessionize.json`. Sessionize is the source of truth; nothing is entered twice.

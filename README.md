@@ -7,7 +7,7 @@ Website for **CommunityDays KC**, migrated from Squarespace to [Astro](https://a
 | Piece | What it does |
 | --- | --- |
 | `src/pages/` | Home, Program (+ a page and `.ics` per talk), Speakers (+ a page each), Communities (+ a page each), Attend, Sponsor, About, Code of Conduct, Feedback |
-| `site.config.js` | **The one file to edit.** Event dates and venue, ticket tiers, links, Sessionize event ID, homepage lineup, communities, sponsors and organizers. Has a new-year checklist at the top. |
+| `site.config.json` | **The one file to edit.** Event dates and venue, ticket tiers, links, Sessionize event ID, homepage lineup, communities, sponsors and organizers. Has a new-year checklist at the top. |
 | `src/lib/site.js` | Derives date labels, the current ticket tier and pre/post-event mode from the config |
 | `src/data/sessionize.json` | Speakers, sessions and schedule from Sessionize (generated) |
 | `src/styles/site.css` | The "Lineup" design system |
@@ -18,15 +18,66 @@ Website for **CommunityDays KC**, migrated from Squarespace to [Astro](https://a
 
 The homepage switches from "buy tickets" to "save the date" once the event's end date has passed, and the ticket price follows the tier deadlines (both decided at build time, so a deploy after a deadline picks it up). Preview with `EVENT_STATE=upcoming npm run build` or `SITE_TODAY=2026-03-01 npm run build`.
 
-If `site.config.js` names a different Sessionize event than the imported data, the program, speaker and community pages show "coming soon" instead of the old talks.
+If `site.config.json` names a different Sessionize event than the imported data, the program, speaker and community pages show "coming soon" instead of the old talks.
+
+## Admin page (`/admin`)
+
+Organizers edit everything in `site.config.json` at **https://communitydays.jerdog.workers.dev/admin/**: event details, the call-for-speakers and registration switches, links, ticket tiers, the homepage community list, communities (with a live ribbon-contrast check), sponsors and logos, organizers and the menu. It can also import the program from Sessionize and start a new year (archiving the current one).
+
+- **Sign-in:** GitHub. Only accounts on the `ADMIN_USERS` allowlist that also have write access to this repository can sign in. With no allowlist, nobody can. The list is checked on every request, so removing someone locks them out immediately.
+- **Drafts:** every save is committed (with the admin's GitHub name) to the `admin-draft` branch, which Workers Builds turns into a preview. **Publish** merges the draft into `main`, which deploys the site; **Discard** deletes the draft.
+- **Security:** the session is an encrypted, HttpOnly cookie that expires after 8 hours. The admin only works on `ADMIN_ORIGIN` (not on previews), and changes are made with the admin's own GitHub token, so GitHub's own permissions apply.
+
+### One-time setup
+
+1. Create a GitHub OAuth app at **github.com → Settings → Developer settings → OAuth Apps → New OAuth App**:
+   - Homepage URL: `https://communitydays.jerdog.workers.dev`
+   - Authorization callback URL: `https://communitydays.jerdog.workers.dev/admin/auth/callback`
+2. Put its **Client ID** in `wrangler.jsonc` → `vars.GITHUB_CLIENT_ID` (it isn't secret; already done).
+3. In Cloudflare: **Workers & Pages → communitydays → Settings → Variables and Secrets**, add two **Secrets**:
+   - `GITHUB_CLIENT_SECRET`: generate one in the OAuth app
+   - `SESSION_SECRET`: a long random string, e.g. the output of `openssl rand -base64 32`
+
+   and one **Text** variable:
+   - `ADMIN_USERS`: who may use the admin, comma-separated, e.g. `296864, someorganizer`. Use numeric GitHub user IDs where you can; they stay the same if someone renames their account. To find someone's ID, open `https://api.github.com/users/<username>` and copy its `"id"`. Edit this list in the dashboard to add or remove admins; no deploy is needed. `keep_vars` in `wrangler.jsonc` stops deploys from deleting it.
+4. Deploy (push to `main`). Until all of these exist, `/admin` shows which ones are missing.
+
+When the site moves to `communitydays.info`, change `ADMIN_ORIGIN` and the OAuth app's URLs to match.
+
+### Testing the admin locally
+
+```bash
+node tests/mock-github.mjs          # stand-in for GitHub on :9999
+npm run build && npx wrangler dev    # with .dev.vars (see tests/admin-e2e.mjs) on :8787
+node tests/admin-e2e.mjs             # add --import to also run a real Sessionize import
+```
+
+`.dev.vars` for local testing:
+
+```
+GITHUB_CLIENT_ID=test-client
+GITHUB_CLIENT_SECRET=test-secret
+SESSION_SECRET=local-dev-only-session-secret
+ADMIN_USERS=1001,test-viewer
+GITHUB_API=http://localhost:9999
+GITHUB_WEB=http://localhost:9999
+```
 
 ## Starting a new year
 
-From a browser: **Actions → Start new year → Run workflow**, enter the year (and dates if known). It opens a pull request; review `site.config.js` and merge. (One-time setting: Settings → Actions → General → allow GitHub Actions to create pull requests.)
+From the admin page: **Years → Start a new year** (recommended). Or from GitHub: **Actions → Start new year → Run workflow**, enter the year (and dates if known). It opens a pull request; review `site.config.json` and merge. (One-time setting: Settings → Actions → General → allow GitHub Actions to create pull requests.)
 
 From a terminal: `npm run new-year -- 2027` or `npm run new-year -- 2027 2027-06-03 2027-06-04`.
 
-Either way the current year is archived to `archive/<year>/` and served at `/<year>/`, old talk and speaker links redirect there, and `site.config.js` is reset with the call for speakers and registration off. Then, as the year goes on, flip the switches in `site.config.js` (`features`): open the call for speakers, add dates, open registration, and set `sessionize.eventId` + run `npm run import:sessionize` once talks are selected. Until then the site shows last year's speakers and sponsors, clearly labelled.
+Either way the current year is archived to `archive/<year>/` and served at `/<year>/`, old talk and speaker links redirect there, and `site.config.json` is reset with the call for speakers and registration off. Then, as the year goes on, flip the switches in `site.config.json` (`features`): open the call for speakers, add dates, open registration, and set `sessionize.eventId` + run `npm run import:sessionize` once talks are selected. Until then the site shows last year's speakers and sponsors, clearly labelled.
+
+## Backups
+
+A backup is one JSON file holding `site.config.json`, `src/data/sessionize.json` and every `archive/<year>/` file. Starting a new year always takes one first.
+
+- **Admin page → Backups:** **Back up now** saves a backup in the D1 `backups` table (the newest 50 are kept). Each row can be downloaded or restored. You can also restore from a downloaded file. Restoring writes to the draft, so you can preview it before publishing. It also takes a backup of what it replaces first. Starting a new year from the admin saves a database backup and downloads the same JSON to your computer.
+- **Terminal:** `npm run backup` (optionally `npm run backup -- "why"`) writes `backups/communitydays-backup-<time>.json`; `npm run new-year` does this automatically before changing anything. `npm run restore -- backups/<file>.json` checks the file, backs up the current state, then puts the files back. That includes removing archive years that aren't in the backup. Review with `git diff` and commit. `backups/` is git-ignored.
+- Form submissions in D1 aren't in these backups; use D1 Time Travel (`wrangler d1 time-travel restore`) for those.
 
 ## Develop
 
@@ -41,7 +92,7 @@ npm run test:a11y           # WCAG 2.2 AA check; run before committing UI change
 ## Update speakers and schedule from Sessionize
 
 ```bash
-npm run import:sessionize            # uses sessionize.eventId from site.config.js
+npm run import:sessionize            # uses sessionize.eventId from site.config.json
 npm run import:sessionize -- <id>    # one-off override
 ```
 

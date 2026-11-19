@@ -1,0 +1,30 @@
+---
+import Admin from '../../layouts/Admin.astro';
+---
+<Admin title="Sign in">
+  <div class="in admin-narrow">
+    <h1>Sign in to the admin</h1>
+    <p id="signin-msg" class="admin-msg" role="status" hidden></p>
+    <p>Use your GitHub account. Your account needs to be on the site’s admin list and have write access to the <code>jerdog/kc-community-days</code> repository.</p>
+    <p><a class="btn" href="/admin/login">Sign in with GitHub</a></p>
+    <p class="sub">Changes you make are saved to a draft first, with your GitHub name on them. Nothing goes live until someone presses Publish.</p>
+    <p><a href="/">Back to the site</a></p>
+  </div>
+  <script>
+    const p = new URLSearchParams(location.search);
+    const msgs = {
+      state: 'Sign-in expired or was started in another tab. Please try again.',
+      denied: 'GitHub sign-in was cancelled.',
+      token: 'GitHub didn’t confirm the sign-in. Please try again.',
+      access: 'Your GitHub account doesn’t have write access to the site’s repository. Ask an organizer to add you.',
+      'not-listed': 'Your GitHub account isn’t on this site’s admin list. Ask an organizer to add you.',
+    };
+    const el = document.getElementById('signin-msg');
+    const text = p.has('signed-out') ? 'You’re signed out.' : msgs[p.get('error')];
+    if (text) {
+      el.textContent = text;
+      el.hidden = false;
+      if (p.has('error')) el.classList.add('is-error');
+    }
+  </script>
+</Admin>

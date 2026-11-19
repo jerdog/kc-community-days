@@ -1,6 +1,7 @@
-# Start a new event year from the browser: Actions tab → "Start new year" → Run workflow.
+# Start a new event year from GitHub: Actions tab → "Start new year" → Run workflow.
+# (The admin page at /admin does the same and is usually easier.)
 # Archives the current year to archive/<year>/ (served at /<year>/), resets
-# site.config.js for the new year and opens a pull request to review and merge.
+# site.config.json for the new year and opens a pull request to review and merge.
 #
 # One-time repo setting: Settings → Actions → General → Workflow permissions →
 # allow "GitHub Actions to create and approve pull requests".
@@ -55,4 +56,4 @@ jobs:
           git push -u origin "$branch"
           gh pr create --base main --head "$branch" \
             --title "Start CommunityDays KC $YEAR" \
-            --body "Archives the previous year to \`archive/\` (served at \`/<year>/\`) and resets \`site.config.js\` for $YEAR: call for speakers and registration off, no Sessionize event, sponsors emptied, ticket deadlines moved forward a year. Review the config, then merge to publish."
+            --body "Archives the previous year to \`archive/\` (served at \`/<year>/\`) and resets \`site.config.json\` for $YEAR: call for speakers and registration off, no Sessionize event, sponsors emptied, ticket deadlines moved forward a year. Review the config, then merge to publish."

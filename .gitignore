@@ -5,3 +5,6 @@ dist/
 .dev.vars
 .env
 .DS_Store
+
+# Local backups (npm run backup / new-year)
+backups/

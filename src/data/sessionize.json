@@ -1,6 +1,6 @@
 {
   "eventId": "295atto3",
-  "importedAt": "2026-11-17T15:33:43.134Z",
+  "importedAt": "2026-11-19T15:36:52.073Z",
   "rooms": [
     "Room 1",
     "Room 2",
@@ -11,66 +11,12 @@
   ],
   "speakers": [
     {
-      "id": "99522a9f-8a16-4c1b-965e-4043d288cfed",
-      "name": "Shashank Daté",
-      "tagline": "Using Ruby for fun and profit since 2002",
-      "photo": "https://cdn.sessionize.com/image/5b60-200o200o2-9KwEpitjZP1zjXEJxy3niP.png",
+      "id": "ba70cb63-c6e5-49c5-929d-42b5fec5dcae",
+      "name": "Aaron Spiegel",
+      "tagline": "Head of Field Engineering & Field CTO, Qbeast",
+      "photo": "https://cdn.sessionize.com/image/26bb-200o200o2-NYbZHuPCuTGVtVaDZdtdM5.png",
       "bio": [
-        "Shashank is an avid mruby programmer who tinkers with Raspberry Pis on electrifying hobby projects."
-      ],
-      "links": []
-    },
-    {
-      "id": "09f1db8d-dbc1-4ac0-a51d-db5b4640dccb",
-      "name": "Angela Jones",
-      "tagline": "Technology Champion | Pay It Forward Advocate | Professional Work-from-Home Fur Mom 🐾",
-      "photo": "https://cdn.sessionize.com/image/1328-200o200o2-pVM7Wyk1C9EWLV9TGipkBD.JPG",
-      "bio": [
-        "Angela Jones is a Modern Workplace Consultant who helps organizations drive business growth and transformation through thoughtful, people‑centered technology solutions. Drawing on her background in retail management and recruiting, Angela brings a strong foundation in leadership, talent development, and operational excellence to her technology work. This experience shapes a consulting approach grounded in trust and a deep understanding of how people and businesses operate, enabling her to design and implement modern workplace solutions that improve adoption, empower employees, and deliver meaningful business outcomes.",
-        "A Kansas City native, Angela enjoys traveling and spending time with her family, friends, and fur babies. She is also an organizer of the Kansas City Dynamics 365, Power Platform, and AI User Group, where she is passionate about community building and knowledge sharing."
-      ],
-      "links": []
-    },
-    {
-      "id": "19c505cb-ff20-4321-ae86-8f28f4e1f7f1",
-      "name": "Julie Heckman",
-      "tagline": "Snowflake | Senior Solution Engineer",
-      "photo": "https://cdn.sessionize.com/image/2473-200o200o2-NBAwDvWvAPqpv86qG7MN53.png",
-      "bio": [
-        "I’ve spent nearly 20 years bridging the gap between petabyte-scale chaos and business-ready clarity. My journey started in the algorithmic trenches of Kansas City’s high-frequency trading scene and has since evolved through the complexities of Agricultural IoT, public sector digital transformation, and global enterprise data strategy.",
-        "From coding MapReduce and Spark algorithms at Tradebot to leading high-performing app dev teams through complex digital transformations, I’ve seen it all. Having navigated many migrations from on prem to the cloud and the \"integration tax\" of the modern data stack, I’ve developed a healthy immunity to architectural buzzwords and a pathological commitment to data provenance.",
-        "Currently, as a Senior Solution Engineer at Snowflake, I act as a bilingual interpreter between the C-suite and the dev team—translating executive visions into technical wins. I advocate for the Data Cloud because it turns a liability—data pain—into a strategic asset. I help organizations optimize their infrastructure so they can stop managing servers and start managing outcomes."
-      ],
-      "links": []
-    },
-    {
-      "id": "7af36cc1-3353-4476-9343-121e962f4bd5",
-      "name": "Patrick Liekhus",
-      "tagline": "Solutions Architect @ SETWorks | AI Creator",
-      "photo": "https://cdn.sessionize.com/image/fb77-200o200o2-RBPMX3XSd9VDZDM1XwQ8tL.png",
-      "bio": [
-        "Patrick Liekhus is a Solutions Architect at SETWorks, building HIPAA-compliant healthcare provider management software for individuals with devlopment disabilities. Patrick advocates for spec-driven development and practical approaches to maintaining engineering discipline with AI coding tools.",
-        "His expertise includes building scalable architectures, implementing continuous delivery pipelines, and helping teams leverage AI to accelerate delivery while maintaining quality. Patrick specializes in regulated environments where comprehensive documentation and compliance requirements must coexist with modern development velocity."
-      ],
-      "links": []
-    },
-    {
-      "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
-      "name": "Billy Korando",
-      "tagline": "Java Developer Advocate",
-      "photo": "https://cdn.sessionize.com/image/2c63-200o200o2-MqnWywU4YnfRYEETYgm4u6.jpg",
-      "bio": [
-        "Billy is a Java Developer Advocate with the Java Platform Group at Oracle. With over a decade of experience in Java, Billy brings a passion for helping developers find ways to reduce tedious work, such as project initiation, deployment, testing, and validation, through automation and adopting the latest features and tools in the Java ecosystem. Outside of work, Billy enjoys traveling, playing kickball, and cheering on the Kansas City Chiefs. Billy also co-organizes the Kansas City Java users group."
-      ],
-      "links": []
-    },
-    {
-      "id": "fa44c880-991f-4f83-aa72-a2a5d5352960",
-      "name": "Derek Moore",
-      "tagline": "Manager & Lead Software Architect at Netsmart",
-      "photo": "https://cdn.sessionize.com/image/85da-200o200o2-hQmwQ45WxyhNYzh6K1cAhA.jpg",
-      "bio": [
-        "Derek Moore is a technical manager and lead software architect at Netsmart with 30 years of experience in building, delivering and supporting mission-critical Internet-connected solutions for industry. With a background in the open source and Internet provider communities, Derek has a unique perspective on solution design and software engineering in a world where services need to start out having small footprints and efficient deployments while holding the door open for massive scale as service usage inevitably grows."
+        "Aaron is a veteran data and platform architect with 25+ years leading high-scale systems across aviation, engineering, telecom, and storage. As Field CTO at Qbeast, he focuses on Lakehouse performance and cost optimization, AI-ready data architecture, and pragmatic agentic design. Formerly with Dell EMC and Wheels Up, he brings deep experience in open analytics, cloud platforms, and Kubernetes. Aaron pairs strategy with hands-on execution—designing resilient data products, governance, and the AI lifecycle (from feature pipelines to model deployment and monitoring)—to solve critical business challenges and translate complex platforms into measurable outcomes."
       ],
       "links": []
     },
@@ -88,123 +34,12 @@
       "links": []
     },
     {
-      "id": "13181a5c-88d0-4791-88f9-3cd6c2373c03",
-      "name": "Daymon Littrell-Reyes",
-      "tagline": "Software Engineer @Google",
-      "photo": "https://cdn.sessionize.com/image/8165-200o200o2-pJqMDs4r7WrHsq348ApKMz.jpg",
+      "id": "ec77568b-a7a8-4243-8419-92414a9268df",
+      "name": "AM Grobelny",
+      "tagline": "Developer Advocate, AWS",
+      "photo": "https://cdn.sessionize.com/image/65db-200o200o2-Nwwr324w72P5BqfpddMiJw.jpg",
       "bio": [
-        "Daymon is a Kansas City-born Software Engineer at Google. His work and research interests focus on microarchitecture, alongside a broad range of personal projects spanning anti-cheat and malware analysis, game development, full-stack web, and native mobile and Windows applications. His preferred languages are Rust, Kotlin, Swift, and Scala. Outside of software development, he enjoys gaming, reading, and chess."
-      ],
-      "links": []
-    },
-    {
-      "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
-      "name": "DaShaun Carter",
-      "tagline": "Spring Developer Advocate, Broadcom",
-      "photo": "https://cdn.sessionize.com/image/92aa-200o200o2-BvDf1x1yDTviz1mo3h9aUH.png",
-      "bio": [
-        "DaShaun is a husband, father of four, volunteer, struggling athlete, former professional cheerleader, Raspberry Pi enthusiast, and Spring Developer Advocate at Broadcom. Deliberately practicing to build, run, and manage, better software, faster."
-      ],
-      "links": []
-    },
-    {
-      "id": "4744f53f-c70b-478a-a5cb-3041c3302036",
-      "name": "Renee Anne Poulin",
-      "tagline": "Stronger Teams Through Clearer Conversations",
-      "photo": "https://cdn.sessionize.com/image/21b3-200o200o2-KccDGLG5wJUvNrEo9dqRtr.jpg",
-      "bio": [
-        "Renée Anne Poulin is an Agile coach, workshop designer, and former university professor who helps leaders and teams navigate complexity, collaboration, and change more skillfully. Her background spans humanities research, adult learning, organizational transformation, and product strategy, giving her an unusual ability to connect people, process, and technology in practical ways. She has worked across cross-functional environments and designs research-informed learning experiences that help professionals make better decisions, communicate more clearly, and work more effectively together. Known for blending systems thinking with human-centered facilitation, she brings a multidisciplinary lens to the hidden dynamics that shape meetings, teamwork, and workplace performance. Her work is grounded in evidence, adaptive learning, and the belief that better team conversations lead to improved business outcomes."
-      ],
-      "links": []
-    },
-    {
-      "id": "98173d1a-ba3a-47b6-97d7-9e2174187eaa",
-      "name": "Christina Lin",
-      "tagline": "Lead Advocate, Google Americas",
-      "photo": "https://cdn.sessionize.com/image/9ee0-200o200o2-HhVijrnf9RAqG8Fp9FWwmE.jpg",
-      "bio": [
-        "As the Lead Advocate for Google Americas, Christina Lin bridges the gap between cutting-edge technologies and developer success. With deep expertise in Agentic systems and modern cloud architectures—including Google Cloud, Kubernetes, Apache Kafka, Java, Python, and Ansible—she creates dynamic technical content and live demonstrations that drive the adoption of intelligent, scalable best practices. An open-source champion at heart, Christina’s mission is to cultivate a highly collaborative, innovative, and deeply connected global developer community ready for the AI era."
-      ],
-      "links": []
-    },
-    {
-      "id": "ba70cb63-c6e5-49c5-929d-42b5fec5dcae",
-      "name": "Aaron Spiegel",
-      "tagline": "Head of Field Engineering & Field CTO, Qbeast",
-      "photo": "https://cdn.sessionize.com/image/26bb-200o200o2-NYbZHuPCuTGVtVaDZdtdM5.png",
-      "bio": [
-        "Aaron is a veteran data and platform architect with 25+ years leading high-scale systems across aviation, engineering, telecom, and storage. As Field CTO at Qbeast, he focuses on Lakehouse performance and cost optimization, AI-ready data architecture, and pragmatic agentic design. Formerly with Dell EMC and Wheels Up, he brings deep experience in open analytics, cloud platforms, and Kubernetes. Aaron pairs strategy with hands-on execution—designing resilient data products, governance, and the AI lifecycle (from feature pipelines to model deployment and monitoring)—to solve critical business challenges and translate complex platforms into measurable outcomes."
-      ],
-      "links": []
-    },
-    {
-      "id": "fba3860c-21b3-4309-8679-c50047b23bf5",
-      "name": "Ben Goodman",
-      "tagline": "Senior Site Reliability Engineer - Rokt",
-      "photo": "https://cdn.sessionize.com/image/18f2-200o200o2-EmoXRjkiDRHCXVMX55po6B.jpg",
-      "bio": [
-        "Ben Goodman is a Member of the Technical Staff on Adaptive Innovation's Infrastructure team. He has previously worked on large, global infrastructure at Rokt, open source tooling to automate Terraform best practices, and was a data scientist in a past life."
-      ],
-      "links": []
-    },
-    {
-      "id": "85019837-c755-48ec-884a-76e6889437b3",
-      "name": "Michelle Frost",
-      "tagline": "AI Advocate @ JetBrains | Responsible AI | MS, AI | Microsoft AI MVP",
-      "photo": "https://cdn.sessionize.com/image/692f-200o200o2-WgzKSCBAFfoamtUwAWukjx.jpg",
-      "bio": [
-        "Michelle Frost is an AI Advocate at JetBrains. With over a decade of engineering experience, Michelle holds a Bachelor of Science in Computer Science from the University of Missouri at Kansas City, a Master of Science in Artificial Intelligence from Johns Hopkins University, and is a Microsoft AI MVP. As an established AI and Machine Learning specialist, Michelle focuses on Responsible AI development. Her approach is grounded in creating AI that is fair, accountable, and transparent.",
-        "Michelle is also an active member and Tech Advisor to The Center for Practical Bioethics' Ethical AI Initiative. When not behind the screen, she can be found tending to her garden with her 100 lb pup Wilbur by her side."
-      ],
-      "links": []
-    },
-    {
-      "id": "6d5add80-9200-4afc-9f33-3cd18e26d723",
-      "name": "Seth Eliot",
-      "tagline": "Principal Resilience Architect, Arpio",
-      "photo": "https://cdn.sessionize.com/image/4276-200o200o2-WSXoxHUhBaLzFtpKVmFSvb.jpg",
-      "bio": [
-        "Seth is Principal Resilience Architect at Arpio. Previously, as the Global Reliability Lead for AWS Well-Architected, he spearheaded the development of comprehensive disaster recovery (DR) guidance for AWS customers. He authored the AWS whitepaper \"Disaster Recovery of Workloads on AWS: Recovery in the Cloud\" [http://bit.ly/DR_AWS] as well as the AWS Architecture Blog's disaster recovery series [http://bit.ly/aws-dr-blog]. At AWS, Seth worked directly with customers, aiding them in building resilient architectures in the cloud. At Arpio, he continues working hands-on with customers, helping them to implement disaster recovery and ransomware protection for their AWS workloads. In prior roles at Amazon, Seth was Principal Engineer for Amazon Fresh and International Technologies, and before that he was developer lead for the team that created Prime Video."
-      ],
-      "links": []
-    },
-    {
-      "id": "714a1231-ea11-41da-81ed-00880a9ec506",
-      "name": "Tamara Copple",
-      "tagline": "Evangelist for women in STEM, product owner, keynote speaker, D&D veteran",
-      "photo": "https://cdn.sessionize.com/image/591a-200o200o2-W1odEwuREomHNmn53Mx1k2.jpg",
-      "bio": [
-        "Tamara Copple is cofounder and Lead Business Consultant for Grand River Analytics and a product owner for international nonprofit Children International. She is a speaker and community organizer for multiple professional groups. Always a business analyst at heart, Tamara mentors tech and tech-adjacent professionals in mastering their craft with empathy and humanity in the age of AI."
-      ],
-      "links": []
-    },
-    {
-      "id": "d6ad140e-cc7f-40d7-8fdf-ff541f171fc3",
-      "name": "Cindy Vogel",
-      "tagline": "Right Triangle, Director of Healthcare Analytics & Integration",
-      "photo": "https://cdn.sessionize.com/image/0a86-200o200o2-QceXdefbeXrdLRSrz14L7q.png",
-      "bio": [
-        "Cindy Vogel is the Director of Healthcare Analytics & Integration at Right Triangle Consulting, where she helps healthcare and life sciences organizations turn complex data into practical, governed, and usable assets. A product professional turned data practitioner, she brings more than 20 years of Healthcare IT experience across domestic and international markets, with a focus on applied data governance, analytics integration, and operational improvement. Cindy is an active contributor to Dataversity and helped develop and review the Applied Data Governance Practitioner Certification. She also is a member of HIMSS Greater Kansas City Chapter, DAMA International and KC Data Professionals."
-      ],
-      "links": []
-    },
-    {
-      "id": "a1f56b95-0b10-40b1-9c58-15b1b183d2ae",
-      "name": "Mike Shearer",
-      "tagline": "Senior Software Engineer",
-      "photo": "https://cdn.sessionize.com/image/e6da-200o200o2-35ftp5xkMM46bAcdLewZgf.jpg",
-      "bio": [
-        "Software engineer with over 10 years of experience in distributed data processing systems with a recent emphasis in AI reasoning and training pipelines."
-      ],
-      "links": []
-    },
-    {
-      "id": "73cb4683-21f0-42ec-a4df-b097e9871259",
-      "name": "Elizabeth Christensen",
-      "tagline": "Postgres @ Snowflake",
-      "photo": "https://cdn.sessionize.com/image/77c0-200o200o2-3BkZm8yJNZBEvnsk2rJD9q.png",
-      "bio": [
-        "Elizabeth is a Postgres contributor and technical writer at Snowflake. She is on the board of the US PostgreSQL Association and hosts an online Postgres Meetup for All and a local KC Postgres group. She also helps host the annual PostGIS Day. Elizabeth is passionate about open source technology and diversity in tech though education. Elizabeth is from Lawrence, Kansas and enjoys spending time in her own personal backyard tiki hut."
+        "I've spent the past 10+ years working on or helping people work on software. I was also a professional educator previously in my career, so I have a particular passion for helping people more easily understand difficult concepts. I currently work at AWS, and I'm focused on helping people learn through experience by using AWS GameDay."
       ],
       "links": []
     },
@@ -219,6 +54,48 @@
       "links": []
     },
     {
+      "id": "09f1db8d-dbc1-4ac0-a51d-db5b4640dccb",
+      "name": "Angela Jones",
+      "tagline": "Technology Champion | Pay It Forward Advocate | Professional Work-from-Home Fur Mom 🐾",
+      "photo": "https://cdn.sessionize.com/image/1328-200o200o2-pVM7Wyk1C9EWLV9TGipkBD.JPG",
+      "bio": [
+        "Angela Jones is a Modern Workplace Consultant who helps organizations drive business growth and transformation through thoughtful, people‑centered technology solutions. Drawing on her background in retail management and recruiting, Angela brings a strong foundation in leadership, talent development, and operational excellence to her technology work. This experience shapes a consulting approach grounded in trust and a deep understanding of how people and businesses operate, enabling her to design and implement modern workplace solutions that improve adoption, empower employees, and deliver meaningful business outcomes.",
+        "A Kansas City native, Angela enjoys traveling and spending time with her family, friends, and fur babies. She is also an organizer of the Kansas City Dynamics 365, Power Platform, and AI User Group, where she is passionate about community building and knowledge sharing."
+      ],
+      "links": []
+    },
+    {
+      "id": "66c1e054-83a5-487a-aef3-0d8499f07c6f",
+      "name": "Avindra Fernando",
+      "tagline": "Principal Architect | Fractional CTO | AI-Driven Development & Modernization | Conference Speaker",
+      "photo": "https://cdn.sessionize.com/image/ae57-200o200o2-LVHWMzkxC1JsTPjNuaDWti.jpg",
+      "bio": [
+        "Avindra Fernando is a software consultant with over 13 years of experience helping teams build scalable, modern web applications. In 2021, he founded Taprobane Consulting to guide clients through architectural decisions, migrations to newer tech stacks, and the implementation of robust AI-powered development and testing strategies that ensure quality and performance.",
+        "He actively mentors engineering teams, leads workshops, and delivers hands-on training. As a regular speaker at tech conferences, Avindra shares practical lessons on concepts and technologies such as Software Architecture, AI-driven development, React, Next.js, E2E Testing, and TypeScript. He leverages his experience to shape future technology direction and accelerate the growth of companies across industries."
+      ],
+      "links": []
+    },
+    {
+      "id": "fba3860c-21b3-4309-8679-c50047b23bf5",
+      "name": "Ben Goodman",
+      "tagline": "Senior Site Reliability Engineer - Rokt",
+      "photo": "https://cdn.sessionize.com/image/18f2-200o200o2-EmoXRjkiDRHCXVMX55po6B.jpg",
+      "bio": [
+        "Ben Goodman is a Member of the Technical Staff on Adaptive Innovation's Infrastructure team. He has previously worked on large, global infrastructure at Rokt, open source tooling to automate Terraform best practices, and was a data scientist in a past life."
+      ],
+      "links": []
+    },
+    {
+      "id": "6f426cb0-6261-4f79-b726-b7ffc3b028ff",
+      "name": "Billy Korando",
+      "tagline": "Java Developer Advocate",
+      "photo": "https://cdn.sessionize.com/image/2c63-200o200o2-MqnWywU4YnfRYEETYgm4u6.jpg",
+      "bio": [
+        "Billy is a Java Developer Advocate with the Java Platform Group at Oracle. With over a decade of experience in Java, Billy brings a passion for helping developers find ways to reduce tedious work, such as project initiation, deployment, testing, and validation, through automation and adopting the latest features and tools in the Java ecosystem. Outside of work, Billy enjoys traveling, playing kickball, and cheering on the Kansas City Chiefs. Billy also co-organizes the Kansas City Java users group."
+      ],
+      "links": []
+    },
+    {
       "id": "82f56bf5-be4f-4f3d-b507-1b69fd777c2d",
       "name": "Bradley Dice",
       "tagline": "NVIDIA",
@@ -229,27 +106,23 @@
       "links": []
     },
     {
-      "id": "9fd5eded-a99b-4935-8464-d8fd5199f494",
-      "name": "Preston Chandler",
-      "tagline": "Lean/Agile Evangelist and SVP Client Transformation at WPP",
-      "photo": "https://cdn.sessionize.com/image/ff19-200o200o2-93623c5b-d687-4768-82c5-63fec1747f81.jpg",
+      "id": "90c74ce2-3381-4226-9c41-1770f75d9d47",
+      "name": "Brent Stewart",
+      "tagline": "Co-Founder of Alien Arc Technologies",
+      "photo": "https://cdn.sessionize.com/image/7b5d-200o200o2-pnkokN1LcvoKE8AErfTJBt.jpg",
       "bio": [
-        "Preston Chandler is a transformation leader and systems strategist with more than 20 years of experience helping complex organizations improve how they operate, innovate, and deliver value.",
-        "He currently serves as the Global Lead of Strategic Operations at WPP, where he works across marketing and engineering organizations to improve decision velocity, operational design, and large-scale delivery performance. In parallel, he is a Managing Partner at Centered, advising executive leaders on building innovation-ready teams and sustainable operating models.",
-        "Preston’s work sits at the intersection of engineering, product, and marketing — designing systems that reduce friction, accelerate learning, and align technical execution with business strategy. Over his career, he has partnered with more than 100 teams across industries including pharmaceuticals, manufacturing, digital product development, supply chain, and enterprise technology. His client experience includes Pfizer, Merck, Johnson & Johnson, Ford, Sprint, Novartis, and VML.",
-        "He specializes in diagnosing systemic bottlenecks, improving alignment in complex environments, and helping senior teams scale without losing adaptability.",
-        "Preston brings a pragmatic, systems-level lens to innovation — focusing not just on frameworks, but on how organizations actually behave under pressure."
+        "As a professional software developer with over two decades of experience, I have seen many development trends come and go and learned that there is not a shortcut to being a great developer. I enjoy teaching others what I have learned and try to mentor others whenever I can. I am a co-organizer of the Kansas City .NET User Group and love speaking at conferences.",
+        "I am a creator at heart and have started multiple businesses over the years in a variety of industries. My latest venture is Alien Arc Technologies which allows me to take my ideas and give them form. I love quality in all things and I always try to provide the best quality in everything I do. If it is worth doing, then it is worth doing right."
       ],
       "links": []
     },
     {
-      "id": "a5a7faa9-6651-4b15-b842-25c24ee21787",
-      "name": "Mindy Becker",
-      "tagline": "Right Triangle Consulting, Director of Data Governance",
-      "photo": "https://cdn.sessionize.com/image/cef5-200o200o2-hkBJy2mStuXbRasiCtGDYp.jpg",
+      "id": "fa6ae37c-e6b0-4b5a-adbe-d03d4b3fa815",
+      "name": "Carl Chesser",
+      "tagline": "Oracle, Software Architect",
+      "photo": "https://cdn.sessionize.com/image/a966-200o200o2-KGux3oFSc1cRuSzfbMGHhP.png",
       "bio": [
-        "Mindy Becker is a Kansas City–based data governance leader known for transforming how organizations understand, trust, and activate their data. As Director of Data Governance at Right Triangle Consulting, she architects programs that strengthen data quality, elevate business intelligence, and enable confident, insight‑driven decision‑making across finance, life insurance, and healthcare. With more than a decade of experience spanning data integration, modeling, privacy, and analytics, Mindy is recognized for translating complex technical concepts into clear, actionable strategies for both executives and practitioners.",
-        "She brings expertise in applied data governance, data quality, metadata strategy, and regulatory reporting, along with emerging capabilities in AI governance and AI readiness to help organizations prepare for responsible, scalable adoption of modern technologies. Mindy holds the DATAVERSITY Applied Data Governance Certification, where she contributed to exam development, and is a Certified Data Management Professional (CDMP). She is an active contributor to the Kansas City data community, a frequent speaker at DAMA and Dataversity events, and a committed advocate for education and community impact through Prep KC, the Junior League of Kansas City, and the American Cancer Society’s Hope Lodge."
+        "Carl is a software architect at Oracle. Most of his career has been focused on evolving and scaling the service infrastructure for their core electronic medical record platform called Millennium. He is now working with on their next-generation EHR within Oracle Health. He is passionate about growing a positive engineering culture, optimizing how software teams operate, and working on interesting problems in healthcare. In his spare time, he enjoys blogging about engineering related topics and sharing his poorly made illustrations at https://che55er.io."
       ],
       "links": []
     },
@@ -264,49 +137,106 @@
       "links": []
     },
     {
-      "id": "f4f9dcb7-93e5-49df-bbe5-b313e137a9f5",
-      "name": "Surya Rao Rayarao",
-      "tagline": "SS&C Technologies, Lead Software Engineer",
-      "photo": "https://cdn.sessionize.com/image/fb75-200o200o2-Kctt6ZofLfdPSA3BpEZXdw.jpg",
+      "id": "8eaf133e-aca8-4e60-8ba0-75374deda636",
+      "name": "Chip Johnson",
+      "tagline": "",
+      "photo": "https://cdn.sessionize.com/image/da6f-200o200o2-BV4jsJB35BU9PkLDmhdvad.png",
       "bio": [
-        "Surya Rao Rayarao is a distinguished thought leader at the forefront of artificial intelligence and data modernization. With deep expertise in machine learning applications and enterprise transformation, he specializes in helping organizations navigate the complex landscape of digital evolution.",
-        "His work particularly focuses on the financial and insurance sectors, where he has pioneered innovative approaches to hyperautomation, anomaly detection, and intelligent data processing. Through his speaking engagements, Surya shares practical insights on implementing AI solutions that drive real business value.",
-        "Known for his \"enlightening\" and \"inspiring\" presentations, Surya combines technical depth with accessible communication, making complex AI concepts understandable for diverse audiences from technical teams to executive leadership."
+        "Chip Johnson has been part of the DevOpsDays community since 2011, attending and speaking at events across the U.S. A former systems engineer turned product leader, he has worked on DevOps, security, identity, and operations platforms at Chef, Sonatype, Auth0, Mondoo, and Mezmo. His current work focuses on how AI-driven software delivery is reshaping production operations, deployment systems, and the constraints that emerge as engineering output begins to outpace human review."
       ],
       "links": []
     },
     {
-      "id": "beeb0799-4d44-4f60-a23d-b3fb2596ebb7",
-      "name": "Rob Voss",
-      "tagline": "Founder, Voss AI Consulting | OpenAI Academy Faculty | Helping organizations stop guessing and start using AI with confidence",
-      "photo": "https://cdn.sessionize.com/image/346c-200o200o2-fQdp4RKvHYvLtqDb9xMeKb.jpg",
+      "id": "7104995a-e90d-4d4c-abe3-193156bc9e79",
+      "name": "Chris Perrin",
+      "tagline": "Director of Product Development + Wrangler of Chaos",
+      "photo": "https://cdn.sessionize.com/image/85b3-200o200o2-Rgv58t5jUHBkChqaALj2va.jpg",
       "bio": [
-        "Rob Voss is an AI strategist, educator, and researcher who helps organizations move from AI anxiety to measurable adoption. As the founder of Voss AI Consulting, he works with business leaders, financial firms, and educational institutions to build practical AI strategies that protect client data, save time, and increase profitability.",
-        "Rob is one of 89 OpenAI Academy faculty worldwide — and the sole representative from Missouri — recognized for his work bridging AI capabilities with real-world professional practice. He has trained over 500 professionals across education, finance, and business, with independently validated outcomes: a 93% increase in regular AI use, 200% improvement in training satisfaction, and 52% reduction in AI-related anxiety among participants.",
-        "A tenured Associate Professor of History at Northwest Missouri State University, Rob brings 25+ years of teaching experience and a researcher's rigor to the AI space. He founded the university's Applied AI minor, directs the MSEd in Teaching History, and is developing a B.S. in Interdisciplinary Technology. His academic background gives him a rare perspective: he understands both how transformative technologies reshape industries and how organizations actually learn and change.",
-        "Rob has presented at IIBA KC Chapter, the Missouri SBDC AI Summit, KC AI Club, MidAIR Conference, and other regional and national venues. He holds a Ph.D. in History from the University of Nebraska–Lincoln.",
-        "Website: vossaiconsulting.com",
-        "LinkedIn: linkedin.com/in/ai-robvoss"
+        "Chris Perrin is a tech geek, chaos wrangler, and all-around software leader with a knack for building high-performance teams and systems. With over 20 years of experience in software engineering, he’s helped teams—from the noblest of startups to giantest of enterprises—navigate the wild world of software development, Agile lifecycles, and getting more done.",
+        "Chris loves demystifying complex tech, creating buzzwords and then turning buzzwords into real-world solutions. Whether he's talking about microservices, team performance, or trying to get AI to do his job, he brings energy, humor, and plenty of practical takeaways to every talk.",
+        "When he’s not writing code or breaking things in the name of innovation, you’ll find him mentoring up-and-coming devs, writing decent-to-okay fiction, and geeking out over the latest in geek. Catch him at the conference, on LinkedIn, or wherever there’s strong coffee and great conversations!"
       ],
       "links": []
     },
     {
-      "id": "d14f9633-1d01-47d0-9351-46b2b0986045",
-      "name": "Kevin Hiatt",
-      "tagline": "CTO & Managing Partner with Arion Trident",
-      "photo": "https://cdn.sessionize.com/image/8fbc-200o200o2-XT1LnD2k4AYHQq9nmkKVUA.png",
+      "id": "98173d1a-ba3a-47b6-97d7-9e2174187eaa",
+      "name": "Christina Lin",
+      "tagline": "Lead Advocate, Google Americas",
+      "photo": "https://cdn.sessionize.com/image/9ee0-200o200o2-HhVijrnf9RAqG8Fp9FWwmE.jpg",
       "bio": [
-        "20+ year IT executive in Fortune 500, healthcare and non-profits leading digital transformation, DevOps, cybersecurity, operational efficiency and governance."
+        "As the Lead Advocate for Google Americas, Christina Lin bridges the gap between cutting-edge technologies and developer success. With deep expertise in Agentic systems and modern cloud architectures—including Google Cloud, Kubernetes, Apache Kafka, Java, Python, and Ansible—she creates dynamic technical content and live demonstrations that drive the adoption of intelligent, scalable best practices. An open-source champion at heart, Christina’s mission is to cultivate a highly collaborative, innovative, and deeply connected global developer community ready for the AI era."
       ],
       "links": []
     },
     {
-      "id": "6ee43712-add3-48d2-81a6-350a27f0411f",
-      "name": "Micah Melling",
-      "tagline": "Data Science Leader",
-      "photo": "https://cdn.sessionize.com/image/9c01-200o200o2-Lo82wf7QGBz7TtW2mgTRkR.jpg",
+      "id": "d6ad140e-cc7f-40d7-8fdf-ff541f171fc3",
+      "name": "Cindy Vogel",
+      "tagline": "Right Triangle, Director of Healthcare Analytics & Integration",
+      "photo": "https://cdn.sessionize.com/image/0a86-200o200o2-QceXdefbeXrdLRSrz14L7q.png",
       "bio": [
-        "Micah Melling has led multiple data science teams in Kansas City. He developed and taught graduate-level data science courses at Park University. He also serves on the UMKC Analytics Advisory Board and volunteers with PrepKC's Data in Action Program for 8th graders. He has spoken throughout the community about data science and the intersection of AI and philosophy."
+        "Cindy Vogel is the Director of Healthcare Analytics & Integration at Right Triangle Consulting, where she helps healthcare and life sciences organizations turn complex data into practical, governed, and usable assets. A product professional turned data practitioner, she brings more than 20 years of Healthcare IT experience across domestic and international markets, with a focus on applied data governance, analytics integration, and operational improvement. Cindy is an active contributor to Dataversity and helped develop and review the Applied Data Governance Practitioner Certification. She also is a member of HIMSS Greater Kansas City Chapter, DAMA International and KC Data Professionals."
+      ],
+      "links": []
+    },
+    {
+      "id": "d81d82c8-b647-465c-a2df-3e8a4e170f54",
+      "name": "CJ Obermaier",
+      "tagline": "Education Engineer",
+      "photo": "https://cdn.sessionize.com/image/7a5f-200o200o2-HgSQzUQzzwB5Lqq8K3R4cS.jpg",
+      "bio": [
+        "I write tutorials for HashiCorp and IBM Bob."
+      ],
+      "links": []
+    },
+    {
+      "id": "424f7166-a882-473f-b05e-15aed7f9ff86",
+      "name": "Cory House",
+      "tagline": "Author / Consultant",
+      "photo": "https://cdn.sessionize.com/image/0729-200o200o2-hX7JViSy9XGF5ys31ag2tt.jpg",
+      "bio": [
+        "Cory is an author, a 12 time Microsoft MVP, and international speaker. He is founder of reactjsconsulting, where he helps companies transition to React. He has trained over 10,000 software developers at conferences and businesses worldwide. Cory has authored over a dozen courses on JavaScript, React, C#, testing, and web development on Pluralsight and Dometrain. He shares software development tips daily on X as @housecor."
+      ],
+      "links": []
+    },
+    {
+      "id": "345b7e02-c223-49a0-875d-0a3502ee2e82",
+      "name": "DaShaun Carter",
+      "tagline": "Spring Developer Advocate, Broadcom",
+      "photo": "https://cdn.sessionize.com/image/92aa-200o200o2-BvDf1x1yDTviz1mo3h9aUH.png",
+      "bio": [
+        "DaShaun is a husband, father of four, volunteer, struggling athlete, former professional cheerleader, Raspberry Pi enthusiast, and Spring Developer Advocate at Broadcom. Deliberately practicing to build, run, and manage, better software, faster."
+      ],
+      "links": []
+    },
+    {
+      "id": "c215589a-869a-499d-86da-6d94bd7ada47",
+      "name": "David Traynham",
+      "tagline": "Building Trust and Vaue by Treating Data as a Product",
+      "photo": "https://cdn.sessionize.com/image/9025-200o200o2-X3NrNnUSNWB8eX7Rthrtfn.jpg",
+      "bio": [
+        "David Traynham is a data engineering and analytics leader based in Kansas City and one of the organizers leading the relaunch of the Kansas City Data Professionals community. He currently leads a data engineering organization at Shamrock Trading Corp., where his team is responsible for building scalable, reliable data platforms that support analytics, reporting, and operational decision-making across the business.",
+        "David approaches data with a product mindset, believing data should be intentionally designed, owned, and evolved rather than treated as a byproduct of applications. His career spans data engineering, analytics, information security, and IT delivery, shaping a systems-level perspective on how data, technology, and organizations intersect. Earlier in his career, he served as a Military Intelligence Officer in the U.S. Army, where his passion for data began and where he developed a deep appreciation for the role high-quality, trustworthy data plays in effective decision-making. That experience continues to influence his leadership approach and emphasis on risk-aware, outcome-driven decisions.",
+        "Through KCDP, David is helping rebuild a practitioner-led community centered on practical experience and peer learning. The group exists to create space for candid conversations, strengthen connections across disciplines and organizations, and raise the bar for how data work is practiced across the Kansas City region."
+      ],
+      "links": []
+    },
+    {
+      "id": "13181a5c-88d0-4791-88f9-3cd6c2373c03",
+      "name": "Daymon Littrell-Reyes",
+      "tagline": "Software Engineer @Google",
+      "photo": "https://cdn.sessionize.com/image/8165-200o200o2-pJqMDs4r7WrHsq348ApKMz.jpg",
+      "bio": [
+        "Daymon is a Kansas City-born Software Engineer at Google. His work and research interests focus on microarchitecture, alongside a broad range of personal projects spanning anti-cheat and malware analysis, game development, full-stack web, and native mobile and Windows applications. His preferred languages are Rust, Kotlin, Swift, and Scala. Outside of software development, he enjoys gaming, reading, and chess."
+      ],
+      "links": []
+    },
+    {
+      "id": "fa44c880-991f-4f83-aa72-a2a5d5352960",
+      "name": "Derek Moore",
+      "tagline": "Manager & Lead Software Architect at Netsmart",
+      "photo": "https://cdn.sessionize.com/image/85da-200o200o2-hQmwQ45WxyhNYzh6K1cAhA.jpg",
+      "bio": [
+        "Derek Moore is a technical manager and lead software architect at Netsmart with 30 years of experience in building, delivering and supporting mission-critical Internet-connected solutions for industry. With a background in the open source and Internet provider communities, Derek has a unique perspective on solution design and software engineering in a world where services need to start out having small footprints and efficient deployments while holding the door open for massive scale as service usage inevitably grows."
       ],
       "links": []
     },
@@ -331,12 +261,37 @@
       "links": []
     },
     {
-      "id": "8eaf133e-aca8-4e60-8ba0-75374deda636",
-      "name": "Chip Johnson",
-      "tagline": "",
-      "photo": "https://cdn.sessionize.com/image/da6f-200o200o2-BV4jsJB35BU9PkLDmhdvad.png",
+      "id": "fe6661a0-fbd2-4139-8ad4-429275250306",
+      "name": "Dylan Evans",
+      "tagline": "Speaker, writer, and CEO of Simple Salt",
+      "photo": "https://cdn.sessionize.com/image/b0cf-200o200o2-N4z1kJ3DkYRDZMy5kAZqUF.jpg",
       "bio": [
-        "Chip Johnson has been part of the DevOpsDays community since 2011, attending and speaking at events across the U.S. A former systems engineer turned product leader, he has worked on DevOps, security, identity, and operations platforms at Chef, Sonatype, Auth0, Mondoo, and Mezmo. His current work focuses on how AI-driven software delivery is reshaping production operations, deployment systems, and the constraints that emerge as engineering output begins to outpace human review."
+        "Dylan is a recovering cyber enthusiast.",
+        "He has held positions building, managing, teaching, and advising on cybersecurity of all flavors.",
+        "He now demystifies security for those worried about it.",
+        "He is the founder and CEO of Simple Salt, which provides focused threat advisory to professional services firms such as law, accounting, and engineering.",
+        "He enjoys reducing waste, aligning teams, and well-chosen metrics.",
+        "He has a soft spot for long walks on the beach, NIST 800-63B rev 5, and asking people about their Whys."
+      ],
+      "links": []
+    },
+    {
+      "id": "73cb4683-21f0-42ec-a4df-b097e9871259",
+      "name": "Elizabeth Christensen",
+      "tagline": "Postgres @ Snowflake",
+      "photo": "https://cdn.sessionize.com/image/77c0-200o200o2-3BkZm8yJNZBEvnsk2rJD9q.png",
+      "bio": [
+        "Elizabeth is a Postgres contributor and technical writer at Snowflake. She is on the board of the US PostgreSQL Association and hosts an online Postgres Meetup for All and a local KC Postgres group. She also helps host the annual PostGIS Day. Elizabeth is passionate about open source technology and diversity in tech though education. Elizabeth is from Lawrence, Kansas and enjoys spending time in her own personal backyard tiki hut."
+      ],
+      "links": []
+    },
+    {
+      "id": "3a72bcea-7907-4e24-9de7-885b91e581ad",
+      "name": "Elizabeth Garrett Christensen",
+      "tagline": "Postgres @ Snowflake",
+      "photo": "https://cdn.sessionize.com/image/27c9-200o200o2-HoUhNUU6gwjdirjjbLCktV.png",
+      "bio": [
+        "Elizabeth is on the Open Source advocacy team at Snowflake focusing on Postgres. She organizes the Kansas City Postgres User Group, Postgres Meetup for All, co-hosts PostGIS Day, and is on the board of the the US PostgreSQL Association. Elizabeth enjoys writing about Postgres for Newbies and teaching people about databases whenever she gets the chance. She has a background in open source project management and enjoys working with development teams to build products and applications using all the fun things in the open source toy box. Elizabeth is from Lawrence, Kansas and spends her free time in her backyard tiki hut."
       ],
       "links": []
     },
@@ -352,43 +307,13 @@
       "links": []
     },
     {
-      "id": "fa6ae37c-e6b0-4b5a-adbe-d03d4b3fa815",
-      "name": "Carl Chesser",
-      "tagline": "Oracle, Software Architect",
-      "photo": "https://cdn.sessionize.com/image/a966-200o200o2-KGux3oFSc1cRuSzfbMGHhP.png",
+      "id": "530b689c-93d5-46a3-b70e-d5bebf9a7f5c",
+      "name": "Jay Whitsitt",
+      "tagline": "Mobile developer, community organizer",
+      "photo": "https://cdn.sessionize.com/image/61e3-200o200o2-NTGcGg6soxyVWAJFLrZnV7.jpg",
       "bio": [
-        "Carl is a software architect at Oracle. Most of his career has been focused on evolving and scaling the service infrastructure for their core electronic medical record platform called Millennium. He is now working with on their next-generation EHR within Oracle Health. He is passionate about growing a positive engineering culture, optimizing how software teams operate, and working on interesting problems in healthcare. In his spare time, he enjoys blogging about engineering related topics and sharing his poorly made illustrations at https://che55er.io."
-      ],
-      "links": []
-    },
-    {
-      "id": "354dc991-47f0-4073-b609-02c5e5c9e4a9",
-      "name": "Nathan Smith",
-      "tagline": "Senior Data Scientist, Neo4j",
-      "photo": "https://cdn.sessionize.com/image/b2f5-200o200o2-NmVtBNi4U559PHz8fTNkZ.png",
-      "bio": [
-        "Nathan Smith is a Senior Data Scientist in Neo4j Professional Services. He helps customers across a range of industries get more value from their data through graph-powered machine learning. He lives in Kansas City and is an organizer of the Kansas City Graph Databases Meetup."
-      ],
-      "links": []
-    },
-    {
-      "id": "e4ca7219-aa6b-4cb8-bd61-d8af33af278f",
-      "name": "Ted Kihm",
-      "tagline": "Euphemystic Ventures, Founder",
-      "photo": "https://cdn.sessionize.com/image/d8d9-200o200o2-48EiAiF1nQVoCkNsnjyoXE.jpg",
-      "bio": [
-        "Ted Kihm is the founder of Euphemystic Ventures, where he is building AI systems and infrastructure focused on real-world data problems. After 25 years working with large-scale search and data platforms at T-Mobile and other enterprise environments, he now focuses on applying semantic search and retrieval-augmented systems to messy, document-heavy workflows.",
-        "His recent work includes building a GPU-backed AI data center and developing citation-first AI systems that operate on unstructured inputs such as scanned documents, PDFs, and operational records. Ted is particularly interested in bridging the gap between theoretical AI capabilities and practical, trustworthy systems that can be used in production."
-      ],
-      "links": []
-    },
-    {
-      "id": "9e0cfc94-5b81-43cb-87bb-b8a110ea093f",
-      "name": "Mandi Walls",
-      "tagline": "DevOps Advocate",
-      "photo": "https://cdn.sessionize.com/image/88e1-200o200o2-7jPk6Wj9frK8N8MpdUFkBG.jpg",
-      "bio": [
-        "Mandi Walls is a DevOps Advocate on the Community and Advocacy Team at PagerDuty. Before joining PagerDuty, Mandi spent a number of years at Chef Software, working with customers and community members in the US and Europe. Originally a large-scale systems administrator, Mandi has focused on IT automation; organizational culture and change; and community."
+        "Jay Whitsitt is an experienced mobile app developer with a passion for crafting user-centric experiences across platforms for users wherever they are. Since starting a career as a native iOS developer, he has released both personal and professional apps for iOS, Android, Wear OS, Google Assistant, and the web, leveraging both native and multiplatform tools like Flutter.",
+        "Jay is also a community leader, co-organizing GDG Kansas City and DevFest KC, connecting developers with the latest in and around Google technologies."
       ],
       "links": []
     },
@@ -404,69 +329,44 @@
       "links": []
     },
     {
-      "id": "90c74ce2-3381-4226-9c41-1770f75d9d47",
-      "name": "Brent Stewart",
-      "tagline": "Co-Founder of Alien Arc Technologies",
-      "photo": "https://cdn.sessionize.com/image/7b5d-200o200o2-pnkokN1LcvoKE8AErfTJBt.jpg",
+      "id": "19c505cb-ff20-4321-ae86-8f28f4e1f7f1",
+      "name": "Julie Heckman",
+      "tagline": "Snowflake | Senior Solution Engineer",
+      "photo": "https://cdn.sessionize.com/image/2473-200o200o2-NBAwDvWvAPqpv86qG7MN53.png",
       "bio": [
-        "As a professional software developer with over two decades of experience, I have seen many development trends come and go and learned that there is not a shortcut to being a great developer. I enjoy teaching others what I have learned and try to mentor others whenever I can. I am a co-organizer of the Kansas City .NET User Group and love speaking at conferences.",
-        "I am a creator at heart and have started multiple businesses over the years in a variety of industries. My latest venture is Alien Arc Technologies which allows me to take my ideas and give them form. I love quality in all things and I always try to provide the best quality in everything I do. If it is worth doing, then it is worth doing right."
+        "I’ve spent nearly 20 years bridging the gap between petabyte-scale chaos and business-ready clarity. My journey started in the algorithmic trenches of Kansas City’s high-frequency trading scene and has since evolved through the complexities of Agricultural IoT, public sector digital transformation, and global enterprise data strategy.",
+        "From coding MapReduce and Spark algorithms at Tradebot to leading high-performing app dev teams through complex digital transformations, I’ve seen it all. Having navigated many migrations from on prem to the cloud and the \"integration tax\" of the modern data stack, I’ve developed a healthy immunity to architectural buzzwords and a pathological commitment to data provenance.",
+        "Currently, as a Senior Solution Engineer at Snowflake, I act as a bilingual interpreter between the C-suite and the dev team—translating executive visions into technical wins. I advocate for the Data Cloud because it turns a liability—data pain—into a strategic asset. I help organizations optimize their infrastructure so they can stop managing servers and start managing outcomes."
       ],
       "links": []
     },
     {
-      "id": "530b689c-93d5-46a3-b70e-d5bebf9a7f5c",
-      "name": "Jay Whitsitt",
-      "tagline": "Mobile developer, community organizer",
-      "photo": "https://cdn.sessionize.com/image/61e3-200o200o2-NTGcGg6soxyVWAJFLrZnV7.jpg",
+      "id": "a9979a02-fb57-4e05-915f-2e5768a71e18",
+      "name": "Justin Rosenberg",
+      "tagline": "#MentalHealth #Bipolar #Stroke",
+      "photo": "https://cdn.sessionize.com/image/187e-200o200o2-7DE4AeSmGtW4QMfz6yN2C1.png",
       "bio": [
-        "Jay Whitsitt is an experienced mobile app developer with a passion for crafting user-centric experiences across platforms for users wherever they are. Since starting a career as a native iOS developer, he has released both personal and professional apps for iOS, Android, Wear OS, Google Assistant, and the web, leveraging both native and multiplatform tools like Flutter.",
-        "Jay is also a community leader, co-organizing GDG Kansas City and DevFest KC, connecting developers with the latest in and around Google technologies."
+        "~25 years experience including a 3 year stint at IBM. Since then he got diagnosed with Bipolar and had a Ischemic Stroke. Luckily he has been Clinical Reference Laboratory for 16 years,"
       ],
       "links": []
     },
     {
-      "id": "34a3eb26-af37-44ba-be41-ad525d8b310f",
-      "name": "Roger O'Dell",
-      "tagline": "Your never to old to learn",
-      "photo": "https://cdn.sessionize.com/image/8e32-200o200o2-N6Gx9V5agob7NeEgvtLhvB.jpg",
+      "id": "846a2657-6c55-48fb-a04e-6bfe727da6d6",
+      "name": "Kalee Wood",
+      "tagline": "Solopreneur | The Body Knows",
+      "photo": "https://cdn.sessionize.com/image/ff5b-200o200o2-TJTrbCP4yZKbhX8fvaAAtq.png",
       "bio": [
-        "Army Veteran, Software Engineer, Speaker & Trainer, I have had the opportunity to work with, help and mentor for the last 16 years."
+        "https://www.the-body-knows.com/"
       ],
       "links": []
     },
     {
-      "id": "135d90c8-09b4-43f0-b9a8-2dd0d0569f84",
-      "name": "Rob Kraft",
-      "tagline": "Software Consultant at Kraft Software",
-      "photo": "https://cdn.sessionize.com/image/3552-200o200o2-YGv7akL2cMzRqfqKfArKix.png",
+      "id": "d14f9633-1d01-47d0-9351-46b2b0986045",
+      "name": "Kevin Hiatt",
+      "tagline": "CTO & Managing Partner with Arion Trident",
+      "photo": "https://cdn.sessionize.com/image/8fbc-200o200o2-XT1LnD2k4AYHQq9nmkKVUA.png",
       "bio": [
-        "I have been developing software for almost four decades. Although I have a Master's Degree in Project Management I earned it prior to the primacy of Agile practices, and I felt many of the principles I learned couldn't be applied to software development. My focus is always on the aspect of software development process that needs to most attention, which could be writing code, project prioritization, quality assurance, or building culture. I'm passionate about sharing good development practices, especially security in software development. I've taught classes on SQL Server and programming languages, co-authored books on SQL Server, spent many years developing large applications with C# .Net, and dabble in everything I can."
-      ],
-      "links": []
-    },
-    {
-      "id": "85316d15-17e0-437d-8a0a-ab44deb388f0",
-      "name": "Richard Boyd",
-      "tagline": "Developer Advocate, HashiCorp",
-      "photo": "https://cdn.sessionize.com/image/55d5-200o200o2-GL8TZHDPECdyuXYjuCdMvT.jpg",
-      "bio": [
-        "Richard is a Developer Advocate at HashiCorp/IBM. He previously worked in industries from consumer robotics to B2B SaaS to the US Defense industry and across roles from Statistician to Developer to SRE to Product Management. Richard’s focus is on Infrastructure-as-code and Serverless system design."
-      ],
-      "links": []
-    },
-    {
-      "id": "fe6661a0-fbd2-4139-8ad4-429275250306",
-      "name": "Dylan Evans",
-      "tagline": "Speaker, writer, and CEO of Simple Salt",
-      "photo": "https://cdn.sessionize.com/image/b0cf-200o200o2-N4z1kJ3DkYRDZMy5kAZqUF.jpg",
-      "bio": [
-        "Dylan is a recovering cyber enthusiast.",
-        "He has held positions building, managing, teaching, and advising on cybersecurity of all flavors.",
-        "He now demystifies security for those worried about it.",
-        "He is the founder and CEO of Simple Salt, which provides focused threat advisory to professional services firms such as law, accounting, and engineering.",
-        "He enjoys reducing waste, aligning teams, and well-chosen metrics.",
-        "He has a soft spot for long walks on the beach, NIST 800-63B rev 5, and asking people about their Whys."
+        "20+ year IT executive in Fortune 500, healthcare and non-profits leading digital transformation, DevOps, cybersecurity, operational efficiency and governance."
       ],
       "links": []
     },
@@ -484,86 +384,32 @@
       "links": []
     },
     {
-      "id": "c215589a-869a-499d-86da-6d94bd7ada47",
-      "name": "David Traynham",
-      "tagline": "Building Trust and Vaue by Treating Data as a Product",
-      "photo": "https://cdn.sessionize.com/image/9025-200o200o2-X3NrNnUSNWB8eX7Rthrtfn.jpg",
+      "id": "3a40aa86-bfd3-4a9a-ac85-64042ee1eeac",
+      "name": "Lyndsay Noble",
+      "tagline": "Director of Analytics and Technology Programs, Rockhurst University",
+      "photo": "https://cdn.sessionize.com/image/7faf-200o200o2-BtZm5UWCqj8JoP2Q6RaYQk.jpg",
       "bio": [
-        "David Traynham is a data engineering and analytics leader based in Kansas City and one of the organizers leading the relaunch of the Kansas City Data Professionals community. He currently leads a data engineering organization at Shamrock Trading Corp., where his team is responsible for building scalable, reliable data platforms that support analytics, reporting, and operational decision-making across the business.",
-        "David approaches data with a product mindset, believing data should be intentionally designed, owned, and evolved rather than treated as a byproduct of applications. His career spans data engineering, analytics, information security, and IT delivery, shaping a systems-level perspective on how data, technology, and organizations intersect. Earlier in his career, he served as a Military Intelligence Officer in the U.S. Army, where his passion for data began and where he developed a deep appreciation for the role high-quality, trustworthy data plays in effective decision-making. That experience continues to influence his leadership approach and emphasis on risk-aware, outcome-driven decisions.",
-        "Through KCDP, David is helping rebuild a practitioner-led community centered on practical experience and peer learning. The group exists to create space for candid conversations, strengthen connections across disciplines and organizations, and raise the bar for how data work is practiced across the Kansas City region."
+        "Lyndsay serves as the Academic Program Director for all analytics and technology programs at Rockhurst University. Beyond guiding the next generation of technologists, she partners with organizations to navigate evolving technology landscapes by aligning strategy, people, and processes"
       ],
       "links": []
     },
     {
-      "id": "b4100c50-f917-4891-ac5d-1b06d1865ae6",
-      "name": "Zackery Griesinger",
-      "tagline": "Senior Software Engineering Building Developer Tooling at C2FO",
-      "photo": "https://cdn.sessionize.com/image/6ab9-200o200o2-VBx6vthYDvdvNS1v4LTD8Z.jpg",
+      "id": "995a76ba-6e94-461b-a823-e0267b77c1c6",
+      "name": "Mandi Walls",
+      "tagline": "Mandi Walls, Developer Advocate, PagerDuty",
+      "photo": "https://cdn.sessionize.com/image/eee4-200o200o2-ac65625c-f3a1-4ff7-b401-85527d80147d.jpg",
       "bio": [
-        "Zackery is a Senior DevOps Engineer working on Developer Tooling at Trumid. A Kansas City native, Zack has over five years of experience building software. After graduating from the University of Missouri-Kansas City in 2018 he began his career building frontends as Cerner. Soon after, Zack moved a local startup, C2FO, where he began learning DevOps and focusing his career on Developer Experience. Now he works on the DevOps team at Trumid. When not writing code or working you can find him reading, running or playing fighting games."
+        "Mandi Walls is a Developer Advocate at PagerDuty. For PagerDuty, she helps organizations along their IT Modernization journey. Prior to PagerDuty, she worked at Chef Software and AOL. She is an international speaker on DevOps topics and the author of the whitepaper “Building A DevOps Culture”, published by O’Reilly."
       ],
       "links": []
     },
     {
-      "id": "ec77568b-a7a8-4243-8419-92414a9268df",
-      "name": "AM Grobelny",
-      "tagline": "Developer Advocate, AWS",
-      "photo": "https://cdn.sessionize.com/image/65db-200o200o2-Nwwr324w72P5BqfpddMiJw.jpg",
+      "id": "9e0cfc94-5b81-43cb-87bb-b8a110ea093f",
+      "name": "Mandi Walls",
+      "tagline": "DevOps Advocate",
+      "photo": "https://cdn.sessionize.com/image/88e1-200o200o2-7jPk6Wj9frK8N8MpdUFkBG.jpg",
       "bio": [
-        "I've spent the past 10+ years working on or helping people work on software. I was also a professional educator previously in my career, so I have a particular passion for helping people more easily understand difficult concepts. I currently work at AWS, and I'm focused on helping people learn through experience by using AWS GameDay."
-      ],
-      "links": []
-    },
-    {
-      "id": "583e8f08-8316-4ed2-afdf-4cd091e44564",
-      "name": "Spencer Schneidenbach",
-      "tagline": "AI Architect, Microsoft MVP, President/CTO Aviron Labs",
-      "photo": "https://cdn.sessionize.com/image/8f7a-200o200o2-08-8316-4ed2-afdf-4cd091e44564.86ef5656-100b-426d-8634-f4d4305b6c67.jpg",
-      "bio": [
-        "Spencer Schneidenbach is an AI Architect, President, and CTO of Aviron Labs, an AI and software development firm based in the United States. He has been recognized as a Microsoft MVP for his AI expertise and contributions to the community. Visit our website at https://avironlabs.com for more information."
-      ],
-      "links": []
-    },
-    {
-      "id": "d81d82c8-b647-465c-a2df-3e8a4e170f54",
-      "name": "CJ Obermaier",
-      "tagline": "Education Engineer",
-      "photo": "https://cdn.sessionize.com/image/7a5f-200o200o2-HgSQzUQzzwB5Lqq8K3R4cS.jpg",
-      "bio": [
-        "I write tutorials for HashiCorp and IBM Bob."
-      ],
-      "links": []
-    },
-    {
-      "id": "3a96be54-c75e-486d-8cd3-cd3a73862667",
-      "name": "Vicki Landers",
-      "tagline": "Speaker | CEO | Coach",
-      "photo": "https://cdn.sessionize.com/image/e738-200o200o2-PykZUsBUTx9zppz2EUY7pL.jpg",
-      "bio": [
-        "Vicki Landers, PT, MHA, ACC is a physical therapist, certified professional coach, and former healthcare software analyst and strategist who has spent her career at the intersection of people, systems, and technology. Her work spans roles as a clinician, supervisor, director, and Senior Systems Analyst/Strategist at North Kansas City Hospital, where she led software strategy, implementations, and workflow analysis for home health.",
-        "Working inside complex healthcare systems taught Vicki something that applies far beyond healthcare or technology: the biggest problems aren’t always technical—they’re often rooted in the perspective people bring to the problem.",
-        "Today, Vicki speaks to leaders, innovators, and teams about a simple but powerful idea: the lens you wear matters. Through her coaching and speaking, she helps people recognize how their perspective shapes decisions, communication, and collaboration—and how a brief pause can shift a reaction into a more intentional response. Her work gives audiences practical ways to notice their lens, rethink assumptions, and show up differently in the moments that matter most."
-      ],
-      "links": []
-    },
-    {
-      "id": "3a72bcea-7907-4e24-9de7-885b91e581ad",
-      "name": "Elizabeth Garrett Christensen",
-      "tagline": "Postgres @ Snowflake",
-      "photo": "https://cdn.sessionize.com/image/27c9-200o200o2-HoUhNUU6gwjdirjjbLCktV.png",
-      "bio": [
-        "Elizabeth is on the Open Source advocacy team at Snowflake focusing on Postgres. She organizes the Kansas City Postgres User Group, Postgres Meetup for All, co-hosts PostGIS Day, and is on the board of the the US PostgreSQL Association. Elizabeth enjoys writing about Postgres for Newbies and teaching people about databases whenever she gets the chance. She has a background in open source project management and enjoys working with development teams to build products and applications using all the fun things in the open source toy box. Elizabeth is from Lawrence, Kansas and spends her free time in her backyard tiki hut."
-      ],
-      "links": []
-    },
-    {
-      "id": "a9979a02-fb57-4e05-915f-2e5768a71e18",
-      "name": "Justin Rosenberg",
-      "tagline": "#MentalHealth #Bipolar #Stroke",
-      "photo": "https://cdn.sessionize.com/image/187e-200o200o2-7DE4AeSmGtW4QMfz6yN2C1.png",
-      "bio": [
-        "~25 years experience including a 3 year stint at IBM. Since then he got diagnosed with Bipolar and had a Ischemic Stroke. Luckily he has been Clinical Reference Laboratory for 16 years,"
+        "Mandi Walls is a DevOps Advocate on the Community and Advocacy Team at PagerDuty. Before joining PagerDuty, Mandi spent a number of years at Chef Software, working with customers and community members in the US and Europe. Originally a large-scale systems administrator, Mandi has focused on IT automation; organizational culture and change; and community."
       ],
       "links": []
     },
@@ -574,59 +420,6 @@
       "photo": "https://cdn.sessionize.com/image/e355-200o200o2-DTnP1VwoA8hPYBQkw2fX5R.jpg",
       "bio": [
         "Mark Williams is a technology executive with 25+ years of experience bridging two worlds that rarely overlap: deep software development expertise and enterprise platform strategy. Currently Director of Solutions Delivery for the Kansas City Chiefs, he has led digital transformation across HRIS, CRM, ERP, and venue operations — implementing and optimizing platforms such as Dynamics 365, Dayforce, and Power Automate to drive measurable business outcomes. His career spans hands-on engineering (including development of Menutronics, the world's first electronic grocery shopping service) through executive leadership of cloud migrations, AI adoption, and organization-wide change management. Mark is equally at home in a architecture whiteboard session and a steering committee boardroom — making him a rare voice who can connect technical reality to strategic vision."
-      ],
-      "links": []
-    },
-    {
-      "id": "be37f63c-e09b-4e43-8c0b-37e9df97dc17",
-      "name": "Tracey Hawkins",
-      "tagline": "Gen AI Cybersecurity Expert for End Users, Safety and Security Source",
-      "photo": "https://cdn.sessionize.com/image/55a8-200o200o2-n5odqRj47hQDpDHiGfeAwm.png",
-      "bio": [],
-      "links": []
-    },
-    {
-      "id": "01c5e7cd-9468-4084-8f0e-0eefb71d4c62",
-      "name": "Rahul Tanniru",
-      "tagline": "Senior Vice President Of Software Engineering, Jp Morgan Chase",
-      "photo": "https://cdn.sessionize.com/image/8fe9-200o200o2-N2c9DpJiGpHQZ2tkyWRwBj.jpg",
-      "bio": [
-        "I am a Senior Vice President of Software Engineering at JPMorgan Chase, specializing in enterprise-scale cloud platforms, distributed systems, and AI-enabled infrastructure. I lead and contribute to the design of secure, scalable, and highly resilient cloud-native architectures supporting mission-critical financial systems.",
-        "My expertise spans AWS, Kubernetes, platform engineering, DevOps, and Site Reliability Engineering, with a strong focus on building self-service infrastructure platforms and enabling large engineering organizations to operate at scale. I work extensively on multi-account cloud architectures, infrastructure automation, reliability engineering, and integrating AI and machine learning workloads into modern cloud environments.",
-        "Over the past decade, I have focused on designing high-performance systems that improve scalability, operational efficiency, and platform reliability in complex enterprise environments. I am passionate about advancing cloud architecture standards, mentoring engineers, evaluating innovative technology solutions, and contributing to the broader technology community through speaking, technical publications, and industry judging initiatives."
-      ],
-      "links": []
-    },
-    {
-      "id": "846a2657-6c55-48fb-a04e-6bfe727da6d6",
-      "name": "Kalee Wood",
-      "tagline": "Solopreneur | The Body Knows",
-      "photo": "https://cdn.sessionize.com/image/ff5b-200o200o2-TJTrbCP4yZKbhX8fvaAAtq.png",
-      "bio": [
-        "https://www.the-body-knows.com/"
-      ],
-      "links": []
-    },
-    {
-      "id": "7104995a-e90d-4d4c-abe3-193156bc9e79",
-      "name": "Chris Perrin",
-      "tagline": "Director of Product Development + Wrangler of Chaos",
-      "photo": "https://cdn.sessionize.com/image/85b3-200o200o2-Rgv58t5jUHBkChqaALj2va.jpg",
-      "bio": [
-        "Chris Perrin is a tech geek, chaos wrangler, and all-around software leader with a knack for building high-performance teams and systems. With over 20 years of experience in software engineering, he’s helped teams—from the noblest of startups to giantest of enterprises—navigate the wild world of software development, Agile lifecycles, and getting more done.",
-        "Chris loves demystifying complex tech, creating buzzwords and then turning buzzwords into real-world solutions. Whether he's talking about microservices, team performance, or trying to get AI to do his job, he brings energy, humor, and plenty of practical takeaways to every talk.",
-        "When he’s not writing code or breaking things in the name of innovation, you’ll find him mentoring up-and-coming devs, writing decent-to-okay fiction, and geeking out over the latest in geek. Catch him at the conference, on LinkedIn, or wherever there’s strong coffee and great conversations!"
-      ],
-      "links": []
-    },
-    {
-      "id": "66c1e054-83a5-487a-aef3-0d8499f07c6f",
-      "name": "Avindra Fernando",
-      "tagline": "Principal Architect | Fractional CTO | AI-Driven Development & Modernization | Conference Speaker",
-      "photo": "https://cdn.sessionize.com/image/ae57-200o200o2-LVHWMzkxC1JsTPjNuaDWti.jpg",
-      "bio": [
-        "Avindra Fernando is a software consultant with over 13 years of experience helping teams build scalable, modern web applications. In 2021, he founded Taprobane Consulting to guide clients through architectural decisions, migrations to newer tech stacks, and the implementation of robust AI-powered development and testing strategies that ensure quality and performance.",
-        "He actively mentors engineering teams, leads workshops, and delivers hands-on training. As a regular speaker at tech conferences, Avindra shares practical lessons on concepts and technologies such as Software Architecture, AI-driven development, React, Next.js, E2E Testing, and TypeScript. He leverages his experience to shape future technology direction and accelerate the growth of companies across industries."
       ],
       "links": []
     },
@@ -644,12 +437,44 @@
       "links": []
     },
     {
-      "id": "995a76ba-6e94-461b-a823-e0267b77c1c6",
-      "name": "Mandi Walls",
-      "tagline": "Mandi Walls, Developer Advocate, PagerDuty",
-      "photo": "https://cdn.sessionize.com/image/eee4-200o200o2-ac65625c-f3a1-4ff7-b401-85527d80147d.jpg",
+      "id": "6ee43712-add3-48d2-81a6-350a27f0411f",
+      "name": "Micah Melling",
+      "tagline": "Data Science Leader",
+      "photo": "https://cdn.sessionize.com/image/9c01-200o200o2-Lo82wf7QGBz7TtW2mgTRkR.jpg",
       "bio": [
-        "Mandi Walls is a Developer Advocate at PagerDuty. For PagerDuty, she helps organizations along their IT Modernization journey. Prior to PagerDuty, she worked at Chef Software and AOL. She is an international speaker on DevOps topics and the author of the whitepaper “Building A DevOps Culture”, published by O’Reilly."
+        "Micah Melling has led multiple data science teams in Kansas City. He developed and taught graduate-level data science courses at Park University. He also serves on the UMKC Analytics Advisory Board and volunteers with PrepKC's Data in Action Program for 8th graders. He has spoken throughout the community about data science and the intersection of AI and philosophy."
+      ],
+      "links": []
+    },
+    {
+      "id": "85019837-c755-48ec-884a-76e6889437b3",
+      "name": "Michelle Frost",
+      "tagline": "AI Advocate @ JetBrains | Responsible AI | MS, AI | Microsoft AI MVP",
+      "photo": "https://cdn.sessionize.com/image/692f-200o200o2-WgzKSCBAFfoamtUwAWukjx.jpg",
+      "bio": [
+        "Michelle Frost is an AI Advocate at JetBrains. With over a decade of engineering experience, Michelle holds a Bachelor of Science in Computer Science from the University of Missouri at Kansas City, a Master of Science in Artificial Intelligence from Johns Hopkins University, and is a Microsoft AI MVP. As an established AI and Machine Learning specialist, Michelle focuses on Responsible AI development. Her approach is grounded in creating AI that is fair, accountable, and transparent.",
+        "Michelle is also an active member and Tech Advisor to The Center for Practical Bioethics' Ethical AI Initiative. When not behind the screen, she can be found tending to her garden with her 100 lb pup Wilbur by her side."
+      ],
+      "links": []
+    },
+    {
+      "id": "a1f56b95-0b10-40b1-9c58-15b1b183d2ae",
+      "name": "Mike Shearer",
+      "tagline": "Senior Software Engineer",
+      "photo": "https://cdn.sessionize.com/image/e6da-200o200o2-35ftp5xkMM46bAcdLewZgf.jpg",
+      "bio": [
+        "Software engineer with over 10 years of experience in distributed data processing systems with a recent emphasis in AI reasoning and training pipelines."
+      ],
+      "links": []
+    },
+    {
+      "id": "a5a7faa9-6651-4b15-b842-25c24ee21787",
+      "name": "Mindy Becker",
+      "tagline": "Right Triangle Consulting, Director of Data Governance",
+      "photo": "https://cdn.sessionize.com/image/cef5-200o200o2-hkBJy2mStuXbRasiCtGDYp.jpg",
+      "bio": [
+        "Mindy Becker is a Kansas City–based data governance leader known for transforming how organizations understand, trust, and activate their data. As Director of Data Governance at Right Triangle Consulting, she architects programs that strengthen data quality, elevate business intelligence, and enable confident, insight‑driven decision‑making across finance, life insurance, and healthcare. With more than a decade of experience spanning data integration, modeling, privacy, and analytics, Mindy is recognized for translating complex technical concepts into clear, actionable strategies for both executives and practitioners.",
+        "She brings expertise in applied data governance, data quality, metadata strategy, and regulatory reporting, along with emerging capabilities in AI governance and AI readiness to help organizations prepare for responsible, scalable adoption of modern technologies. Mindy holds the DATAVERSITY Applied Data Governance Certification, where she contributed to exam development, and is a Certified Data Management Professional (CDMP). She is an active contributor to the Kansas City data community, a frequent speaker at DAMA and Dataversity events, and a committed advocate for education and community impact through Prep KC, the Junior League of Kansas City, and the American Cancer Society’s Hope Lodge."
       ],
       "links": []
     },
@@ -666,22 +491,197 @@
       "links": []
     },
     {
-      "id": "3a40aa86-bfd3-4a9a-ac85-64042ee1eeac",
-      "name": "Lyndsay Noble",
-      "tagline": "Director of Analytics and Technology Programs, Rockhurst University",
-      "photo": "https://cdn.sessionize.com/image/7faf-200o200o2-BtZm5UWCqj8JoP2Q6RaYQk.jpg",
+      "id": "354dc991-47f0-4073-b609-02c5e5c9e4a9",
+      "name": "Nathan Smith",
+      "tagline": "Senior Data Scientist, Neo4j",
+      "photo": "https://cdn.sessionize.com/image/b2f5-200o200o2-NmVtBNi4U559PHz8fTNkZ.png",
       "bio": [
-        "Lyndsay serves as the Academic Program Director for all analytics and technology programs at Rockhurst University. Beyond guiding the next generation of technologists, she partners with organizations to navigate evolving technology landscapes by aligning strategy, people, and processes"
+        "Nathan Smith is a Senior Data Scientist in Neo4j Professional Services. He helps customers across a range of industries get more value from their data through graph-powered machine learning. He lives in Kansas City and is an organizer of the Kansas City Graph Databases Meetup."
       ],
       "links": []
     },
     {
-      "id": "424f7166-a882-473f-b05e-15aed7f9ff86",
-      "name": "Cory House",
-      "tagline": "Author / Consultant",
-      "photo": "https://cdn.sessionize.com/image/0729-200o200o2-hX7JViSy9XGF5ys31ag2tt.jpg",
+      "id": "7af36cc1-3353-4476-9343-121e962f4bd5",
+      "name": "Patrick Liekhus",
+      "tagline": "Solutions Architect @ SETWorks | AI Creator",
+      "photo": "https://cdn.sessionize.com/image/fb77-200o200o2-RBPMX3XSd9VDZDM1XwQ8tL.png",
       "bio": [
-        "Cory is an author, a 12 time Microsoft MVP, and international speaker. He is founder of reactjsconsulting, where he helps companies transition to React. He has trained over 10,000 software developers at conferences and businesses worldwide. Cory has authored over a dozen courses on JavaScript, React, C#, testing, and web development on Pluralsight and Dometrain. He shares software development tips daily on X as @housecor."
+        "Patrick Liekhus is a Solutions Architect at SETWorks, building HIPAA-compliant healthcare provider management software for individuals with devlopment disabilities. Patrick advocates for spec-driven development and practical approaches to maintaining engineering discipline with AI coding tools.",
+        "His expertise includes building scalable architectures, implementing continuous delivery pipelines, and helping teams leverage AI to accelerate delivery while maintaining quality. Patrick specializes in regulated environments where comprehensive documentation and compliance requirements must coexist with modern development velocity."
+      ],
+      "links": []
+    },
+    {
+      "id": "9fd5eded-a99b-4935-8464-d8fd5199f494",
+      "name": "Preston Chandler",
+      "tagline": "Lean/Agile Evangelist and SVP Client Transformation at WPP",
+      "photo": "https://cdn.sessionize.com/image/ff19-200o200o2-93623c5b-d687-4768-82c5-63fec1747f81.jpg",
+      "bio": [
+        "Preston Chandler is a transformation leader and systems strategist with more than 20 years of experience helping complex organizations improve how they operate, innovate, and deliver value.",
+        "He currently serves as the Global Lead of Strategic Operations at WPP, where he works across marketing and engineering organizations to improve decision velocity, operational design, and large-scale delivery performance. In parallel, he is a Managing Partner at Centered, advising executive leaders on building innovation-ready teams and sustainable operating models.",
+        "Preston’s work sits at the intersection of engineering, product, and marketing — designing systems that reduce friction, accelerate learning, and align technical execution with business strategy. Over his career, he has partnered with more than 100 teams across industries including pharmaceuticals, manufacturing, digital product development, supply chain, and enterprise technology. His client experience includes Pfizer, Merck, Johnson & Johnson, Ford, Sprint, Novartis, and VML.",
+        "He specializes in diagnosing systemic bottlenecks, improving alignment in complex environments, and helping senior teams scale without losing adaptability.",
+        "Preston brings a pragmatic, systems-level lens to innovation — focusing not just on frameworks, but on how organizations actually behave under pressure."
+      ],
+      "links": []
+    },
+    {
+      "id": "01c5e7cd-9468-4084-8f0e-0eefb71d4c62",
+      "name": "Rahul Tanniru",
+      "tagline": "Senior Vice President Of Software Engineering, Jp Morgan Chase",
+      "photo": "https://cdn.sessionize.com/image/8fe9-200o200o2-N2c9DpJiGpHQZ2tkyWRwBj.jpg",
+      "bio": [
+        "I am a Senior Vice President of Software Engineering at JPMorgan Chase, specializing in enterprise-scale cloud platforms, distributed systems, and AI-enabled infrastructure. I lead and contribute to the design of secure, scalable, and highly resilient cloud-native architectures supporting mission-critical financial systems.",
+        "My expertise spans AWS, Kubernetes, platform engineering, DevOps, and Site Reliability Engineering, with a strong focus on building self-service infrastructure platforms and enabling large engineering organizations to operate at scale. I work extensively on multi-account cloud architectures, infrastructure automation, reliability engineering, and integrating AI and machine learning workloads into modern cloud environments.",
+        "Over the past decade, I have focused on designing high-performance systems that improve scalability, operational efficiency, and platform reliability in complex enterprise environments. I am passionate about advancing cloud architecture standards, mentoring engineers, evaluating innovative technology solutions, and contributing to the broader technology community through speaking, technical publications, and industry judging initiatives."
+      ],
+      "links": []
+    },
+    {
+      "id": "4744f53f-c70b-478a-a5cb-3041c3302036",
+      "name": "Renee Anne Poulin",
+      "tagline": "Stronger Teams Through Clearer Conversations",
+      "photo": "https://cdn.sessionize.com/image/21b3-200o200o2-KccDGLG5wJUvNrEo9dqRtr.jpg",
+      "bio": [
+        "Renée Anne Poulin is an Agile coach, workshop designer, and former university professor who helps leaders and teams navigate complexity, collaboration, and change more skillfully. Her background spans humanities research, adult learning, organizational transformation, and product strategy, giving her an unusual ability to connect people, process, and technology in practical ways. She has worked across cross-functional environments and designs research-informed learning experiences that help professionals make better decisions, communicate more clearly, and work more effectively together. Known for blending systems thinking with human-centered facilitation, she brings a multidisciplinary lens to the hidden dynamics that shape meetings, teamwork, and workplace performance. Her work is grounded in evidence, adaptive learning, and the belief that better team conversations lead to improved business outcomes."
+      ],
+      "links": []
+    },
+    {
+      "id": "85316d15-17e0-437d-8a0a-ab44deb388f0",
+      "name": "Richard Boyd",
+      "tagline": "Developer Advocate, HashiCorp",
+      "photo": "https://cdn.sessionize.com/image/55d5-200o200o2-GL8TZHDPECdyuXYjuCdMvT.jpg",
+      "bio": [
+        "Richard is a Developer Advocate at HashiCorp/IBM. He previously worked in industries from consumer robotics to B2B SaaS to the US Defense industry and across roles from Statistician to Developer to SRE to Product Management. Richard’s focus is on Infrastructure-as-code and Serverless system design."
+      ],
+      "links": []
+    },
+    {
+      "id": "135d90c8-09b4-43f0-b9a8-2dd0d0569f84",
+      "name": "Rob Kraft",
+      "tagline": "Software Consultant at Kraft Software",
+      "photo": "https://cdn.sessionize.com/image/3552-200o200o2-YGv7akL2cMzRqfqKfArKix.png",
+      "bio": [
+        "I have been developing software for almost four decades. Although I have a Master's Degree in Project Management I earned it prior to the primacy of Agile practices, and I felt many of the principles I learned couldn't be applied to software development. My focus is always on the aspect of software development process that needs to most attention, which could be writing code, project prioritization, quality assurance, or building culture. I'm passionate about sharing good development practices, especially security in software development. I've taught classes on SQL Server and programming languages, co-authored books on SQL Server, spent many years developing large applications with C# .Net, and dabble in everything I can."
+      ],
+      "links": []
+    },
+    {
+      "id": "beeb0799-4d44-4f60-a23d-b3fb2596ebb7",
+      "name": "Rob Voss",
+      "tagline": "Founder, Voss AI Consulting | OpenAI Academy Faculty | Helping organizations stop guessing and start using AI with confidence",
+      "photo": "https://cdn.sessionize.com/image/346c-200o200o2-fQdp4RKvHYvLtqDb9xMeKb.jpg",
+      "bio": [
+        "Rob Voss is an AI strategist, educator, and researcher who helps organizations move from AI anxiety to measurable adoption. As the founder of Voss AI Consulting, he works with business leaders, financial firms, and educational institutions to build practical AI strategies that protect client data, save time, and increase profitability.",
+        "Rob is one of 89 OpenAI Academy faculty worldwide — and the sole representative from Missouri — recognized for his work bridging AI capabilities with real-world professional practice. He has trained over 500 professionals across education, finance, and business, with independently validated outcomes: a 93% increase in regular AI use, 200% improvement in training satisfaction, and 52% reduction in AI-related anxiety among participants.",
+        "A tenured Associate Professor of History at Northwest Missouri State University, Rob brings 25+ years of teaching experience and a researcher's rigor to the AI space. He founded the university's Applied AI minor, directs the MSEd in Teaching History, and is developing a B.S. in Interdisciplinary Technology. His academic background gives him a rare perspective: he understands both how transformative technologies reshape industries and how organizations actually learn and change.",
+        "Rob has presented at IIBA KC Chapter, the Missouri SBDC AI Summit, KC AI Club, MidAIR Conference, and other regional and national venues. He holds a Ph.D. in History from the University of Nebraska–Lincoln.",
+        "Website: vossaiconsulting.com",
+        "LinkedIn: linkedin.com/in/ai-robvoss"
+      ],
+      "links": []
+    },
+    {
+      "id": "34a3eb26-af37-44ba-be41-ad525d8b310f",
+      "name": "Roger O'Dell",
+      "tagline": "Your never to old to learn",
+      "photo": "https://cdn.sessionize.com/image/8e32-200o200o2-N6Gx9V5agob7NeEgvtLhvB.jpg",
+      "bio": [
+        "Army Veteran, Software Engineer, Speaker & Trainer, I have had the opportunity to work with, help and mentor for the last 16 years."
+      ],
+      "links": []
+    },
+    {
+      "id": "6d5add80-9200-4afc-9f33-3cd18e26d723",
+      "name": "Seth Eliot",
+      "tagline": "Principal Resilience Architect, Arpio",
+      "photo": "https://cdn.sessionize.com/image/4276-200o200o2-WSXoxHUhBaLzFtpKVmFSvb.jpg",
+      "bio": [
+        "Seth is Principal Resilience Architect at Arpio. Previously, as the Global Reliability Lead for AWS Well-Architected, he spearheaded the development of comprehensive disaster recovery (DR) guidance for AWS customers. He authored the AWS whitepaper \"Disaster Recovery of Workloads on AWS: Recovery in the Cloud\" [http://bit.ly/DR_AWS] as well as the AWS Architecture Blog's disaster recovery series [http://bit.ly/aws-dr-blog]. At AWS, Seth worked directly with customers, aiding them in building resilient architectures in the cloud. At Arpio, he continues working hands-on with customers, helping them to implement disaster recovery and ransomware protection for their AWS workloads. In prior roles at Amazon, Seth was Principal Engineer for Amazon Fresh and International Technologies, and before that he was developer lead for the team that created Prime Video."
+      ],
+      "links": []
+    },
+    {
+      "id": "99522a9f-8a16-4c1b-965e-4043d288cfed",
+      "name": "Shashank Daté",
+      "tagline": "Using Ruby for fun and profit since 2002",
+      "photo": "https://cdn.sessionize.com/image/5b60-200o200o2-9KwEpitjZP1zjXEJxy3niP.png",
+      "bio": [
+        "Shashank is an avid mruby programmer who tinkers with Raspberry Pis on electrifying hobby projects."
+      ],
+      "links": []
+    },
+    {
+      "id": "583e8f08-8316-4ed2-afdf-4cd091e44564",
+      "name": "Spencer Schneidenbach",
+      "tagline": "AI Architect, Microsoft MVP, President/CTO Aviron Labs",
+      "photo": "https://cdn.sessionize.com/image/8f7a-200o200o2-08-8316-4ed2-afdf-4cd091e44564.86ef5656-100b-426d-8634-f4d4305b6c67.jpg",
+      "bio": [
+        "Spencer Schneidenbach is an AI Architect, President, and CTO of Aviron Labs, an AI and software development firm based in the United States. He has been recognized as a Microsoft MVP for his AI expertise and contributions to the community. Visit our website at https://avironlabs.com for more information."
+      ],
+      "links": []
+    },
+    {
+      "id": "f4f9dcb7-93e5-49df-bbe5-b313e137a9f5",
+      "name": "Surya Rao Rayarao",
+      "tagline": "SS&C Technologies, Lead Software Engineer",
+      "photo": "https://cdn.sessionize.com/image/fb75-200o200o2-Kctt6ZofLfdPSA3BpEZXdw.jpg",
+      "bio": [
+        "Surya Rao Rayarao is a distinguished thought leader at the forefront of artificial intelligence and data modernization. With deep expertise in machine learning applications and enterprise transformation, he specializes in helping organizations navigate the complex landscape of digital evolution.",
+        "His work particularly focuses on the financial and insurance sectors, where he has pioneered innovative approaches to hyperautomation, anomaly detection, and intelligent data processing. Through his speaking engagements, Surya shares practical insights on implementing AI solutions that drive real business value.",
+        "Known for his \"enlightening\" and \"inspiring\" presentations, Surya combines technical depth with accessible communication, making complex AI concepts understandable for diverse audiences from technical teams to executive leadership."
+      ],
+      "links": []
+    },
+    {
+      "id": "714a1231-ea11-41da-81ed-00880a9ec506",
+      "name": "Tamara Copple",
+      "tagline": "Evangelist for women in STEM, product owner, keynote speaker, D&D veteran",
+      "photo": "https://cdn.sessionize.com/image/591a-200o200o2-W1odEwuREomHNmn53Mx1k2.jpg",
+      "bio": [
+        "Tamara Copple is cofounder and Lead Business Consultant for Grand River Analytics and a product owner for international nonprofit Children International. She is a speaker and community organizer for multiple professional groups. Always a business analyst at heart, Tamara mentors tech and tech-adjacent professionals in mastering their craft with empathy and humanity in the age of AI."
+      ],
+      "links": []
+    },
+    {
+      "id": "e4ca7219-aa6b-4cb8-bd61-d8af33af278f",
+      "name": "Ted Kihm",
+      "tagline": "Euphemystic Ventures, Founder",
+      "photo": "https://cdn.sessionize.com/image/d8d9-200o200o2-48EiAiF1nQVoCkNsnjyoXE.jpg",
+      "bio": [
+        "Ted Kihm is the founder of Euphemystic Ventures, where he is building AI systems and infrastructure focused on real-world data problems. After 25 years working with large-scale search and data platforms at T-Mobile and other enterprise environments, he now focuses on applying semantic search and retrieval-augmented systems to messy, document-heavy workflows.",
+        "His recent work includes building a GPU-backed AI data center and developing citation-first AI systems that operate on unstructured inputs such as scanned documents, PDFs, and operational records. Ted is particularly interested in bridging the gap between theoretical AI capabilities and practical, trustworthy systems that can be used in production."
+      ],
+      "links": []
+    },
+    {
+      "id": "be37f63c-e09b-4e43-8c0b-37e9df97dc17",
+      "name": "Tracey Hawkins",
+      "tagline": "Gen AI Cybersecurity Expert for End Users, Safety and Security Source",
+      "photo": "https://cdn.sessionize.com/image/55a8-200o200o2-n5odqRj47hQDpDHiGfeAwm.png",
+      "bio": [],
+      "links": []
+    },
+    {
+      "id": "3a96be54-c75e-486d-8cd3-cd3a73862667",
+      "name": "Vicki Landers",
+      "tagline": "Speaker | CEO | Coach",
+      "photo": "https://cdn.sessionize.com/image/e738-200o200o2-PykZUsBUTx9zppz2EUY7pL.jpg",
+      "bio": [
+        "Vicki Landers, PT, MHA, ACC is a physical therapist, certified professional coach, and former healthcare software analyst and strategist who has spent her career at the intersection of people, systems, and technology. Her work spans roles as a clinician, supervisor, director, and Senior Systems Analyst/Strategist at North Kansas City Hospital, where she led software strategy, implementations, and workflow analysis for home health.",
+        "Working inside complex healthcare systems taught Vicki something that applies far beyond healthcare or technology: the biggest problems aren’t always technical—they’re often rooted in the perspective people bring to the problem.",
+        "Today, Vicki speaks to leaders, innovators, and teams about a simple but powerful idea: the lens you wear matters. Through her coaching and speaking, she helps people recognize how their perspective shapes decisions, communication, and collaboration—and how a brief pause can shift a reaction into a more intentional response. Her work gives audiences practical ways to notice their lens, rethink assumptions, and show up differently in the moments that matter most."
+      ],
+      "links": []
+    },
+    {
+      "id": "b4100c50-f917-4891-ac5d-1b06d1865ae6",
+      "name": "Zackery Griesinger",
+      "tagline": "Senior Software Engineering Building Developer Tooling at C2FO",
+      "photo": "https://cdn.sessionize.com/image/6ab9-200o200o2-VBx6vthYDvdvNS1v4LTD8Z.jpg",
+      "bio": [
+        "Zackery is a Senior DevOps Engineer working on Developer Tooling at Trumid. A Kansas City native, Zack has over five years of experience building software. After graduating from the University of Missouri-Kansas City in 2018 he began his career building frontends as Cerner. Soon after, Zack moved a local startup, C2FO, where he began learning DevOps and focusing his career on Developer Experience. Now he works on the DevOps team at Trumid. When not writing code or working you can find him reading, running or playing fighting games."
       ],
       "links": []
     }

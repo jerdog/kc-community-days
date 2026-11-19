@@ -1,0 +1,22 @@
+---
+import Admin from '../../layouts/Admin.astro';
+---
+<Admin title="Site settings">
+  <form slot="user" class="admin-user" method="post" action="/admin/logout">
+    <span id="who" class="admin-who"></span>
+    <button class="btn outline small" type="submit">Sign out</button>
+  </form>
+  <div class="in admin-wrap">
+    <h1>Site settings</h1>
+    <section id="draft" class="draft-bar" aria-labelledby="draft-h">
+      <h2 id="draft-h" class="visually-hidden">Draft status</h2>
+      <p>Loading…</p>
+    </section>
+    <div id="announce" class="admin-msg" role="status" aria-live="polite"></div>
+    <div id="error-summary" class="error-summary" tabindex="-1" hidden></div>
+    <nav class="admin-toc" aria-label="Sections"><ul id="toc"></ul></nav>
+    <form id="settings" novalidate></form>
+    <noscript><p>The admin page needs JavaScript.</p></noscript>
+  </div>
+  <script src="../../scripts/admin.js"></script>
+</Admin>

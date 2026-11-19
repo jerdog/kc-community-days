@@ -23,7 +23,19 @@
       "migrations_dir": "migrations",
       "migrations_table": "d1_migrations"
     }
-  ]
+  ],
+  // Branch previews (Workers Builds runs `npm run deploy:preview` on non-production
+  // branches). Previews get their own D1 database so test form submissions never
+  // touch production data. Keep this in sync with wrangler.preview-migrations.jsonc.
+  "previews": {
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "communitydays-preview",
+        "database_id": "f34fd501-609e-49ae-bf28-c55d6e2e497f"
+      }
+    ]
+  }
   // Once ready to cut over from Squarespace:
   // "routes": [
   //   { "pattern": "communitydays.info", "custom_domain": true },

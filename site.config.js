@@ -95,16 +95,36 @@ export default {
     { name: 'KCJUG', fullName: 'Kansas City Java Users Group', slug: 'kcjug', tag: 'KCJUG', color: '#a34700', url: 'https://www.meetup.com/kansascityjug', logo: '/images/groups/kcjug.png' },
   ],
 
+  // Sponsors by tier, highest first.
+  // - badge:  text on the sponsor badge's top strip (homepage)
+  // - gold:   true gives the badge a gold strip
+  // - ribbon: ribbon color under the badge; must keep 4.5:1+ contrast with white text
+  // - hero:   true lists this tier's logos in the homepage hero ("Presented with support from")
+  // Logos sit on a white backing, so dark artwork on a transparent or white background works best.
   sponsors: [
     {
       tier: 'Gold',
+      badge: 'GOLD SPONSOR',
+      gold: true,
+      ribbon: '#7a5a00',
+      hero: true,
       items: [
         { name: 'groundcover', logo: '/images/sponsors/groundcover.png', url: 'https://www.groundcover.com/' },
         { name: 'USDA', logo: '/images/sponsors/usda.webp', url: 'https://www.usda.gov/' },
       ],
     },
-    { tier: 'Bronze', items: [{ name: 'Vindex', logo: '/images/sponsors/vindex.png' }] },
-    { tier: 'Community partner', items: [{ name: 'Surya Consulting', logo: '/images/sponsors/surya-consulting.jpg' }] },
+    {
+      tier: 'Bronze',
+      badge: 'BRONZE SPONSOR',
+      ribbon: '#8a4b20',
+      items: [{ name: 'Vindex', logo: '/images/sponsors/vindex.png' }],
+    },
+    {
+      tier: 'Community partner',
+      badge: 'PARTNER',
+      ribbon: '#303086',
+      items: [{ name: 'Surya Consulting', logo: '/images/sponsors/surya-consulting.png' }],
+    },
   ],
 
   team: [

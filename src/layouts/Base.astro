@@ -2,7 +2,9 @@
 import '../styles/site.css';
 import Fountain from '../components/Fountain.astro';
 import Form from '../components/Form.astro';
+import SponsorLogos from '../components/SponsorLogos.astro';
 import { event, nav, sponsors } from '../lib/site.js';
+const hasSponsors = sponsors.some((t) => t.items.length);
 import { isPast } from '../lib/site.js';
 
 const { title, description = event.description, sponsorStrip = true } = Astro.props;
@@ -47,19 +49,14 @@ const nextYear = event.year + 1;
       <slot />
     </main>
 
-    {sponsorStrip && (
-      <aside class="spons-strip" aria-labelledby="spons-strip-h">
-        <div class="in">
-          <h2 id="spons-strip-h">Made possible by</h2>
-          {sponsors.flatMap((t) => t.items.map((s) => (
-            <span>{s.url ? <a href={s.url}>{s.name}</a> : <span class="nm">{s.name}</span>}<small>{t.tier.toLowerCase()}</small></span>
-          )))}
-        </div>
-      </aside>
-    )}
-
     <footer class="site-foot on-dark">
       <div class="in">
+        {sponsorStrip && hasSponsors && (
+          <section class="foot-sponsors" aria-labelledby="foot-spons-h">
+            <h2 id="foot-spons-h">Made possible by</h2>
+            <SponsorLogos size="sm" />
+          </section>
+        )}
         <div id="signup">
           <h2>{isPast ? `Hear about ${nextYear} first.` : 'Get event updates.'}</h2>
           <Form endpoint="subscribe" class="news" buttonClass="btn gold" submitLabel="Sign up" id="footer-signup">

@@ -47,9 +47,9 @@ Pushing to the production branch deploys automatically through **Workers Builds*
 | --- | --- |
 | Build command | `npm run build` |
 | Deploy command | `npm run deploy` |
-| Preview command | leave as `npx wrangler preview` |
+| Preview command | `npm run deploy:preview` |
 
-`npm run deploy` builds the site, applies any new D1 migrations to the live database, then deploys the Worker. If a migration fails, the deploy stops and the old version keeps serving. Preview builds of other branches do **not** run migrations.
+`npm run deploy` builds the site, applies any new D1 migrations to the live database, then deploys the Worker. If a migration fails, the deploy stops and the old version keeps serving. Branch previews use a separate database, `communitydays-preview`, so testing a form on a preview never touches production data. `npm run deploy:preview` applies new migrations to that database first, so migrations get tried on previews before they reach production.
 
 The build token Workers Builds created needs **Account → D1 → Edit** added (My Profile → API Tokens → the Workers Builds token → Edit), or the migration step fails with an authentication error.
 

@@ -24,7 +24,7 @@ If `site.config.json` names a different Sessionize event than the imported data,
 
 Organizers edit everything in `site.config.json` at **https://communitydays.jerdog.workers.dev/admin/**: event details, the call-for-speakers and registration switches, links, ticket tiers, the homepage community list, communities (with a live ribbon-contrast check), sponsors and logos, organizers and the menu. It can also import the program from Sessionize and start a new year (archiving the current one).
 
-- **Sign-in:** GitHub. Anyone with write access to this repository can sign in; set `ADMIN_USERS` in `wrangler.jsonc` to narrow it to specific GitHub usernames.
+- **Sign-in:** GitHub. Only accounts on the `ADMIN_USERS` allowlist that also have write access to this repository can sign in. With no allowlist, nobody can. The list is checked on every request, so removing someone locks them out immediately.
 - **Drafts:** every save is committed (with the admin's GitHub name) to the `admin-draft` branch, which Workers Builds turns into a preview. **Publish** merges the draft into `main`, which deploys the site; **Discard** deletes the draft.
 - **Security:** the session is an encrypted, HttpOnly cookie that expires after 8 hours. The admin only works on `ADMIN_ORIGIN` (not on previews), and changes are made with the admin's own GitHub token, so GitHub's own permissions apply.
 
@@ -33,10 +33,13 @@ Organizers edit everything in `site.config.json` at **https://communitydays.jerd
 1. Create a GitHub OAuth app at **github.com → Settings → Developer settings → OAuth Apps → New OAuth App**:
    - Homepage URL: `https://communitydays.jerdog.workers.dev`
    - Authorization callback URL: `https://communitydays.jerdog.workers.dev/admin/auth/callback`
-2. Put its **Client ID** in `wrangler.jsonc` → `vars.GITHUB_CLIENT_ID` (it isn't secret).
+2. Put its **Client ID** in `wrangler.jsonc` → `vars.GITHUB_CLIENT_ID` (it isn't secret; already done).
 3. In Cloudflare: **Workers & Pages → communitydays → Settings → Variables and Secrets**, add two **Secrets**:
    - `GITHUB_CLIENT_SECRET`: generate one in the OAuth app
    - `SESSION_SECRET`: a long random string, e.g. the output of `openssl rand -base64 32`
+
+   and one **Text** variable:
+   - `ADMIN_USERS`: who may use the admin, comma-separated, e.g. `296864, someorganizer`. Use numeric GitHub user IDs where you can; they stay the same if someone renames their account. To find someone's ID, open `https://api.github.com/users/<username>` and copy its `"id"`. Edit this list in the dashboard to add or remove admins; no deploy is needed. `keep_vars` in `wrangler.jsonc` stops deploys from deleting it.
 4. Deploy (push to `main`). Until all of these exist, `/admin` shows which ones are missing.
 
 When the site moves to `communitydays.info`, change `ADMIN_ORIGIN` and the OAuth app's URLs to match.
@@ -55,6 +58,7 @@ node tests/admin-e2e.mjs             # add --import to also run a real Sessioniz
 GITHUB_CLIENT_ID=test-client
 GITHUB_CLIENT_SECRET=test-secret
 SESSION_SECRET=local-dev-only-session-secret
+ADMIN_USERS=1001,test-viewer
 GITHUB_API=http://localhost:9999
 GITHUB_WEB=http://localhost:9999
 ```

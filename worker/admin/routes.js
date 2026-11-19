@@ -1,8 +1,10 @@
 // /admin: sign in with GitHub, then edit site.config.json through a draft branch.
 //
-// Who can sign in: GitHub users with write (push) access to ADMIN_REPO, optionally
-// narrowed by ADMIN_USERS (comma-separated logins). Every change is made with the
-// admin's own GitHub token, so commits show who made them.
+// Who can sign in: GitHub users on the ADMIN_USERS allowlist (comma-separated GitHub
+// user IDs or usernames; set in the Cloudflare dashboard) who also have write (push)
+// access to ADMIN_REPO. With no allowlist nobody can sign in. The allowlist is checked
+// again on every request, so removing someone takes effect immediately. Every change is
+// made with the admin's own GitHub token, so commits show who made them.
 //
 // Changes are saved to ADMIN_DRAFT_BRANCH (which Workers Builds turns into a preview),
 // then "Publish" merges the draft into ADMIN_BRANCH (main), which deploys the site.
@@ -33,10 +35,19 @@ function settings(env) {
   return {
     branch: env.ADMIN_BRANCH || 'main',
     draft: env.ADMIN_DRAFT_BRANCH || 'admin-draft',
-    users: (env.ADMIN_USERS || '').split(',').map((u) => u.trim().toLowerCase()).filter(Boolean),
     previewUrl: (branch) => (env.PREVIEW_URL_TEMPLATE || '').replace('{branch}', branch.toLowerCase().replace(/[^a-z0-9]+/g, '-')),
   };
 }
+
+// ADMIN_USERS: "296864, someone" — numeric GitHub user IDs (they survive username
+// changes) or usernames, matched case-insensitively.
+export function allowlist(env) {
+  return String(env.ADMIN_USERS || '').split(/[\s,]+/).map((u) => u.trim().replace(/^@/, '').toLowerCase()).filter(Boolean);
+}
+export const isAllowed = (env, user) => {
+  const list = allowlist(env);
+  return Boolean(user) && (list.includes(String(user.id)) || list.includes(String(user.login || '').toLowerCase()));
+};
 
 // Admin only answers on the production origin (and localhost for development),
 // so preview copies of the site can't be used to edit the real repository.
@@ -51,6 +62,7 @@ export async function handleAdmin(request, env) {
 
   if (!allowedOrigin(url, env)) return env.ASSETS.fetch(new Request(new URL('/404.html', url), request)).then((r) => new Response(r.body, { status: 404, headers: r.headers }));
   const missing = ['GITHUB_CLIENT_ID', 'GITHUB_CLIENT_SECRET', 'SESSION_SECRET', 'ADMIN_REPO'].filter((k) => !env[k]);
+  if (!allowlist(env).length) missing.push('ADMIN_USERS');
   if (missing.length) return setupPage(missing);
 
   // ---- Sign-in flow (public) ----
@@ -72,9 +84,10 @@ export async function handleAdmin(request, env) {
 
   // ---- Everything else needs a session ----
   const session = await unseal(readCookie(request, SESSION) || '', env.SESSION_SECRET);
-  if (!session) {
-    if (path.startsWith('/admin/api/')) return json({ error: 'Your session has ended. Sign in again.' }, 401);
-    return redirect('/admin/sign-in/');
+  if (!session || !isAllowed(env, session)) {
+    const clear = session ? { 'set-cookie': cookie(SESSION, '', { maxAge: 0 }) } : {};
+    if (path.startsWith('/admin/api/')) return json({ error: session ? 'Your account is no longer on the admin list.' : 'Your session has ended. Sign in again.' }, 401, clear);
+    return redirect(session ? '/admin/sign-in/?error=not-listed' : '/admin/sign-in/', clear);
   }
   if (!path.startsWith('/admin/api/')) return env.ASSETS.fetch(request);
 
@@ -116,10 +129,10 @@ async function callback(request, env, url) {
 
   const gh = github(tok.access_token, env);
   const [user, repo] = await Promise.all([gh.user(), gh.repo().catch(() => null)]);
-  const { users } = settings(env);
-  if (!repo?.permissions?.push || (users.length && !users.includes(user.login.toLowerCase()))) return fail('access');
+  if (!isAllowed(env, user)) return fail('not-listed');
+  if (!repo?.permissions?.push) return fail('access');
 
-  const session = await seal({ login: user.login, name: user.name || user.login, avatar: user.avatar_url, token: tok.access_token }, env.SESSION_SECRET, SESSION_TTL);
+  const session = await seal({ id: user.id, login: user.login, name: user.name || user.login, avatar: user.avatar_url, token: tok.access_token }, env.SESSION_SECRET, SESSION_TTL);
   return new Response(null, {
     status: 302,
     headers: [

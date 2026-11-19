@@ -4,7 +4,8 @@
 // pointed at it). Seeded from this checkout's site.config.json, sessionize.json and archive/.
 //
 // OAuth: /login/oauth/authorize?...&login=<code> redirects back with code=<code>.
-//   code "admin" → token with push access, "viewer" → token without push access.
+//   "admin" (id 1001) has push access, "viewer" (1002) doesn't, "outsider" (1003) has push
+//   access but isn't on the test ADMIN_USERS allowlist.
 import { createServer } from 'node:http';
 import { readFile, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
@@ -87,10 +88,12 @@ createServer(async (req, res) => {
 
   // ---- REST API
   if (!token.startsWith('tok-')) return send(res, 401, { message: 'Bad credentials' });
-  if (p === '/user') return send(res, 200, { login: token === 'tok-admin' ? 'test-admin' : 'test-viewer', name: 'Test Person', avatar_url: '' });
+  const who = token.slice(4);
+  const pushers = ['admin', 'outsider'];
+  if (p === '/user') return send(res, 200, { id: { admin: 1001, viewer: 1002, outsider: 1003 }[who] || 1999, login: `test-${who}`, name: 'Test Person', avatar_url: '' });
   const base = `/repos/${REPO}`;
-  if (p === base) return send(res, 200, { full_name: REPO, permissions: { push: token === 'tok-admin', pull: true } });
-  if (token !== 'tok-admin' && req.method !== 'GET') return send(res, 403, { message: 'Resource not accessible' });
+  if (p === base) return send(res, 200, { full_name: REPO, permissions: { push: pushers.includes(who), pull: true } });
+  if (!pushers.includes(who) && req.method !== 'GET') return send(res, 403, { message: 'Resource not accessible' });
 
   let m;
   if ((m = p.match(new RegExp(`^${base}/git/ref/heads/(.+)$`)))) {

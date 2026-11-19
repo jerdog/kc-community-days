@@ -10,15 +10,17 @@
     "not_found_handling": "404-page",
     "run_worker_first": ["/api/*", "/admin", "/admin/*"]
   },
-  // Admin page (/admin): sign in with GitHub. Secrets GITHUB_CLIENT_SECRET and
-  // SESSION_SECRET are set in the dashboard (Settings → Variables and Secrets).
+  // Admin page (/admin): sign in with GitHub. Set in the dashboard (Settings → Variables
+  // and Secrets), not here: secrets GITHUB_CLIENT_SECRET and SESSION_SECRET, and the
+  // ADMIN_USERS allowlist (GitHub user IDs or usernames, comma-separated). keep_vars stops
+  // deploys from deleting dashboard variables that aren't listed in this file.
+  "keep_vars": true,
   "vars": {
     "ADMIN_ORIGIN": "https://communitydays.jerdog.workers.dev",
     "ADMIN_REPO": "jerdog/kc-community-days",
     "ADMIN_BRANCH": "main",
     "ADMIN_DRAFT_BRANCH": "admin-draft",
-    "ADMIN_USERS": "",
-    "GITHUB_CLIENT_ID": "",
+    "GITHUB_CLIENT_ID": "0v23lijv58f52CbF23V0",
     "PREVIEW_URL_TEMPLATE": "https://{branch}-communitydays.jerdog.workers.dev"
   },
   "d1_databases": [

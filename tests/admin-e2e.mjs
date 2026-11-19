@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // End-to-end test of /admin against tests/mock-github.mjs.
 //   1. node tests/mock-github.mjs            (port 9999)
-//   2. npm run build && npx wrangler dev     (port 8787, with .dev.vars pointing GITHUB_API/GITHUB_WEB at the mock)
+//   2. npm run build && npx wrangler dev     (port 8787, with .dev.vars pointing GITHUB_API/GITHUB_WEB at the mock
+//                                             and ADMIN_USERS=1001,test-viewer)
 //   3. node tests/admin-e2e.mjs [--import]   (--import also runs a real Sessionize import)
 import { chromium } from 'playwright';
 import { createRequire } from 'node:module';
@@ -169,6 +170,15 @@ await p2.waitForURL(/sign-in/);
 check(p2.url().includes('error=access') && (await p2.getByText('doesn’t have write access').isVisible()), 'a GitHub user without write access is turned away');
 const viewerApi = await ctx2.request.get(`${SITE}/admin/api/state`);
 check(viewerApi.status() === 401, 'and gets no session');
+const ctx3 = await browser.newContext();
+const start3 = await ctx3.request.get(`${SITE}/admin/login`, { maxRedirects: 0 });
+const auth3 = new URL(start3.headers().location);
+auth3.searchParams.set('login', 'outsider');
+const p3 = await ctx3.newPage();
+await p3.goto(auth3.toString());
+await p3.waitForURL(/sign-in/);
+check(p3.url().includes('error=not-listed') && (await p3.getByText('isn’t on this site’s admin list').isVisible()), 'a GitHub user with write access but not on ADMIN_USERS is turned away');
+check((await ctx3.request.get(`${SITE}/admin/api/state`)).status() === 401, 'and gets no session');
 
 await browser.close();
 console.log(failures ? `\n${failures} check(s) failed.` : '\nAll admin checks passed.');

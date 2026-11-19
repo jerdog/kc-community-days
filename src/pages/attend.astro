@@ -1,13 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
-import { event, tickets } from '../lib/site.js';
-import { isPast } from '../lib/site.js';
-const nextYear = event.year + 1;
+import NewTab from '../components/NewTab.astro';
+import { current } from '../lib/years.js';
+const { event, tickets, isPast, features } = current;
+const nextYear = current.nextYear;
+const ticketsOpen = !isPast && features.registration && event.ticketsUrl;
 ---
 <Base title="Attend" description={`Tickets, venue and policies for ${event.name} ${event.year}.`}>
   <header class="page-head on-dark"><div class="in">
     <h1>Attend</h1>
-    <p>{event.dates.days}, {event.dates.label} at {event.venue.host} in {event.venue.city}.</p>
+    <p>{event.dates.known ? `${event.dates.days}, ${event.dates.label} at ${event.venue.host} in ${event.venue.city}.` : `${event.name} ${event.year}: dates and venue coming soon.`}</p>
   </div></header>
 
   <section class="sec" aria-labelledby="tix-h"><div class="in">
@@ -19,7 +21,8 @@ const nextYear = event.year + 1;
         <div class="tier"><h3>{t.name}</h3><p class="amt">${t.price}</p><p class="sub">{t.note}</p></div>
       ))}
     </div>
-    {!isPast && <p style="margin-top:22px"><a class="btn" href={event.ticketsUrl}>Buy tickets on Tito</a></p>}
+    {ticketsOpen && <p style="margin-top:22px"><NewTab class="btn" href={event.ticketsUrl}>Buy tickets</NewTab></p>}
+    {!isPast && !ticketsOpen && <p class="prose" style="margin-top:22px">Tickets for {event.year} aren't on sale yet. <a href="#signup">Sign up for updates</a> to hear when they are.</p>}
   </div></section>
 
   <section class="sec" aria-labelledby="venue-h"><div class="in two">

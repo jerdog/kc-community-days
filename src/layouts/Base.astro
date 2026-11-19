@@ -3,15 +3,21 @@ import '../styles/site.css';
 import Fountain from '../components/Fountain.astro';
 import Form from '../components/Form.astro';
 import SponsorLogos from '../components/SponsorLogos.astro';
-import { event, nav, sponsors } from '../lib/site.js';
-const hasSponsors = sponsors.some((t) => t.items.length);
-import { isPast } from '../lib/site.js';
+import { current as cur, previous, archives, site } from '../lib/years.js';
 
-const { title, description = event.description, sponsorStrip = true } = Astro.props;
-const pageTitle = title ? `${title} · ${event.name}` : `${event.name} ${event.year}`;
+// `y` is the year this page belongs to (an archived year on /2026/… pages).
+const { title, description, sponsorStrip = true, y = cur } = Astro.props;
+const event = y.event;
+const nav = site.nav;
+const isPast = cur.isPast;
+const nextYear = cur.nextYear;
+const pageTitle = title ? `${title} · ${event.name}${y.archived ? ` ${y.year}` : ''}` : `${event.name} ${event.year}`;
+const metaDescription = description || event.description;
 const path = Astro.url.pathname;
-const current = (href) => (path === href || (href !== '/' && path.startsWith(href)) ? 'page' : undefined);
-const nextYear = event.year + 1;
+const current = (href) => (!y.archived && (path === href || (href !== '/' && path.startsWith(href))) ? 'page' : undefined);
+// Footer sponsors: this year's, or last year's (labelled) until new sponsors are added.
+const footSponsors = y.hasSponsors ? y : !y.archived && previous?.hasSponsors ? previous : null;
+const footSponsorsLabel = footSponsors === y ? 'Made possible by' : `Thanks to our ${footSponsors?.year} sponsors`;
 ---
 <!doctype html>
 <html lang="en">
@@ -19,12 +25,12 @@ const nextYear = event.year + 1;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDescription} />
     <link rel="icon" href="/favicon.ico" />
     <link rel="canonical" href={new URL(path, Astro.site)} />
     <meta property="og:site_name" content={event.name} />
     <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:image" content={new URL('/images/brand/logo-square.webp', Astro.site)} />
     <meta name="twitter:card" content="summary" />
     <meta name="theme-color" content="#303086" />
@@ -51,10 +57,10 @@ const nextYear = event.year + 1;
 
     <footer class="site-foot on-dark">
       <div class="in">
-        {sponsorStrip && hasSponsors && (
+        {sponsorStrip && footSponsors && (
           <section class="foot-sponsors" aria-labelledby="foot-spons-h">
-            <h2 id="foot-spons-h">Made possible by</h2>
-            <SponsorLogos size="sm" />
+            <h2 id="foot-spons-h">{footSponsorsLabel}</h2>
+            <SponsorLogos y={footSponsors} size="sm" />
           </section>
         )}
         <div id="signup">
@@ -69,10 +75,11 @@ const nextYear = event.year + 1;
             <li><a href="/about/">About the organizers</a></li>
             <li><a href="/attend/#refunds">Refund policy</a></li>
             <li><a href="/feedback/">Share feedback</a></li>
+            {archives.length > 0 && <li>Past years: {archives.map((a, i) => <>{i > 0 && ', '}<a href={`/${a.year}/`}>{a.year}</a></>)}</li>}
           </ul>
-          <p class="help">Questions? <a href={`mailto:${event.contactEmail}`}>{event.contactEmail}</a></p>
+          <p class="help">Questions? <a href={`mailto:${cur.event.contactEmail}`}>{cur.event.contactEmail}</a></p>
         </div>
-        <p class="legal">{event.name} is a community-run, not-for-profit event.</p>
+        <p class="legal">{cur.event.name} is a community-run, not-for-profit event.</p>
       </div>
     </footer>
 

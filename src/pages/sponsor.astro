@@ -1,7 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
 import Form from '../components/Form.astro';
-import { event, sponsors, communities } from '../lib/site.js';
+import { current, previous } from '../lib/years.js';
+const { event, communities } = current;
+// Until this year's sponsors are added, show last year's (labelled).
+const shown = current.hasSponsors ? current : previous?.hasSponsors ? previous : null;
+const sponsors = shown?.sponsors || [];
 ---
 <Base title="Sponsor" sponsorStrip={false} description={`Sponsor ${event.name} and reach Kansas City's tech community.`}>
   <header class="page-head on-dark"><div class="in">
@@ -11,7 +15,7 @@ import { event, sponsors, communities } from '../lib/site.js';
   </div></header>
 
   <section class="sec" aria-labelledby="thanks-h"><div class="in">
-    <div class="sec-h"><h2 id="thanks-h">{event.year} sponsors</h2></div>
+    <div class="sec-h"><h2 id="thanks-h">{shown ? `${shown.year} sponsors` : `${event.year} sponsors`}</h2></div>
     {sponsors.map((t) => (
       <>
         <h3 class="tier-h">{t.tier}</h3>

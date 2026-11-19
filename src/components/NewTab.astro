@@ -1,0 +1,5 @@
+---
+// A link that opens in a new tab, and says so (visible arrow + screen-reader text).
+const { href, class: cls } = Astro.props;
+---
+<a href={href} class={cls} target="_blank" rel="noopener"><slot /><span aria-hidden="true" class="nt">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a>

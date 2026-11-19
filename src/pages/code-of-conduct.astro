@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-import { event } from '../lib/site.js';
+import { current } from '../lib/years.js';
+const { event } = current;
 ---
 <Base title="Code of Conduct">
   <header class="page-head on-dark"><div class="in">

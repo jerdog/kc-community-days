@@ -1,0 +1,8 @@
+---
+import Home from '../../views/Home.astro';
+import { archives } from '../../lib/years.js';
+export function getStaticPaths() {
+  return archives.map((y) => ({ params: { year: String(y.year) }, props: { y } }));
+}
+---
+<Home y={Astro.props.y} />

@@ -1,8 +1,7 @@
 ---
 // A row of sponsor logos on white tiles. `hero` limits it to tiers marked hero: true.
-import { sponsors } from '../lib/site.js';
-const { hero = false, size = 'md' } = Astro.props;
-const items = sponsors.filter((t) => !hero || t.hero).flatMap((t) => t.items.map((s) => ({ ...s, tier: t.tier })));
+const { y, hero = false, size = 'md' } = Astro.props;
+const items = y.sponsors.filter((t) => !hero || t.hero).flatMap((t) => t.items.map((s) => ({ ...s, tier: t.tier })));
 ---
 {items.length > 0 && (
   <ul class:list={['logo-row', `logo-${size}`]}>

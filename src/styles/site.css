@@ -164,7 +164,11 @@ select:focus-visible, input:focus-visible, textarea:focus-visible { border-color
 .badge .card:has(a:focus-visible) { outline: 3px solid var(--indigo); outline-offset: 3px }
 .badge .card:hover h3 a { text-decoration: underline }
 .badge p { color: var(--sub); font-size: 15px }
+/* Ribbons hang under a badge; several stack like real conference ribbons, the last one notched. */
+.hangs { list-style: none; margin: 0; padding: 0; width: 66%; display: grid }
 .badge .hang { width: 66%; background: var(--c); color: var(--white); font: 700 13px/1.2 var(--body); text-align: center; padding: 8px 6px 18px; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 72%, 0 100%) }
+.hangs .hang { width: 100% }
+.hangs .hang:not(:last-child) { clip-path: none; padding-bottom: 8px; box-shadow: inset 0 -2px 0 rgba(255, 255, 255, .55) }
 @media (max-width: 560px) { .badges { grid-template-columns: repeat(2, minmax(0, 1fr)) } .badge h3 { font-size: 18px; font-stretch: 92% } .badge .who { padding: 12px } }
 
 /* Speaker detail */
@@ -265,3 +269,12 @@ fieldset input, label.check input { width: 22px; height: 22px; min-height: 0; fl
   .hero-fountain { width: 90%; right: -30% }
   .hero h1 { font-size: 9.4vw; font-stretch: 100% }
 }
+
+/* New-tab marker, call for speakers, archive year */
+.nt { margin-left: 6px; font-family: var(--body) }
+.cfp { display: grid; gap: 12px; justify-items: start; padding: 16px 18px; margin-bottom: 22px; border: 2px solid var(--gold); border-radius: 4px; max-width: 560px }
+.cfp p { font-size: 16px }
+.hero-year { color: var(--white) }
+/* A text-only section keeps the page's left edge; only its lines are limited to a readable width. */
+.in.prose { max-width: var(--max) }
+.in.prose > * { max-width: 68ch }

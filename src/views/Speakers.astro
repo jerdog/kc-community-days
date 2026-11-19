@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import SpeakerBadge from '../components/SpeakerBadge.astro';
+import { previous } from '../lib/years.js';
+const { y } = Astro.props;
+// With no speakers yet this year, show last year's (clearly labelled) instead of an empty page.
+const show = y.speakers.length ? y : !y.archived && previous?.speakers.length ? previous : null;
+const isFallback = show && show !== y;
+const title = y.archived ? `${y.year} speakers` : 'Speakers';
+---
+<Base y={y} title={title} description={`Speakers at ${y.event.name} ${y.year}.`}>
+  <header class="page-head on-dark"><div class="in">
+    {y.archived && <p class="crumb"><a href={y.link('/')}>{y.year} archive</a></p>}
+    <h1>{title}</h1>
+    <p>{show === y
+      ? `${y.speakers.length} people from across Kansas City's tech community, listed by first name. Ribbons show the communities each one spoke with.`
+      : `Speakers for ${y.event.name} ${y.year} will appear here once talks are selected.`}</p>
+  </div></header>
+  <div class="sec"><div class="in">
+    {isFallback && (
+      <div class="sec-h"><h2 id="prev-h">{show.year} speakers</h2><a class="lnk" href="#signup">Get notified when {y.year} speakers are announced</a></div>
+    )}
+    {!show && <p class="prose"><a href="#signup">Sign up for updates</a> to hear when speakers are announced.</p>}
+    {show && <ul class="badges">{show.speakers.map((p, i) => <SpeakerBadge speaker={p} y={show} headingLevel={isFallback ? 3 : 2} eager={i < 4} />)}</ul>}
+  </div></div>
+</Base>

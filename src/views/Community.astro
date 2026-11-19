@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import SessionRow from '../components/SessionRow.astro';
+import { archives } from '../lib/years.js';
+const { y, community: c } = Astro.props;
+const theirTalks = y.talksByCommunity(c.slug);
+const n = theirTalks.length;
+// Before this year's program exists, point to the most recent year this community had talks.
+const pastYear = !y.archived && !y.hasProgram ? archives.find((a) => a.talksByCommunity(c.slug).length) : null;
+---
+<Base y={y} title={c.name} description={`${c.name} at ${y.event.name} ${y.year}${n ? `: ${n} talks` : ''}.`}>
+  <header class="page-head community on-dark" style={`--c:${c.color}`}><div class="in">
+    <p class="crumb">{y.archived && <><a href={y.link('/')}>{y.year} archive</a> / </>}<a href={y.link('/communities/')}>Communities</a></p>
+    <h1>{c.name}</h1>
+    {c.fullName && <p>{c.fullName}</p>}
+    <p>{n ? `${n} talk${n > 1 ? 's' : ''} at ${y.event.name} ${y.year}.` : y.hasProgram ? `A community partner of ${y.event.name} ${y.year}.` : `Part of ${y.event.name} ${y.year}. Talks will be listed here once the program is announced.`}</p>
+    {c.url && <p><a class="btn" style={`background:var(--white);color:${c.color}`} href={c.url}>Visit {c.name}</a></p>}
+  </div></header>
+  <div class="sec"><div class="in">
+    {n ? (
+      <section aria-labelledby="talks-h">
+        <div class="sec-h"><h2 id="talks-h">{y.archived ? `Their ${y.year} talks` : 'Their talks'}</h2><a class="lnk" href={y.link(`/program/?community=${c.slug}`)}>Show in the full program</a></div>
+        <ol class="rows">{theirTalks.map((s) => <SessionRow session={s} y={y} showDay />)}</ol>
+      </section>
+    ) : (
+      <div class="prose">
+        <p>{y.hasProgram ? `${c.name} didn't present talks in ${y.year}.` : 'The program hasn’t been announced yet.'}{c.url && <> Find their events on <a href={c.url}>their site</a>.</>}</p>
+        {pastYear && <p>See <a href={pastYear.link(`/communities/${c.slug}/`)}>{c.name}'s talks from {pastYear.year}</a>.</p>}
+      </div>
+    )}
+  </div></div>
+</Base>

@@ -60,3 +60,8 @@ html:has(body.admin) { scroll-padding-top: 24px; scroll-padding-bottom: 24px }
 .admin input, .admin select, .admin textarea { max-width: 100% }
 .admin-sec, .draft-bar, .list, .item { overflow-wrap: anywhere }
 @media (max-width: 560px) { .admin-sec { padding: 16px 14px } .list { padding: 12px 10px } .item { padding: 12px 10px } }
+
+.table-wrap { overflow-x: auto; position: relative } /* relative keeps visually-hidden text inside the scroller */
+.backups { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 15px }
+.backups th { text-align: left; font-size: 14px; color: var(--sub); padding: 0 12px 8px 0 }
+.backups td { padding: 10px 12px 10px 0; border-top: 1px solid var(--rule); vertical-align: top }

@@ -18,7 +18,9 @@
     "db:migrate:preview": "wrangler d1 migrations apply PREVIEW_DB --remote --config wrangler.preview-migrations.jsonc",
     "deploy:preview": "npm run build && npm run db:migrate:preview && wrangler preview",
     "new-year": "node scripts/new-year.mjs",
-    "test:admin": "node tests/admin-e2e.mjs"
+    "test:admin": "node tests/admin-e2e.mjs",
+    "backup": "node scripts/backup.mjs",
+    "restore": "node scripts/restore.mjs"
   },
   "devDependencies": {
     "astro": "^7.4.12",

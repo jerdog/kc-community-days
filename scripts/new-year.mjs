@@ -10,6 +10,7 @@ import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { startNewYear, toJson } from '../src/lib/new-year.js';
 import { validateConfig } from '../src/lib/config-schema.js';
+import { writeLocalBackup } from './lib/local-backup.mjs';
 
 const root = resolve(import.meta.dirname, '..');
 const [year, start = null, end = null] = process.argv.slice(2);
@@ -26,6 +27,14 @@ try {
 const problems = validateConfig(result.files['site.config.json']);
 if (problems.length) {
   console.error(`new-year: the new config would be invalid:\n${problems.map((p) => `  • ${p.path}: ${p.message}`).join('\n')}`);
+  process.exit(1);
+}
+// Back up everything first; stop if that fails.
+try {
+  const { path } = await writeLocalBackup(`Before starting ${result.newYear}`);
+  console.log(`Backed up the current site to ${path} (restore with: npm run restore -- ${path})`);
+} catch (e) {
+  console.error(`new-year: couldn’t write the backup, so nothing was changed: ${e.message}`);
   process.exit(1);
 }
 for (const [path, value] of Object.entries(result.files)) {

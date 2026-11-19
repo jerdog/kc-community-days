@@ -97,12 +97,39 @@ check(!(await refs())['admin-draft'], 'discarding removes the draft branch');
 // New year
 await page.locator('#f-ny-year').fill('2027');
 await page.getByRole('button', { name: /Archive 2026 and start/ }).click();
-await page.getByRole('button', { name: 'Yes, start 2027' }).click();
+const [dl] = await Promise.all([page.waitForEvent('download'), page.getByRole('button', { name: 'Yes, start 2027' }).click()]);
 await waitAnnounce(/archived and the draft is set up for 2027/);
+const dlPath = await dl.path();
+const dlBackup = JSON.parse(await readFile(dlPath, 'utf8'));
+check(dlBackup.type === 'communitydays-backup' && dlBackup.files['site.config.json'].event.year === 2026 && dlBackup.reason === 'Before starting 2027', `starting a new year downloads a backup first (${dl.suggestedFilename()})`);
+check((await page.locator('#sec-backups').textContent()).includes('Before starting 2027'), 'and saves it in the database');
 const ny = JSON.parse(await mockFile('site.config.json', 'admin-draft'));
 check(ny.event.year === 2027 && ny.event.start === null && ny.sessionize.eventId === null && ny.features.registration === false, 'new year resets the config in the draft');
 check(Boolean(await mockFile('archive/2026/config.json', 'admin-draft')) && Boolean(await mockFile('archive/2026/sessionize.json', 'admin-draft')), 'new year archives 2026 in the draft');
 check((await page.locator('#sec-years').textContent()).includes('Current year: 2027'), 'page reloads showing 2027');
+
+// Backups: back up now, restore the pre-new-year backup, restore from a file, reject a bad file
+await page.getByRole('button', { name: 'Back up now' }).click();
+await waitAnnounce(/Backup #\d+ saved/);
+check((await page.locator('#sec-backups tbody tr').count()) >= 2, 'Back up now adds a backup to the list');
+const preNy = page.locator('#sec-backups tbody tr', { hasText: 'Before starting 2027' }).first();
+await preNy.getByRole('button', { name: /Restore to draft/ }).click();
+await page.getByRole('button', { name: 'Yes, restore to draft' }).click();
+await waitAnnounce(/Restored backup #\d+/);
+const restored = JSON.parse(await mockFile('site.config.json', 'admin-draft'));
+check(restored.event.year === 2026 && restored.sessionize.eventId === '295atto3', 'restoring the pre-new-year backup brings back the 2026 settings');
+check(!(await mockFile('archive/2026/config.json', 'admin-draft')), 'and removes the archive it created');
+check((await page.locator('#sec-backups').textContent()).includes('Before restoring backup'), 'restoring saves a backup of the replaced state first');
+await page.locator('#restore-file').setInputFiles(dlPath);
+await page.getByRole('button', { name: 'Yes, restore to draft' }).click();
+await waitAnnounce(/Restored an uploaded backup/);
+check(JSON.parse(await mockFile('site.config.json', 'admin-draft')).event.year === 2026, 'restoring from a downloaded file works');
+await page.locator('#restore-file').setInputFiles({ name: 'nope.json', mimeType: 'application/json', buffer: Buffer.from('{"type":"nope"}') });
+await page.getByRole('button', { name: 'Yes, restore to draft' }).click();
+await page.waitForSelector('#error-summary:not([hidden])');
+check((await page.locator('#error-summary').textContent()).includes('isn’t a CommunityDays backup'), 'a file that isn’t a backup is refused');
+await page.reload();
+await page.waitForSelector('#sec-event');
 
 // Sessionize import (real network), optional
 if (process.argv.includes('--import')) {
@@ -114,7 +141,7 @@ if (process.argv.includes('--import')) {
   await page.waitForSelector('#sec-event');
   await page.evaluate(() => { const i = document.querySelector('#f-sessionize-eventId'); i.value = '295atto3'; i.dispatchEvent(new Event('input', { bubbles: true })); });
   await page.locator('#sec-switches').getByRole('button', { name: 'Save to draft' }).click();
-  await waitAnnounce(/Saved to the draft/);
+  await waitAnnounce(/Saved to the draft|No changes to save/);
   await page.locator('#sec-program').getByRole('button', { name: 'Import from Sessionize' }).click();
   await waitAnnounce(/Imported \d+ speakers/);
   const data = JSON.parse(await mockFile('src/data/sessionize.json', 'admin-draft'));

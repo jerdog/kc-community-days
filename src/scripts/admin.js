@@ -112,6 +112,7 @@ const SECTIONS = [
     ],
   },
   { id: 'years', title: 'Years', custom: 'years' },
+  { id: 'backups', title: 'Backups', custom: 'backups' },
 ];
 
 // ---------------------------------------------------------------- state + helpers
@@ -208,6 +209,7 @@ function sectionHtml(sec) {
   let inner;
   if (sec.custom === 'program') inner = programHtml();
   else if (sec.custom === 'years') inner = yearsHtml();
+  else if (sec.custom === 'backups') inner = backupsHtml();
   else inner = sec.fields.map((fd) => fieldHtml(fd, fd.key, get(cfg, fd.key))).join('') + `<p><button type="submit" class="btn">Save to draft</button></p>`;
   return `<section class="admin-sec" id="sec-${sec.id}" aria-labelledby="sec-${sec.id}-h"><h2 id="sec-${sec.id}-h">${esc(sec.title)}</h2>${inner}</section>`;
 }
@@ -227,7 +229,7 @@ function yearsHtml() {
   const y = cfg.event.year;
   return `<p>Current year: <strong>${y}</strong>.${state.archives.length ? ` Archived: ${state.archives.map((a) => `<a href="/${a}/" target="_blank" rel="noopener">${a}<span class="visually-hidden"> (opens in a new tab)</span></a>`).join(', ')}.` : ' No archived years yet.'}</p>
     <h3>Start a new year</h3>
-    <p>Archives ${y} at <code>/${y}/</code>, then resets the settings for the new year: call for speakers and registration off, no Sessionize event, sponsor lists emptied (tiers kept), ticket deadlines moved forward a year. Communities carry over. Like every change, it goes to the draft first.</p>
+    <p>First saves a backup (in the database, and downloaded to your computer as a JSON file). Then archives ${y} at <code>/${y}/</code> and resets the settings for the new year: call for speakers and registration off, no Sessionize event, sponsor lists emptied (tiers kept), ticket deadlines moved forward a year. Communities carry over. Like every change, it goes to the draft first.</p>
     <div class="inline-fields">
       ${fieldHtml(f('number', 'ny.year', 'New year', { min: y + 1, max: 2100 }), 'ny.year', y + 1)}
       ${fieldHtml(f('date', 'ny.start', 'First day (optional)'), 'ny.start', '')}
@@ -236,6 +238,38 @@ function yearsHtml() {
     <p class="btn-row"><button type="button" class="btn" id="new-year">Archive ${y} and start the new year</button></p>
     <div id="ny-confirm" class="confirm" hidden></div>`;
 }
+
+function backupsHtml() {
+  const rows = state.backups;
+  const list = rows === null
+    ? `<p class="warn">Backups aren’t available right now (the database couldn’t be reached).</p>`
+    : rows.length === 0
+      ? '<p>No backups yet.</p>'
+      : `<div class="table-wrap" tabindex="0" role="region" aria-label="Saved backups"><table class="backups">
+          <thead><tr><th scope="col">Saved</th><th scope="col">By</th><th scope="col">Why</th><th scope="col">Contents</th><th scope="col">Actions</th></tr></thead>
+          <tbody>${rows.map((b) => `<tr>
+            <td>#${b.id}<br><span class="sub">${esc(new Date(b.created_at).toLocaleString())}</span></td>
+            <td>${esc(b.created_by)}</td><td>${esc(b.reason)}</td><td>${esc(b.summary || '')}</td>
+            <td class="btn-row"><a class="btn outline small" href="/admin/api/backups/${b.id}/download" download>Download<span class="visually-hidden"> backup #${b.id}</span></a>
+              <button type="button" class="btn outline small" data-restore-id="${b.id}">Restore to draft<span class="visually-hidden"> backup #${b.id}</span></button></td>
+          </tr>`).join('')}</tbody></table></div>`;
+  return `<p>A backup holds the site settings, this year’s Sessionize program and every archived year. Backups are kept in the database (the newest 50) and can be downloaded as JSON. A backup is saved automatically before starting a new year and before every restore.</p>
+    <p class="btn-row"><button type="button" class="btn" id="backup-now">Back up now</button></p>
+    ${list}
+    <div id="restore-confirm" class="confirm" hidden></div>
+    <h3>Restore from a file</h3>
+    <p class="help">A backup JSON downloaded here, or made with <code>npm run backup</code>. Restoring goes to the draft, so you can check the preview before publishing.</p>
+    <div class="image-row"><label class="btn outline small upload">Choose backup file<input type="file" accept="application/json,.json" id="restore-file" class="visually-hidden"></label><span id="restore-file-name" class="sub"></span></div>`;
+}
+
+const download = (url) => {
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = '';
+  document.body.append(a);
+  a.click();
+  a.remove();
+};
 
 function draftHtml() {
   const d = state.draft;
@@ -354,8 +388,9 @@ async function action(path, body, busy) {
   announce(busy);
   try {
     const r = await call(path, { method: 'POST', body: { head: state.head, ...body } });
-    await load(r.message);
-    $('#announce').focus?.();
+    if (r.backup?.download) download(r.backup.download);
+    await load(r.backup?.download ? `${r.message} The backup is downloading.` : r.message);
+    return r;
   } catch (e) {
     if (e.errors) showErrors(e.errors, e.message);
     else announce(e.message, true);
@@ -448,8 +483,20 @@ function updateColor(text) {
     row.querySelector('input[type=color]').value = v;
   }
 }
-form.addEventListener('change', (e) => {
+form.addEventListener('change', async (e) => {
   if (e.target.dataset.upload) upload(e.target);
+  if (e.target.id === 'restore-file') {
+    const file = e.target.files[0];
+    if (!file) return;
+    let backup;
+    try {
+      backup = JSON.parse(await file.text());
+    } catch {
+      return announce('That file isn’t valid JSON.', true);
+    }
+    $('#restore-file-name').textContent = file.name;
+    confirmBox('restore-confirm', `Restore ${file.name} (saved ${String(backup.createdAt || '?').slice(0, 10)}) into the draft? The current state is backed up first.`, 'Yes, restore to draft', () => action('backups/restore-file', { backup }, 'Restoring…'));
+  }
 });
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -482,6 +529,10 @@ form.addEventListener('click', (e) => {
     rerenderList(b.dataset.move, `${idOf(b.dataset.move)}-${j}-h`);
     announce(`Moved to position ${j + 1}.`);
   } else if (b.id === 'import') importSessionize();
+  else if (b.id === 'backup-now') action('backups', { reason: 'Manual backup' }, 'Saving a backup…');
+  else if (b.dataset.restoreId) {
+    confirmBox('restore-confirm', `Restore backup #${b.dataset.restoreId} into the draft? The current state is backed up first, and nothing goes live until you publish.`, 'Yes, restore to draft', () => action(`backups/${b.dataset.restoreId}/restore`, {}, 'Restoring…'));
+  }
   else if (b.id === 'new-year') {
     const year = Number($(`#${idOf('ny.year')}`).value);
     const start = $(`#${idOf('ny.start')}`).value || null;

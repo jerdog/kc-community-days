@@ -60,13 +60,15 @@ export function github(token, env) {
       return Array.isArray(r.data) ? r.data : [];
     },
 
-    // One commit with several files. `files`: [{ path, text } | { path, base64 }].
+    // One commit with several files. `files`: [{ path, text } | { path, base64 } | { path, remove: true }].
     // Fails with 409 if `branch` no longer points at `parent` (someone else saved first).
     async commit(branch, parent, files, message) {
       const parentCommit = (await api(`/{repo}/git/commits/${parent}`)).data;
       const tree = [];
       for (const f of files) {
-        if (f.base64 != null) {
+        if (f.remove) {
+          tree.push({ path: f.path, mode: '100644', type: 'blob', sha: null });
+        } else if (f.base64 != null) {
           const blob = (await api('/{repo}/git/blobs', { method: 'POST', body: { content: f.base64, encoding: 'base64' } })).data;
           tree.push({ path: f.path, mode: '100644', type: 'blob', sha: blob.sha });
         } else {

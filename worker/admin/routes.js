@@ -12,6 +12,8 @@ import { setupPage } from './page.js';
 import { validateConfig } from '../../src/lib/config-schema.js';
 import { startNewYear, toJson } from '../../src/lib/new-year.js';
 import { fetchOverview, fetchBios, assemble } from '../../src/lib/sessionize-import.js';
+import { checkBackup, backupFileName, summary } from '../../src/lib/backup.js';
+import { saveBackup, listBackups, getBackup, filesAt } from './backups.js';
 
 const SESSION = 'cdkc_admin';
 const STATE = 'cdkc_oauth_state';
@@ -170,6 +172,7 @@ async function api(request, env, url, path, session) {
       config,
       program: data ? { eventId: data.eventId, importedAt: data.importedAt, speakers: data.speakers.length, sessions: data.sessions.length } : null,
       archives: archiveDir.filter((d) => d.type === 'dir' && /^\d{4}$/.test(d.name)).map((d) => Number(d.name)).sort((a, b) => b - a),
+      backups: await listBackups(env).catch((e) => (console.error('backups unavailable', e), null)),
     });
   }
 
@@ -208,9 +211,17 @@ async function api(request, env, url, path, session) {
     }
     const errors = validateConfig(result.files[CONFIG]);
     if (errors.length) throw new UserError('The new year would have invalid settings.', errors);
+    // Back up first; if that fails, change nothing.
+    let saved;
+    try {
+      saved = await saveBackup(env, gh, parent, { createdBy: who, reason: `Before starting ${result.newYear}` });
+    } catch (e) {
+      console.error('backup before new year failed', e);
+      throw new UserError('Couldn’t save a backup, so nothing was changed. Try again, or back up from the Backups section first.');
+    }
     const files = Object.entries(result.files).map(([p, v]) => ({ path: p, text: toJson(v) }));
-    const head = await gh.commit(s.draft, parent, files, `Admin: start ${result.newYear}, archive ${result.oldYear}\n\nStarted by ${who} in the admin page.`);
-    return json({ ok: true, head, message: `${result.oldYear} is archived and the draft is set up for ${result.newYear}. Check the preview, then publish.` });
+    const head = await gh.commit(s.draft, parent, files, `Admin: start ${result.newYear}, archive ${result.oldYear}\n\nStarted by ${who} in the admin page (backup #${saved.id} saved first).`);
+    return json({ ok: true, head, backup: { id: saved.id, download: `/admin/api/backups/${saved.id}/download` }, message: `Backup #${saved.id} saved. ${result.oldYear} is archived and the draft is set up for ${result.newYear}. Check the preview, then publish.` });
   }
 
   // Sessionize import in three steps so each request stays within Cloudflare's fetch limit.
@@ -240,6 +251,42 @@ async function api(request, env, url, path, session) {
     if (config.sessionize?.eventId !== eventId) files.push({ path: CONFIG, text: toJson({ ...config, sessionize: { ...config.sessionize, eventId } }) });
     const head = await gh.commit(s.draft, parent, files, `Admin: import Sessionize ${eventId} (${data.speakers.length} speakers, ${data.sessions.length} sessions)\n\nImported by ${who} in the admin page.`);
     return json({ ok: true, head, message: `Imported ${data.speakers.length} speakers and ${data.sessions.length} sessions into the draft.` });
+  }
+
+  // ---- Backups
+  if (path === '/admin/api/backups' && request.method === 'POST') {
+    const r = await refs();
+    const saved = await saveBackup(env, gh, r.head, { createdBy: who, reason: String(body.reason || '').slice(0, 200) || 'Manual backup' });
+    return json({ ok: true, backup: { id: saved.id, download: `/admin/api/backups/${saved.id}/download` }, message: `Backup #${saved.id} saved (${summary(saved.backup)}).` });
+  }
+  let m;
+  if ((m = path.match(/^\/admin\/api\/backups\/(\d+)\/download$/)) && request.method === 'GET') {
+    const backup = await getBackup(env, Number(m[1]));
+    if (!backup) return json({ error: 'Backup not found.' }, 404);
+    return new Response(JSON.stringify(backup, null, 2) + '\n', {
+      headers: { 'content-type': 'application/json; charset=utf-8', 'content-disposition': `attachment; filename="${backupFileName(backup)}"`, 'cache-control': 'no-store' },
+    });
+  }
+  const restore = async (backup, label) => {
+    const problems = checkBackup(backup);
+    if (problems.length) throw new UserError('This backup can’t be restored.', problems.map((message) => ({ path: 'backup', message })));
+    const parent = await draftParent(body.head);
+    const safety = await saveBackup(env, gh, parent, { createdBy: who, reason: `Before restoring ${label}` });
+    const current = Object.keys(await filesAt(gh, parent));
+    const files = [
+      ...Object.entries(backup.files).map(([p, v]) => ({ path: p, text: toJson(v) })),
+      ...current.filter((p) => p.startsWith('archive/') && !(p in backup.files)).map((p) => ({ path: p, remove: true })),
+    ];
+    const head = await gh.commit(s.draft, parent, files, `Admin: restore ${label} (${summary(backup)})\n\nRestored by ${who} in the admin page (backup #${safety.id} of the previous state saved first).`);
+    return json({ ok: true, head, message: `Restored ${label} into the draft. The previous state is saved as backup #${safety.id}. Check the preview, then publish.` });
+  };
+  if ((m = path.match(/^\/admin\/api\/backups\/(\d+)\/restore$/)) && request.method === 'POST') {
+    const backup = await getBackup(env, Number(m[1]));
+    if (!backup) return json({ error: 'Backup not found.' }, 404);
+    return restore(backup, `backup #${m[1]} from ${backup.createdAt.slice(0, 10)}`);
+  }
+  if (path === '/admin/api/backups/restore-file' && request.method === 'POST') {
+    return restore(body.backup, `an uploaded backup from ${String(body.backup?.createdAt || 'an unknown date').slice(0, 10)}`);
   }
 
   if (path === '/admin/api/publish' && request.method === 'POST') {

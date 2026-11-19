@@ -67,6 +67,14 @@ From a terminal: `npm run new-year -- 2027` or `npm run new-year -- 2027 2027-06
 
 Either way the current year is archived to `archive/<year>/` and served at `/<year>/`, old talk and speaker links redirect there, and `site.config.json` is reset with the call for speakers and registration off. Then, as the year goes on, flip the switches in `site.config.json` (`features`): open the call for speakers, add dates, open registration, and set `sessionize.eventId` + run `npm run import:sessionize` once talks are selected. Until then the site shows last year's speakers and sponsors, clearly labelled.
 
+## Backups
+
+A backup is one JSON file holding `site.config.json`, `src/data/sessionize.json` and every `archive/<year>/` file. Starting a new year always takes one first.
+
+- **Admin page → Backups:** **Back up now** saves a backup in the D1 `backups` table (the newest 50 are kept). Each row can be downloaded or restored. You can also restore from a downloaded file. Restoring writes to the draft, so you can preview it before publishing. It also takes a backup of what it replaces first. Starting a new year from the admin saves a database backup and downloads the same JSON to your computer.
+- **Terminal:** `npm run backup` (optionally `npm run backup -- "why"`) writes `backups/communitydays-backup-<time>.json`; `npm run new-year` does this automatically before changing anything. `npm run restore -- backups/<file>.json` checks the file, backs up the current state, then puts the files back. That includes removing archive years that aren't in the backup. Review with `git diff` and commit. `backups/` is git-ignored.
+- Form submissions in D1 aren't in these backups; use D1 Time Travel (`wrangler d1 time-travel restore`) for those.
+
 ## Develop
 
 ```bash

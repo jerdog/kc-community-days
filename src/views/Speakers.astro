@@ -13,7 +13,7 @@ const title = y.archived ? `${y.year} speakers` : 'Speakers';
     {y.archived && <p class="crumb"><a href={y.link('/')}>{y.year} archive</a></p>}
     <h1>{title}</h1>
     <p>{show === y
-      ? `${y.speakers.length} people from across Kansas City's tech community, listed by first name. The ribbon shows the community each one spoke with.`
+      ? `${y.speakers.length} people from across Kansas City's tech community, listed by first name. Ribbons show the communities each one spoke with.`
       : `Speakers for ${y.event.name} ${y.year} will appear here once talks are selected.`}</p>
   </div></header>
   <div class="sec"><div class="in">

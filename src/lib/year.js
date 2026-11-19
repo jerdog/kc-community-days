@@ -36,6 +36,29 @@ function withSlugs(items, key) {
 
 const EMPTY = { eventId: null, speakers: [], sessions: [], rooms: [] };
 
+// Sessionize sometimes holds two profiles for one person (one per submitted talk).
+// Merge profiles with the same name: keep the one with a photo and the fullest bio,
+// and point every talk at it.
+function mergeDuplicateSpeakers(data) {
+  const groups = new Map();
+  for (const p of data.speakers) {
+    const key = p.name.trim().toLowerCase().replace(/\s+/g, ' ');
+    groups.set(key, [...(groups.get(key) || []), p]);
+  }
+  const alias = new Map();
+  const speakers = [];
+  for (const group of groups.values()) {
+    const score = (p) => (p.photo ? 1e6 : 0) + p.bio.join(' ').length;
+    const keep = [...group].sort((a, b) => score(b) - score(a))[0];
+    const links = [...new Map(group.flatMap((p) => p.links || []).map((l) => [l.url, l])).values()];
+    speakers.push({ ...keep, links });
+    for (const p of group) alias.set(p.id, keep.id);
+  }
+  if (speakers.length === data.speakers.length) return data;
+  const sessions = data.sessions.map((s) => ({ ...s, speakers: [...new Set(s.speakers.map((id) => alias.get(id) || id))] }));
+  return { ...data, speakers, sessions };
+}
+
 /**
  * @param {object} config   one year's settings (shape of site.config.js)
  * @param {object} raw      that year's sessionize.json, or null
@@ -56,7 +79,7 @@ export function makeYear(config, raw, { base = '', archived = false, today } = {
   if (raw && eventId && raw.eventId !== eventId && !archived) {
     console.warn(`[sessionize] src/data/sessionize.json is for event ${raw.eventId}, but site.config.js names ${eventId}. Run npm run import:sessionize. Showing no program for now.`);
   }
-  const data = matches ? raw : EMPTY;
+  const data = matches ? mergeDuplicateSpeakers(raw) : EMPTY;
 
   const event = {
     ...ev,
@@ -119,6 +142,8 @@ export function makeYear(config, raw, { base = '', archived = false, today } = {
   const talksBySpeaker = (id) => talks.filter((s) => s.speakers.includes(id));
   const talksByCommunity = (slug) => talks.filter((s) => s.community?.slug === slug);
   const primaryCommunity = (speakerId) => talksBySpeaker(speakerId)[0]?.community || null;
+  // Every community a speaker gave a talk for, in talk order (for the badge ribbons).
+  const speakerCommunities = (speakerId) => [...new Map(talksBySpeaker(speakerId).filter((s) => s.community).map((s) => [s.community.slug, s.community])).values()];
 
   function days() {
     const map = new Map();
@@ -163,7 +188,7 @@ export function makeYear(config, raw, { base = '', archived = false, today } = {
     communities, sponsors: config.sponsors || [], hasSponsors: (config.sponsors || []).some((t) => t.items.length),
     lineupConfig, lineup,
     speakers, sessions, talks, rooms: data.rooms, hasProgram,
-    talksBySpeaker, talksByCommunity, primaryCommunity, days, icsFor,
+    talksBySpeaker, talksByCommunity, primaryCommunity, speakerCommunities, days, icsFor,
     fmtTime, fmtClock, fmtDay, fmtShortDay, minutes,
     // Link inside this year's pages: link('/program/') → '/2026/program/' for archives
     link: (path) => `${base}${path}`,

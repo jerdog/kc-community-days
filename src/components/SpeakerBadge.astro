@@ -1,9 +1,10 @@
 ---
+// Speaker badge with one ribbon per community the speaker gave a talk for.
 const { speaker, y, link = true, headingLevel = 3, eager = false } = Astro.props;
-const community = y.primaryCommunity(speaker.id);
+const communities = y.speakerCommunities(speaker.id);
 const H = `h${headingLevel}`;
 ---
-<li class="badge" style={community ? `--c:${community.color}` : undefined}>
+<li class="badge">
   <div class="card">
     <div class="role" aria-hidden="true">SPEAKER</div>
     {speaker.photo ? <img src={speaker.photo} alt="" width="200" height="200" loading={eager ? 'eager' : 'lazy'} /> : <div style="aspect-ratio:1;background:var(--rule)"></div>}
@@ -12,5 +13,9 @@ const H = `h${headingLevel}`;
       {speaker.tagline && <p>{speaker.tagline}</p>}
     </div>
   </div>
-  {community && <div class="hang">{community.name}</div>}
+  {communities.length > 0 && (
+    <ul class="hangs" aria-label="Speaking with">
+      {communities.map((c) => <li class="hang" style={`--c:${c.color}`}>{c.name}</li>)}
+    </ul>
+  )}
 </li>

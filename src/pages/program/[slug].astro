@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import SpeakerBadge from '../../components/SpeakerBadge.astro';
+import Ribbon from '../../components/Ribbon.astro';
+import { event } from '../../data/site.js';
+import { talks, fmtDay, fmtTime, minutes } from '../../lib/sessionize.js';
+
+export function getStaticPaths() {
+  return talks.map((session) => ({ params: { slug: session.slug }, props: { session } }));
+}
+const { session: s } = Astro.props;
+const who = s.speakerList.map((p) => p.name).join(', ');
+---
+<Base title={s.title} description={`${who} at ${event.name} ${event.year}: ${s.description[0] || s.title}`.slice(0, 300)}>
+  <header class="page-head on-dark"><div class="in">
+    <p class="crumb"><a href="/program/">Program</a>{s.community && <> / <a href={`/communities/${s.community.slug}/`}>{s.community.name}</a></>}</p>
+    <h1 style="font-size:clamp(30px,4.6vw,56px);font-stretch:110%">{s.title}</h1>
+    <p class="session-meta">
+      <span><b>When</b> {fmtDay(s.startsAt)}, {fmtTime(s.startsAt)}</span>
+      <span><b>Where</b> {s.room}</span>
+      <span><b>Length</b> {minutes(s)} min</span>
+    </p>
+  </div></header>
+  <div class="sec"><div class="in session-body">
+    <div class="prose">
+      {s.community && <p><Ribbon community={s.community} /></p>}
+      {s.description.map((p) => <p>{p}</p>)}
+      <p><a class="btn outline" href={`/program/${s.slug}.ics`} download>Add to calendar<span class="visually-hidden"> (.ics file)</span></a></p>
+    </div>
+    <section aria-labelledby="spk-h">
+      <h2 id="spk-h" class="visually-hidden">{s.speakerList.length > 1 ? 'Speakers' : 'Speaker'}</h2>
+      <ul class="badges">{s.speakerList.map((p) => <SpeakerBadge speaker={p} />)}</ul>
+    </section>
+  </div></div>
+</Base>

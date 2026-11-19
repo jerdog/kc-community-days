@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+import { event, tickets } from '../data/site.js';
+import { isPast } from '../lib/state.js';
+const nextYear = event.year + 1;
+---
+<Base title="Attend" description={`Tickets, venue and policies for ${event.name} ${event.year}.`}>
+  <header class="page-head on-dark"><div class="in">
+    <h1>Attend</h1>
+    <p>{event.dates.days}, {event.dates.label} at {event.venue.host} in {event.venue.city}.</p>
+  </div></header>
+
+  <section class="sec" aria-labelledby="tix-h"><div class="in">
+    <div class="sec-h"><h2 id="tix-h">Tickets</h2></div>
+    {isPast && <p class="prose" style="margin-bottom:20px"><strong>{event.year} has wrapped up.</strong> Ticket prices below are from {event.year}. <a href="#signup">Sign up for updates</a> to hear when {nextYear} tickets go on sale.</p>}
+    <p class="sub" style="margin-bottom:16px">{tickets.note}</p>
+    <div class="tiers">
+      {tickets.tiers.map((t) => (
+        <div class="tier"><h3>{t.name}</h3><p class="amt">${t.price}</p><p class="sub">{t.note}</p></div>
+      ))}
+    </div>
+    {!isPast && <p style="margin-top:22px"><a class="btn" href={event.ticketsUrl}>Buy tickets on Tito</a></p>}
+  </div></section>
+
+  <section class="sec" aria-labelledby="venue-h"><div class="in two">
+    <div>
+      <div class="sec-h"><h2 id="venue-h">Venue</h2></div>
+      <dl class="info">
+        <dt>Host</dt><dd>{event.venue.host}</dd>
+        <dt>Building</dt><dd>{event.venue.name}</dd>
+        <dt>Address</dt><dd>{event.venue.street}<br />{event.venue.city}</dd>
+        <dt>Map</dt><dd><a href={event.venue.mapUrl}>Open in Google Maps</a></dd>
+      </dl>
+    </div>
+    <div class="prose">
+      <h2 style="margin-top:0">Access needs</h2>
+      <p>If you need an accommodation to take part, such as accessible seating, a quiet space or materials in another format, email <a href={`mailto:${event.contactEmail}`}>{event.contactEmail}</a> before the event and we'll work it out with you.</p>
+      <p>Everyone at {event.name} agrees to our <a href="/code-of-conduct/">Code of Conduct</a>.</p>
+    </div>
+  </div></section>
+
+  <section class="sec" aria-labelledby="refunds"><div class="in prose">
+    <h2 id="refunds" style="font-size:clamp(30px,4vw,44px);font-weight:900;font-stretch:118%">Refund policy</h2>
+    <p>Tickets to {event.name} {event.year} are non-refundable within thirty (30) days of the event.</p>
+    <p>If you are unable to attend, and you cancel between 15 and 30 days prior to {event.name}, we can carry forward your current ticket registration to {event.name} {nextYear}.</p>
+    <p>Any cancellation requests within 15 days of the event are not eligible for a refund or a {nextYear} carryover, and can only be transferred to another colleague or friend for {event.name} {event.year}.</p>
+    <p>We are a community-run, not-for-profit event, and we have our own non-refundable commitments to our vendors. To survive, we must remain financially viable, and that does drive our ticketing and refund policy.</p>
+  </div></section>
+</Base>

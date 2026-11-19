@@ -1,16 +1,18 @@
 ---
 import Base from '../layouts/Base.astro';
 import Form from '../components/Form.astro';
-import { event, groups } from '../data/site.js';
+import { event, communities } from '../data/site.js';
 ---
 <Base title="Feedback">
-  <section class="section"><div class="container">
-    <h1>Conference Feedback</h1>
-    <p class="prose">Tell us how {event.name} {event.year} went for you.</p>
-    <Form endpoint="feedback">
+  <header class="page-head on-dark"><div class="in">
+    <h1>Feedback</h1>
+    <p>Tell us how {event.name} {event.year} went for you. Every field is optional.</p>
+  </div></header>
+  <div class="sec"><div class="in">
+    <Form endpoint="feedback" submitLabel="Send feedback">
       <input type="hidden" name="event_year" value={event.year} />
-      <label>Name <span class="muted">(optional)</span><input name="name" autocomplete="name" /></label>
-      <label>Email <span class="muted">(optional)</span><input name="email" type="email" autocomplete="email" /></label>
+      <label>Name<input name="name" autocomplete="name" /></label>
+      <label>Email<input name="email" type="email" autocomplete="email" /></label>
       <fieldset>
         <legend>Overall, how would you rate the content you attended?</legend>
         {[1, 2, 3, 4, 5].map((n) => <label><input type="radio" name="content_rating" value={n} />{n}{n === 1 ? ' (poor)' : n === 5 ? ' (excellent)' : ''}</label>)}
@@ -18,10 +20,10 @@ import { event, groups } from '../data/site.js';
       <label>What did you enjoy?<textarea name="enjoyed" rows="3"></textarea></label>
       <label>What could we do better?<textarea name="improve" rows="3"></textarea></label>
       <fieldset>
-        <legend>Which user group(s) do you attend?</legend>
-        {groups.map((g) => <label><input type="checkbox" name="groups" value={g.name} />{g.name}</label>)}
+        <legend>Which user groups do you attend?</legend>
+        {[...communities].sort((a, b) => a.name.localeCompare(b.name)).map((g) => <label><input type="checkbox" name="groups" value={g.name} />{g.name}</label>)}
       </fieldset>
       <label class="check"><input type="checkbox" name="contact_ok" value="yes" />Group leaders may contact me about future events</label>
     </Form>
-  </div></section>
+  </div></div>
 </Base>

@@ -1,0 +1,17 @@
+---
+import { primaryCommunity } from '../lib/sessionize.js';
+const { speaker, link = true, headingLevel = 3, eager = false } = Astro.props;
+const community = primaryCommunity(speaker.id);
+const H = `h${headingLevel}`;
+---
+<li class="badge" style={community ? `--c:${community.color}` : undefined}>
+  <div class="card">
+    <div class="role" aria-hidden="true">SPEAKER</div>
+    {speaker.photo ? <img src={speaker.photo} alt="" width="200" height="200" loading={eager ? 'eager' : 'lazy'} /> : <div style="aspect-ratio:1;background:var(--rule)"></div>}
+    <div class="who">
+      <H>{link ? <a href={`/speakers/${speaker.slug}/`}>{speaker.name}</a> : speaker.name}</H>
+      {speaker.tagline && <p>{speaker.tagline}</p>}
+    </div>
+  </div>
+  {community && <div class="hang">{community.name}</div>}
+</li>

@@ -1,6 +1,16 @@
 # Old Squarespace URLs
-/home                                         /                                              301
+/home                                         /                                                301
+/schedule                                     /program/                                        301
+/schedule/                                    /program/                                        301
+/sessions                                     /program/                                        301
+/sessions/                                    /program/                                        301
+/sponsors                                     /sponsor/                                        301
+/sponsors/                                    /sponsor/                                        301
+/tickets                                      /attend/                                         301
+/tickets/                                     /attend/                                         301
+/stay-informed                                /#signup                                         301
+/stay-informed/                               /#signup                                         301
 /s/CommunityDays-2026-Sponsor-Prospectus.pdf  /files/CommunityDays-2026-Sponsor-Prospectus.pdf 301
-/map                                          /about/                                        301
-/store                                        /                                              301
-/cart                                         /                                              301
+/map                                          /attend/                                         301
+/store                                        /                                                301
+/cart                                         /                                                301

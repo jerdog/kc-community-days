@@ -1,0 +1,15 @@
+---
+import Ribbon from './Ribbon.astro';
+import { fmtClock, fmtShortDay, minutes } from '../lib/sessionize.js';
+const { session: s, showDay = false, headingLevel = 3 } = Astro.props;
+const H = `h${headingLevel}`;
+const who = s.speakerList.map((p) => p.name).join(', ');
+---
+<li class:list={['row', { service: s.service }]} data-day={s.startsAt.slice(0, 10)} data-room={s.room} data-community={s.community?.slug || ''}>
+  <time datetime={s.startsAt}>{fmtClock(s.startsAt)}<span class="where">{showDay ? `${fmtShortDay(s.startsAt)} · ` : ''}{s.room}</span></time>
+  <div>
+    <H>{s.service ? s.title : <a href={`/program/${s.slug}/`}>{s.title}</a>}</H>
+    <p>{[s.service ? 'Everyone' : who, `${minutes(s)} min`].filter(Boolean).join(' · ')}</p>
+  </div>
+  <Ribbon community={s.community} />
+</li>

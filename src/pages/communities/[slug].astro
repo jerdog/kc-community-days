@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import SessionRow from '../../components/SessionRow.astro';
+import { event, communities } from '../../data/site.js';
+import { talksByCommunity } from '../../lib/sessionize.js';
+
+export function getStaticPaths() {
+  return communities.map((community) => ({ params: { slug: community.slug }, props: { community } }));
+}
+const { community: c } = Astro.props;
+const theirTalks = talksByCommunity(c.slug);
+const n = theirTalks.length;
+---
+<Base title={c.name} description={`${c.name} at ${event.name} ${event.year}${n ? `: ${n} talks` : ''}.`}>
+  <header class="page-head community on-dark" style={`--c:${c.color}`}><div class="in">
+    <p class="crumb"><a href="/communities/">Communities</a></p>
+    <h1>{c.name}</h1>
+    {c.fullName && <p>{c.fullName}</p>}
+    <p>{n ? `${n} talk${n > 1 ? 's' : ''} at ${event.name} ${event.year}.` : `A community partner of ${event.name} ${event.year}.`}</p>
+    {c.url && <p><a class="btn" style={`background:var(--white);color:${c.color}`} href={c.url}>Visit {c.name}</a></p>}
+  </div></header>
+  <div class="sec"><div class="in">
+    {n ? (
+      <section aria-labelledby="talks-h">
+        <div class="sec-h"><h2 id="talks-h">Their talks</h2><a class="lnk" href={`/program/?community=${c.slug}`}>Show in the full program</a></div>
+        <ol class="rows">{theirTalks.map((s) => <SessionRow session={s} showDay />)}</ol>
+      </section>
+    ) : (
+      <p class="prose">{c.name} didn't present talks this year. {c.url ? <>Find their events on <a href={c.url}>their site</a>.</> : null}</p>
+    )}
+  </div></div>
+</Base>

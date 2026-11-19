@@ -1,0 +1,246 @@
+/* CommunityDays KC — "Lineup" design system. WCAG 2.2 AA; see CLAUDE.md for the rules. */
+:root {
+  --indigo: #303086;   /* from the logo */
+  --night: #16153f;
+  --gold: #fdd52f;     /* from the fountain mark */
+  --gold-hover: #ffe36b;
+  --stock: #eeecf6;    /* badge-stock paper */
+  --white: #ffffff;
+  --ink: #16153f;
+  --sub: #4a4970;      /* 7.2:1 on --stock */
+  --rule: #cfcde3;
+  --error: #a3161a;
+  --display: "Mona Sans", Arial, sans-serif;
+  --body: "Atkinson Hyperlegible Next", "Atkinson Hyperlegible", system-ui, sans-serif;
+  --mono: "Atkinson Hyperlegible Mono", ui-monospace, monospace;
+  --max: 1120px;
+  --gutter: clamp(16px, 4vw, 48px);
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box }
+[hidden] { display: none !important }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 24px }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth } }
+body { margin: 0; background: var(--stock); color: var(--ink); font: 17px/1.55 var(--body) }
+img { max-width: 100%; height: auto; display: block }
+a { color: inherit; text-underline-offset: 3px }
+h1, h2, h3, h4 { font-family: var(--display); line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance; margin: 0 }
+p, ul, ol, dl, figure { margin: 0 }
+ul.plain, ol.plain { list-style: none; padding: 0 }
+:focus-visible { outline: 3px solid var(--indigo); outline-offset: 3px }
+.on-dark :focus-visible { outline-color: var(--gold) }
+main:focus { outline: none }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap }
+.skip-link { position: absolute; left: 16px; top: -100px; z-index: 100; background: var(--gold); color: var(--ink); padding: 12px 18px; border-radius: 4px; font-weight: 700 }
+.skip-link:focus { top: 12px }
+.in { max-width: var(--max); margin: 0 auto; padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)) }
+.mono { font-family: var(--mono) }
+.sub { color: var(--sub) }
+.prose { max-width: 68ch; display: grid; gap: 1em }
+.prose h2 { font-size: 28px; margin-top: .6em; font-weight: 850 }
+.prose ul { padding-left: 1.2em; display: grid; gap: .4em }
+
+/* ---------- Buttons & links ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 10px 20px; background: var(--indigo); color: var(--white); border: 0; border-radius: 4px; font: 700 17px/1.2 var(--body); text-decoration: none; cursor: pointer }
+.btn:hover { background: var(--night) }
+.btn.gold { background: var(--gold); color: var(--ink) }
+.btn.gold:hover { background: var(--gold-hover) }
+.btn.outline { background: transparent; color: inherit; box-shadow: inset 0 0 0 2px currentColor }
+.btn:disabled { opacity: .6; cursor: progress }
+.lnk { font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 4px; display: inline-block; padding-block: 6px }
+
+/* ---------- Header ---------- */
+.site-top { background: var(--indigo); color: var(--white) }
+.site-top .in { display: flex; align-items: center; gap: 12px 28px; padding-block: 14px; flex-wrap: wrap }
+.mark { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 800; font-stretch: 112%; font-size: 20px; letter-spacing: -0.01em }
+.mark svg { width: 30px; height: 30px; color: var(--gold) }
+.fountain { fill: none; stroke: currentColor; stroke-linecap: round }
+.site-nav { margin-left: auto }
+.site-nav ul { display: flex; gap: 4px 22px; flex-wrap: wrap; list-style: none; margin: 0; padding: 0; font-weight: 700; font-size: 16px }
+.site-nav a { text-decoration: none; display: inline-block; padding-block: 8px; border-bottom: 3px solid transparent }
+.site-nav a:hover, .site-nav a[aria-current] { border-bottom-color: var(--gold) }
+.menu-btn { display: none; margin-left: auto; min-width: 44px; min-height: 44px; font: 700 16px var(--body); background: transparent; color: var(--white); border: 2px solid var(--white); border-radius: 4px; padding-inline: 12px; cursor: pointer }
+@media (max-width: 760px) {
+  .js .menu-btn { display: inline-block }
+  .js .site-nav { display: none; flex-basis: 100%; margin: 0 }
+  .js .site-top.open .site-nav { display: block }
+  .site-nav ul { flex-direction: column; gap: 0 }
+  .site-nav a { padding-block: 12px }
+}
+
+/* ---------- Page header (inner pages) ---------- */
+.page-head { background: var(--indigo); color: var(--white) }
+.page-head .in { padding-block: 40px 44px; display: grid; gap: 12px }
+.page-head h1 { font-weight: 900; font-stretch: 125%; font-size: clamp(34px, 6vw, 72px); letter-spacing: -0.035em; line-height: .98; overflow-wrap: anywhere }
+.page-head p { max-width: 60ch; font-size: 18px }
+.crumb { font-family: var(--mono); font-size: 15px }
+.crumb a { text-underline-offset: 3px }
+.page-head.community { background: var(--c) }
+
+/* ---------- Sections ---------- */
+.sec { padding-block: 64px }
+.sec + .sec { padding-top: 0 }
+.sec-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; margin-bottom: 26px }
+.sec-h h2 { font-weight: 900; font-stretch: 118%; font-size: clamp(30px, 4vw, 44px); letter-spacing: -0.03em; line-height: 1 }
+
+/* ---------- Poster hero (home) ---------- */
+.hero { background: var(--indigo); color: var(--white); position: relative; overflow: hidden }
+.hero .in { position: relative; padding-block: 36px 0; display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px 48px; align-items: end }
+.hero-fountain { position: absolute; right: -6%; top: -4%; width: min(62%, 640px); color: var(--gold); opacity: .28; pointer-events: none }
+.hero-fountain svg { width: 100%; height: auto; aspect-ratio: 1; stroke-width: .9 }
+.when { font-family: var(--mono); font-size: 15px; display: flex; flex-wrap: wrap; gap: 4px 18px }
+.when b { color: var(--gold) }
+.hero h1 { font-weight: 900; font-stretch: 125%; font-size: clamp(40px, 7.4vw, 92px); line-height: .92; letter-spacing: -0.035em; margin: 14px 0 22px }
+.hero h1 span { color: var(--gold) }
+.presents { font-family: var(--mono); font-size: 15px; color: var(--gold); margin-bottom: 10px }
+.lineup { display: flex; flex-wrap: wrap; align-items: baseline; font-family: var(--display); line-height: 1.08; padding-bottom: 40px; list-style: none; margin: 0; padding-left: 0 }
+.lineup li { display: inline-flex; align-items: baseline }
+.lineup li + li::before { content: ""; width: .24em; height: .24em; border-radius: 50%; background: var(--gold); margin: 0 .36em; transform: translateY(-.2em); flex: none }
+.lineup a { text-decoration: none; font-weight: 800; letter-spacing: -0.02em; display: inline-block; min-height: 24px; padding-block: 2px }
+.lineup a:hover { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 3px; text-underline-offset: 4px }
+.lineup .t1 { font-size: clamp(30px, 4.6vw, 56px); font-stretch: 115% }
+.lineup .t2 { font-size: clamp(25px, 3.4vw, 40px); font-stretch: 100% }
+.lineup .t3 { font-size: clamp(21px, 2.6vw, 30px); font-stretch: 88% }
+
+/* Attendee badge (ticket CTA) */
+.attendee { position: relative; background: var(--white); color: var(--ink); border-radius: 10px 10px 0 0; padding: 30px 22px 22px; box-shadow: 0 -12px 40px -20px rgba(0,0,0,.45); display: grid; gap: 10px }
+.attendee::before { content: ""; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 54px; height: 9px; border-radius: 5px; background: var(--indigo) }
+.attendee .role { background: var(--gold); font-family: var(--display); font-weight: 900; font-stretch: 125%; font-size: 22px; text-align: center; padding: 6px 0; margin-inline: -22px }
+.attendee .price { font-family: var(--display); font-weight: 900; font-size: 54px; line-height: 1; font-stretch: 110% }
+.attendee .price small { font: 700 16px var(--body); margin-left: 6px }
+.attendee p { font-size: 15px; color: var(--sub) }
+.attendee h2 { font-size: 26px; font-weight: 900; font-stretch: 110% }
+.attendee :focus-visible { outline-color: var(--indigo) }
+.facts { background: var(--night); color: var(--white) }
+.facts .in { display: flex; flex-wrap: wrap; gap: 8px 36px; padding-block: 16px; font-family: var(--mono); font-size: 15px }
+.facts b { color: var(--gold) }
+
+/* ---------- Program rows & ribbons ---------- */
+.rows { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0 }
+.row { display: grid; grid-template-columns: 116px minmax(0, 1fr) auto; gap: 6px 20px; align-items: start; background: var(--white); padding: 16px 18px; border-radius: 4px }
+.row time { font-family: var(--mono); font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums; padding-top: 2px }
+.row .where { display: block; white-space: nowrap; font-family: var(--mono); font-weight: 400; color: var(--sub); font-size: 14px }
+.row h3 { font-weight: 750; font-stretch: 100%; font-size: 20px; line-height: 1.2; letter-spacing: -0.01em }
+.row h3 a { text-decoration: none }
+.row h3 a:hover { text-decoration: underline }
+.row p { color: var(--sub); font-size: 15px; margin-top: 4px }
+.row.service { background: transparent; box-shadow: inset 0 0 0 2px var(--rule) }
+.ribbon { display: inline-block; background: var(--c, var(--indigo)); color: var(--white); font: 700 14px/1 var(--body); padding: 8px 20px 8px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 9px) 50%, 100% 100%, 0 100%); white-space: nowrap; align-self: center; text-decoration: none }
+a.ribbon:hover { text-decoration: underline }
+@media (max-width: 560px) { .row { grid-template-columns: minmax(0, 1fr) } .row .ribbon { justify-self: start } }
+
+/* Program page layout */
+.prog { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 24px 48px; align-items: start }
+.prog-side { display: grid; gap: 16px; position: sticky; top: 16px }
+.filters { display: grid; gap: 14px }
+.filters label { display: grid; gap: 6px; font-weight: 700; font-size: 15px }
+select, input, textarea { font: inherit; color: var(--ink); background: var(--white); border: 2px solid #8584a6; border-radius: 4px; min-height: 48px; padding: 8px 12px; width: 100% }
+textarea { min-height: 120px }
+select:focus-visible, input:focus-visible, textarea:focus-visible { border-color: var(--indigo) }
+.day-h { font-weight: 900; font-stretch: 112%; font-size: 30px; margin: 32px 0 14px }
+.day-block:first-child .day-h { margin-top: 0 }
+.count { font-family: var(--mono); font-size: 15px; color: var(--sub) }
+@media (max-width: 860px) { .prog { grid-template-columns: minmax(0, 1fr) } .prog-side { position: static } }
+
+/* ---------- Speaker badges ---------- */
+.badges { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 28px 22px; list-style: none; margin: 0; padding: 0 }
+.badge { display: grid; justify-items: center; align-content: start }
+.badge .card { position: relative; width: 100%; background: var(--white); border-radius: 10px; overflow: hidden; display: grid }
+.badge .card::before { content: ""; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 46px; height: 8px; border-radius: 4px; background: var(--stock); z-index: 1 }
+.badge .role { background: var(--indigo); color: var(--gold); font-family: var(--display); font-weight: 900; font-stretch: 125%; font-size: 16px; text-align: center; padding: 26px 0 8px; letter-spacing: .04em }
+.badge img { width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--rule) }
+.badge .who { padding: 14px 16px 16px; display: grid; gap: 4px }
+.badge h3, .badge h2 { font-weight: 850; font-stretch: 108%; font-size: 21px; line-height: 1.08; overflow-wrap: break-word; hyphens: auto }
+.badge h3 a { text-decoration: none }
+.badge h3 a::after { content: ""; position: absolute; inset: 0 }
+.badge h3 a:focus-visible { outline: none }
+.badge .card:has(a:focus-visible) { outline: 3px solid var(--indigo); outline-offset: 3px }
+.badge .card:hover h3 a { text-decoration: underline }
+.badge p { color: var(--sub); font-size: 15px }
+.badge .hang { width: 66%; background: var(--c); color: var(--white); font: 700 13px/1.2 var(--body); text-align: center; padding: 8px 6px 18px; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 72%, 0 100%) }
+@media (max-width: 560px) { .badges { grid-template-columns: repeat(2, minmax(0, 1fr)) } .badge h3 { font-size: 18px; font-stretch: 92% } .badge .who { padding: 12px } }
+
+/* Speaker detail */
+.speaker-detail { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 32px 56px; align-items: start }
+@media (max-width: 760px) { .speaker-detail { grid-template-columns: minmax(0, 1fr) } .speaker-detail .badge { max-width: 300px } }
+
+/* Session detail */
+.session-meta { display: flex; flex-wrap: wrap; gap: 8px 28px; font-family: var(--mono); font-size: 16px }
+.session-meta b { color: var(--gold) }
+.session-body { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 32px 56px; align-items: start }
+.session-body .badges { grid-template-columns: minmax(0, 1fr) }
+@media (max-width: 860px) { .session-body { grid-template-columns: minmax(0, 1fr) } .session-body .badges { grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)) } }
+
+/* ---------- Communities ---------- */
+.comm-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 10px 28px; list-style: none; margin: 0; padding: 0 }
+.comm-list a { display: grid; grid-template-columns: 14px minmax(0, 1fr) auto; align-items: center; gap: 14px; text-decoration: none; padding: 14px 0; border-bottom: 2px solid var(--rule); min-height: 56px }
+.comm-list a::before { content: ""; width: 14px; height: 36px; background: var(--c) }
+.comm-list a:hover { border-bottom-color: var(--ink) }
+.comm-list b { font-family: var(--display); font-weight: 800; font-size: 22px; letter-spacing: -0.01em }
+.comm-list span { font-family: var(--mono); font-size: 14px; color: var(--sub) }
+
+/* ---------- Tiers, sponsors, info ---------- */
+.tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; max-width: 640px }
+.tier { background: var(--white); padding: 22px; border-radius: 4px; display: grid; gap: 4px }
+.tier h3 { font-size: 20px; font-weight: 800 }
+.tier .amt { font-family: var(--display); font-weight: 900; font-size: 48px; font-stretch: 110%; line-height: 1 }
+.logos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 16px; list-style: none; margin: 0; padding: 0 }
+.logos li { background: var(--white); border-radius: 4px; padding: 24px; display: grid; place-items: center; min-height: 130px }
+.logos a { display: grid; place-items: center; width: 100%; min-height: 80px }
+.logos img { max-height: 80px; width: auto; object-fit: contain }
+.tier-h { font-family: var(--mono); font-size: 16px; font-weight: 700; color: var(--sub); margin: 32px 0 12px; letter-spacing: 0 }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 56px; align-items: start }
+@media (max-width: 860px) { .two { grid-template-columns: minmax(0, 1fr) } }
+.info { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 20px }
+.info dt { font-family: var(--mono); font-weight: 700; color: var(--sub) }
+.info dd { margin: 0 }
+.team { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr)); gap: 22px; list-style: none; margin: 0; padding: 0 }
+.team img { aspect-ratio: 1; object-fit: cover; width: 100%; border-radius: 4px }
+.team h3 { font-size: 19px; margin-top: 10px; font-weight: 800 }
+.team p { color: var(--sub); font-size: 15px }
+
+/* ---------- Forms ---------- */
+form.stack { display: grid; gap: 18px; max-width: 560px }
+form.stack label { display: grid; gap: 6px; font-weight: 700 }
+.req { font-weight: 400; color: var(--sub) }
+fieldset { border: 2px solid var(--rule); border-radius: 4px; padding: 14px 16px; display: grid; gap: 4px; margin: 0 }
+legend { font-weight: 700; padding-inline: 4px }
+form.stack fieldset label, form.stack label.check { display: flex; gap: 10px; align-items: center; font-weight: 400; min-height: 32px }
+fieldset input, label.check input { width: 22px; height: 22px; min-height: 0; flex: none; accent-color: var(--indigo) }
+.form-status { min-height: 1.5em; font-weight: 700 }
+.form-status[data-state="error"] { color: var(--error) }
+.on-dark .form-status[data-state="error"] { color: var(--gold) }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden }
+
+/* ---------- Sponsors strip + footer ---------- */
+.spons-strip { border-top: 2px solid var(--rule) }
+.spons-strip .in { padding-block: 36px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 36px }
+.spons-strip h2 { font-family: var(--mono); font-size: 15px; font-weight: 700; color: var(--sub); flex-basis: 100%; letter-spacing: 0 }
+.spons-strip a, .spons-strip .nm { font-family: var(--display); font-weight: 800; font-size: 26px; font-stretch: 105%; text-decoration: none; white-space: nowrap }
+.spons-strip a:hover { text-decoration: underline }
+.spons-strip small { font-family: var(--mono); font-size: 13px; color: var(--sub); font-weight: 400; margin-left: 6px }
+.site-foot { background: var(--night); color: var(--white) }
+.site-foot .in { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 48px; padding-block: 44px }
+.site-foot h2 { font-weight: 900; font-stretch: 118%; font-size: 28px; margin-bottom: 14px }
+.news { display: flex; gap: 8px; flex-wrap: wrap; align-items: end }
+.news label { display: grid; gap: 6px; flex: 1 1 240px; font-weight: 700; font-size: 15px }
+.news input { border-color: var(--white) }
+.news .form-status { flex-basis: 100% }
+.foot-links { display: grid; gap: 2px; align-content: start; font-size: 16px; list-style: none; margin: 0; padding: 0 }
+.foot-links a { display: inline-block; padding-block: 5px }
+.help { font-family: var(--mono); font-size: 15px; color: var(--gold); margin-top: 12px }
+.help a { color: inherit }
+.legal { grid-column: 1 / -1; font-size: 14px; color: #c9c8e0; border-top: 1px solid #34336a; padding-top: 18px }
+
+@media (max-width: 860px) {
+  .hero .in { grid-template-columns: minmax(0, 1fr) }
+  .attendee { max-width: 360px; border-radius: 10px; margin-bottom: 24px }
+  .lineup { padding-bottom: 8px }
+  .site-foot .in { grid-template-columns: minmax(0, 1fr) }
+}
+@media (max-width: 560px) {
+  .hero-fountain { width: 90%; right: -30% }
+  .hero h1 { font-size: 9.4vw; font-stretch: 100% }
+  .spons-strip a, .spons-strip .nm { font-size: 22px }
+}

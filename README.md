@@ -20,6 +20,14 @@ The homepage switches from "buy tickets" to "save the date" once the event's end
 
 If `site.config.js` names a different Sessionize event than the imported data, the program, speaker and community pages show "coming soon" instead of the old talks.
 
+## Starting a new year
+
+From a browser: **Actions → Start new year → Run workflow**, enter the year (and dates if known). It opens a pull request; review `site.config.js` and merge. (One-time setting: Settings → Actions → General → allow GitHub Actions to create pull requests.)
+
+From a terminal: `npm run new-year -- 2027` or `npm run new-year -- 2027 2027-06-03 2027-06-04`.
+
+Either way the current year is archived to `archive/<year>/` and served at `/<year>/`, old talk and speaker links redirect there, and `site.config.js` is reset with the call for speakers and registration off. Then, as the year goes on, flip the switches in `site.config.js` (`features`): open the call for speakers, add dates, open registration, and set `sessionize.eventId` + run `npm run import:sessionize` once talks are selected. Until then the site shows last year's speakers and sponsors, clearly labelled.
+
 ## Develop
 
 ```bash

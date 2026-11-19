@@ -1,0 +1,8 @@
+---
+import Speaker from '../../../views/Speaker.astro';
+import { archives } from '../../../lib/years.js';
+export function getStaticPaths() {
+  return archives.flatMap((y) => y.speakers.map((speaker) => ({ params: { year: String(y.year), slug: speaker.slug }, props: { y, speaker } })));
+}
+---
+<Speaker y={Astro.props.y} speaker={Astro.props.speaker} />

@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+const { y } = Astro.props;
+const list = [...y.communities].sort((a, b) => a.name.localeCompare(b.name));
+const title = y.archived ? `${y.year} communities` : 'Communities';
+const email = y.event.contactEmail;
+---
+<Base y={y} title={title} description={`The Kansas City meetup groups behind ${y.event.name} ${y.year}.`}>
+  <header class="page-head on-dark"><div class="in">
+    {y.archived && <p class="crumb"><a href={y.link('/')}>{y.year} archive</a></p>}
+    <h1>{title}</h1>
+    <p>{y.event.name} is built by Kansas City's meetup groups. Each one brings its own talks. Find yours, then go meet the others.</p>
+  </div></header>
+  <div class="sec"><div class="in">
+    <ul class="comm-list">
+      {list.map((c) => {
+        const n = y.talksByCommunity(c.slug).length;
+        return <li><a href={y.link(`/communities/${c.slug}/`)} style={`--c:${c.color}`}><b>{c.name}</b><span>{n ? `${n} talk${n > 1 ? 's' : ''}` : y.hasProgram ? 'Community partner' : 'Talks coming soon'}</span></a></li>;
+      })}
+    </ul>
+    {!y.archived && email && <p class="sub" style="margin-top:28px;max-width:60ch">Run a Kansas City meetup and want to take part? Email <a href={`mailto:${email}`}>{email}</a>.</p>}
+  </div></div>
+</Base>

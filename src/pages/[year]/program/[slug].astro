@@ -1,0 +1,8 @@
+---
+import Talk from '../../../views/Talk.astro';
+import { archives } from '../../../lib/years.js';
+export function getStaticPaths() {
+  return archives.flatMap((y) => y.talks.map((session) => ({ params: { year: String(y.year), slug: session.slug }, props: { y, session } })));
+}
+---
+<Talk y={Astro.props.y} session={Astro.props.session} />

@@ -5,12 +5,15 @@
 // else (date labels, the current ticket price, "save the date" mode, next-year
 // wording, counts) is worked out from it when the site builds.
 //
-// New year checklist:
-//   1. Update `event` (start/end dates, venue) and `tickets`.
-//   2. Set `sessionize.eventId` to the new Sessionize event, then run
-//      `npm run import:sessionize`. Until you do, the program and speaker pages
-//      show "coming soon" instead of last year's talks.
-//   3. Update `links.tickets`, `links.prospectus`, `communities` and `sponsors`.
+// Starting a new year: run `npm run new-year -- 2027` (or the "Start new year"
+// workflow in GitHub Actions). It archives this year to archive/<year>/ (served
+// at /<year>/), then resets this file for the new year. After that, as the year
+// goes on:
+//   • Call for speakers opens  → set links.callForSpeakers, features.callForSpeakers: true
+//   • Dates and venue are set  → event.start / event.end / event.venue
+//   • Tickets go on sale       → links.tickets, tickets.tiers, features.registration: true
+//   • Talks are selected       → sessionize.eventId, then `npm run import:sessionize`
+//   • Sponsors sign on         → sponsors
 // Dates are written as YYYY-MM-DD in the event's local time zone.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -20,6 +23,8 @@ export default {
     tagline: "Kansas City's meetups, under one roof.",
     description:
       "CommunityDays KC is a two-day event celebrating the strength and diversity of Kansas City's tech community. It brings the city's meetup groups together to collaborate on content and build community.",
+    year: 2026,
+    // Leave start/end as null until the dates are set; the site shows "dates coming soon".
     start: '2026-05-28',
     end: '2026-05-29',
     timezone: 'America/Chicago',
@@ -32,6 +37,18 @@ export default {
     },
   },
 
+  // Turn parts of the site on and off as the year progresses.
+  features: {
+    // "Submit a talk" button in the homepage hero (opens links.callForSpeakers in a new tab).
+    callForSpeakers: false,
+    // Ticket buttons on the homepage and Attend page (open links.tickets in a new tab).
+    registration: true,
+    // Program pages and nav link. With no talks imported yet, pages say "coming soon".
+    program: true,
+    // Speaker pages and nav link. With no speakers yet, last year's speakers are shown (labelled).
+    speakers: true,
+  },
+
   // Homepage mode: 'auto' switches to "save the date" the day after `event.end`.
   // Force it with 'upcoming' or 'past' (e.g. while announcing next year early).
   homepage: { mode: 'auto' },
@@ -39,12 +56,13 @@ export default {
   links: {
     tickets: 'https://ti.to/kansas-city-developers-conference/communitydays-kc-2026',
     prospectus: '/files/CommunityDays-2026-Sponsor-Prospectus.pdf',
-    callForSpeakers: null, // e.g. 'https://sessionize.com/communitydays-kc-2027/'
+    callForSpeakers: null, // Sessionize call-for-speakers page, e.g. 'https://sessionize.com/communitydays-kc-2027/'
     contactEmail: 'communitydays@kcdc.info',
     conductEmail: 'staff@kcdc.info',
   },
 
-  // Sessionize event that `npm run import:sessionize` pulls from.
+  // Sessionize embed/API ID that `npm run import:sessionize` pulls from.
+  // Leave null until talks are selected.
   sessionize: { eventId: '295atto3' },
 
   tickets: {
@@ -69,8 +87,9 @@ export default {
   },
 
   nav: [
-    { href: '/program/', label: 'Program' },
-    { href: '/speakers/', label: 'Speakers' },
+    // `feature` hides the link when that feature is turned off.
+    { href: '/program/', label: 'Program', feature: 'program' },
+    { href: '/speakers/', label: 'Speakers', feature: 'speakers' },
     { href: '/communities/', label: 'Communities' },
     { href: '/attend/', label: 'Attend' },
     { href: '/sponsor/', label: 'Sponsor' },

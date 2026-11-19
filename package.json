@@ -6,7 +6,7 @@
   "description": "communitydays.info — CommunityDays KC conference site on Cloudflare Workers",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/archive-redirects.mjs",
     "preview": "npm run build && npm run db:migrate:local && wrangler dev",
     "deploy": "npm run build && npm run db:migrate && wrangler deploy",
     "db:migrate": "wrangler d1 migrations apply DB --remote",
@@ -16,7 +16,8 @@
     "import:sessionize": "node scripts/import-sessionize.mjs",
     "test:a11y": "npm run build && node tests/a11y.mjs",
     "db:migrate:preview": "wrangler d1 migrations apply PREVIEW_DB --remote --config wrangler.preview-migrations.jsonc",
-    "deploy:preview": "npm run build && npm run db:migrate:preview && wrangler preview"
+    "deploy:preview": "npm run build && npm run db:migrate:preview && wrangler preview",
+    "new-year": "node scripts/new-year.mjs"
   },
   "devDependencies": {
     "astro": "^7.4.12",

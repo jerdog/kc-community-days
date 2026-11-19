@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
-import { event, team } from '../lib/site.js';
+import { current, site } from '../lib/years.js';
+const { event } = current;
+const { team } = site;
 ---
 <Base title="About">
   <header class="page-head on-dark"><div class="in">

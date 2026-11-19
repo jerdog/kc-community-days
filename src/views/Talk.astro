@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import SpeakerBadge from '../components/SpeakerBadge.astro';
+import Ribbon from '../components/Ribbon.astro';
+const { y, session: s } = Astro.props;
+const who = s.speakerList.map((p) => p.name).join(', ');
+---
+<Base y={y} title={s.title} description={`${who} at ${y.event.name} ${y.year}: ${s.description[0] || s.title}`.slice(0, 300)}>
+  <header class="page-head on-dark"><div class="in">
+    <p class="crumb">{y.archived && <><a href={y.link('/')}>{y.year} archive</a> / </>}<a href={y.link('/program/')}>Program</a>{s.community && <> / <a href={y.link(`/communities/${s.community.slug}/`)}>{s.community.name}</a></>}</p>
+    <h1 style="font-size:clamp(30px,4.6vw,56px);font-stretch:110%">{s.title}</h1>
+    <p class="session-meta">
+      <span><b>When</b> {y.fmtDay(s.startsAt)}{y.archived && `, ${y.year}`}, {y.fmtTime(s.startsAt)}</span>
+      <span><b>Where</b> {s.room}</span>
+      <span><b>Length</b> {y.minutes(s)} min</span>
+    </p>
+  </div></header>
+  <div class="sec"><div class="in session-body">
+    <div class="prose">
+      {s.community && <p><Ribbon community={s.community} y={y} /></p>}
+      {s.description.map((p) => <p>{p}</p>)}
+      {!y.archived && <p><a class="btn outline" href={y.link(`/program/${s.slug}.ics`)} download>Add to calendar<span class="visually-hidden"> (.ics file)</span></a></p>}
+    </div>
+    <section aria-labelledby="spk-h">
+      <h2 id="spk-h" class="visually-hidden">{s.speakerList.length > 1 ? 'Speakers' : 'Speaker'}</h2>
+      <ul class="badges">{s.speakerList.map((p) => <SpeakerBadge speaker={p} y={y} />)}</ul>
+    </section>
+  </div></div>
+</Base>

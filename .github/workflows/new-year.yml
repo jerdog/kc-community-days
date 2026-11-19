@@ -1,0 +1,58 @@
+# Start a new event year from the browser: Actions tab → "Start new year" → Run workflow.
+# Archives the current year to archive/<year>/ (served at /<year>/), resets
+# site.config.js for the new year and opens a pull request to review and merge.
+#
+# One-time repo setting: Settings → Actions → General → Workflow permissions →
+# allow "GitHub Actions to create and approve pull requests".
+name: Start new year
+
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: New event year (e.g. 2027)
+        required: true
+      start:
+        description: First day, YYYY-MM-DD (leave blank if not set yet)
+        required: false
+      end:
+        description: Last day, YYYY-MM-DD (leave blank if not set yet)
+        required: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  new-year:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Archive this year and set up the new one
+        env:
+          YEAR: ${{ inputs.year }}
+          START: ${{ inputs.start }}
+          END: ${{ inputs.end }}
+        run: npm run new-year -- "$YEAR" $START $END
+      - name: Check the site still builds
+        run: npm run build
+      - name: Open a pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          YEAR: ${{ inputs.year }}
+        run: |
+          branch="new-year-$YEAR"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add -A
+          git commit -m "Start CommunityDays KC $YEAR and archive the previous year"
+          git push -u origin "$branch"
+          gh pr create --base main --head "$branch" \
+            --title "Start CommunityDays KC $YEAR" \
+            --body "Archives the previous year to \`archive/\` (served at \`/<year>/\`) and resets \`site.config.js\` for $YEAR: call for speakers and registration off, no Sessionize event, sponsors emptied, ticket deadlines moved forward a year. Review the config, then merge to publish."

@@ -1,32 +1,8 @@
 ---
-import Base from '../../layouts/Base.astro';
-import SessionRow from '../../components/SessionRow.astro';
-import { event, communities } from '../../lib/site.js';
-import { talksByCommunity, hasProgram } from '../../lib/sessionize.js';
-
+import Community from '../../views/Community.astro';
+import { current } from '../../lib/years.js';
 export function getStaticPaths() {
-  return communities.map((community) => ({ params: { slug: community.slug }, props: { community } }));
+  return current.communities.map((community) => ({ params: { slug: community.slug }, props: { community } }));
 }
-const { community: c } = Astro.props;
-const theirTalks = talksByCommunity(c.slug);
-const n = theirTalks.length;
 ---
-<Base title={c.name} description={`${c.name} at ${event.name} ${event.year}${n ? `: ${n} talks` : ''}.`}>
-  <header class="page-head community on-dark" style={`--c:${c.color}`}><div class="in">
-    <p class="crumb"><a href="/communities/">Communities</a></p>
-    <h1>{c.name}</h1>
-    {c.fullName && <p>{c.fullName}</p>}
-    <p>{n ? `${n} talk${n > 1 ? 's' : ''} at ${event.name} ${event.year}.` : hasProgram ? `A community partner of ${event.name} ${event.year}.` : `Part of ${event.name} ${event.year}. Talks will be listed here once the program is announced.`}</p>
-    {c.url && <p><a class="btn" style={`background:var(--white);color:${c.color}`} href={c.url}>Visit {c.name}</a></p>}
-  </div></header>
-  <div class="sec"><div class="in">
-    {n ? (
-      <section aria-labelledby="talks-h">
-        <div class="sec-h"><h2 id="talks-h">Their talks</h2><a class="lnk" href={`/program/?community=${c.slug}`}>Show in the full program</a></div>
-        <ol class="rows">{theirTalks.map((s) => <SessionRow session={s} showDay />)}</ol>
-      </section>
-    ) : (
-      <p class="prose">{hasProgram ? `${c.name} didn't present talks this year.` : 'The program hasn’t been announced yet.'} {c.url ? <>Find their events on <a href={c.url}>their site</a>.</> : null}</p>
-    )}
-  </div></div>
-</Base>
+<Community y={current} community={Astro.props.community} />

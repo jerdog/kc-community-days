@@ -1,23 +1,17 @@
 ---
-// Homepage sponsor badges: one badge per sponsor, tier on the strip and the ribbon.
-import { sponsors } from '../lib/site.js';
-const { headingLevel = 3 } = Astro.props;
+// Sponsor badges: one per sponsor, tier on the strip and the ribbon.
+const { y, headingLevel = 3 } = Astro.props;
 const H = `h${headingLevel}`;
 ---
 <ul class="sbadges">
-  {sponsors.flatMap((t) => t.items.map((s) => {
-    const inner = (
-      <>
+  {y.sponsors.flatMap((t) => t.items.map((s) => (
+    <li class="badge sponsor" style={`--c:${t.ribbon || '#303086'}`}>
+      <div class="card">
         <div class:list={['role', { gold: t.gold }]} aria-hidden="true">{t.badge || t.tier.toUpperCase()}</div>
         <div class="logo"><img src={s.logo} alt="" loading="lazy" /></div>
         <H class="nm">{s.url ? <a href={s.url}>{s.name}</a> : s.name}</H>
-      </>
-    );
-    return (
-      <li class="badge sponsor" style={`--c:${t.ribbon || '#303086'}`}>
-        <div class="card">{inner}</div>
-        <div class="hang">{t.tier}</div>
-      </li>
-    );
-  }))}
+      </div>
+      <div class="hang">{t.tier}</div>
+    </li>
+  )))}
 </ul>

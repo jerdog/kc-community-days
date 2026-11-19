@@ -14,6 +14,10 @@ import { parse } from 'node-html-parser';
 import config from '../site.config.js';
 
 const EVENT_ID = process.argv[2] || process.env.SESSIONIZE_ID || config.sessionize.eventId;
+if (!EVENT_ID) {
+  console.error('No Sessionize event set. Put the event ID in sessionize.eventId in site.config.js (once talks are selected), then run this again.');
+  process.exit(1);
+}
 const BASE = `https://sessionize.com/api/v2/${EVENT_ID}`;
 const OUT = new URL('../src/data/sessionize.json', import.meta.url);
 

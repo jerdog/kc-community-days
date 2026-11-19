@@ -1,36 +1,8 @@
 ---
-import Base from '../../layouts/Base.astro';
-import SpeakerBadge from '../../components/SpeakerBadge.astro';
-import SessionRow from '../../components/SessionRow.astro';
-import { event } from '../../lib/site.js';
-import { speakers, talksBySpeaker } from '../../lib/sessionize.js';
-
+import Speaker from '../../views/Speaker.astro';
+import { current } from '../../lib/years.js';
 export function getStaticPaths() {
-  return speakers.map((speaker) => ({ params: { slug: speaker.slug }, props: { speaker } }));
+  return current.speakers.map((speaker) => ({ params: { slug: speaker.slug }, props: { speaker } }));
 }
-const { speaker: p } = Astro.props;
-const theirTalks = talksBySpeaker(p.id);
 ---
-<Base title={p.name} description={`${p.name}${p.tagline ? `, ${p.tagline}` : ''}: speaker at ${event.name} ${event.year}.`}>
-  <header class="page-head on-dark"><div class="in">
-    <p class="crumb"><a href="/speakers/">Speakers</a></p>
-    <h1>{p.name}</h1>
-    {p.tagline && <p>{p.tagline}</p>}
-  </div></header>
-  <div class="sec"><div class="in speaker-detail">
-    <ul class="badges"><SpeakerBadge speaker={p} link={false} headingLevel={2} eager /></ul>
-    <div style="display:grid;gap:40px">
-      {p.bio.length > 0 && (
-        <section aria-labelledby="bio-h" class="prose">
-          <h2 id="bio-h">About {p.name.split(' ')[0]}</h2>
-          {p.bio.map((b) => <p>{b}</p>)}
-          {p.links.length > 0 && <ul>{p.links.map((l) => <li><a href={l.url}>{l.title}</a></li>)}</ul>}
-        </section>
-      )}
-      <section aria-labelledby="talks-h">
-        <h2 id="talks-h" style="font-size:28px;font-weight:850;margin-bottom:14px">{theirTalks.length > 1 ? 'Talks' : 'Talk'}</h2>
-        <ol class="rows">{theirTalks.map((s) => <SessionRow session={s} showDay />)}</ol>
-      </section>
-    </div>
-  </div></div>
-</Base>
+<Speaker y={current} speaker={Astro.props.speaker} />

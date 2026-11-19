@@ -2,18 +2,16 @@
 // Homepage list of communities as ribbons. Order and the phone cut-off come from
 // `lineup` in site.config.js. On phones only the first `mobileCount` show until
 // "Show all" is pressed; without JavaScript every community is listed.
-import { lineupConfig } from '../lib/site.js';
-import { lineup } from '../lib/sessionize.js';
-
-const list = lineup();
-const n = lineupConfig.mobileCount;
+const { y } = Astro.props;
+const list = y.lineup();
+const n = y.lineupConfig.mobileCount;
 const hidden = Math.max(0, list.length - n);
 ---
 <div class="lineup-wrap">
   <ul class="lineup" id="lineup" aria-label="Participating communities">
     {list.map((c, i) => (
       <li class:list={{ extra: i >= n }}>
-        <a class="rib" href={`/communities/${c.slug}/`} style={`--c:${c.color}`}>{c.name}</a>
+        <a class="rib" href={y.link(`/communities/${c.slug}/`)} style={`--c:${c.color}`}>{c.name}</a>
       </li>
     ))}
   </ul>

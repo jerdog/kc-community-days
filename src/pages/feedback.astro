@@ -1,7 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import Form from '../components/Form.astro';
-import { event, communities } from '../lib/site.js';
+import { current } from '../lib/years.js';
+const { event, communities } = current;
 ---
 <Base title="Feedback">
   <header class="page-head on-dark"><div class="in">

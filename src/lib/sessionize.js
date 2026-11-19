@@ -1,5 +1,14 @@
-import data from '../data/sessionize.json';
-import { event, communities } from '../data/site.js';
+import raw from '../data/sessionize.json';
+import { event, communities, lineupConfig, sessionizeEventId } from './site.js';
+
+// Only use the imported data if it belongs to the Sessionize event named in site.config.js.
+// After switching to next year's event (and before re-importing), pages show "coming soon"
+// instead of last year's talks.
+export const hasProgram = raw.eventId === sessionizeEventId && raw.sessions.length > 0;
+if (raw.eventId !== sessionizeEventId) {
+  console.warn(`[sessionize] src/data/sessionize.json is for event ${raw.eventId}, but site.config.js names ${sessionizeEventId}. Run npm run import:sessionize. Showing no program for now.`);
+}
+const data = raw.eventId === sessionizeEventId ? raw : { ...raw, speakers: [], sessions: [], rooms: [] };
 
 const tz = event.timezone;
 
@@ -94,4 +103,14 @@ export function icsFor(session, url) {
     'END:VCALENDAR',
   ];
   return lines.join('\r\n') + '\r\n';
+}
+
+// Communities in lineup order: featured first, then by talk count, alphabetically or as listed.
+export function lineup() {
+  const count = (c) => talksByCommunity(c.slug).length;
+  const featured = lineupConfig.featured.map((slug) => communities.find((c) => c.slug === slug)).filter(Boolean);
+  const rest = communities.filter((c) => !featured.includes(c));
+  if (lineupConfig.order === 'alphabetical' || (lineupConfig.order === 'talks' && !hasProgram)) rest.sort((a, b) => a.name.localeCompare(b.name));
+  else if (lineupConfig.order === 'talks') rest.sort((a, b) => count(b) - count(a) || a.name.localeCompare(b.name));
+  return [...featured, ...rest];
 }

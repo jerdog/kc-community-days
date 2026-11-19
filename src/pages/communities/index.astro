@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { event, communities } from '../../data/site.js';
-import { talksByCommunity } from '../../lib/sessionize.js';
+import { event, communities } from '../../lib/site.js';
+import { talksByCommunity, hasProgram } from '../../lib/sessionize.js';
 const list = [...communities].sort((a, b) => a.name.localeCompare(b.name));
 ---
 <Base title="Communities" description={`The Kansas City meetup groups behind ${event.name}.`}>
@@ -13,7 +13,7 @@ const list = [...communities].sort((a, b) => a.name.localeCompare(b.name));
     <ul class="comm-list">
       {list.map((c) => {
         const n = talksByCommunity(c.slug).length;
-        return <li><a href={`/communities/${c.slug}/`} style={`--c:${c.color}`}><b>{c.name}</b><span>{n ? `${n} talk${n > 1 ? 's' : ''}` : 'Community partner'}</span></a></li>;
+        return <li><a href={`/communities/${c.slug}/`} style={`--c:${c.color}`}><b>{c.name}</b><span>{n ? `${n} talk${n > 1 ? 's' : ''}` : hasProgram ? 'Community partner' : 'Talks coming soon'}</span></a></li>;
       })}
     </ul>
     <p class="sub" style="margin-top:28px;max-width:60ch">Run a Kansas City meetup and want to take part next year? Email <a href={`mailto:${event.contactEmail}`}>{event.contactEmail}</a>.</p>

@@ -1,16 +1,19 @@
 ---
 import Base from '../layouts/Base.astro';
 import Fountain from '../components/Fountain.astro';
+import Lineup from '../components/Lineup.astro';
 import SessionRow from '../components/SessionRow.astro';
 import SpeakerBadge from '../components/SpeakerBadge.astro';
-import { event, communities, tickets } from '../data/site.js';
-import { days, talks, speakers, rooms, talksBySpeaker } from '../lib/sessionize.js';
-import { isPast } from '../lib/state.js';
+import { event, tickets, isPast, nextYear } from '../lib/site.js';
+import { days, talks, speakers, rooms, hasProgram } from '../lib/sessionize.js';
 
 const allDays = days();
 const firstDay = allDays[0];
-const firstHour = firstDay.sessions.filter((s) => new Date(s.startsAt) - new Date(firstDay.sessions[0].startsAt) < 60 * 60 * 1000).slice(0, 6);
-// Featured speakers: one per community, in lineup order, for variety
+const firstHour = firstDay
+  ? firstDay.sessions.filter((s) => new Date(s.startsAt) - new Date(firstDay.sessions[0].startsAt) < 60 * 60 * 1000).slice(0, 6)
+  : [];
+
+// Featured speakers: one per community, for variety
 const featured = [];
 const usedCommunities = new Set();
 for (const t of talks) {
@@ -20,8 +23,10 @@ for (const t of talks) {
   featured.push(sp);
   if (featured.length === 4) break;
 }
-const lineup = [...communities].sort((a, b) => a.name.localeCompare(b.name));
-const early = tickets.tiers[0];
+
+const presents = isPast
+  ? hasProgram ? `Thanks for coming to ${event.year}. The program is below.` : `Thanks for coming to ${event.year}.`
+  : event.tagline;
 ---
 <Base>
   <section class="hero on-dark" aria-labelledby="hero-h">
@@ -30,45 +35,54 @@ const early = tickets.tiers[0];
       <div>
         <p class="when"><span><b>{event.dates.days}</b> {event.dates.label}</span><span><b>at</b> {event.venue.host}, {event.venue.city}</span></p>
         <h1 id="hero-h">CommunityDays <span>KC</span></h1>
-        <p class="presents">{isPast ? `Thanks for coming to ${event.year}. The program is below.` : event.tagline}</p>
-        <ul class="lineup" aria-label="Participating communities">
-          {lineup.map((c) => <li class={`t${c.tier}`}><a href={`/communities/${c.slug}/`}>{c.name}</a></li>)}
-        </ul>
+        <p class="presents">{presents}</p>
+        <Lineup />
       </div>
       {isPast ? (
         <div class="attendee">
           <div class="role" aria-hidden="true">SAVE THE DATE</div>
-          <h2>{event.name} {event.year + 1}</h2>
+          <h2>{event.name} {nextYear}</h2>
           <p>Dates are coming. Sign up and we'll email you when tickets and the call for speakers open.</p>
           <a class="btn" href="#signup">Get updates</a>
         </div>
       ) : (
         <div class="attendee">
           <div class="role" aria-hidden="true">ATTENDEE</div>
-          <p class="price">${early.price}<small>{early.name.toLowerCase()}</small></p>
-          <p>{tickets.note} ${tickets.tiers[1].price} after April 27.</p>
+          <p class="price">${tickets.current.price}<small>{tickets.current.name.toLowerCase()}</small></p>
+          <p>{tickets.note}{tickets.current.untilLabel && tickets.next && ` $${tickets.next.price} after ${tickets.current.untilLabel}.`}</p>
           <a class="btn" href={event.ticketsUrl}>Get your badge</a>
         </div>
       )}
     </div>
   </section>
   <div class="facts on-dark"><div class="in">
-    <span><b>{talks.length}</b> talks</span><span><b>{speakers.length}</b> speakers</span><span><b>{rooms.length}</b> rooms</span><span><b>{allDays.length}</b> days</span><span>{event.venue.name} · {event.venue.street}</span>
+    {hasProgram && <><span><b>{talks.length}</b> talks</span><span><b>{speakers.length}</b> speakers</span><span><b>{rooms.length}</b> rooms</span></>}
+    <span><b>{event.dates.count}</b> {event.dates.count === 1 ? 'day' : 'days'}</span><span>{event.venue.name} · {event.venue.street}</span>
   </div></div>
 
-  <section class="sec" aria-labelledby="prog-h"><div class="in">
-    <div class="prog">
-      <div class="prog-side" style="position:static">
-        <h2 id="prog-h" style="font-weight:900;font-stretch:118%;font-size:clamp(30px,4vw,44px);letter-spacing:-0.03em;line-height:1">Program</h2>
-        <p class="sub">How {firstDay.weekday} {isPast ? 'started' : 'starts'}. The full program filters by day, community and room.</p>
-        <a class="lnk" href="/program/">See the full program</a>
-      </div>
-      <ol class="rows">{firstHour.map((s) => <SessionRow session={s} />)}</ol>
-    </div>
-  </div></section>
+  {hasProgram ? (
+    <>
+      <section class="sec" aria-labelledby="prog-h"><div class="in">
+        <div class="prog">
+          <div class="prog-side" style="position:static">
+            <h2 id="prog-h" style="font-weight:900;font-stretch:118%;font-size:clamp(30px,4vw,44px);letter-spacing:-0.03em;line-height:1">Program</h2>
+            <p class="sub">How {firstDay.weekday} {isPast ? 'started' : 'starts'}. The full program filters by day, community and room.</p>
+            <a class="lnk" href="/program/">See the full program</a>
+          </div>
+          <ol class="rows">{firstHour.map((s) => <SessionRow session={s} />)}</ol>
+        </div>
+      </div></section>
 
-  <section class="sec" aria-labelledby="spk-h"><div class="in">
-    <div class="sec-h"><h2 id="spk-h">Speakers</h2><a class="lnk" href="/speakers/">All {speakers.length} speakers</a></div>
-    <ul class="badges">{featured.map((p) => <SpeakerBadge speaker={p} />)}</ul>
-  </div></section>
+      <section class="sec" aria-labelledby="spk-h"><div class="in">
+        <div class="sec-h"><h2 id="spk-h">Speakers</h2><a class="lnk" href="/speakers/">All {speakers.length} speakers</a></div>
+        <ul class="badges">{featured.map((p) => <SpeakerBadge speaker={p} />)}</ul>
+      </div></section>
+    </>
+  ) : (
+    <section class="sec" aria-labelledby="soon-h"><div class="in prose">
+      <h2 id="soon-h" style="font-size:clamp(30px,4vw,44px);font-weight:900;font-stretch:118%">The program is on its way</h2>
+      <p>Talks and speakers for {event.name} {event.year} will appear here once they're announced.</p>
+      {event.callForSpeakersUrl && <p><a class="btn" href={event.callForSpeakersUrl}>Submit a talk</a></p>}
+    </div></section>
+  )}
 </Base>

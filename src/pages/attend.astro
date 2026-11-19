@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-import { event, tickets } from '../data/site.js';
-import { isPast } from '../lib/state.js';
+import { event, tickets } from '../lib/site.js';
+import { isPast } from '../lib/site.js';
 const nextYear = event.year + 1;
 ---
 <Base title="Attend" description={`Tickets, venue and policies for ${event.name} ${event.year}.`}>

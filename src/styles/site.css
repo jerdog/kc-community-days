@@ -94,14 +94,19 @@ main:focus { outline: none }
 .hero h1 { font-weight: 900; font-stretch: 125%; font-size: clamp(40px, 7.4vw, 92px); line-height: .92; letter-spacing: -0.035em; margin: 14px 0 22px }
 .hero h1 span { color: var(--gold) }
 .presents { font-family: var(--mono); font-size: 15px; color: var(--gold); margin-bottom: 10px }
-.lineup { display: flex; flex-wrap: wrap; align-items: baseline; font-family: var(--display); line-height: 1.08; padding-bottom: 40px; list-style: none; margin: 0; padding-left: 0 }
-.lineup li { display: inline-flex; align-items: baseline }
-.lineup li + li::before { content: ""; width: .24em; height: .24em; border-radius: 50%; background: var(--gold); margin: 0 .36em; transform: translateY(-.2em); flex: none }
-.lineup a { text-decoration: none; font-weight: 800; letter-spacing: -0.02em; display: inline-block; min-height: 24px; padding-block: 2px }
-.lineup a:hover { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 3px; text-underline-offset: 4px }
-.lineup .t1 { font-size: clamp(30px, 4.6vw, 56px); font-stretch: 115% }
-.lineup .t2 { font-size: clamp(25px, 3.4vw, 40px); font-stretch: 100% }
-.lineup .t3 { font-size: clamp(21px, 2.6vw, 30px); font-stretch: 88% }
+/* Community lineup: ribbons in each community's color (order and phone cut-off in site.config.js) */
+.lineup { display: flex; flex-wrap: wrap; gap: 10px 8px; list-style: none; margin: 0; padding: 0 0 40px }
+.rib { position: relative; isolation: isolate; display: inline-flex; align-items: center; min-height: 44px; padding: 8px 28px 8px 14px; color: var(--white); text-decoration: none; font: 750 18px/1.1 var(--display); font-stretch: 105% }
+/* The ribbon shape is drawn on a layer behind the text, so the focus ring on the link is not clipped. */
+.rib::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--c); clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 50%, 100% 100%, 0 100%); box-shadow: inset 0 -3px 0 rgba(0, 0, 0, .2) }
+@media (hover: hover) { .rib:hover { text-decoration: underline; text-underline-offset: 3px } }
+.lineup-more { display: none; min-height: 44px; padding: 8px 16px; margin: 0 0 24px; font: 700 16px/1.2 var(--body); color: var(--white); background: transparent; border: 2px solid var(--white); border-radius: 4px; cursor: pointer }
+@media (max-width: 760px) {
+  .js .lineup:not(.expanded) .extra { display: none }
+  .js .lineup-more { display: inline-block }
+  .js .lineup:has(.extra) { padding-bottom: 14px }
+  .rib { font-size: 17px }
+}
 
 /* Attendee badge (ticket CTA) */
 .attendee { position: relative; background: var(--white); color: var(--ink); border-radius: 10px 10px 0 0; padding: 30px 22px 22px; box-shadow: 0 -12px 40px -20px rgba(0,0,0,.45); display: grid; gap: 10px }
@@ -126,8 +131,9 @@ main:focus { outline: none }
 .row h3 a:hover { text-decoration: underline }
 .row p { color: var(--sub); font-size: 15px; margin-top: 4px }
 .row.service { background: transparent; box-shadow: inset 0 0 0 2px var(--rule) }
-.ribbon { display: inline-block; background: var(--c, var(--indigo)); color: var(--white); font: 700 14px/1 var(--body); padding: 8px 20px 8px 12px; clip-path: polygon(0 0, 100% 0, calc(100% - 9px) 50%, 100% 100%, 0 100%); white-space: nowrap; align-self: center; text-decoration: none }
-a.ribbon:hover { text-decoration: underline }
+.ribbon { position: relative; isolation: isolate; display: inline-block; color: var(--white); font: 700 14px/1 var(--body); padding: 8px 20px 8px 12px; white-space: nowrap; align-self: center; text-decoration: none }
+.ribbon::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--c, var(--indigo)); clip-path: polygon(0 0, 100% 0, calc(100% - 9px) 50%, 100% 100%, 0 100%) }
+@media (hover: hover) { a.ribbon:hover { text-decoration: underline } }
 @media (max-width: 560px) { .row { grid-template-columns: minmax(0, 1fr) } .row .ribbon { justify-self: start } }
 
 /* Program page layout */
@@ -236,7 +242,7 @@ fieldset input, label.check input { width: 22px; height: 22px; min-height: 0; fl
 @media (max-width: 860px) {
   .hero .in { grid-template-columns: minmax(0, 1fr) }
   .attendee { max-width: 360px; border-radius: 10px; margin-bottom: 24px }
-  .lineup { padding-bottom: 8px }
+  .lineup { padding-bottom: 24px }
   .site-foot .in { grid-template-columns: minmax(0, 1fr) }
 }
 @media (max-width: 560px) {

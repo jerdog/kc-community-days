@@ -2,7 +2,8 @@
 // Pulls speakers, sessions and the schedule grid from Sessionize and writes
 // them to src/data/sessionize.json so the site can be built statically.
 //
-// Usage: npm run import:sessionize [-- <sessionizeEventId>]
+// Usage: npm run import:sessionize            (event ID from site.config.js)
+//        npm run import:sessionize -- <id>    (one-off override)
 //
 // The current Sessionize ID only exposes the HTML "embed" views, so this script
 // parses those. If you enable a JSON endpoint in Sessionize (API / Embed ->
@@ -10,8 +11,9 @@
 
 import { writeFile, mkdir } from 'node:fs/promises';
 import { parse } from 'node-html-parser';
+import config from '../site.config.js';
 
-const EVENT_ID = process.argv[2] || process.env.SESSIONIZE_ID || '295atto3';
+const EVENT_ID = process.argv[2] || process.env.SESSIONIZE_ID || config.sessionize.eventId;
 const BASE = `https://sessionize.com/api/v2/${EVENT_ID}`;
 const OUT = new URL('../src/data/sessionize.json', import.meta.url);
 

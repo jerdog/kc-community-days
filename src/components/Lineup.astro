@@ -1,0 +1,38 @@
+---
+// Homepage list of communities as ribbons. Order and the phone cut-off come from
+// `lineup` in site.config.js. On phones only the first `mobileCount` show until
+// "Show all" is pressed; without JavaScript every community is listed.
+import { lineupConfig } from '../lib/site.js';
+import { lineup } from '../lib/sessionize.js';
+
+const list = lineup();
+const n = lineupConfig.mobileCount;
+const hidden = Math.max(0, list.length - n);
+---
+<div class="lineup-wrap">
+  <ul class="lineup" id="lineup" aria-label="Participating communities">
+    {list.map((c, i) => (
+      <li class:list={{ extra: i >= n }}>
+        <a class="rib" href={`/communities/${c.slug}/`} style={`--c:${c.color}`}>{c.name}</a>
+      </li>
+    ))}
+  </ul>
+  {hidden > 0 && (
+    <button class="lineup-more" type="button" aria-expanded="false" aria-controls="lineup" data-more={`Show all ${list.length} communities`} data-less="Show fewer">
+      Show all {list.length} communities
+    </button>
+  )}
+</div>
+
+<script>
+  const btn = document.querySelector<HTMLButtonElement>('.lineup-more');
+  const list = document.getElementById('lineup');
+  btn?.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') !== 'true';
+    btn.setAttribute('aria-expanded', String(open));
+    list?.classList.toggle('expanded', open);
+    btn.textContent = open ? btn.dataset.less! : btn.dataset.more!;
+    // Move focus to the first newly shown community so keyboard users land in the new items.
+    if (open) list?.querySelector<HTMLElement>('.extra a')?.focus();
+  });
+</script>

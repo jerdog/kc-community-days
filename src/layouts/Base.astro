@@ -2,8 +2,8 @@
 import '../styles/site.css';
 import Fountain from '../components/Fountain.astro';
 import Form from '../components/Form.astro';
-import { event, nav, sponsors } from '../data/site.js';
-import { isPast } from '../lib/state.js';
+import { event, nav, sponsors } from '../lib/site.js';
+import { isPast } from '../lib/site.js';
 
 const { title, description = event.description, sponsorStrip = true } = Astro.props;
 const pageTitle = title ? `${title} · ${event.name}` : `${event.name} ${event.year}`;

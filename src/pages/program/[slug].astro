@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import SpeakerBadge from '../../components/SpeakerBadge.astro';
 import Ribbon from '../../components/Ribbon.astro';
-import { event } from '../../data/site.js';
+import { event } from '../../lib/site.js';
 import { talks, fmtDay, fmtTime, minutes } from '../../lib/sessionize.js';
 
 export function getStaticPaths() {
